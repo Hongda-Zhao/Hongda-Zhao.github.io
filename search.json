@@ -9,9 +9,9 @@
   {
     "objectID": "notes.html",
     "href": "notes.html",
-    "title": "Archive",
+    "title": "Blog",
     "section": "",
-    "text": "Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.\n\nTopics\nLife\nTechnology\nResearch\nActivities\n\n\n\n\nThe archive is empty for now.\nPublished posts will be listed here by date.\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A single stream of notes, without categories for now.\n\n\n\nThe blog is empty for now.\nPublished posts will be listed here by date.\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "activities.html",
@@ -21,25 +21,18 @@
     "text": "Activities\n\n\n\nA record of academic exchange, community contribution, and the experiences that shape work beyond the screen.\n\n\n\n\n\nAcademic exchange\nConferences, talks & visits\n\n\n\n\nACADEMIC / IMAGEEvent photograph to be added.\nDETAILS TO BE ADDED\nAcademic activity\nRole, venue, and outcome will appear here.\n\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nCommunity\nTeaching, service & leadership\n\n\n\n\nCOMMUNITY / IMAGETeaching, volunteering, or team photograph to be added.\nDETAILS TO BE ADDED\nCommunity activity\nContribution, audience, and outcome will appear here.\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nOutside work\nOutside the lab\n\n\n\nFIELD NOTE / 01Photograph to be added\nFIELD NOTE / 02Photograph to be added\nFIELD NOTE / 03Photograph to be added\n\n\nA note connecting these interests to scientific practice will be added here."
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Hongda Zhao",
-    "section": "",
-    "text": "Curriculum vitae\nHongda Zhao\n\nBioinformatics · Computational Genomics\n\n\nGitHub\nLinkedIn\n\nEmail to be added\nPrint / save PDF\n\n\n\n\nProfile\nProfessional summary to be added.\n\n\n\nEducation\n\n—Education detailsTo be added\n\n\n\n\nExperience\n\n—Experience detailsTo be added\n\n\n\n\nSelected projects\n\nSelected project 01Details to be added.\nSelected project 02Details to be added.\n\nOpen full project notes\n\n\n\nMethods & toolsTo be added\nLanguagesTo be added\n\n\n\nPublicationsTo be addedFull publication list\nAwards & activitiesTo be addedActivity log"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Profile",
-    "section": "",
-    "text": "About\n\n\n\nA developing profile in bioinformatics and computational genomics. A fuller account of current work, motivation, and future direction will be added here.\n\n\n\n\nPortrait & bio\n\n\n\n\nA concise first-person biography will be added here.\n\n\n\n\n\nQuick facts\n\nFieldBioinformatics\nFocusComputational genomics\nCurrent roleTo be added\nLocationTo be added\nLanguagesTo be added\nContactTo be added\n\n\n\n\nEducation\n\n\n—Education detailsTo be added\n\n\n\n\nExperience\n\n\n—Experience detailsTo be added\n\n\n\n\nSkills & recognition\n\nMethodsMethods and tools will be added here.\nAwards & talksSelected recognition and presentations will be added here.\n\n\n\n\nBeyond work\n\nWhat I noticePersonal interests and observations will be added here.\nWhy it belongs hereA note connecting life beyond work to scientific practice will be added here.\n\n\n\n\nMore\n\nView CV\nSelected projects\nActivities"
-  },
-  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
     "section": "",
     "text": "Publications\n\n\n\nPeer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.\n\nScholar profile to be added\nORCID to be added\n\n\n\n\n\nPeer-reviewed\n\n\n\n—\n\nPublication details to be added\nCitation and evidence links will appear here.\n\n\n\n\n\n\nPreprints\n\n\n—\n\nPreprint details to be added\nCitation and evidence links will appear here.\n\n\n\n\n\n\nOther outputs\n\n\n—\n\nOther outputs to be added\nSoftware, datasets, posters, or technical reports will appear here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "A short introduction",
+    "section": "",
+    "text": "About\nA short introduction\nI am Hongda Zhao. This is my personal notebook for research questions, technical work, academic life, and observations beyond the screen.\n\n\n\nAbout me\n\n\n\nI work in bioinformatics and computational genomics, with a particular interest in viruses, genomes, and computational methods for biological discovery.\nI use this site to keep useful ideas in one place: notes from research, tools I want to remember, academic experiences, and small observations from everyday life.\n\n\n\n\n\nAway from the screen\n\nField observations\nI enjoy observing birds and biodiversity. Some of those photographs and field notes may appear here over time.\n\n\n\n\nContinue reading\n\nBlog\nResearch"
   },
   {
     "objectID": "research.html",
@@ -53,6 +46,6 @@
     "href": "index.html",
     "title": "Hongda Zhao",
     "section": "",
-    "text": "A personal notebook\nNotes on life,technology & research.\n\nI use this space to record research questions, technical work, academic activities, and observations from everyday life.\n\n\n\n\n\nHongda Zhao\nBioinformatics · Computational genomics\n\nCurrent role and location to be added.\n\nAbout\nResearch\nCV\n\n\n\n\n\n\nTopics\nLife\nTechnology\nResearch\nActivities\n\n\n\n\nLatest writing\nRecent notes\n\nFull archive\n\n\n\nNo notes have been published yet.\nNew posts will appear here automatically. Start from posts/template/index.qmd.\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A personal notebook\nNotes on life,technology & research.\n\nI use this space to record research questions, technical work, academic activities, and observations from everyday life.\n\n\n\n\n\nHongda Zhao\nBioinformatics · Computational genomics\nResearch notes, technical work, and field observations.\n\nAbout\nResearch\n\n\n\n\n\n\n\nLatest writing\nRecent notes\n\nAll posts\n\n\n\nNo notes have been published yet.\nNew posts will appear here automatically. Start from posts/template/index.qmd.\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
