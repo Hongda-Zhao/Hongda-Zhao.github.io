@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "activities.html",
+    "href": "activities.html",
+    "title": "Activities",
+    "section": "",
+    "text": "ACTIVITIES / FIELD LOG\n\n\n\n[Introduce the conferences, talks, teaching, service, communities, and personal experiences that shape how you work.]\n\n\n\n\n\nACADEMIC / EXCHANGE\nConferences, talks & visits\n\n\n\n\nPHOTO / ACADEMIC[Event visual]\n[Month Year] · [City / Venue]\n[Conference, talk, workshop, or visit]\n[Your role, what you shared or learned, and one concrete outcome.]\n\n\n\n[20XX][Activity title][Role · venue · evidence link]\n[20XX][Activity title][Role · venue · evidence link]\n\n\n\n\n\n\nCOMMUNITY / CONTRIBUTION\nTeaching, service & leadership\n\n\n\n\nPHOTO / COMMUNITY[People and participation]\n[Month Year] · [Organisation]\n[Teaching, outreach, volunteering, or leadership]\n[Who you worked with, what you contributed, and the effect.]\n\n\n[20XX][Activity title][Responsibility · audience · outcome]\n[20XX][Activity title][Responsibility · audience · outcome]\n\n\n\n\n\n\nLIFE / OBSERVATION\nOutside the lab\n\n\n\nPHOTO / 01[Place or moment · Year]\nPHOTO / 02[Place or moment · Year]\nPHOTO / 03[Place or moment · Year]\n\n\n[Add how these interests influence your curiosity, resilience, or way of collaborating.]"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Profile",
+    "section": "",
+    "text": "PROFILE / ABOUT\n\n\n\n[Introduce your current work, the questions that motivate you, and the kind of role or collaboration you are seeking.]\n\n\n\n\nPortrait & bio\n\n\n\nPHOTO SLOT / PROFILE\nReplace with a clear portrait.\n\n\n\n[Add a short biography here. Two paragraphs are usually enough: one professional, one personal.]\n\n\n\n\n\nQuick facts\n\nCurrent role[Role · Institution]\nLocation[City · Country]\nResearch focus[Two or three keywords]\nLanguages[Languages and proficiency]\nOpen to[Roles, collaborations, or projects]\nContact[Public email or preferred contact method]\n\n\n\n\nEducation\n\n\n[Year–Year][Degree / programme][Institution · thesis or distinction]\n[Year–Year][Degree / programme][Institution · thesis or distinction]\n\n\n\n\nExperience\n\n\n[Year–Now][Role][Organisation · scope · result]\n[Year–Year][Role][Organisation · scope · result]\n\n\n\n\nSkills & recognition\n\nMethods[Add experimental, computational, statistical, and communication methods that support your work.]\nAwards & talks[Add selected fellowships, awards, invited presentations, or leadership recognition.]\n\n\n\n\nBeyond work\n\nWhat I notice[Add interests such as photography, travel, books, sport, craft, or community work.]\nWhy it belongs here[Connect one personal interest to how you learn, collaborate, or see scientific problems.]\n\n\n\n\nNEXT / OPEN\nContinue to the evidence.\n\nView CV\nSelected projects\nActivities"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "HongdaZhao",
+    "section": "",
+    "text": "HONGDA ZHAO / RESEARCH · PRACTICE · LIFE\nHongdaZhao\n\n[Add the biological questions you study, the methods you use, and the impact you want your work to create.]\n\nView selected projects\nProfile & CV\n\n\n\n\n\nField\nBioinformatics\n\n\nFocus\nComputational genomics\n\n\nCurrent\n\n[Role · Institution]\n\n\nOpen to\n\n[Roles · Collaborations]\n\n\n\n\n0 kbPERSONAL LOCUS / 4 TRACKS100 kb\n\n\n\n\n\n\n\n\nResearch\nProjects\nActivities\nWriting\n\n\n\n\n\n\n\nPHOTO SLOT / 01\nReplace with one photograph that connects your research and everyday life.\n\n\nFIELD / NOTE\nWork, observed in context.\n\n[Add a short personal note. Keep it specific enough that a reader remembers you.]\n\n\n\n\n\nRESEARCH / THEMES\nQuestions I pursue\n\n\n\n\n\nTheme / A\n[Research theme][Central question and why it matters.]\n↗\n\n\nTheme / B\n[Research theme][Central question and why it matters.]\n↗\n\n\nTheme / C\n[Research theme][Central question and why it matters.]\n↗\n\n\n\n\n\n\nSELECTED / PROJECTS\nEvidence of practice\n\n\n\n\n\nProject / Year\n[Selected project title][Problem, your contribution, and outcome in one sentence.]\n↗\n\n\nProject / Year\n[Selected project title][Problem, your contribution, and outcome in one sentence.]\n↗\n\n\n\n\n\n\nACTIVITIES / LOG\nWhere I take part\n\n\n\n\n\nAcademic\n[Conference, talk, or workshop][Your role · venue · year · result.]\n↗\n\n\nCommunity\n[Teaching, outreach, or leadership][What you contributed and who benefited.]\n↗\n\n\n\n\n\n\nWRITING / INDEX\nNotes from three worlds\n\n\n\n\nLife\nField notesPlaces, people, photography, books, and observations outside the lab.\n↗\n\n\nTechnology\nBuild notesCode, data workflows, tools, experiments, and lessons from implementation.\n↗\n\n\nResearch\nResearch notesPapers, methods, open questions, and work in progress.\n↗\n\n\n\n\n\nPROFILE / CONTACT\n\n[Add one sentence for potential collaborators, research groups, or employers.]\n\nProfile\nCV\nGitHub\nLinkedIn"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "RESEARCH / THEMES\n\n\n\n[Explain the common biological question or perspective that connects your research areas.]\n\n\n\n\n\nRESEARCH AREA / A\n\n[Research area title]\n[Add a short overview of the biological question and why it matters.]\n[Keyword][Keyword][Keyword]\n\n\nQuestion[What are you trying to understand?]\nApproach[Which data and methods do you use?]\nContribution[What is specifically yours?]\nEvidence[Paper, code, dataset, poster, or result]\n\n\n\n\nRESEARCH AREA / B\n\n[Research area title]\n[Add a short overview of the biological question and why it matters.]\n[Keyword][Keyword][Keyword]\n\n\nQuestion[What are you trying to understand?]\nApproach[Which data and methods do you use?]\nContribution[What is specifically yours?]\nEvidence[Paper, code, dataset, poster, or result]\n\n\n\n\nRESEARCH AREA / C\n\n[Research area title]\n[Add a short overview of the biological question and why it matters.]\n[Keyword][Keyword][Keyword]\n\n\nQuestion[What are you trying to understand?]\nApproach[Which data and methods do you use?]\nContribution[What is specifically yours?]\nEvidence[Paper, code, dataset, poster, or result]\n\n\n\n\nRESEARCH / OUTPUTS\nFollow the work into its outputs.\n\nPublications\nProjects\nResearch notes"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Writing",
+    "section": "",
+    "text": "WRITING / INDEX\n\n\n\n[Add what you will write about and what readers should expect to learn or notice.]\n\n\n\n\n01 / LIFEField notesPlaces, people, photography, books, and observations beyond work.\n02 / TECHNOLOGYBuild notesCode, data workflows, tools, failures, and implementation lessons.\n03 / RESEARCHResearch notesPapers, methods, open questions, and work in progress.\n04 / ACTIVITIESEvent notesConferences, talks, workshops, visits, teaching, and community work.\n\n\n\nPublished writing appears below.\nFilter with Life / Technology / Research / Activities.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "SELECTED / PROJECTS\n\n\n\n[Show two to four projects that best demonstrate how you frame problems, collaborate, and deliver evidence.]\n\n\n\n\n\nPROJECT / [YEAR][STATUS]\n\n\n[Selected project title]\n[Summarise the problem, your contribution, and the outcome in one sentence.]\n\n\nPROJECT VISUAL / AReplace with evidence, not decoration.\n\n\nProblem[What needed to be understood or built?]\nMy role[What did you personally own?]\nMethods[Which data, methods, or tools mattered?]\nOutcome[What changed, and how can it be verified?]\n\n\n[Paper][Code][Data][Poster]\n\n\n\nPROJECT / [YEAR][STATUS]\n\n\n[Selected project title]\n[Summarise the problem, your contribution, and the outcome in one sentence.]\n\n\nPROJECT VISUAL / BReplace with evidence, not decoration.\n\n\nProblem[What needed to be understood or built?]\nMy role[What did you personally own?]\nMethods[Which data, methods, or tools mattered?]\nOutcome[What changed, and how can it be verified?]\n\n\n[Paper][Code][Data][Poster]"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "PUBLICATIONS / INDEX\n\n\n\n[Add one line explaining the scope of this selected publication list.]\n\n[Google Scholar]\n[ORCID]\n\n\n\n\n\nPeer-reviewed\n\n\n\n[20XX]\n\n[Paper title]\n[Authors. Journal, volume and pages.]\n[DOI][Code][Data]\n\n\n\n\n\n\nPreprints\n\n\n[20XX]\n\n[Preprint title]\n[Authors. Preprint server and version.]\n[Preprint][Code][Data]\n\n\n\n\n\n\nOther outputs\n\n\n[20XX]\n\n[Dataset, software, poster, or technical report]\n[Your role, venue or repository, and a concise description.]\n[Open output]"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Hongda Zhao",
+    "section": "",
+    "text": "CURRICULUM / VITAE\nHongda Zhao\n\n[Target role · Research identity · Location]\n\n\nGitHub\nLinkedIn\n\n[Public email]\nPrint / save PDF\n\n\n\n\nProfile\n[Write a 60–90 word summary tailored to the roles you want. State domain, methods, evidence, and direction.]\n\n\n\nEducation\n\n[Year–Year][Degree / programme][Institution · location · thesis / distinction]\n[Year–Year][Degree / programme][Institution · location · thesis / distinction]\n\n\n\n\nExperience\n\n[Year–Now][Role][Organisation · Location][Action + scope + measurable or verifiable result.][Action + method + outcome.]\n[Year–Year][Role][Organisation · Location][Action + scope + measurable or verifiable result.][Action + method + outcome.]\n\n\n\n\nSelected projects\n\n[Project title][Problem · your contribution · methods · outcome.]\n[Project title][Problem · your contribution · methods · outcome.]\n\nOpen full project notes\n\n\n\nMethods & tools[Bioinformatics · statistics · programming · platforms · wet-lab methods, if relevant]\nLanguages[Language — proficiency · Language — proficiency]\n\n\n\nPublications[Selected citation or publication count.]Full publication list\nAwards & activities[Selected awards, talks, service, and leadership.]Activity log"
+  }
+]
