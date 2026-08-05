@@ -1,0 +1,69 @@
+---
+pagetitle: "CV | Hongda Zhao"
+description: "Curriculum vitae of Hongda Zhao."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<div class="page-shell cv-shell">
+<header class="cv-header">
+<div>
+<p class="page-code">CURRICULUM / VITAE</p>
+<h1 class="page-title">Hongda Zhao</h1>
+<!-- EDIT: Add your target role or professional identity. -->
+<p class="page-lead placeholder-copy">[Target role · Research identity · Location]</p>
+</div>
+<div class="cv-contact">
+<a href="https://github.com/Hongda-Zhao">GitHub</a>
+<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
+<!-- EDIT: Replace this span with <a href="mailto:you@example.com">you@example.com</a>. -->
+<span class="placeholder-copy">[Public email]</span>
+<button class="print-button" type="button" onclick="window.print()">Print / save PDF</button>
+</div>
+</header>
+
+<section class="cv-section">
+<h2>Profile</h2>
+<p class="cv-summary placeholder-copy">[Write a 60–90 word summary tailored to the roles you want. State domain, methods, evidence, and direction.]</p>
+</section>
+
+<section class="cv-section">
+<h2>Education</h2>
+<div class="timeline-list">
+<div class="timeline-row"><span class="timeline-date">[Year–Year]</span><div><strong>[Degree / programme]</strong><small>[Institution · location · thesis / distinction]</small></div></div>
+<div class="timeline-row"><span class="timeline-date">[Year–Year]</span><div><strong>[Degree / programme]</strong><small>[Institution · location · thesis / distinction]</small></div></div>
+</div>
+</section>
+
+<section class="cv-section">
+<h2>Experience</h2>
+<div class="cv-experience">
+<article><div class="cv-role"><span>[Year–Now]</span><div><h3>[Role]</h3><p>[Organisation · Location]</p></div></div><ul><li>[Action + scope + measurable or verifiable result.]</li><li>[Action + method + outcome.]</li></ul></article>
+<article><div class="cv-role"><span>[Year–Year]</span><div><h3>[Role]</h3><p>[Organisation · Location]</p></div></div><ul><li>[Action + scope + measurable or verifiable result.]</li><li>[Action + method + outcome.]</li></ul></article>
+</div>
+</section>
+
+<section class="cv-section">
+<h2>Selected projects</h2>
+<div class="cv-projects">
+<article><h3>[Project title]</h3><p class="placeholder-copy">[Problem · your contribution · methods · outcome.]</p></article>
+<article><h3>[Project title]</h3><p class="placeholder-copy">[Problem · your contribution · methods · outcome.]</p></article>
+</div>
+<a class="text-link" href="./projects.html">Open full project notes</a>
+</section>
+
+<section class="cv-section cv-two-column">
+<div><h2>Methods &amp; tools</h2><p class="placeholder-copy">[Bioinformatics · statistics · programming · platforms · wet-lab methods, if relevant]</p></div>
+<div><h2>Languages</h2><p class="placeholder-copy">[Language — proficiency · Language — proficiency]</p></div>
+</section>
+
+<section class="cv-section cv-two-column">
+<div><h2>Publications</h2><p class="placeholder-copy">[Selected citation or publication count.]</p><a class="text-link" href="./publications.html">Full publication list</a></div>
+<div><h2>Awards &amp; activities</h2><p class="placeholder-copy">[Selected awards, talks, service, and leadership.]</p><a class="text-link" href="./activities.html">Activity log</a></div>
+</section>
+
+<!-- PDF: When ready, add assets/Hongda_Zhao_CV.pdf and place a download link here. -->
+</div>
+```

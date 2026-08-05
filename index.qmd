@@ -1,0 +1,179 @@
+---
+pagetitle: "Hongda Zhao | Bioinformatics & Computational Genomics"
+description: "Research, projects, activities, and writing by Hongda Zhao."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<section class="home-hero site-frame">
+<div class="hero-main">
+<p class="hero-code">HONGDA ZHAO / RESEARCH · PRACTICE · LIFE</p>
+<h1 class="hero-name"><span>Hongda</span><span>Zhao</span></h1>
+<!-- EDIT: Replace the bracketed sentence with one clear professional statement (25–35 words). -->
+<p class="hero-deck placeholder-copy">[Add the biological questions you study, the methods you use, and the impact you want your work to create.]</p>
+<div class="hero-actions" aria-label="Primary profile links">
+<a class="text-link" href="./projects.html">View selected projects</a>
+<a class="text-link" href="./cv.html">Profile &amp; CV</a>
+</div>
+</div>
+
+<aside class="profile-stamp" aria-label="Current profile">
+<div class="stamp-item">
+<span class="stamp-label">Field</span>
+<span class="stamp-value">Bioinformatics</span>
+</div>
+<div class="stamp-item">
+<span class="stamp-label">Focus</span>
+<span class="stamp-value">Computational genomics</span>
+</div>
+<div class="stamp-item">
+<span class="stamp-label">Current</span>
+<!-- EDIT: Add your current role and institution. -->
+<span class="stamp-value placeholder-copy">[Role · Institution]</span>
+</div>
+<div class="stamp-item">
+<span class="stamp-label">Open to</span>
+<!-- EDIT: Add the roles, collaborations, or opportunities you welcome. -->
+<span class="stamp-value placeholder-copy">[Roles · Collaborations]</span>
+</div>
+</aside>
+
+<nav class="locus-track" aria-label="Homepage section navigation">
+<div class="track-scale"><span>0 kb</span><span>PERSONAL LOCUS / 4 TRACKS</span><span>100 kb</span></div>
+<div class="track-line">
+<a class="locus locus-research" href="#research-index" aria-label="Jump to research"></a>
+<a class="locus locus-work" href="#work-index" aria-label="Jump to projects"></a>
+<a class="locus locus-activities" href="#activities-index" aria-label="Jump to activities"></a>
+<a class="locus locus-writing" href="#writing-index" aria-label="Jump to writing"></a>
+<span class="variant-point" aria-hidden="true"></span>
+</div>
+<div class="track-legend">
+<a href="#research-index">Research</a>
+<a href="#work-index">Projects</a>
+<a href="#activities-index">Activities</a>
+<a href="#writing-index">Writing</a>
+</div>
+</nav>
+</section>
+
+<section class="field-note site-frame">
+<!-- PHOTO: Replace this div with <img class="field-photo" src="assets/your-photo.jpg" alt="Describe the scene">. -->
+<div class="media-placeholder media-placeholder-wide" role="img" aria-label="Wide personal or research photograph placeholder">
+<span>PHOTO SLOT / 01</span>
+<small>Replace with one photograph that connects your research and everyday life.</small>
+</div>
+<div class="field-note-copy">
+<p class="section-code">FIELD / NOTE</p>
+<h2>Work, observed in context.</h2>
+<!-- EDIT: Add 2–3 sentences about the perspective that connects your research, technical practice, and life outside work. -->
+<p class="placeholder-copy">[Add a short personal note. Keep it specific enough that a reader remembers you.]</p>
+</div>
+</section>
+
+<section class="index-section site-frame" id="research-index">
+<div class="index-heading">
+<p class="section-code">RESEARCH / THEMES</p>
+<h2>Questions I pursue</h2>
+</div>
+
+<div class="index-list">
+<!-- EDIT: Replace each row with one research theme. Keep each description to one sentence. -->
+<a class="index-row" href="./research.html#research-area-a">
+<span class="row-meta">Theme / A</span>
+<span class="row-main"><strong>[Research theme]</strong><small>[Central question and why it matters.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./research.html#research-area-b">
+<span class="row-meta">Theme / B</span>
+<span class="row-main"><strong>[Research theme]</strong><small>[Central question and why it matters.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./research.html#research-area-c">
+<span class="row-meta">Theme / C</span>
+<span class="row-main"><strong>[Research theme]</strong><small>[Central question and why it matters.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+
+<section class="index-section site-frame" id="work-index">
+<div class="index-heading">
+<p class="section-code">SELECTED / PROJECTS</p>
+<h2>Evidence of practice</h2>
+</div>
+
+<div class="index-list">
+<!-- EDIT: Keep two to four representative projects here. -->
+<a class="index-row" href="./projects.html#project-a">
+<span class="row-meta">Project / Year</span>
+<span class="row-main"><strong>[Selected project title]</strong><small>[Problem, your contribution, and outcome in one sentence.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./projects.html#project-b">
+<span class="row-meta">Project / Year</span>
+<span class="row-main"><strong>[Selected project title]</strong><small>[Problem, your contribution, and outcome in one sentence.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+
+<section class="index-section site-frame" id="activities-index">
+<div class="index-heading">
+<p class="section-code">ACTIVITIES / LOG</p>
+<h2>Where I take part</h2>
+</div>
+
+<div class="index-list">
+<!-- EDIT: Use these rows for conferences, talks, teaching, outreach, volunteering, or leadership. -->
+<a class="index-row" href="./activities.html#academic-activities">
+<span class="row-meta">Academic</span>
+<span class="row-main"><strong>[Conference, talk, or workshop]</strong><small>[Your role · venue · year · result.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./activities.html#community-activities">
+<span class="row-meta">Community</span>
+<span class="row-main"><strong>[Teaching, outreach, or leadership]</strong><small>[What you contributed and who benefited.]</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+
+<section class="index-section site-frame" id="writing-index">
+<div class="index-heading">
+<p class="section-code">WRITING / INDEX</p>
+<h2>Notes from three worlds</h2>
+</div>
+
+<div class="index-list">
+<a class="index-row" href="./notes.html">
+<span class="row-meta">Life</span>
+<span class="row-main"><strong>Field notes</strong><small>Places, people, photography, books, and observations outside the lab.</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./notes.html">
+<span class="row-meta">Technology</span>
+<span class="row-main"><strong>Build notes</strong><small>Code, data workflows, tools, experiments, and lessons from implementation.</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="index-row" href="./notes.html">
+<span class="row-meta">Research</span>
+<span class="row-main"><strong>Research notes</strong><small>Papers, methods, open questions, and work in progress.</small></span>
+<span class="row-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+
+<section class="closing-strip site-frame">
+<p class="section-code">PROFILE / CONTACT</p>
+<!-- EDIT: Replace this line with a short invitation to connect. -->
+<p class="closing-line placeholder-copy">[Add one sentence for potential collaborators, research groups, or employers.]</p>
+<div class="closing-links">
+<a href="./about.html">Profile</a>
+<a href="./cv.html">CV</a>
+<a href="https://github.com/Hongda-Zhao">GitHub</a>
+<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
+</div>
+</section>
+```
