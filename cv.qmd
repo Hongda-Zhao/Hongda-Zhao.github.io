@@ -12,56 +12,54 @@ title-block-style: none
 <div>
 <p class="page-code">Curriculum vitae</p>
 <h1 class="page-title">Hongda Zhao</h1>
-<p class="page-lead">Bioinformatics PhD Candidate · JSPS Research Fellow</p>
+<!-- EDIT: Add your target role or professional identity. -->
+<p class="page-lead">Bioinformatics · Computational Genomics</p>
 </div>
 <div class="cv-contact">
 <a href="https://github.com/Hongda-Zhao">GitHub</a>
 <a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
-<a href="mailto:work.hongda@gmail.com">work.hongda@gmail.com</a>
+<!-- EDIT: Replace this span with <a href="mailto:you@example.com">you@example.com</a>. -->
+<span class="placeholder-copy">Email to be added</span>
 <button class="print-button" type="button" onclick="window.print()">Print / save PDF</button>
 </div>
 </header>
 
 <section class="cv-section">
 <h2>Profile</h2>
-<p class="cv-summary">Bioinformatics PhD candidate and JSPS Research Fellow working across viral genomics, comparative genomics, and AI-assisted protein discovery. Experienced in framing research questions, designing large-scale datasets, building reproducible workflows, validating computational results, and communicating evidence through publications and international presentations.</p>
+<p class="cv-summary placeholder-copy">Professional summary to be added.</p>
 </section>
 
 <section class="cv-section">
 <h2>Education</h2>
 <div class="timeline-list">
-<div class="timeline-row"><span class="timeline-date">2025–2028</span><div><strong>Doctor of Science, Bioinformatics · Kyoto University</strong><small>Expected March 2028</small></div></div>
-<div class="timeline-row"><span class="timeline-date">2023–2025</span><div><strong>Master of Science, Bioinformatics · Kyoto University</strong></div></div>
-<div class="timeline-row"><span class="timeline-date">2021–2023</span><div><strong>Research Student, Bioinformatics · Kyoto University</strong></div></div>
-<div class="timeline-row"><span class="timeline-date">2017–2021</span><div><strong>B.Eng., Biomedical Engineering · Northeastern University, China</strong></div></div>
+<div class="timeline-row pending-row"><span class="timeline-date">—</span><div><strong>Education details</strong><small>To be added</small></div></div>
 </div>
 </section>
 
 <section class="cv-section">
 <h2>Experience</h2>
 <div class="cv-experience">
-<article><div class="cv-role"><span>2025–present</span><div><h3>JSPS Research Fellow (DC1) · Kyoto University</h3><p>Independent, grant-supported research program · Kyoto, Japan</p></div></div><ul><li>Lead a large-scale viral-genomics program across 37,254 public eukaryotic genomes.</li><li>Built an automated detection, annotation, and comparison framework that standardised more than 780,000 viral regions.</li><li>Integrate comparative genomics, phylogenetics, protein-structure analysis, and machine learning.</li></ul></article>
-<article><div class="cv-role"><span>2025–2026</span><div><h3>Bioinformatics Research Collaborator · Eurus Therapeutics</h3><p>Cross-functional R&amp;D collaboration · Kyoto, Japan</p></div></div><ul><li>Built a microbial genome-mining pipeline spanning millions of genomes and annotated more than 800,000 protein candidates.</li><li>Translated computational results into biological hypotheses and downstream experimental evaluation choices.</li></ul></article>
+<article class="pending-row"><div class="cv-role"><span>—</span><div><h3>Experience details</h3><p>To be added</p></div></div></article>
 </div>
 </section>
 
 <section class="cv-section">
 <h2>Selected projects</h2>
 <div class="cv-projects">
-<article><h3>DJR-Finder</h3><p>AI-assisted double jelly-roll protein recognition using ESM-2, calibrated classifiers, cluster-aware evaluation, HMMER, and Foldseek.</p></article>
-<article><h3>Endogenous dsDNA viral landscape</h3><p>Genome-scale comparative analysis revealing lineage-specific viral-element accumulation and new virus–host associations.</p></article>
+<article class="pending-row"><h3>Selected project 01</h3><p class="placeholder-copy">Details to be added.</p></article>
+<article class="pending-row"><h3>Selected project 02</h3><p class="placeholder-copy">Details to be added.</p></article>
 </div>
-<a class="text-link" href="./research.html">Open research &amp; project details</a>
+<a class="text-link" href="./projects.html">Open full project notes</a>
 </section>
 
 <section class="cv-section cv-two-column">
-<div><h2>Methods &amp; tools</h2><p>Python, R, Shell/Bash, Linux/HPC, machine learning, ESM-2, HMMER, Foldseek, AlphaFold, comparative genomics, phylogenetics, genome annotation, structural bioinformatics.</p></div>
-<div><h2>Languages</h2><p>Chinese — native<br>English — professional; TOEIC L&amp;R 895/990, S&amp;W 360/400<br>Japanese — professional; JLPT N1 134/180</p></div>
+<div><h2>Methods &amp; tools</h2><p class="placeholder-copy">To be added</p></div>
+<div><h2>Languages</h2><p class="placeholder-copy">To be added</p></div>
 </section>
 
 <section class="cv-section cv-two-column">
-<div><h2>Selected publications</h2><p>First-author research in <em>Current Biology</em>, <em>Virus Evolution</em>, and bioRxiv on mirusviruses and endogenous dsDNA viral elements.</p><a class="text-link" href="./publications.html">Full publication list</a></div>
-<div><h2>Recognition</h2><p>NPO Bioinformatics Japan Student Award, 2026<br>JSPS DC1 Fellowship, 2025<br>ICR Award for Graduate Students, Kyoto University, 2025<br>Presentations in Germany, Australia, and Japan, 2023–2025</p></div>
+<div><h2>Publications</h2><p class="placeholder-copy">To be added</p><a class="text-link" href="./publications.html">Full publication list</a></div>
+<div><h2>Awards &amp; activities</h2><p class="placeholder-copy">To be added</p><a class="text-link" href="./activities.html">Activity log</a></div>
 </section>
 
 <!-- PDF: When ready, add assets/Hongda_Zhao_CV.pdf and place a download link here. -->

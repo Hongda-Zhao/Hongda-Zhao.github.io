@@ -1,6 +1,6 @@
 ---
 pagetitle: "Publications | Hongda Zhao"
-description: "Peer-reviewed publications, preprints, software, and datasets by Hongda Zhao."
+description: "Selected publications and preprints by Hongda Zhao."
 page-layout: full
 toc: false
 title-block-style: none
@@ -9,63 +9,53 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-title" role="heading" aria-level="1">Publications</p>
-<p class="page-lead">Peer-reviewed research, preprints, and computational outputs on viral genomics and protein discovery.</p>
-<div class="hero-actions publication-profiles">
-<span class="text-link placeholder-link">Google Scholar to be added</span>
+<p class="page-code">Publications</p>
+<div>
+<h1 class="page-title">Publications</h1>
+<!-- EDIT: Add one line describing this list and replace the profile placeholders. -->
+<p class="page-lead">Peer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.</p>
+<div class="hero-actions">
+<span class="text-link placeholder-link">Scholar profile to be added</span>
 <span class="text-link placeholder-link">ORCID to be added</span>
-<a class="text-link" href="https://github.com/Hongda-Zhao">GitHub</a>
+</div>
 </div>
 </header>
 
 <section class="publication-group">
-<h2 class="publication-label">Peer-reviewed publications</h2>
+<h2 class="publication-label">Peer-reviewed</h2>
 <div class="publication-list">
+<!-- EDIT: Copy this entry for each paper. Bold your own name and replace spans with links. -->
 <article class="publication-row">
-<span class="publication-year">2024</span>
+<span class="publication-year">—</span>
 <div>
-<h3>Eukaryotic genomic data uncover an extensive host range of mirusviruses</h3>
-<p><strong>Hongda Zhao</strong>, Lingjie Meng, Hiroyuki Hikida, Hiroyuki Ogata. <em>Current Biology</em> 34, 2633–2643.e3.</p>
-<p class="publication-contribution">Expanded the known host range, environments, and evolutionary diversity of mirusviruses using eukaryotic genomic data.</p>
-<div class="publication-links"><a href="https://doi.org/10.1016/j.cub.2024.04.085">Paper</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10827195/">Full text</a></div>
-</div>
-</article>
-<article class="publication-row">
-<span class="publication-year">2023</span>
-<div>
-<h3>A 1.5-Mb continuous endogenous viral region in the arbuscular mycorrhizal fungus <em>Rhizophagus irregularis</em></h3>
-<p><strong>Hongda Zhao</strong>, Ruixuan Zhang, Junyi Wu, Lingjie Meng, Yusuke Okazaki, Hiroyuki Hikida, Hiroyuki Ogata. <em>Virus Evolution</em> 9, vead064.</p>
-<p class="publication-contribution">Provided genomic and phylogenetic evidence for a recent large dsDNA virus infection in an arbuscular mycorrhizal fungus.</p>
-<div class="publication-links"><a href="https://doi.org/10.1093/ve/vead064">Paper</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10640383/">Full text</a></div>
+<h3>Publication details to be added</h3>
+<p class="placeholder-copy">Citation and evidence links will appear here.</p>
 </div>
 </article>
 </div>
 </section>
 
 <section class="publication-group">
-<h2 class="publication-label">Preprints &amp; manuscripts</h2>
+<h2 class="publication-label">Preprints</h2>
 <div class="publication-list">
 <article class="publication-row">
-<span class="publication-year">2025</span>
+<span class="publication-year">—</span>
 <div>
-<h3>Lineage-specific accumulation of endogenous dsDNA viral elements across eukaryotes</h3>
-<p><strong>Hongda Zhao</strong>, Lingjie Meng, Ruixuan Zhang, Morgan Gaïa, Hiroyuki Ogata. <em>bioRxiv</em>.</p>
-<p class="publication-contribution">Established a baseline landscape of endogenous dsDNA viral elements and their lineage-specific accumulation across eukaryotes.</p>
-<div class="publication-links"><a href="https://doi.org/10.1101/2025.04.19.649669">Preprint</a></div>
+<h3>Preprint details to be added</h3>
+<p class="placeholder-copy">Citation and evidence links will appear here.</p>
 </div>
 </article>
 </div>
 </section>
 
 <section class="publication-group">
-<h2 class="publication-label">Software &amp; datasets</h2>
+<h2 class="publication-label">Other outputs</h2>
 <div class="publication-list">
 <article class="publication-row">
-<span class="publication-year">Active</span>
+<span class="publication-year">—</span>
 <div>
-<h3>DJR-Finder</h3>
-<p>AI-assisted protein detection and validation workflow built around ESM-2, HMMER, and Foldseek.</p>
-<p class="placeholder-copy">Public code, software release, and dataset links will be added when available.</p>
+<h3>Other outputs to be added</h3>
+<p class="placeholder-copy">Software, datasets, posters, or technical reports will appear here.</p>
 </div>
 </article>
 </div>
