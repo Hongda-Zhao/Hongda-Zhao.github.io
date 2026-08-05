@@ -1,7 +1,7 @@
 ---
-title: "Archive"
-pagetitle: "Writing archive | Hongda Zhao"
-description: "Writing on life, technology, research, and academic activities."
+title: "Blog"
+pagetitle: "Blog | Hongda Zhao"
+description: "Blog posts by Hongda Zhao."
 page-layout: full
 title-block-style: none
 listing:
@@ -15,19 +15,11 @@ listing:
 
 ```{=html}
 <div class="archive-intro site-frame">
-<!-- EDIT: Replace this sentence with your own description of the archive. -->
-<p>Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.</p>
-<nav class="topic-index topic-index-archive" aria-label="Writing topics">
-<span>Topics</span>
-<span>Life</span>
-<span>Technology</span>
-<span>Research</span>
-<span>Activities</span>
-</nav>
+<p>A single stream of notes, without categories for now.</p>
 </div>
 
 <div class="blog-empty-guidance archive-empty site-frame">
-<p>The archive is empty for now.</p>
+<p>The blog is empty for now.</p>
 <span>Published posts will be listed here by date.</span>
 </div>
 ```

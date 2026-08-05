@@ -19,7 +19,7 @@ website:
     pinned: true
     left:
       - href: notes.qmd
-        text: Archive
+        text: Blog
       - href: research.qmd
         text: Research
       - href: activities.qmd

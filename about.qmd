@@ -36,7 +36,7 @@ title-block-style: none
 <section class="profile-cta">
 <h2>Continue reading</h2>
 <div class="hero-actions">
-<a class="text-link" href="./notes.html">Writing archive</a>
+<a class="text-link" href="./notes.html">Blog</a>
 <a class="text-link" href="./research.html">Research</a>
 </div>
 </section>
