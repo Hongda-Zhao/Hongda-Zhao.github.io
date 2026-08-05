@@ -1,0 +1,76 @@
+---
+pagetitle: "Activities | Hongda Zhao"
+description: "Academic, community, and personal activities by Hongda Zhao."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<div class="page-shell">
+<header class="page-header">
+<p class="page-code">ACTIVITIES / FIELD LOG</p>
+<div>
+<h1 class="page-title">Activities</h1>
+<!-- EDIT: Add one sentence describing how you participate beyond your core research. -->
+<p class="page-lead placeholder-copy">[Introduce the conferences, talks, teaching, service, communities, and personal experiences that shape how you work.]</p>
+</div>
+</header>
+
+<section class="activity-section" id="academic-activities">
+<div class="activity-heading">
+<p class="section-code">ACADEMIC / EXCHANGE</p>
+<h2>Conferences, talks &amp; visits</h2>
+</div>
+<div class="activity-grid">
+<article class="activity-card">
+<!-- PHOTO: Replace with an event, poster, talk, or group photograph. -->
+<div class="media-placeholder media-placeholder-activity" role="img" aria-label="Academic activity photo placeholder"><span>PHOTO / ACADEMIC</span><small>[Event visual]</small></div>
+<p class="activity-meta">[Month Year] · [City / Venue]</p>
+<h3>[Conference, talk, workshop, or visit]</h3>
+<p class="placeholder-copy">[Your role, what you shared or learned, and one concrete outcome.]</p>
+</article>
+<div class="timeline-list">
+<!-- EDIT: Add recent activities in reverse chronological order. -->
+<div class="timeline-row"><span class="timeline-date">[20XX]</span><div><strong>[Activity title]</strong><small>[Role · venue · evidence link]</small></div></div>
+<div class="timeline-row"><span class="timeline-date">[20XX]</span><div><strong>[Activity title]</strong><small>[Role · venue · evidence link]</small></div></div>
+</div>
+</div>
+</section>
+
+<section class="activity-section" id="community-activities">
+<div class="activity-heading">
+<p class="section-code">COMMUNITY / CONTRIBUTION</p>
+<h2>Teaching, service &amp; leadership</h2>
+</div>
+<div class="activity-grid activity-grid-reverse">
+<article class="activity-card">
+<!-- PHOTO: Replace with a teaching, volunteering, or team photograph. -->
+<div class="media-placeholder media-placeholder-activity" role="img" aria-label="Community activity photo placeholder"><span>PHOTO / COMMUNITY</span><small>[People and participation]</small></div>
+<p class="activity-meta">[Month Year] · [Organisation]</p>
+<h3>[Teaching, outreach, volunteering, or leadership]</h3>
+<p class="placeholder-copy">[Who you worked with, what you contributed, and the effect.]</p>
+</article>
+<div class="timeline-list">
+<div class="timeline-row"><span class="timeline-date">[20XX]</span><div><strong>[Activity title]</strong><small>[Responsibility · audience · outcome]</small></div></div>
+<div class="timeline-row"><span class="timeline-date">[20XX]</span><div><strong>[Activity title]</strong><small>[Responsibility · audience · outcome]</small></div></div>
+</div>
+</div>
+</section>
+
+<section class="activity-section" id="life-activities">
+<div class="activity-heading">
+<p class="section-code">LIFE / OBSERVATION</p>
+<h2>Outside the lab</h2>
+</div>
+<div class="photo-contact-sheet">
+<!-- PHOTO: Replace each div with a real image. Keep captions factual and brief. -->
+<figure><div class="media-placeholder media-placeholder-square"><span>PHOTO / 01</span></div><figcaption>[Place or moment · Year]</figcaption></figure>
+<figure><div class="media-placeholder media-placeholder-square"><span>PHOTO / 02</span></div><figcaption>[Place or moment · Year]</figcaption></figure>
+<figure><div class="media-placeholder media-placeholder-square"><span>PHOTO / 03</span></div><figcaption>[Place or moment · Year]</figcaption></figure>
+</div>
+<!-- EDIT: Add a short note about the interests represented in these photographs. -->
+<p class="activity-closing placeholder-copy">[Add how these interests influence your curiosity, resilience, or way of collaborating.]</p>
+</section>
+</div>
+```

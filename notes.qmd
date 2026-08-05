@@ -1,0 +1,38 @@
+---
+pagetitle: "Writing | Hongda Zhao"
+description: "Writing on life, technology, research, and academic activities."
+page-layout: full
+title-block-style: none
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  page-size: 12
+---
+
+```{=html}
+<div class="page-shell writing-shell">
+<header class="page-header">
+<p class="page-code">WRITING / INDEX</p>
+<div>
+<h1 class="page-title">Writing</h1>
+<!-- EDIT: Replace this sentence with your own editorial promise. -->
+<p class="page-lead placeholder-copy">[Add what you will write about and what readers should expect to learn or notice.]</p>
+</div>
+</header>
+
+<section class="writing-lenses" aria-label="Writing categories">
+<article><span>01 / LIFE</span><h2>Field notes</h2><p>Places, people, photography, books, and observations beyond work.</p></article>
+<article><span>02 / TECHNOLOGY</span><h2>Build notes</h2><p>Code, data workflows, tools, failures, and implementation lessons.</p></article>
+<article><span>03 / RESEARCH</span><h2>Research notes</h2><p>Papers, methods, open questions, and work in progress.</p></article>
+<article><span>04 / ACTIVITIES</span><h2>Event notes</h2><p>Conferences, talks, workshops, visits, teaching, and community work.</p></article>
+</section>
+
+<div class="notes-intro">
+<span>Published writing appears below.</span>
+<span>Filter with Life / Technology / Research / Activities.</span>
+</div>
+</div>
+```

@@ -1,0 +1,91 @@
+---
+pagetitle: "Profile | Hongda Zhao"
+description: "Profile, background, and interests of Hongda Zhao."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<div class="page-shell">
+<header class="page-header">
+<p class="page-code">PROFILE / ABOUT</p>
+<div>
+<h1 class="page-title">Profile</h1>
+<!-- EDIT: Add a two- or three-sentence professional introduction. -->
+<p class="page-lead placeholder-copy">[Introduce your current work, the questions that motivate you, and the kind of role or collaboration you are seeking.]</p>
+</div>
+</header>
+
+<section class="content-section">
+<div class="content-label">Portrait &amp; bio</div>
+<div class="profile-intro-grid">
+<!-- PHOTO: Replace this div with <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Hongda Zhao">. -->
+<div class="media-placeholder media-placeholder-portrait" role="img" aria-label="Portrait photograph placeholder">
+<span>PHOTO SLOT / PROFILE</span>
+<small>Replace with a clear portrait.</small>
+</div>
+<div class="prose-slot">
+<!-- EDIT: Write a concise first-person biography. -->
+<p class="placeholder-copy">[Add a short biography here. Two paragraphs are usually enough: one professional, one personal.]</p>
+</div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="content-label">Quick facts</div>
+<dl class="facts-list">
+<div><dt>Current role</dt><dd class="placeholder-copy">[Role · Institution]</dd></div>
+<div><dt>Location</dt><dd class="placeholder-copy">[City · Country]</dd></div>
+<div><dt>Research focus</dt><dd class="placeholder-copy">[Two or three keywords]</dd></div>
+<div><dt>Languages</dt><dd class="placeholder-copy">[Languages and proficiency]</dd></div>
+<div><dt>Open to</dt><dd class="placeholder-copy">[Roles, collaborations, or projects]</dd></div>
+<div><dt>Contact</dt><dd class="placeholder-copy">[Public email or preferred contact method]</dd></div>
+</dl>
+</section>
+
+<section class="content-section">
+<div class="content-label">Education</div>
+<div class="timeline-list">
+<!-- EDIT: Duplicate or remove rows as needed. -->
+<div class="timeline-row"><span class="timeline-date">[Year–Year]</span><div><strong>[Degree / programme]</strong><small>[Institution · thesis or distinction]</small></div></div>
+<div class="timeline-row"><span class="timeline-date">[Year–Year]</span><div><strong>[Degree / programme]</strong><small>[Institution · thesis or distinction]</small></div></div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="content-label">Experience</div>
+<div class="timeline-list">
+<!-- EDIT: Lead with outcomes. Add up to four roles that support your target position. -->
+<div class="timeline-row"><span class="timeline-date">[Year–Now]</span><div><strong>[Role]</strong><small>[Organisation · scope · result]</small></div></div>
+<div class="timeline-row"><span class="timeline-date">[Year–Year]</span><div><strong>[Role]</strong><small>[Organisation · scope · result]</small></div></div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="content-label">Skills &amp; recognition</div>
+<div class="two-column-copy">
+<div><h2>Methods</h2><p class="placeholder-copy">[Add experimental, computational, statistical, and communication methods that support your work.]</p></div>
+<div><h2>Awards &amp; talks</h2><p class="placeholder-copy">[Add selected fellowships, awards, invited presentations, or leadership recognition.]</p></div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="content-label">Beyond work</div>
+<div class="two-column-copy">
+<div><h2>What I notice</h2><p class="placeholder-copy">[Add interests such as photography, travel, books, sport, craft, or community work.]</p></div>
+<div><h2>Why it belongs here</h2><p class="placeholder-copy">[Connect one personal interest to how you learn, collaborate, or see scientific problems.]</p></div>
+</div>
+</section>
+
+<section class="profile-cta">
+<p class="section-code">NEXT / OPEN</p>
+<h2>Continue to the evidence.</h2>
+<div class="hero-actions">
+<a class="text-link" href="./cv.html">View CV</a>
+<a class="text-link" href="./projects.html">Selected projects</a>
+<a class="text-link" href="./activities.html">Activities</a>
+</div>
+</section>
+</div>
+```
