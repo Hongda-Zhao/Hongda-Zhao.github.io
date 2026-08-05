@@ -1,5 +1,6 @@
 ---
-pagetitle: "Writing | Hongda Zhao"
+title: "Archive"
+pagetitle: "Writing archive | Hongda Zhao"
 description: "Writing on life, technology, research, and academic activities."
 page-layout: full
 title-block-style: none
@@ -7,32 +8,26 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
   feed: true
-  page-size: 12
+  page-size: 20
 ---
 
 ```{=html}
-<div class="page-shell writing-shell">
-<header class="page-header">
-<p class="page-code">Notes</p>
-<div>
-<h1 class="page-title">Writing</h1>
-<!-- EDIT: Replace this sentence with your own editorial promise. -->
-<p class="page-lead">Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.</p>
+<div class="archive-intro site-frame">
+<!-- EDIT: Replace this sentence with your own description of the archive. -->
+<p>Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.</p>
+<nav class="topic-index topic-index-archive" aria-label="Writing topics">
+<span>Topics</span>
+<span>Life</span>
+<span>Technology</span>
+<span>Research</span>
+<span>Activities</span>
+</nav>
 </div>
-</header>
 
-<section class="writing-lenses" aria-label="Writing categories">
-<article><span>Life</span><h2>Field notes</h2><p>Places, people, photography, books, and observations beyond work.</p></article>
-<article><span>Technology</span><h2>Build notes</h2><p>Code, data workflows, tools, failures, and implementation lessons.</p></article>
-<article><span>Research</span><h2>Research notes</h2><p>Papers, methods, open questions, and work in progress.</p></article>
-<article><span>Activities</span><h2>Event notes</h2><p>Conferences, talks, workshops, visits, teaching, and community work.</p></article>
-</section>
-
-<div class="notes-intro">
-<span>Published writing appears below.</span>
-<span>Filter with Life / Technology / Research / Activities.</span>
-</div>
+<div class="blog-empty-guidance archive-empty site-frame">
+<p>The archive is empty for now.</p>
+<span>Published posts will be listed here by date.</span>
 </div>
 ```
