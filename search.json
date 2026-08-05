@@ -9,9 +9,9 @@
   {
     "objectID": "notes.html",
     "href": "notes.html",
-    "title": "Writing",
+    "title": "Archive",
     "section": "",
-    "text": "Notes\n\n\n\nNotes on research, technical practice, academic exchange, and the details of life that sharpen observation.\n\n\n\n\nLifeField notesPlaces, people, photography, books, and observations beyond work.\nTechnologyBuild notesCode, data workflows, tools, failures, and implementation lessons.\nResearchResearch notesPapers, methods, open questions, and work in progress.\nActivitiesEvent notesConferences, talks, workshops, visits, teaching, and community work.\n\n\n\nPublished writing appears below.\nFilter with Life / Technology / Research / Activities.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.\n\nTopics\nLife\nTechnology\nResearch\nActivities\n\n\n\n\nThe archive is empty for now.\nPublished posts will be listed here by date.\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "activities.html",
@@ -53,6 +53,6 @@
     "href": "index.html",
     "title": "Hongda Zhao",
     "section": "",
-    "text": "Bioinformatics · Computational genomics\nHongda Zhao\n\nI work with biological data and computational methods. This site collects my research, projects, academic activities, and notes from work and everyday life.\n\nAbout\nCV\nGitHub\nLinkedIn\n\n\n\n\n\n\n\n\n\nResearch and work\n\nResearchQuestions, methods, and current research themes.View\nProjectsSelected computational and research projects.View\nPublicationsPapers, preprints, software, and other outputs.View\n\n\n\n\n\nActivities\nConferences, talks, teaching, service, and experiences outside the lab.\nSee activities\n\n\nNotes\nWriting about research, technology, academic exchange, and daily observations.\nRead notes\n\n\n\n\nCurrently\n\nRoleTo be added\nFocusTo be added\nLocationTo be added"
+    "text": "A personal notebook\nNotes on life,technology & research.\n\nI use this space to record research questions, technical work, academic activities, and observations from everyday life.\n\n\n\n\n\nHongda Zhao\nBioinformatics · Computational genomics\n\nCurrent role and location to be added.\n\nAbout\nResearch\nCV\n\n\n\n\n\n\nTopics\nLife\nTechnology\nResearch\nActivities\n\n\n\n\nLatest writing\nRecent notes\n\nFull archive\n\n\n\nNo notes have been published yet.\nNew posts will appear here automatically. Start from posts/template/index.qmd.\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

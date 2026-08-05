@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Research, projects, activities, and notes by Hongda Zhao.">
+<meta name="description" content="A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life.">
 
-<title>Hongda Zhao | Bioinformatics &amp; Computational Genomics – Hongda Zhao</title>
+<title>Hongda Zhao | Notes on life, technology, and research – Hongda Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,6 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -45,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-19c4125100d6d92d05da557cd7ac3d5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-82abdbe170c4db3faba3a94a94d39acf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,19 +75,77 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta name="theme-color" content="#ffffff">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Hongda Zhao | Bioinformatics &amp; Computational Genomics">
-<meta property="og:description" content="Research, projects, activities, and notes by Hongda Zhao.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Hongda Zhao" href="index.xml" data-external="1"><meta property="og:title" content="Hongda Zhao | Notes on life, technology, and research">
+<meta property="og:description" content="A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life.">
 <meta property="og:image" content="https://hongda-zhao.github.io/assets/og.png">
 <meta property="og:site_name" content="Hongda Zhao">
 <meta property="og:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="Hongda Zhao | Bioinformatics &amp; Computational Genomics">
-<meta name="twitter:description" content="Research, projects, activities, and notes by Hongda Zhao.">
+<meta name="twitter:title" content="Hongda Zhao | Notes on life, technology, and research">
+<meta name="twitter:description" content="A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life.">
 <meta name="twitter:image" content="https://hongda-zhao.github.io/assets/og.png">
 <meta name="twitter:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
 <meta name="twitter:card" content="summary_large_image">
@@ -111,24 +171,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Archive</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./activities.html"> 
+<span class="menu-text">Activities</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html"> 
-<span class="menu-text">Notes</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -154,64 +210,65 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content page-columns page-full column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section class="home-intro site-frame">
-<div class="home-copy">
-<p class="home-field">Bioinformatics · Computational genomics</p>
-<h1>Hongda Zhao</h1>
-<!-- EDIT: Replace this paragraph with your own two- or three-sentence introduction. -->
-<p class="home-summary">I work with biological data and computational methods. This site collects my research, projects, academic activities, and notes from work and everyday life.</p>
-<nav class="home-links" aria-label="Profile links">
+<section class="blog-masthead site-frame page-columns page-full">
+<div class="blog-intro">
+<p class="blog-kicker">A personal notebook</p>
+<p class="blog-title" role="heading" aria-level="1">Notes on life,<br>technology &amp; research.</p>
+<!-- EDIT: Replace this paragraph with a short description of what you want to write about. -->
+<p class="blog-description">I use this space to record research questions, technical work, academic activities, and observations from everyday life.</p>
+</div>
+
+<aside class="blog-profile" aria-label="About the author">
+<img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
+<div>
+<strong>Hongda Zhao</strong>
+<span>Bioinformatics · Computational genomics</span>
+<!-- EDIT: Add your current role or location here. -->
+<p>Current role and location to be added.</p>
+<nav aria-label="Author links">
 <a href="./about.html">About</a>
+<a href="./research.html">Research</a>
 <a href="./cv.html">CV</a>
-<a href="https://github.com/Hongda-Zhao">GitHub</a>
-<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
 </nav>
 </div>
-
-<figure class="home-portrait figure">
-<img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async" class="figure-img">
-</figure>
+</aside>
 </section>
 
-<section class="home-section site-frame">
-<h2 class="anchored">Research and work</h2>
-<div class="home-list">
-<a href="./research.html"><span><strong>Research</strong><small>Questions, methods, and current research themes.</small></span><span>View</span></a>
-<a href="./projects.html"><span><strong>Projects</strong><small>Selected computational and research projects.</small></span><span>View</span></a>
-<a href="./publications.html"><span><strong>Publications</strong><small>Papers, preprints, software, and other outputs.</small></span><span>View</span></a>
-</div>
-</section>
+<nav class="topic-index site-frame" aria-label="Writing topics">
+<span>Topics</span>
+<a href="./notes.html">Life</a>
+<a href="./notes.html">Technology</a>
+<a href="./notes.html">Research</a>
+<a href="./notes.html">Activities</a>
+</nav>
 
-<section class="home-columns site-frame">
+<section class="latest-heading site-frame">
 <div>
-<h2 class="anchored">Activities</h2>
-<p>Conferences, talks, teaching, service, and experiences outside the lab.</p>
-<a class="simple-link" href="./activities.html">See activities</a>
+<p class="blog-kicker">Latest writing</p>
+<h2 class="anchored">Recent notes</h2>
 </div>
-<div>
-<h2 class="anchored">Notes</h2>
-<p>Writing about research, technology, academic exchange, and daily observations.</p>
-<a class="simple-link" href="./notes.html">Read notes</a>
-</div>
+<a href="./notes.html">Full archive</a>
 </section>
 
-<section class="home-status site-frame">
-<h2 class="anchored">Currently</h2>
-<dl>
-<div><dt>Role</dt><dd>To be added</dd></div>
-<div><dt>Focus</dt><dd>To be added</dd></div>
-<div><dt>Location</dt><dd>To be added</dd></div>
-</dl>
-</section>
+<div class="blog-empty-guidance site-frame">
+<p>No notes have been published yet.</p>
+<span>New posts will appear here automatically. Start from <code>posts/template/index.qmd</code>.</span>
+</div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -622,7 +679,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Bioinformatics · Computational genomics</p>
+<p>Notes on life · technology · research</p>
 </div>
   </div>
 </footer>
