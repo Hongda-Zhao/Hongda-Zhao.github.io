@@ -1,59 +1,61 @@
 ---
-pagetitle: "Hongda Zhao | Bioinformatics & Computational Genomics"
-description: "Research, projects, activities, and notes by Hongda Zhao."
+pagetitle: "Hongda Zhao | Notes on life, technology, and research"
+description: "A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life."
 page-layout: full
 toc: false
 title-block-style: none
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  feed: true
+  page-size: 8
 ---
 
 ```{=html}
-<section class="home-intro site-frame">
-<div class="home-copy">
-<p class="home-field">Bioinformatics · Computational genomics</p>
-<h1>Hongda Zhao</h1>
-<!-- EDIT: Replace this paragraph with your own two- or three-sentence introduction. -->
-<p class="home-summary">I work with biological data and computational methods. This site collects my research, projects, academic activities, and notes from work and everyday life.</p>
-<nav class="home-links" aria-label="Profile links">
+<section class="blog-masthead site-frame">
+<div class="blog-intro">
+<p class="blog-kicker">A personal notebook</p>
+<p class="blog-title" role="heading" aria-level="1">Notes on life,<br>technology &amp; research.</p>
+<!-- EDIT: Replace this paragraph with a short description of what you want to write about. -->
+<p class="blog-description">I use this space to record research questions, technical work, academic activities, and observations from everyday life.</p>
+</div>
+
+<aside class="blog-profile" aria-label="About the author">
+<img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
+<div>
+<strong>Hongda Zhao</strong>
+<span>Bioinformatics · Computational genomics</span>
+<!-- EDIT: Add your current role or location here. -->
+<p>Current role and location to be added.</p>
+<nav aria-label="Author links">
 <a href="./about.html">About</a>
+<a href="./research.html">Research</a>
 <a href="./cv.html">CV</a>
-<a href="https://github.com/Hongda-Zhao">GitHub</a>
-<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
 </nav>
 </div>
-
-<figure class="home-portrait">
-<img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
-</figure>
+</aside>
 </section>
 
-<section class="home-section site-frame">
-<h2>Research and work</h2>
-<div class="home-list">
-<a href="./research.html"><span><strong>Research</strong><small>Questions, methods, and current research themes.</small></span><span>View</span></a>
-<a href="./projects.html"><span><strong>Projects</strong><small>Selected computational and research projects.</small></span><span>View</span></a>
-<a href="./publications.html"><span><strong>Publications</strong><small>Papers, preprints, software, and other outputs.</small></span><span>View</span></a>
-</div>
-</section>
+<nav class="topic-index site-frame" aria-label="Writing topics">
+<span>Topics</span>
+<a href="./notes.html">Life</a>
+<a href="./notes.html">Technology</a>
+<a href="./notes.html">Research</a>
+<a href="./notes.html">Activities</a>
+</nav>
 
-<section class="home-columns site-frame">
+<section class="latest-heading site-frame">
 <div>
-<h2>Activities</h2>
-<p>Conferences, talks, teaching, service, and experiences outside the lab.</p>
-<a class="simple-link" href="./activities.html">See activities</a>
+<p class="blog-kicker">Latest writing</p>
+<h2>Recent notes</h2>
 </div>
-<div>
-<h2>Notes</h2>
-<p>Writing about research, technology, academic exchange, and daily observations.</p>
-<a class="simple-link" href="./notes.html">Read notes</a>
-</div>
+<a href="./notes.html">Full archive</a>
 </section>
 
-<section class="home-status site-frame">
-<h2>Currently</h2>
-<dl>
-<div><dt>Role</dt><dd>To be added</dd></div>
-<div><dt>Focus</dt><dd>To be added</dd></div>
-<div><dt>Location</dt><dd>To be added</dd></div>
-</dl>
-</section>
+<div class="blog-empty-guidance site-frame">
+<p>No notes have been published yet.</p>
+<span>New posts will appear here automatically. Start from <code>posts/template/index.qmd</code>.</span>
+</div>
 ```

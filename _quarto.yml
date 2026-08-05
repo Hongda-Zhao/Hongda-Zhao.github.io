@@ -6,7 +6,7 @@ lang: en
 website:
   title: "Hongda Zhao"
   site-url: "https://hongda-zhao.github.io"
-  description: "Hongda Zhao — bioinformatics, computational genomics, projects, activities, and field notes."
+  description: "Hongda Zhao — notes on life, technology, research, and academic activities."
   draft-mode: gone
   open-graph:
     image: assets/og.png
@@ -18,16 +18,14 @@ website:
   navbar:
     pinned: true
     left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
+      - href: notes.qmd
+        text: Archive
       - href: research.qmd
         text: Research
-      - href: projects.qmd
-        text: Projects
-      - href: notes.qmd
-        text: Notes
+      - href: activities.qmd
+        text: Activities
+      - href: about.qmd
+        text: About
     right:
       - href: cv.qmd
         text: CV
@@ -36,7 +34,7 @@ website:
         aria-label: GitHub
   page-footer:
     left: "© Hongda Zhao"
-    right: "Bioinformatics · Computational genomics"
+    right: "Notes on life · technology · research"
 
 format:
   html:
