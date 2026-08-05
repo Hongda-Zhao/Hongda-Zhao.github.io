@@ -13,7 +13,7 @@ title-block-style: none
 <div>
 <h1 class="page-title">Research</h1>
 <!-- EDIT: Add one sentence that ties your research themes together. -->
-<p class="page-lead placeholder-copy">[Explain the common biological question or perspective that connects your research areas.]</p>
+<p class="page-lead">Research questions, methods, and outputs will be organised here as the archive develops.</p>
 </div>
 </header>
 
@@ -21,45 +21,42 @@ title-block-style: none
 <article class="research-strand" id="research-area-a">
 <div class="strand-label">RESEARCH AREA / A</div>
 <div class="strand-main">
-<h2>[Research area title]</h2>
-<p class="placeholder-copy">[Add a short overview of the biological question and why it matters.]</p>
-<div class="tag-line"><span>[Keyword]</span><span>[Keyword]</span><span>[Keyword]</span></div>
+<h2>Research theme 01</h2>
+<p class="placeholder-copy">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">[What are you trying to understand?]</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">[Which data and methods do you use?]</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">[What is specifically yours?]</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">[Paper, code, dataset, poster, or result]</dd></div>
+<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
 </dl>
 </article>
 
 <article class="research-strand" id="research-area-b">
 <div class="strand-label">RESEARCH AREA / B</div>
 <div class="strand-main">
-<h2>[Research area title]</h2>
-<p class="placeholder-copy">[Add a short overview of the biological question and why it matters.]</p>
-<div class="tag-line"><span>[Keyword]</span><span>[Keyword]</span><span>[Keyword]</span></div>
+<h2>Research theme 02</h2>
+<p class="placeholder-copy">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">[What are you trying to understand?]</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">[Which data and methods do you use?]</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">[What is specifically yours?]</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">[Paper, code, dataset, poster, or result]</dd></div>
+<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
 </dl>
 </article>
 
 <article class="research-strand" id="research-area-c">
 <div class="strand-label">RESEARCH AREA / C</div>
 <div class="strand-main">
-<h2>[Research area title]</h2>
-<p class="placeholder-copy">[Add a short overview of the biological question and why it matters.]</p>
-<div class="tag-line"><span>[Keyword]</span><span>[Keyword]</span><span>[Keyword]</span></div>
+<h2>Research theme 03</h2>
+<p class="placeholder-copy">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">[What are you trying to understand?]</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">[Which data and methods do you use?]</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">[What is specifically yours?]</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">[Paper, code, dataset, poster, or result]</dd></div>
+<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
 </dl>
 </article>
 

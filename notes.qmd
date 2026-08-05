@@ -19,7 +19,7 @@ listing:
 <div>
 <h1 class="page-title">Writing</h1>
 <!-- EDIT: Replace this sentence with your own editorial promise. -->
-<p class="page-lead placeholder-copy">[Add what you will write about and what readers should expect to learn or notice.]</p>
+<p class="page-lead">Notes on research, technical practice, academic exchange, and the details of life that sharpen observation.</p>
 </div>
 </header>
 
