@@ -27,8 +27,6 @@ website:
       - href: about.qmd
         text: About
     right:
-      - href: cv.qmd
-        text: CV
       - icon: github
         href: https://github.com/Hongda-Zhao
         aria-label: GitHub

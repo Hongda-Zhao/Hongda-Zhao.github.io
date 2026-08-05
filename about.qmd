@@ -1,6 +1,6 @@
 ---
-pagetitle: "Profile | Hongda Zhao"
-description: "Profile, background, and interests of Hongda Zhao."
+pagetitle: "About | Hongda Zhao"
+description: "A short introduction to Hongda Zhao and this personal notebook."
 page-layout: full
 toc: false
 title-block-style: none
@@ -10,74 +10,34 @@ title-block-style: none
 <div class="page-shell">
 <header class="page-header">
 <p class="page-code">About</p>
-<div>
-<h1 class="page-title">Profile</h1>
-<!-- EDIT: Replace with a two- or three-sentence professional introduction. -->
-<p class="page-lead">A developing profile in bioinformatics and computational genomics. A fuller account of current work, motivation, and future direction will be added here.</p>
-</div>
+<h1 class="page-title">A short introduction</h1>
+<p class="page-lead">I am Hongda Zhao. This is my personal notebook for research questions, technical work, academic life, and observations beyond the screen.</p>
 </header>
 
 <section class="content-section">
-<div class="content-label">Portrait &amp; bio</div>
+<div class="content-label">About me</div>
 <div class="profile-intro-grid">
 <img class="profile-photo" src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" loading="lazy" decoding="async">
 <div class="prose-slot">
-<!-- EDIT: Write a concise first-person biography. -->
-<p class="placeholder-copy">A concise first-person biography will be added here.</p>
+<p>I work in bioinformatics and computational genomics, with a particular interest in viruses, genomes, and computational methods for biological discovery.</p>
+<p>I use this site to keep useful ideas in one place: notes from research, tools I want to remember, academic experiences, and small observations from everyday life.</p>
 </div>
 </div>
 </section>
 
 <section class="content-section">
-<div class="content-label">Quick facts</div>
-<dl class="facts-list">
-<div><dt>Field</dt><dd>Bioinformatics</dd></div>
-<div><dt>Focus</dt><dd>Computational genomics</dd></div>
-<div><dt>Current role</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Location</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Languages</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Contact</dt><dd class="placeholder-copy">To be added</dd></div>
-</dl>
-</section>
-
-<section class="content-section">
-<div class="content-label">Education</div>
-<div class="timeline-list">
-<!-- EDIT: Duplicate or remove rows as needed. -->
-<div class="timeline-row pending-row"><span class="timeline-date">—</span><div><strong>Education details</strong><small>To be added</small></div></div>
-</div>
-</section>
-
-<section class="content-section">
-<div class="content-label">Experience</div>
-<div class="timeline-list">
-<!-- EDIT: Lead with outcomes. Add up to four roles that support your target position. -->
-<div class="timeline-row pending-row"><span class="timeline-date">—</span><div><strong>Experience details</strong><small>To be added</small></div></div>
-</div>
-</section>
-
-<section class="content-section">
-<div class="content-label">Skills &amp; recognition</div>
-<div class="two-column-copy">
-<div><h2>Methods</h2><p class="placeholder-copy">Methods and tools will be added here.</p></div>
-<div><h2>Awards &amp; talks</h2><p class="placeholder-copy">Selected recognition and presentations will be added here.</p></div>
-</div>
-</section>
-
-<section class="content-section">
-<div class="content-label">Beyond work</div>
-<div class="two-column-copy">
-<div><h2>What I notice</h2><p class="placeholder-copy">Personal interests and observations will be added here.</p></div>
-<div><h2>Why it belongs here</h2><p class="placeholder-copy">A note connecting life beyond work to scientific practice will be added here.</p></div>
+<div class="content-label">Away from the screen</div>
+<div class="prose-slot">
+<h2>Field observations</h2>
+<p>I enjoy observing birds and biodiversity. Some of those photographs and field notes may appear here over time.</p>
 </div>
 </section>
 
 <section class="profile-cta">
-<h2>More</h2>
+<h2>Continue reading</h2>
 <div class="hero-actions">
-<a class="text-link" href="./cv.html">View CV</a>
-<a class="text-link" href="./projects.html">Selected projects</a>
-<a class="text-link" href="./activities.html">Activities</a>
+<a class="text-link" href="./notes.html">Writing archive</a>
+<a class="text-link" href="./research.html">Research</a>
 </div>
 </section>
 </div>
