@@ -9,7 +9,7 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">ACTIVITIES / FIELD LOG</p>
+<p class="page-code">Activities</p>
 <div>
 <h1 class="page-title">Activities</h1>
 <!-- EDIT: Add one sentence describing how you participate beyond your core research. -->
@@ -19,7 +19,7 @@ title-block-style: none
 
 <section class="activity-section" id="academic-activities">
 <div class="activity-heading">
-<p class="section-code">ACADEMIC / EXCHANGE</p>
+<p class="section-code">Academic exchange</p>
 <h2>Conferences, talks &amp; visits</h2>
 </div>
 <div class="activity-grid">
@@ -39,7 +39,7 @@ title-block-style: none
 
 <section class="activity-section" id="community-activities">
 <div class="activity-heading">
-<p class="section-code">COMMUNITY / CONTRIBUTION</p>
+<p class="section-code">Community</p>
 <h2>Teaching, service &amp; leadership</h2>
 </div>
 <div class="activity-grid activity-grid-reverse">
@@ -58,7 +58,7 @@ title-block-style: none
 
 <section class="activity-section" id="life-activities">
 <div class="activity-heading">
-<p class="section-code">LIFE / OBSERVATION</p>
+<p class="section-code">Outside work</p>
 <h2>Outside the lab</h2>
 </div>
 <div class="photo-contact-sheet">

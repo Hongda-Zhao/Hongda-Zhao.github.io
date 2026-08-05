@@ -9,7 +9,7 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">PROFILE / ABOUT</p>
+<p class="page-code">About</p>
 <div>
 <h1 class="page-title">Profile</h1>
 <!-- EDIT: Replace with a two- or three-sentence professional introduction. -->
@@ -73,8 +73,7 @@ title-block-style: none
 </section>
 
 <section class="profile-cta">
-<p class="section-code">NEXT / OPEN</p>
-<h2>Continue to the evidence.</h2>
+<h2>More</h2>
 <div class="hero-actions">
 <a class="text-link" href="./cv.html">View CV</a>
 <a class="text-link" href="./projects.html">Selected projects</a>

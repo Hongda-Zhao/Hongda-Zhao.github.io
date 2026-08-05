@@ -9,7 +9,7 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">SELECTED / PROJECTS</p>
+<p class="page-code">Projects</p>
 <div>
 <h1 class="page-title">Projects</h1>
 <!-- EDIT: Add a short sentence explaining how you choose projects for this page. -->
@@ -19,7 +19,7 @@ title-block-style: none
 
 <!-- EDIT: Duplicate a project block as needed. Prefer depth over a long list. -->
 <article class="project-entry" id="project-a">
-<div class="project-topline"><span>PROJECT / 01</span><span>IN PREPARATION</span></div>
+<div class="project-topline"><span>Project 01</span><span>In preparation</span></div>
 <div class="project-heading-grid">
 <div>
 <h2>Selected project 01</h2>
@@ -39,7 +39,7 @@ title-block-style: none
 </article>
 
 <article class="project-entry" id="project-b">
-<div class="project-topline"><span>PROJECT / 02</span><span>IN PREPARATION</span></div>
+<div class="project-topline"><span>Project 02</span><span>In preparation</span></div>
 <div class="project-heading-grid">
 <div>
 <h2>Selected project 02</h2>

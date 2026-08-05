@@ -10,7 +10,7 @@ title-block-style: none
 <div class="page-shell cv-shell">
 <header class="cv-header">
 <div>
-<p class="page-code">CURRICULUM / VITAE</p>
+<p class="page-code">Curriculum vitae</p>
 <h1 class="page-title">Hongda Zhao</h1>
 <!-- EDIT: Add your target role or professional identity. -->
 <p class="page-lead">Bioinformatics · Computational Genomics</p>

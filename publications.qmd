@@ -9,7 +9,7 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">PUBLICATIONS / INDEX</p>
+<p class="page-code">Publications</p>
 <div>
 <h1 class="page-title">Publications</h1>
 <!-- EDIT: Add one line describing this list and replace the profile placeholders. -->

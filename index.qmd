@@ -1,100 +1,59 @@
 ---
 pagetitle: "Hongda Zhao | Bioinformatics & Computational Genomics"
-description: "Research, projects, activities, and writing by Hongda Zhao."
+description: "Research, projects, activities, and notes by Hongda Zhao."
 page-layout: full
 toc: false
 title-block-style: none
 ---
 
 ```{=html}
-<section class="home-hero site-frame">
-<div class="hero-copy">
-<p class="hero-code">HONGDA ZHAO — BIOINFORMATICS</p>
-<h1 class="hero-thesis">Reading genomes,<br><em>building evidence.</em></h1>
-<!-- EDIT: Replace this paragraph with your own 2-sentence introduction when ready. -->
-<p class="hero-deck">A personal archive of research, computational work, academic activities, and observations from life beyond the lab.</p>
-<div class="hero-actions" aria-label="Primary profile links">
-<a class="primary-link" href="./projects.html">Explore projects <span aria-hidden="true">↗</span></a>
-<a class="quiet-link" href="./research.html">Research themes</a>
-</div>
-<div class="hero-utility" aria-label="External profile links">
+<section class="home-intro site-frame">
+<div class="home-copy">
+<p class="home-field">Bioinformatics · Computational genomics</p>
+<h1>Hongda Zhao</h1>
+<!-- EDIT: Replace this paragraph with your own two- or three-sentence introduction. -->
+<p class="home-summary">I work with biological data and computational methods. This site collects my research, projects, academic activities, and notes from work and everyday life.</p>
+<nav class="home-links" aria-label="Profile links">
+<a href="./about.html">About</a>
 <a href="./cv.html">CV</a>
 <a href="https://github.com/Hongda-Zhao">GitHub</a>
 <a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
-</div>
+</nav>
 </div>
 
-<figure class="hero-portrait">
-<div class="portrait-frame">
+<figure class="home-portrait">
 <img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
-<span class="portrait-marker" aria-hidden="true"></span>
-</div>
-<figcaption><strong>Hongda Zhao</strong><span>Bioinformatics · Computational Genomics</span></figcaption>
 </figure>
+</section>
 
-<div class="hero-locus" aria-hidden="true">
-<div class="locus-caption"><span>PERSONAL LOCUS</span><span>0 kb</span><span>100 kb</span></div>
-<div class="locus-rail"><i></i><i></i><i></i><i></i><b></b></div>
+<section class="home-section site-frame">
+<h2>Research and work</h2>
+<div class="home-list">
+<a href="./research.html"><span><strong>Research</strong><small>Questions, methods, and current research themes.</small></span><span>View</span></a>
+<a href="./projects.html"><span><strong>Projects</strong><small>Selected computational and research projects.</small></span><span>View</span></a>
+<a href="./publications.html"><span><strong>Publications</strong><small>Papers, preprints, software, and other outputs.</small></span><span>View</span></a>
 </div>
 </section>
 
-<section class="home-index site-frame">
-<header class="home-section-heading">
-<p class="section-code">EXPLORE / INDEX</p>
-<h2>Four threads,<br>one practice.</h2>
-</header>
-
-<div class="portal-grid">
-<a class="portal-card" href="./research.html">
-<span class="portal-meta">Questions &amp; methods</span>
-<h3>Research</h3>
-<p>Scientific themes, approaches, and the evidence they produce.</p>
-<span class="portal-arrow" aria-hidden="true">↗</span>
-</a>
-<a class="portal-card" href="./projects.html">
-<span class="portal-meta">Work &amp; outcomes</span>
-<h3>Projects</h3>
-<p>Selected computational work, individual contributions, and results.</p>
-<span class="portal-arrow" aria-hidden="true">↗</span>
-</a>
-<a class="portal-card" href="./activities.html">
-<span class="portal-meta">Participation &amp; exchange</span>
-<h3>Activities</h3>
-<p>Conferences, talks, teaching, service, and life outside the lab.</p>
-<span class="portal-arrow" aria-hidden="true">↗</span>
-</a>
-<a class="portal-card" href="./notes.html">
-<span class="portal-meta">Life · technology · research</span>
-<h3>Writing</h3>
-<p>Field notes, build notes, reading notes, and unfinished questions.</p>
-<span class="portal-arrow" aria-hidden="true">↗</span>
-</a>
+<section class="home-columns site-frame">
+<div>
+<h2>Activities</h2>
+<p>Conferences, talks, teaching, service, and experiences outside the lab.</p>
+<a class="simple-link" href="./activities.html">See activities</a>
+</div>
+<div>
+<h2>Notes</h2>
+<p>Writing about research, technology, academic exchange, and daily observations.</p>
+<a class="simple-link" href="./notes.html">Read notes</a>
 </div>
 </section>
 
-<section class="home-note site-frame">
-<div class="home-note-label">
-<p class="section-code">NOTE / 001</p>
-<span>Site in progress</span>
-</div>
-<div class="home-note-copy">
-<h2>An archive should grow with the work.</h2>
-<!-- EDIT: Replace this paragraph with your current role, research direction, or availability. -->
-<p>This first version establishes the structure. Research details, project evidence, activities, and longer writing will be added progressively.</p>
-<div class="hero-actions">
-<a class="primary-link" href="./about.html">Open profile <span aria-hidden="true">↗</span></a>
-<a class="quiet-link" href="./cv.html">View CV</a>
-</div>
-</div>
-</section>
-
-<section class="closing-strip site-frame">
-<p class="section-code">CONNECT / LINKS</p>
-<p class="closing-line">For research conversations, technical collaborations, or opportunities, start with the profiles here.</p>
-<div class="closing-links">
-<a href="https://github.com/Hongda-Zhao">GitHub</a>
-<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
-<a href="./cv.html">CV</a>
-</div>
+<section class="home-status site-frame">
+<h2>Currently</h2>
+<dl>
+<div><dt>Role</dt><dd>To be added</dd></div>
+<div><dt>Focus</dt><dd>To be added</dd></div>
+<div><dt>Location</dt><dd>To be added</dd></div>
+</dl>
 </section>
 ```

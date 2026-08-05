@@ -15,7 +15,7 @@ listing:
 ```{=html}
 <div class="page-shell writing-shell">
 <header class="page-header">
-<p class="page-code">WRITING / INDEX</p>
+<p class="page-code">Notes</p>
 <div>
 <h1 class="page-title">Writing</h1>
 <!-- EDIT: Replace this sentence with your own editorial promise. -->
@@ -24,10 +24,10 @@ listing:
 </header>
 
 <section class="writing-lenses" aria-label="Writing categories">
-<article><span>01 / LIFE</span><h2>Field notes</h2><p>Places, people, photography, books, and observations beyond work.</p></article>
-<article><span>02 / TECHNOLOGY</span><h2>Build notes</h2><p>Code, data workflows, tools, failures, and implementation lessons.</p></article>
-<article><span>03 / RESEARCH</span><h2>Research notes</h2><p>Papers, methods, open questions, and work in progress.</p></article>
-<article><span>04 / ACTIVITIES</span><h2>Event notes</h2><p>Conferences, talks, workshops, visits, teaching, and community work.</p></article>
+<article><span>Life</span><h2>Field notes</h2><p>Places, people, photography, books, and observations beyond work.</p></article>
+<article><span>Technology</span><h2>Build notes</h2><p>Code, data workflows, tools, failures, and implementation lessons.</p></article>
+<article><span>Research</span><h2>Research notes</h2><p>Papers, methods, open questions, and work in progress.</p></article>
+<article><span>Activities</span><h2>Event notes</h2><p>Conferences, talks, workshops, visits, teaching, and community work.</p></article>
 </section>
 
 <div class="notes-intro">
