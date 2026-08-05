@@ -1,6 +1,6 @@
 ---
-pagetitle: "Hongda Zhao | Notes on life, technology, and research"
-description: "A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life."
+pagetitle: "Hongda Zhao | Bioinformatics & Computational Genomics"
+description: "Hongda Zhao is a bioinformatics PhD candidate and JSPS Research Fellow working on viral genomics and computational protein discovery."
 page-layout: full
 toc: false
 title-block-style: none
@@ -10,52 +10,95 @@ listing:
   type: default
   categories: false
   feed: true
-  page-size: 8
+  page-size: 4
 ---
 
 ```{=html}
-<section class="blog-masthead site-frame">
-<div class="blog-intro">
-<p class="blog-kicker">A personal notebook</p>
-<p class="blog-title" role="heading" aria-level="1">Notes on life,<br>technology &amp; research.</p>
-<!-- EDIT: Replace this paragraph with a short description of what you want to write about. -->
-<p class="blog-description">I use this space to record research questions, technical work, academic activities, and observations from everyday life.</p>
+<section class="profile-hero site-frame">
+<div class="profile-copy">
+<p class="identity-line">Hongda Zhao · Kyoto, Japan</p>
+<p class="profile-title" role="heading" aria-level="1">Bioinformatics for virus discovery and genome-scale evidence.</p>
+<p class="profile-role">PhD candidate at Kyoto University · JSPS Research Fellow (DC1)</p>
+<p class="profile-summary">I study viruses hidden in eukaryotic genomes and develop computational methods for large-scale genome and protein analysis.</p>
+<nav class="profile-links" aria-label="Primary links">
+<a href="./research.html">Research &amp; projects</a>
+<a href="./publications.html">Publications</a>
+<a href="mailto:work.hongda@gmail.com">Email</a>
+<a href="https://github.com/Hongda-Zhao">GitHub</a>
+</nav>
 </div>
-
-<aside class="blog-profile" aria-label="About the author">
+<figure class="profile-portrait-home">
 <img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
+</figure>
+</section>
+
+<section class="selected-work-section site-frame">
+<header class="section-heading">
+<div><p class="section-kicker">Selected work</p><h2>Research in practice</h2></div>
+<p>Three projects connecting biological questions, scalable computation, and interpretable evidence.</p>
+</header>
+<div class="selected-work-list">
+<a class="selected-work-item" href="./research.html#djr-finder">
+<span class="work-label">Protein discovery</span>
+<div><h3>DJR-Finder</h3><p>AI-assisted detection and validation of double jelly-roll proteins using ESM-2, calibrated classifiers, HMMER, and Foldseek.</p></div>
+<span class="work-link">View project</span>
+</a>
+<a class="selected-work-item" href="./research.html#eve-landscape">
+<span class="work-label">Viral genomics</span>
+<div><h3>Endogenous dsDNA viral landscape</h3><p>A reproducible survey across 37,254 public eukaryotic genomes, standardising 781,111 viral regions for comparative analysis.</p></div>
+<span class="work-link">View project</span>
+</a>
+<a class="selected-work-item" href="./research.html#mirusvirus">
+<span class="work-label">Virus–host range</span>
+<div><h3>Mirusvirus host-range research</h3><p>Large-scale genomic evidence revealing mirusvirus signals across diverse eukaryotic lineages and environments.</p></div>
+<span class="work-link">View project</span>
+</a>
+</div>
+</section>
+
+<section class="interest-section site-frame">
+<header class="section-heading compact-heading">
+<div><p class="section-kicker">Research interests</p><h2>Questions I work on</h2></div>
+</header>
+<div class="interest-list">
+<article><h3>Viral elements in eukaryotic genomes</h3><p>What can integrated viral sequences reveal about long-term virus–host interactions?</p></article>
+<article><h3>Virus evolution and comparative genomics</h3><p>How can genome-scale evidence refine viral diversity, host range, and evolutionary history?</p></article>
+<article><h3>AI-assisted protein discovery</h3><p>How can protein language models become reproducible, interpretable discovery systems?</p></article>
+</div>
+</section>
+
+<section class="featured-publications site-frame">
+<header class="section-heading">
+<div><p class="section-kicker">Selected publications</p><h2>Recent research outputs</h2></div>
+<a href="./publications.html">All publications</a>
+</header>
+<div class="featured-publication-list">
+<article><span>2025 · bioRxiv</span><h3><a href="https://doi.org/10.1101/2025.04.19.649669">Lineage-specific accumulation of endogenous dsDNA viral elements across eukaryotes</a></h3><p>First-author preprint establishing a baseline landscape of endogenous dsDNA viral elements across eukaryotes.</p></article>
+<article><span>2024 · Current Biology</span><h3><a href="https://doi.org/10.1016/j.cub.2024.04.085">Eukaryotic genomic data uncover an extensive host range of mirusviruses</a></h3><p>First-author study expanding the known diversity, environments, and potential hosts of mirusviruses.</p></article>
+<article><span>2023 · Virus Evolution</span><h3><a href="https://doi.org/10.1093/ve/vead064">A 1.5-Mb continuous endogenous viral region in <em>Rhizophagus irregularis</em></a></h3><p>First-author evidence for a recent large dsDNA virus infection in an arbuscular mycorrhizal fungus.</p></article>
+</div>
+</section>
+
+<section class="home-about-row site-frame">
 <div>
-<strong>Hongda Zhao</strong>
-<span>Bioinformatics · Computational genomics</span>
-<!-- EDIT: Add your current role or location here. -->
-<p>Current role and location to be added.</p>
-<nav aria-label="Author links">
-<a href="./about.html">About</a>
-<a href="./research.html">Research</a>
+<p class="section-kicker">Beyond research</p>
+<h2>Field observations</h2>
+<p>Outside research, I enjoy observing birds and documenting biodiversity. Field notes and photographs will gradually appear in Notes.</p>
+</div>
+<div>
+<p class="section-kicker">Contact</p>
+<h2>Links</h2>
+<nav class="contact-links" aria-label="Contact links">
+<a href="mailto:work.hongda@gmail.com">Email</a>
+<a href="https://github.com/Hongda-Zhao">GitHub</a>
+<a href="https://www.linkedin.com/in/hongda-zhao-0357b5405/">LinkedIn</a>
 <a href="./cv.html">CV</a>
 </nav>
 </div>
-</aside>
 </section>
-
-<nav class="topic-index site-frame" aria-label="Writing topics">
-<span>Topics</span>
-<a href="./notes.html">Life</a>
-<a href="./notes.html">Technology</a>
-<a href="./notes.html">Research</a>
-<a href="./notes.html">Activities</a>
-</nav>
 
 <section class="latest-heading site-frame">
-<div>
-<p class="blog-kicker">Latest writing</p>
-<h2>Recent notes</h2>
-</div>
-<a href="./notes.html">Full archive</a>
+<div><p class="section-kicker">Latest notes</p><h2>Writing in progress</h2></div>
+<a href="./notes.html">All notes</a>
 </section>
-
-<div class="blog-empty-guidance site-frame">
-<p>No notes have been published yet.</p>
-<span>New posts will appear here automatically. Start from <code>posts/template/index.qmd</code>.</span>
-</div>
 ```

@@ -1,6 +1,6 @@
 ---
-pagetitle: "Profile | Hongda Zhao"
-description: "Profile, background, and interests of Hongda Zhao."
+pagetitle: "About | Hongda Zhao"
+description: "A brief introduction to Hongda Zhao, a bioinformatics PhD candidate and JSPS Research Fellow in Kyoto."
 page-layout: full
 toc: false
 title-block-style: none
@@ -9,21 +9,17 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">About</p>
-<div>
-<h1 class="page-title">Profile</h1>
-<!-- EDIT: Replace with a two- or three-sentence professional introduction. -->
-<p class="page-lead">A developing profile in bioinformatics and computational genomics. A fuller account of current work, motivation, and future direction will be added here.</p>
-</div>
+<p class="page-title" role="heading" aria-level="1">About</p>
+<p class="page-lead">I am a bioinformatics PhD candidate at Kyoto University and a JSPS Research Fellow (DC1), based in Kyoto, Japan.</p>
 </header>
 
 <section class="content-section">
-<div class="content-label">Portrait &amp; bio</div>
+<div class="content-label">Brief bio</div>
 <div class="profile-intro-grid">
 <img class="profile-photo" src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" loading="lazy" decoding="async">
 <div class="prose-slot">
-<!-- EDIT: Write a concise first-person biography. -->
-<p class="placeholder-copy">A concise first-person biography will be added here.</p>
+<p>My research focuses on viruses hidden in eukaryotic genomes, comparative viral genomics, and AI-assisted protein discovery. I enjoy turning large, heterogeneous biological datasets into reproducible workflows and evidence that can be inspected from more than one angle.</p>
+<p>This site is a home for my research, publications, technical notes, and occasional observations from life beyond the computer.</p>
 </div>
 </div>
 </section>
@@ -31,53 +27,28 @@ title-block-style: none
 <section class="content-section">
 <div class="content-label">Quick facts</div>
 <dl class="facts-list">
-<div><dt>Field</dt><dd>Bioinformatics</dd></div>
-<div><dt>Focus</dt><dd>Computational genomics</dd></div>
-<div><dt>Current role</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Location</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Languages</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Contact</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt>Role</dt><dd>PhD candidate · JSPS Research Fellow (DC1)</dd></div>
+<div><dt>Interests</dt><dd>Viral genomics · comparative genomics · protein discovery</dd></div>
+<div><dt>Location</dt><dd>Kyoto, Japan</dd></div>
+<div><dt>Languages</dt><dd>Chinese · English · Japanese</dd></div>
+<div><dt>Contact</dt><dd><a href="mailto:work.hongda@gmail.com">work.hongda@gmail.com</a></dd></div>
 </dl>
 </section>
 
 <section class="content-section">
-<div class="content-label">Education</div>
-<div class="timeline-list">
-<!-- EDIT: Duplicate or remove rows as needed. -->
-<div class="timeline-row pending-row"><span class="timeline-date">—</span><div><strong>Education details</strong><small>To be added</small></div></div>
-</div>
-</section>
-
-<section class="content-section">
-<div class="content-label">Experience</div>
-<div class="timeline-list">
-<!-- EDIT: Lead with outcomes. Add up to four roles that support your target position. -->
-<div class="timeline-row pending-row"><span class="timeline-date">—</span><div><strong>Experience details</strong><small>To be added</small></div></div>
-</div>
-</section>
-
-<section class="content-section">
-<div class="content-label">Skills &amp; recognition</div>
-<div class="two-column-copy">
-<div><h2>Methods</h2><p class="placeholder-copy">Methods and tools will be added here.</p></div>
-<div><h2>Awards &amp; talks</h2><p class="placeholder-copy">Selected recognition and presentations will be added here.</p></div>
-</div>
-</section>
-
-<section class="content-section">
 <div class="content-label">Beyond work</div>
-<div class="two-column-copy">
-<div><h2>What I notice</h2><p class="placeholder-copy">Personal interests and observations will be added here.</p></div>
-<div><h2>Why it belongs here</h2><p class="placeholder-copy">A note connecting life beyond work to scientific practice will be added here.</p></div>
+<div class="prose-slot">
+<h2>Birds, biodiversity, and field notes</h2>
+<p>Outside research, I enjoy observing birds and documenting biodiversity. I plan to use the Notes section for occasional field observations and photographs alongside research and technical writing.</p>
 </div>
 </section>
 
 <section class="profile-cta">
-<h2>More</h2>
+<h2>Continue</h2>
 <div class="hero-actions">
+<a class="text-link" href="./research.html">Research &amp; projects</a>
+<a class="text-link" href="./publications.html">Publications</a>
 <a class="text-link" href="./cv.html">View CV</a>
-<a class="text-link" href="./projects.html">Selected projects</a>
-<a class="text-link" href="./activities.html">Activities</a>
 </div>
 </section>
 </div>
