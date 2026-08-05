@@ -2,9 +2,9 @@
 title: "[Replace with note title]"
 description: "[Replace with a one-sentence summary.]"
 author: "Hongda Zhao"
-# EDIT: Replace the date, choose one approved category, and set draft to false when ready.
+# EDIT: Replace the date, choose one or two approved categories, and set draft to false when ready.
 date: 2026-01-01
-categories: [Research Notes]
+categories: [Research]
 # image: cover.jpg
 # image-alt: "Describe the cover image for readers who cannot see it."
 draft: true
@@ -15,7 +15,7 @@ anchor-sections: true
 ---
 
 <!-- EDIT: Copy this entire folder, rename the copy, then replace all bracketed text. -->
-<!-- CATEGORY RULE: Use Research Notes, Technical Notes, Career & Academic Life, or Field Notes / Biodiversity. -->
+<!-- CATEGORY RULE: Use only Life, Technology, Research, or Activities as the first category. -->
 
 Write a short opening that tells the reader what this note is about and why it is worth their time.
 
