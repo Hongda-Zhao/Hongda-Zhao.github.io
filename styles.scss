@@ -367,7 +367,7 @@ main.content:has(> .blog-profile) {
   padding-right: 2.25rem;
   border-right: 1px solid var(--rule);
   grid-column: 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 5;
 }
 
 .blog-profile img {
@@ -483,6 +483,82 @@ main.content:has(> .blog-profile) {
   margin-top: 0.35rem;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.external-links {
+  padding-block: clamp(3.5rem, 7vw, 5rem) clamp(5rem, 9vw, 7rem);
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.external-links-heading {
+  display: flex;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+}
+
+.external-links-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.external-links-heading > span {
+  padding-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.external-links-list {
+  border-bottom: 1px solid var(--rule);
+}
+
+.external-link-item {
+  display: grid;
+  padding-block: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  grid-template-columns: 6.5rem minmax(0, 1fr) 1rem;
+  gap: 1.25rem;
+  align-items: start;
+  text-decoration: none;
+}
+
+.external-link-item:last-child {
+  border-bottom: 0;
+}
+
+.external-link-item time {
+  padding-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.external-link-item span {
+  font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.external-link-item b {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: transform 160ms ease;
+}
+
+.external-link-item:hover,
+.external-link-item:focus-visible {
+  color: var(--accent);
+}
+
+.external-link-item:hover b,
+.external-link-item:focus-visible b {
+  transform: translate(0.12rem, -0.12rem);
 }
 
 main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
@@ -1241,6 +1317,11 @@ main.content:has(> .blog-profile) > .quarto-listing-container-default {
     grid-row: 5;
   }
 
+  .external-links {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
   .home-intro {
     padding-top: 3.5rem;
     grid-template-columns: minmax(0, 1fr) 10rem;
@@ -1299,6 +1380,35 @@ main.content:has(> .blog-profile) > .quarto-listing-container-default {
     align-items: start;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .external-links-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .external-links-heading > span {
+    padding-bottom: 0;
+  }
+
+  .external-link-item {
+    grid-template-columns: minmax(0, 1fr) 1rem;
+    gap: 0.35rem 1rem;
+  }
+
+  .external-link-item time {
+    grid-column: 1;
+  }
+
+  .external-link-item span {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .external-link-item b {
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 
   .quarto-listing-default .quarto-post {
