@@ -9,63 +9,63 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">Research</p>
+<p class="page-code" data-i18n="nav.research">Research</p>
 <div>
-<h1 class="page-title">Research</h1>
+<h1 class="page-title" data-i18n="nav.research">Research</h1>
 <!-- EDIT: Add one sentence that ties your research themes together. -->
-<p class="page-lead">Research questions, methods, and outputs will be organised here as the archive develops.</p>
+<p class="page-lead" data-i18n="research.lead">Research questions, methods, and outputs will be organised here as the archive develops.</p>
 </div>
 </header>
 
 <!-- EDIT: Keep no more than three research areas. Duplicate a block only if essential. -->
 <article class="research-strand" id="research-area-a">
-<div class="strand-label">Area A</div>
+<div class="strand-label" data-i18n="research.area.a">Area A</div>
 <div class="strand-main">
-<h2>Research theme 01</h2>
-<p class="placeholder-copy">Theme summary to be added.</p>
+<h2 data-i18n="research.theme.1">Research theme 01</h2>
+<p class="placeholder-copy" data-i18n="common.theme.pending">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt data-i18n="common.question">Question</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.approach">Approach</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.contribution">Contribution</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.evidence">Evidence</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
 </dl>
 </article>
 
 <article class="research-strand" id="research-area-b">
-<div class="strand-label">Area B</div>
+<div class="strand-label" data-i18n="research.area.b">Area B</div>
 <div class="strand-main">
-<h2>Research theme 02</h2>
-<p class="placeholder-copy">Theme summary to be added.</p>
+<h2 data-i18n="research.theme.2">Research theme 02</h2>
+<p class="placeholder-copy" data-i18n="common.theme.pending">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt data-i18n="common.question">Question</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.approach">Approach</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.contribution">Contribution</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.evidence">Evidence</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
 </dl>
 </article>
 
 <article class="research-strand" id="research-area-c">
-<div class="strand-label">Area C</div>
+<div class="strand-label" data-i18n="research.area.c">Area C</div>
 <div class="strand-main">
-<h2>Research theme 03</h2>
-<p class="placeholder-copy">Theme summary to be added.</p>
+<h2 data-i18n="research.theme.3">Research theme 03</h2>
+<p class="placeholder-copy" data-i18n="common.theme.pending">Theme summary to be added.</p>
 </div>
 <dl class="strand-details">
-<div><dt>Question</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Approach</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Contribution</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Evidence</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt data-i18n="common.question">Question</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.approach">Approach</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.contribution">Contribution</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="common.evidence">Evidence</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
 </dl>
 </article>
 
 <section class="profile-cta">
-<h2>Related</h2>
+<h2 data-i18n="common.related">Related</h2>
 <div class="hero-actions">
-<a class="text-link" href="./publications.html">Publications</a>
-<a class="text-link" href="./projects.html">Projects</a>
-<a class="text-link" href="./notes.html">Research notes</a>
+<a class="text-link" href="./publications.html" data-i18n="common.publications">Publications</a>
+<a class="text-link" href="./projects.html" data-i18n="common.projects">Projects</a>
+<a class="text-link" href="./notes.html" data-i18n="common.researchNotes">Research notes</a>
 </div>
 </section>
 </div>

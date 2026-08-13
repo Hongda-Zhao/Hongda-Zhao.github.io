@@ -1,0 +1,59 @@
+---
+pagetitle: "Received the ICR Award for Graduate Students"
+description: "Hongda Zhao received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research in 2025."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<div class="page-shell highlight-page">
+<header class="page-header highlight-header">
+<p class="highlight-meta"><span data-i18n="award.eyebrow">Award record</span><time datetime="2025-02-14">2025.02.14</time></p>
+<h1 class="page-title" data-i18n="award.title" data-document-title>Received the ICR Award for Graduate Students</h1>
+<p class="page-lead" data-i18n="award.lead">On 14 February 2025, I received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research.</p>
+</header>
+
+<!-- EDIT: Replace the placeholder below with an image such as <img class="highlight-image" src="cover.jpg" alt="Describe the image">. -->
+<figure class="highlight-media">
+<div class="media-placeholder media-placeholder-highlight" role="img" aria-label="Image placeholder">
+<span data-i18n="award.image.label">CERTIFICATE / AWARD PHOTOGRAPH</span>
+<small data-i18n="award.image.pending">Image to be added — certificate, award ceremony, or presentation photograph.</small>
+</div>
+</figure>
+
+<section class="content-section">
+<h2 class="content-label" data-i18n="detail.record">Record</h2>
+<div class="prose-slot highlight-prose">
+<p data-i18n="award.record.copy">The award was presented at the 124th ICR Research Presentation Meeting, where I also gave an award lecture about the research.</p>
+<nav class="highlight-links" aria-label="Award links">
+<a href="https://www.kuicr.kyoto-u.ac.jp/sites/news/news_250214/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.source">Official announcement</span> ↗</a>
+</nav>
+</div>
+</section>
+
+<section class="content-section">
+<h2 class="content-label" data-i18n="detail.details">Details</h2>
+<div class="prose-slot">
+<dl class="highlight-facts">
+<div><dt data-i18n="detail.meta.award">Award</dt><dd data-i18n="award.name">ICR Award for Graduate Students</dd></div>
+<div><dt data-i18n="detail.meta.date">Date</dt><dd>2025.02.14</dd></div>
+<div><dt data-i18n="detail.meta.venue">Venue</dt><dd data-i18n="award.venue">124th ICR Research Presentation Meeting</dd></div>
+<div><dt data-i18n="detail.meta.work">Work</dt><dd>Eukaryotic Genomic Data Uncover an Extensive Host Range of Mirusviruses</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="content-section highlight-note-section">
+<h2 class="content-label" data-i18n="detail.personal">Personal note</h2>
+<div class="prose-slot">
+<!-- EDIT: Replace the following paragraph with your own note. -->
+<p class="placeholder-copy" data-i18n="award.note.pending">I will add a personal note about the award and the research here.</p>
+</div>
+</section>
+
+<nav class="highlight-back" aria-label="Back">
+<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to coverage</span></a>
+</nav>
+</div>
+```

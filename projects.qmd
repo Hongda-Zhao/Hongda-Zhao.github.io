@@ -9,53 +9,53 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">Projects</p>
+<p class="page-code" data-i18n="common.projects">Projects</p>
 <div>
-<h1 class="page-title">Projects</h1>
+<h1 class="page-title" data-i18n="common.projects">Projects</h1>
 <!-- EDIT: Add a short sentence explaining how you choose projects for this page. -->
-<p class="page-lead">Selected computational and research projects will be documented here as concise case studies.</p>
+<p class="page-lead" data-i18n="projects.lead">Selected computational and research projects will be documented here as concise case studies.</p>
 </div>
 </header>
 
 <!-- EDIT: Duplicate a project block as needed. Prefer depth over a long list. -->
 <article class="project-entry" id="project-a">
-<div class="project-topline"><span>Project 01</span><span>In preparation</span></div>
+<div class="project-topline"><span data-i18n="projects.p1">Project 01</span><span data-i18n="projects.preparing">In preparation</span></div>
 <div class="project-heading-grid">
 <div>
-<h2>Selected project 01</h2>
-<p class="project-summary placeholder-copy">Case study details to be added.</p>
+<h2 data-i18n="projects.title1">Selected project 01</h2>
+<p class="project-summary placeholder-copy" data-i18n="projects.case">Case study details to be added.</p>
 </div>
 <!-- PHOTO: Replace this div with an image, plot, workflow, poster crop, or screenshot. -->
-<div class="media-placeholder media-placeholder-project" role="img" aria-label="Project image placeholder"><span>PROJECT VISUAL / 01</span><small>Plot, workflow, poster, or interface to be added.</small></div>
+<div class="media-placeholder media-placeholder-project" role="img" aria-label="Project image placeholder"><span data-i18n="projects.visual1">PROJECT VISUAL / 01</span><small data-i18n="projects.visual">Plot, workflow, poster, or interface to be added.</small></div>
 </div>
 <dl class="project-details">
-<div><dt>Problem</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>My role</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Methods</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Outcome</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt data-i18n="projects.problem">Problem</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.role">My role</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.methods">Methods</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.outcome">Outcome</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
 </dl>
 <!-- EDIT LINKS: Replace spans with links, e.g. <a href="URL">Paper</a>. -->
-<div class="project-links"><span>Evidence links to be added</span></div>
+<div class="project-links"><span data-i18n="projects.links">Evidence links to be added</span></div>
 </article>
 
 <article class="project-entry" id="project-b">
-<div class="project-topline"><span>Project 02</span><span>In preparation</span></div>
+<div class="project-topline"><span data-i18n="projects.p2">Project 02</span><span data-i18n="projects.preparing">In preparation</span></div>
 <div class="project-heading-grid">
 <div>
-<h2>Selected project 02</h2>
-<p class="project-summary placeholder-copy">Case study details to be added.</p>
+<h2 data-i18n="projects.title2">Selected project 02</h2>
+<p class="project-summary placeholder-copy" data-i18n="projects.case">Case study details to be added.</p>
 </div>
 <!-- PHOTO: Replace this div with an image, plot, workflow, poster crop, or screenshot. -->
-<div class="media-placeholder media-placeholder-project" role="img" aria-label="Project image placeholder"><span>PROJECT VISUAL / 02</span><small>Plot, workflow, poster, or interface to be added.</small></div>
+<div class="media-placeholder media-placeholder-project" role="img" aria-label="Project image placeholder"><span data-i18n="projects.visual2">PROJECT VISUAL / 02</span><small data-i18n="projects.visual">Plot, workflow, poster, or interface to be added.</small></div>
 </div>
 <dl class="project-details">
-<div><dt>Problem</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>My role</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Methods</dt><dd class="placeholder-copy">To be added</dd></div>
-<div><dt>Outcome</dt><dd class="placeholder-copy">To be added</dd></div>
+<div><dt data-i18n="projects.problem">Problem</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.role">My role</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.methods">Methods</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
+<div><dt data-i18n="projects.outcome">Outcome</dt><dd class="placeholder-copy" data-i18n="common.pending">To be added</dd></div>
 </dl>
 <!-- EDIT LINKS: Replace spans with links, e.g. <a href="URL">Code</a>. -->
-<div class="project-links"><span>Evidence links to be added</span></div>
+<div class="project-links"><span data-i18n="projects.links">Evidence links to be added</span></div>
 </article>
 </div>
 ```

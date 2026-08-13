@@ -14,38 +14,68 @@ listing:
 ---
 
 ```{=html}
-<section class="blog-masthead site-frame">
-<div class="blog-intro">
-<p class="blog-kicker">A personal notebook</p>
-<p class="blog-title" role="heading" aria-level="1">Notes on life,<br>technology &amp; research.</p>
-<!-- EDIT: Replace this paragraph with a short description of what you want to write about. -->
-<p class="blog-description">I use this space to record research questions, technical work, academic activities, and observations from everyday life.</p>
-</div>
-
-<aside class="blog-profile" aria-label="About the author">
-<img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
+<div class="blog-profile" role="complementary" aria-label="About the author">
+<img src="assets/avatar-cat.jpg" width="1078" height="1105" alt="A Siamese cat looking up" fetchpriority="high" decoding="async">
 <div>
 <strong>Hongda Zhao</strong>
-<span>Bioinformatics · Computational genomics</span>
-<p>Research notes, technical work, and field observations.</p>
+<span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
+<p data-i18n="home.profile.summary">Research notes, technical work, and field observations.</p>
 <nav aria-label="Author links">
-<a href="./about.html">About</a>
-<a href="./research.html">Research</a>
+<a href="./about.html" data-i18n="nav.about">About</a>
+<a href="./research.html" data-i18n="nav.research">Research</a>
 </nav>
 </div>
-</aside>
+</div>
+
+<section class="blog-intro">
+<p class="blog-kicker" data-i18n="home.kicker">A personal notebook</p>
+<p class="blog-title" role="heading" aria-level="1" data-i18n="home.title">Notes on life, technology &amp; research.</p>
 </section>
 
-<section class="latest-heading site-frame">
+<section class="latest-heading">
 <div>
-<p class="blog-kicker">Latest writing</p>
-<h2>Recent notes</h2>
+<p class="blog-kicker" data-i18n="coverage.kicker">Selected mentions</p>
+<h2 id="coverage" data-i18n="coverage.title">Coverage</h2>
 </div>
-<a href="./notes.html">All posts</a>
 </section>
 
-<div class="blog-empty-guidance site-frame">
-<p>No notes have been published yet.</p>
-<span>New posts will appear here automatically. Start from <code>posts/template/index.qmd</code>.</span>
+<section class="coverage-listing" aria-label="Coverage">
+<div class="coverage-list">
+<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e7%89%b9%e5%ae%9a%e9%9d%9e%e5%96%b6%e5%88%a9%e6%b4%bb%e5%8b%95%e6%b3%95%e4%ba%ba%e3%83%90%e3%82%a4%e3%82%aa%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%9e%e3%83%86%e3%82%a3%e3%82%af%e3%82%b9%e3%83%bb/" target="_blank" rel="noopener noreferrer">
+<time datetime="2026-03-05">2026.03.05</time>
+<span class="coverage-copy"><span data-i18n="coverage.2026">Hongda Zhao receives the FY2025 Bioinformatics Japan Student Award.</span><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small><em class="coverage-item-source" data-i18n="coverage.source">Ogata Lab · Kyoto University</em></span>
+<b aria-hidden="true">↗</b>
+</a>
+<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer">
+<time datetime="2025-12-22">2025.12.22</time>
+<span class="coverage-copy"><span data-i18n="coverage.symposium">Lingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.</span><small lang="ja">ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。</small><em class="coverage-item-source" data-i18n="coverage.source">Ogata Lab · Kyoto University</em></span>
+<b aria-hidden="true">↗</b>
+</a>
+<a class="coverage-item coverage-item--internal" href="./highlights/icr-student-research-award-2025/">
+<time datetime="2025-02-14">2025.02.14</time>
+<span class="coverage-copy"><span data-i18n="coverage.award">Received the ICR Award for Graduate Students at Kyoto University.</span></span>
+<b aria-hidden="true">→</b>
+</a>
+<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer">
+<time datetime="2025-01-28">2025.01.28</time>
+<span class="coverage-copy"><span data-i18n="coverage.thesis">Saki Kikuya, Komei Nagasaka, and Hongda Zhao gave their master’s thesis presentations. Their presentations and Q&amp;A sessions were excellent. Well done after two years of hard work!</span><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。</small><em class="coverage-item-source" data-i18n="coverage.source">Ogata Lab · Kyoto University</em></span>
+<b aria-hidden="true">↗</b>
+</a>
+<a class="coverage-item coverage-item--internal" href="./highlights/cairns-poster-2024/">
+<time datetime="2024-07-18">2024.07.18</time>
+<span class="coverage-copy"><span data-i18n="coverage.poster">Poster presentation on the host spectrum of mirusviruses at Viruses of Microbes 2024 in Cairns.</span></span>
+<b aria-hidden="true">→</b>
+</a>
+<a class="coverage-item coverage-item--internal" href="./highlights/current-biology-acceptance/">
+<time datetime="2024-04-30">2024.04.30</time>
+<span class="coverage-copy"><span data-i18n="coverage.currentBiology">First-author mirusvirus paper accepted for publication in Current Biology.</span></span>
+<b aria-hidden="true">→</b>
+</a>
+<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer">
+<time datetime="2023-10-04">2023.10.04</time>
+<span class="coverage-copy"><span data-i18n="coverage.paper">A paper by Hongda Zhao, then a first-year master’s student, was accepted for publication in Virus Evolution. Congratulations!</span><small lang="ja">修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。</small><em class="coverage-item-source" data-i18n="coverage.source">Ogata Lab · Kyoto University</em></span>
+<b aria-hidden="true">↗</b>
+</a>
 </div>
+</section>
 ```
