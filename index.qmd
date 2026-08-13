@@ -47,9 +47,9 @@ listing:
 <span class="external-link-copy"><span data-i18n="coverage.2026">Hongda Zhao receives the FY2025 Bioinformatics Japan Student Award.</span><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small></span>
 <b aria-hidden="true">↗</b>
 </a>
-<a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e5%8f%97%e8%b3%9e%e3%81%8c%e6%b1%ba%e5%ae%9a%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer">
-<time datetime="2025-11-28">2025.11.28</time>
-<span class="external-link-copy"><span data-i18n="coverage.2025award">First-year doctoral student Hongda Zhao is selected to receive the FY2024 Bioinformatics Japan Student Award.</span><small lang="ja">受賞が決定しました。</small></span>
+<a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer">
+<time datetime="2025-12-22">2025.12.22</time>
+<span class="external-link-copy"><span data-i18n="coverage.symposium">Lingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.</span><small lang="ja">ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。</small></span>
 <b aria-hidden="true">↗</b>
 </a>
 <a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer">
