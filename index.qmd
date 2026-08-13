@@ -14,7 +14,6 @@ listing:
 ---
 
 ```{=html}
-<section class="blog-masthead site-frame">
 <div class="blog-profile" role="complementary" aria-label="About the author">
 <img src="assets/profile.jpg" width="390" height="567" alt="Portrait of Hongda Zhao" fetchpriority="high" decoding="async">
 <div>
@@ -28,15 +27,14 @@ listing:
 </div>
 </div>
 
-<div class="blog-intro">
+<section class="blog-intro">
 <p class="blog-kicker">A personal notebook</p>
 <p class="blog-title" role="heading" aria-level="1">Notes on life,<br>technology &amp; research.</p>
 <!-- EDIT: Replace this paragraph with a short description of what you want to write about. -->
 <p class="blog-description">I use this space to record research questions, technical work, academic activities, and observations from everyday life.</p>
-</div>
 </section>
 
-<section class="latest-heading site-frame">
+<section class="latest-heading">
 <div>
 <p class="blog-kicker">Latest writing</p>
 <h2>Recent notes</h2>
@@ -44,7 +42,7 @@ listing:
 <a href="./notes.html">All posts</a>
 </section>
 
-<div class="blog-empty-guidance site-frame">
+<div class="blog-empty-guidance">
 <p>No notes have been published yet.</p>
 <span>New posts will appear here automatically. Start from <code>posts/template/index.qmd</code>.</span>
 </div>
