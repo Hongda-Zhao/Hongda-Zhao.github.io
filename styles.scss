@@ -320,11 +320,11 @@ dd {
 
 main.content:has(> .blog-profile) {
   display: grid;
-  width: min(calc(100% - 3rem), 920px);
+  width: min(calc(100% - 3rem), 1120px);
   margin-inline: auto;
   padding-block: clamp(4rem, 8vw, 6.5rem) 0;
-  grid-template-columns: 13.5rem minmax(0, 1fr);
-  column-gap: clamp(3rem, 6vw, 4.5rem);
+  grid-template-columns: 12rem minmax(0, 1fr);
+  column-gap: clamp(2.75rem, 5vw, 4rem);
   align-items: start;
 }
 
@@ -341,14 +341,15 @@ main.content:has(> .blog-profile) {
 }
 
 .blog-title {
-  max-width: 15ch;
+  max-width: none;
   margin: 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.75rem, 5.2vw, 4.25rem);
+  font-size: clamp(1.6rem, 3.45vw, 2.85rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.06;
+  white-space: nowrap;
 }
 
 .blog-description {
@@ -377,7 +378,7 @@ main.content:has(> .blog-profile) {
   border-radius: 50%;
   filter: saturate(0.88);
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 32%;
 }
 
 .blog-profile strong,
@@ -1219,6 +1220,10 @@ main.content:has(> .blog-profile) > .quarto-listing-container-default {
   .blog-intro {
     grid-column: 1;
     grid-row: 1;
+  }
+
+  .blog-title {
+    white-space: normal;
   }
 
   .latest-heading {
