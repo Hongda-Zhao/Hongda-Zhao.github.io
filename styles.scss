@@ -318,12 +318,19 @@ dd {
 
 /* Blog home */
 
-.blog-masthead {
+.blog-masthead.site-frame {
   display: grid;
-  padding-block: clamp(4.5rem, 9vw, 7.5rem) clamp(3.5rem, 7vw, 5.5rem);
-  grid-template-columns: minmax(0, 1fr) 17rem;
-  gap: clamp(3rem, 8vw, 6.5rem);
+  padding-block: clamp(4rem, 8vw, 6.5rem) clamp(3.25rem, 6vw, 5rem);
+  grid-template-areas: "profile intro";
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: clamp(3rem, 7vw, 5.5rem);
   align-items: center;
+}
+
+.blog-intro {
+  grid-area: intro;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .blog-kicker {
@@ -334,14 +341,14 @@ dd {
 }
 
 .blog-title {
-  max-width: 13ch;
+  max-width: 15ch;
   margin: 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2.75rem, 5.2vw, 4.25rem);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 1.04;
+  line-height: 1.06;
 }
 
 .blog-description {
@@ -354,9 +361,12 @@ dd {
 
 .blog-profile {
   display: grid;
-  padding-left: 2rem;
-  border-left: 1px solid var(--rule);
+  padding-right: 2rem;
+  border-right: 1px solid var(--rule);
   grid-template-columns: 4.5rem minmax(0, 1fr);
+  grid-area: profile;
+  grid-column: 1;
+  grid-row: 1;
   gap: 1rem;
   align-items: start;
 }
@@ -1160,7 +1170,10 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
     width: min(calc(100% - 2rem), 920px);
   }
 
-  .blog-masthead {
+  .blog-masthead.site-frame {
+    grid-template-areas:
+      "intro"
+      "profile";
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -1169,7 +1182,14 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
     max-width: 26rem;
     padding: 1.5rem 0 0;
     border-top: 1px solid var(--rule);
-    border-left: 0;
+    border-right: 0;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .blog-intro {
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .home-intro {
@@ -1214,7 +1234,7 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
 
 @media (max-width: 520px) {
   .blog-title {
-    font-size: clamp(2.65rem, 14vw, 3.8rem);
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
   }
 
   .topic-index {
