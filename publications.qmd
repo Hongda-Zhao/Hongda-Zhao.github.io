@@ -9,53 +9,53 @@ title-block-style: none
 ```{=html}
 <div class="page-shell">
 <header class="page-header">
-<p class="page-code">Publications</p>
+<p class="page-code" data-i18n="common.publications">Publications</p>
 <div>
-<h1 class="page-title">Publications</h1>
+<h1 class="page-title" data-i18n="common.publications">Publications</h1>
 <!-- EDIT: Add one line describing this list and replace the profile placeholders. -->
-<p class="page-lead">Peer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.</p>
+<p class="page-lead" data-i18n="publications.lead">Peer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.</p>
 <div class="hero-actions">
-<span class="text-link placeholder-link">Scholar profile to be added</span>
-<span class="text-link placeholder-link">ORCID to be added</span>
+<span class="text-link placeholder-link" data-i18n="publications.scholar">Scholar profile to be added</span>
+<span class="text-link placeholder-link" data-i18n="publications.orcid">ORCID to be added</span>
 </div>
 </div>
 </header>
 
 <section class="publication-group">
-<h2 class="publication-label">Peer-reviewed</h2>
+<h2 class="publication-label" data-i18n="publications.peer">Peer-reviewed</h2>
 <div class="publication-list">
 <!-- EDIT: Copy this entry for each paper. Bold your own name and replace spans with links. -->
 <article class="publication-row">
 <span class="publication-year">—</span>
 <div>
-<h3>Publication details to be added</h3>
-<p class="placeholder-copy">Citation and evidence links will appear here.</p>
+<h3 data-i18n="publications.details">Publication details to be added</h3>
+<p class="placeholder-copy" data-i18n="publications.citation">Citation and evidence links will appear here.</p>
 </div>
 </article>
 </div>
 </section>
 
 <section class="publication-group">
-<h2 class="publication-label">Preprints</h2>
+<h2 class="publication-label" data-i18n="publications.preprints">Preprints</h2>
 <div class="publication-list">
 <article class="publication-row">
 <span class="publication-year">—</span>
 <div>
-<h3>Preprint details to be added</h3>
-<p class="placeholder-copy">Citation and evidence links will appear here.</p>
+<h3 data-i18n="publications.preprintDetails">Preprint details to be added</h3>
+<p class="placeholder-copy" data-i18n="publications.citation">Citation and evidence links will appear here.</p>
 </div>
 </article>
 </div>
 </section>
 
 <section class="publication-group">
-<h2 class="publication-label">Other outputs</h2>
+<h2 class="publication-label" data-i18n="publications.other">Other outputs</h2>
 <div class="publication-list">
 <article class="publication-row">
 <span class="publication-year">—</span>
 <div>
-<h3>Other outputs to be added</h3>
-<p class="placeholder-copy">Software, datasets, posters, or technical reports will appear here.</p>
+<h3 data-i18n="publications.otherDetails">Other outputs to be added</h3>
+<p class="placeholder-copy" data-i18n="publications.outputCopy">Software, datasets, posters, or technical reports will appear here.</p>
 </div>
 </article>
 </div>
