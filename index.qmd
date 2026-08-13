@@ -44,22 +44,22 @@ listing:
 <div class="external-links-list">
 <a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e7%89%b9%e5%ae%9a%e9%9d%9e%e5%96%b6%e5%88%a9%e6%b4%bb%e5%8b%95%e6%b3%95%e4%ba%ba%e3%83%90%e3%82%a4%e3%82%aa%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%9e%e3%83%86%e3%82%a3%e3%82%af%e3%82%b9%e3%83%bb/" target="_blank" rel="noopener noreferrer">
 <time datetime="2026-03-05">2026.03.05</time>
-<span class="external-link-copy"><span data-i18n="coverage.2026">Hongda Zhao receives the FY2025 Bioinformatics Japan Student Encouragement Award.</span><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small></span>
+<span class="external-link-copy"><span data-i18n="coverage.2026">Hongda Zhao receives the FY2025 Bioinformatics Japan Student Award.</span><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small></span>
 <b aria-hidden="true">↗</b>
 </a>
 <a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e5%8f%97%e8%b3%9e%e3%81%8c%e6%b1%ba%e5%ae%9a%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer">
 <time datetime="2025-11-28">2025.11.28</time>
-<span class="external-link-copy"><span data-i18n="coverage.2025award">Hongda Zhao receives the FY2024 Bioinformatics Japan Student Encouragement Award.</span><small lang="ja">受賞が決定しました。</small></span>
+<span class="external-link-copy"><span data-i18n="coverage.2025award">First-year doctoral student Hongda Zhao is selected to receive the FY2024 Bioinformatics Japan Student Award.</span><small lang="ja">受賞が決定しました。</small></span>
 <b aria-hidden="true">↗</b>
 </a>
 <a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer">
 <time datetime="2025-01-28">2025.01.28</time>
-<span class="external-link-copy"><span data-i18n="coverage.thesis">Saki Kikuya, Komei Nagasaka, and Hongda Zhao present their master’s theses.</span><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。</small></span>
+<span class="external-link-copy"><span data-i18n="coverage.thesis">Saki Kikuya, Komei Nagasaka, and Hongda Zhao gave their master’s thesis presentations. Their presentations and Q&amp;A sessions were excellent. Well done after two years of hard work!</span><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。</small></span>
 <b aria-hidden="true">↗</b>
 </a>
 <a class="external-link-item" href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer">
 <time datetime="2023-10-04">2023.10.04</time>
-<span class="external-link-copy"><span data-i18n="coverage.paper">Hongda Zhao’s paper is accepted by Virus Evolution during the first year of his master’s program.</span><small lang="ja">修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。</small></span>
+<span class="external-link-copy"><span data-i18n="coverage.paper">A paper by Hongda Zhao, then a first-year master’s student, was accepted for publication in Virus Evolution. Congratulations!</span><small lang="ja">修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。</small></span>
 <b aria-hidden="true">↗</b>
 </a>
 </div>
