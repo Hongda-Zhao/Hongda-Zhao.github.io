@@ -177,11 +177,10 @@ dd {
 }
 
 #quarto-sidebar .site-sidebar-icon {
+  display: block;
   width: 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
+  height: 1rem;
+  object-fit: contain;
 }
 
 #quarto-sidebar .site-sidebar-arrow {
@@ -189,9 +188,8 @@ dd {
   font-size: 0.7rem;
 }
 
-#quarto-sidebar .site-sidebar-link:hover .site-sidebar-icon,
-#quarto-sidebar .site-sidebar-link:focus-visible .site-sidebar-icon {
-  color: var(--ink);
+#quarto-sidebar .site-sidebar-icon-inaturalist {
+  border-radius: 0.2rem;
 }
 
 #quarto-sidebar .site-sidebar-email {
