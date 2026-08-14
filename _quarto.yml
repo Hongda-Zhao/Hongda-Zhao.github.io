@@ -2,6 +2,10 @@ project:
   type: website
   resources:
     - assets/gallery/**
+    - assets/js/gallery-map.js
+    - assets/map/**
+    - assets/vendor/leaflet/**
+    - assets/vendor/leaflet-markercluster/**
 
 lang: en
 

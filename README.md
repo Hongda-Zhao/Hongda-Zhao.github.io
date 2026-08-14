@@ -9,6 +9,7 @@ Search the `.qmd` files for `EDIT:`, `PHOTO:`, `PDF:`, and square-bracket placeh
 - Homepage notebook and its chronological entries: `index.qmd`
 - Standalone records linked from the homepage: `highlights/*/index.qmd`
 - Photo gallery, dates, places, and bilingual descriptions: `gallery.qmd`
+- Gallery map coordinates and photo-to-place links: `assets/map/gallery-places.js`
 - Optimized gallery images: `assets/gallery/`
 - Optional project and publication pages: `projects.qmd` and `publications.qmd`
 - Image replacement instructions: `assets/README.md`
@@ -46,6 +47,16 @@ cp -R highlights/current-biology-acceptance highlights/my-new-entry
 ```
 
 Then add a corresponding row to `index.qmd`. Standalone pages are not added to the homepage automatically.
+
+## Add a Gallery place
+
+1. Put the optimized WebP image in `assets/gallery/`.
+2. Copy one existing `<figure class="gallery-item">` block in `gallery.qmd` and update its image, date, place, alt text, and translation keys.
+3. Copy one record in `assets/map/gallery-places.js` and update `region`, the `admin` ISO 3166-2 code, and the photo filename without `.webp`.
+4. Add the English and Chinese place/alt translations to `head.html`.
+5. Run `./scripts/render.sh` and open `_site/gallery.html`.
+
+The marker is placed automatically at the centre of its prefecture, province, or state. Regional photograph counts update automatically. See `assets/map/README.md` for the field template and supported regions.
 
 ## Publishing
 
