@@ -23,7 +23,7 @@ lightbox:
       <article class="gallery-region gallery-region--china">
         <header class="gallery-region-header">
           <h2 id="gallery-region-china-title" data-i18n="gallery.map.region.china">China</h2>
-          <span class="gallery-region-count" data-gallery-region-count="china">12 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="china">13 photographs</span>
         </header>
         <div id="gallery-map-china" class="gallery-map gallery-map--china" data-gallery-region="china" role="region" tabindex="-1" aria-label="Photograph locations in China" data-i18n-aria-label="gallery.map.region.chinaAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -33,7 +33,7 @@ lightbox:
       <article class="gallery-region gallery-region--japan">
         <header class="gallery-region-header">
           <h2 id="gallery-region-japan-title" data-i18n="gallery.map.region.japan">Japan</h2>
-          <span class="gallery-region-count" data-gallery-region-count="japan">19 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="japan">20 photographs</span>
         </header>
         <div id="gallery-map-japan" class="gallery-map gallery-map--japan" data-gallery-region="japan" role="region" tabindex="-1" aria-label="Photograph locations in Japan" data-i18n-aria-label="gallery.map.region.japanAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -59,6 +59,10 @@ lightbox:
 
   <div class="gallery-grid" id="gallery-grid">
     <!-- China -->
+    <figure class="gallery-item gallery-item--wide">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2024-04-30-chongqing-yangtze-river.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2024-04-30-chongqing-yangtze-river.webp" width="1706" height="1279" alt="A brightly lit cruise boat passes Chongqing’s illuminated skyline on the Yangtze River at night." data-i18n-alt="gallery.alt.chongqingYangtze" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2024-04-30">2024.04.30</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.chongqingYangtze">Yangtze River, Chongqing</span></figcaption>
+    </figure>
     <figure class="gallery-item gallery-item--five">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2025-06-08-canton-tower.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-06-08-canton-tower.webp" width="1279" height="1706" alt="Canton Tower rises above leafy trees beneath a blue sky and towering white clouds." data-i18n-alt="gallery.alt.cantonTower" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2025-06-08">2025.06.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.cantonTower">Canton Tower, Guangzhou</span></figcaption>
@@ -149,9 +153,13 @@ lightbox:
       <a class="gallery-lightbox lightbox" href="assets/gallery/2024-07-27-otsu.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2024-07-27-otsu.webp" width="1706" height="1279" alt="Sunbeams break through clouds over a reed-lined lake and mountains." data-i18n-alt="gallery.alt.otsu" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2024-07-27">2024.07.27</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.otsu">Otsu</span></figcaption>
     </figure>
-    <figure class="gallery-item gallery-item--wide">
+    <figure class="gallery-item gallery-item--seven">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2024-06-08-amanohashidate.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2024-06-08-amanohashidate.webp" width="1706" height="1279" alt="Amanohashidate stretches across the bay beneath a textured sky." data-i18n-alt="gallery.alt.amanohashidate" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2024-06-08">2024.06.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.amanohashidate">Amanohashidate, Miyazu</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2022-10-25-kyoto-university-uji-campus.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2022-10-25-kyoto-university-uji-campus.webp" width="1707" height="1279" alt="A group gathers around several computer screens in a lab office at Kyoto University’s Uji Campus." data-i18n-alt="gallery.alt.kyotoUjiCampus" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2022-10-25">2022.10.25</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.kyotoUjiCampus">Kyoto University, Uji Campus</span></figcaption>
     </figure>
     <figure class="gallery-item gallery-item--five">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2022-11-05-nanzenji.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2022-11-05-nanzenji.webp" width="1706" height="1279" alt="Autumn trees and a waterway beneath bright clouds near Nanzen-ji." data-i18n-alt="gallery.alt.nanzenji" loading="lazy" decoding="async"></a>

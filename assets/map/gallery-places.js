@@ -17,6 +17,7 @@
  */
 window.GALLERY_MAP_PLACES = [
   // China: ISO 3166-2 administrative order.
+  { region: "china", admin: "CN-CQ", photos: ["2024-04-30-chongqing-yangtze-river"] },
   { region: "china", admin: "CN-GD", photos: ["2025-06-08-canton-tower", "2025-06-05-shantou"] },
   { region: "china", admin: "CN-GS", photos: ["2026-07-08-gansu"] },
   { region: "china", admin: "CN-HE", photos: ["2023-08-08-qinhuangdao"] },
@@ -36,7 +37,7 @@ window.GALLERY_MAP_PLACES = [
   { region: "japan", admin: "JP-20", photos: ["2023-11-02-lake-tateshina", "2026-01-07-tateishi-park", "2023-11-02-tateishi-park"] },
   { region: "japan", admin: "JP-24", photos: ["2026-06-07-shima"] },
   { region: "japan", admin: "JP-25", photos: ["2024-07-27-otsu"] },
-  { region: "japan", admin: "JP-26", photos: ["2024-06-08-amanohashidate", "2022-11-05-nanzenji"] },
+  { region: "japan", admin: "JP-26", photos: ["2024-06-08-amanohashidate", "2022-10-25-kyoto-university-uji-campus", "2022-11-05-nanzenji"] },
   { region: "japan", admin: "JP-27", photos: ["2025-11-16-kawachinagano"] },
   { region: "japan", admin: "JP-28", photos: ["2024-10-24-kobe"] },
   { region: "japan", admin: "JP-29", photos: ["2022-10-23-odaigahara"] },
