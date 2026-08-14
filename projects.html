@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9abafc18d48e236b038abb62e0b31eed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4739d1a2b837ce36a795c01da878210c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,15 +80,13 @@ ul.task-list li input[type="checkbox"] {
 (() => {
   const storageKey = "hongda-site-language";
   const strings = {
-    "nav.blog": ["Blog", "博客"],
-    "nav.research": ["Research", "研究"],
-    "nav.activities": ["Activities", "活动"],
-    "nav.about": ["About", "关于"],
     "footer.tagline": ["Notes on life · technology · research", "生活 · 技术 · 研究随笔"],
+    "sidebar.externalProfiles": ["External profiles", "外部主页"],
+    "sidebar.email": ["Email", "邮箱"],
     "home.profile.fields": ["Bioinformatics · Computational genomics · AI for science", "生物信息学 · 计算基因组学 · AI for Science"],
     "home.profile.summary": ["Research notes, technical work, and field observations.", "研究笔记、技术实践与野外观察。"],
-    "coverage.kicker": ["Selected mentions", "相关记录"],
-    "coverage.title": ["Coverage, notes on life, technology & research.", "报道、生活、技术与研究随笔。"],
+    "coverage.title": ["Notes on life, technology & research.", "生活、技术与研究随笔。"],
+    "coverage.aria": ["Notes on life, technology and research", "生活、技术与研究随笔"],
     "coverage.source": ["Ogata Lab · Kyoto University", "京都大学 · 绪方研究室"],
     "coverage.2026": ["Hongda Zhao receives the FY2025 Bioinformatics Japan Student Award.", "赵宏达荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Lingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.", "孟令杰、张瑞轩和赵宏达在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
@@ -100,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
     "detail.record": ["Record", "记录"],
     "detail.details": ["Details", "详情"],
     "detail.personal": ["Personal note", "个人记录"],
-    "detail.back": ["Back to coverage", "返回报道"],
+    "detail.back": ["Back to notes", "返回随笔"],
     "detail.meta.event": ["Event", "会议"],
     "detail.meta.date": ["Date", "日期"],
     "detail.meta.location": ["Location", "地点"],
@@ -137,58 +135,9 @@ ul.task-list li input[type="checkbox"] {
     "award.name": ["ICR Award for Graduate Students", "京大化研学生研究賞（京都大学化学研究所学生研究奖）"],
     "award.venue": ["124th ICR Research Presentation Meeting", "京都大学化学研究所第124回研究发表会"],
     "award.note.pending": ["I will add a personal note about the award and the research here.", "我会在这里补充获奖感想与研究经历。"],
-    "archive.intro": ["A single stream of notes, without categories for now.", "暂不分类，所有笔记按时间排列。"],
-    "archive.empty.title": ["The blog is empty for now.", "博客目前还是空的。"],
-    "archive.empty.copy": ["Published posts will be listed here by date.", "发布后的文章会按日期显示在这里。"],
-    "about.code": ["About", "关于"],
-    "about.title": ["A short introduction", "简单介绍"],
-    "about.lead": ["I am Hongda Zhao. This is my personal notebook for research questions, technical work, academic life, and observations beyond the screen.", "我是赵宏达。这里是我记录研究问题、技术工作、学术生活与屏幕之外观察的个人笔记。"],
-    "about.me": ["About me", "关于我"],
-    "about.p1": ["I work in bioinformatics and computational genomics, with a particular interest in viruses, genomes, and computational methods for biological discovery.", "我从事生物信息学与计算基因组学研究，尤其关注病毒、基因组以及用于生物学发现的计算方法。"],
-    "about.p2": ["I use this site to keep useful ideas in one place: notes from research, tools I want to remember, academic experiences, and small observations from everyday life.", "我用这个网站集中保存有用的想法：研究笔记、值得记住的工具、学术经历，以及日常生活中的细小观察。"],
-    "about.away": ["Away from the screen", "屏幕之外"],
-    "about.field.title": ["Field observations", "野外观察"],
-    "about.field.copy": ["I enjoy observing birds and biodiversity. Some of those photographs and field notes may appear here over time.", "我喜欢观察鸟类与生物多样性，今后会逐渐在这里分享相关照片和野外笔记。"],
-    "common.continue": ["Continue reading", "继续阅读"],
-    "research.lead": ["Research questions, methods, and outputs will be organised here as the archive develops.", "研究问题、方法与成果将在内容逐步完善后整理于此。"],
-    "research.area.a": ["Area A", "方向 A"],
-    "research.area.b": ["Area B", "方向 B"],
-    "research.area.c": ["Area C", "方向 C"],
-    "research.theme.1": ["Research theme 01", "研究主题 01"],
-    "research.theme.2": ["Research theme 02", "研究主题 02"],
-    "research.theme.3": ["Research theme 03", "研究主题 03"],
-    "common.theme.pending": ["Theme summary to be added.", "主题简介待补充。"],
-    "common.question": ["Question", "问题"],
-    "common.approach": ["Approach", "方法"],
-    "common.contribution": ["Contribution", "贡献"],
-    "common.evidence": ["Evidence", "证据"],
     "common.pending": ["To be added", "待补充"],
-    "common.related": ["Related", "相关内容"],
     "common.publications": ["Publications", "论文"],
     "common.projects": ["Projects", "项目"],
-    "common.researchNotes": ["Research notes", "研究笔记"],
-    "activities.lead": ["A record of academic exchange, community contribution, and the experiences that shape work beyond the screen.", "记录学术交流、社区参与，以及塑造屏幕之外工作方式的经历。"],
-    "activities.exchange": ["Academic exchange", "学术交流"],
-    "activities.exchange.title": ["Conferences, talks & visits", "会议、报告与访问"],
-    "activities.photo.academic": ["Event photograph to be added.", "活动照片待补充。"],
-    "activities.media.academic": ["ACADEMIC / IMAGE", "学术活动 / 图片"],
-    "activities.details": ["DETAILS TO BE ADDED", "详情待补充"],
-    "activities.academic": ["Academic activity", "学术活动"],
-    "activities.role": ["Role, venue, and outcome will appear here.", "角色、地点与成果待补充。"],
-    "activities.timeline": ["Activity timeline", "活动时间线"],
-    "activities.community": ["Community", "公共参与"],
-    "activities.community.title": ["Teaching, service & leadership", "教学、学术服务与组织工作"],
-    "activities.photo.community": ["Teaching, volunteering, or team photograph to be added.", "教学、志愿服务或团队照片待补充。"],
-    "activities.media.community": ["COMMUNITY / IMAGE", "社区活动 / 图片"],
-    "activities.community.item": ["Community activity", "公共参与活动"],
-    "activities.community.copy": ["Contribution, audience, and outcome will appear here.", "具体贡献、服务对象与成果待补充。"],
-    "activities.outside": ["Outside work", "工作之外"],
-    "activities.outside.title": ["Outside the lab", "实验室之外"],
-    "activities.photo.pending": ["Photograph to be added", "照片待补充"],
-    "activities.field.1": ["FIELD NOTE / 01", "野外笔记 / 01"],
-    "activities.field.2": ["FIELD NOTE / 02", "野外笔记 / 02"],
-    "activities.field.3": ["FIELD NOTE / 03", "野外笔记 / 03"],
-    "activities.closing": ["A note connecting these interests to scientific practice will be added here.", "这些兴趣与科学实践之间的联系待补充。"],
     "projects.lead": ["Selected computational and research projects will be documented here as concise case studies.", "精选计算与研究项目将以简洁案例的形式记录于此。"],
     "projects.p1": ["Project 01", "项目 01"],
     "projects.p2": ["Project 02", "项目 02"],
@@ -205,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
     "projects.outcome": ["Outcome", "成果"],
     "projects.links": ["Evidence links to be added", "相关链接待补充"],
     "publications.lead": ["Peer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.", "同行评议论文、预印本、软件、数据集及其他研究成果将整理于此。"],
-    "publications.scholar": ["Scholar profile to be added", "Google Scholar 页面待补充"],
+    "publications.scholar": ["Google Scholar", "Google Scholar"],
     "publications.orcid": ["ORCID to be added", "ORCID 待补充"],
     "publications.peer": ["Peer-reviewed", "同行评议论文"],
     "publications.preprints": ["Preprints", "预印本"],
@@ -235,29 +184,32 @@ ul.task-list li input[type="checkbox"] {
       if (translation) element.textContent = translation[index];
     });
 
-    const navigationTranslations = {
-      "notes.html": strings["nav.blog"],
-      "research.html": strings["nav.research"],
-      "activities.html": strings["nav.activities"],
-      "about.html": strings["nav.about"]
-    };
-    document.querySelectorAll("#quarto-sidebar .sidebar-link").forEach((link) => {
-      const file = (link.getAttribute("href") || "").split("/").pop();
-      const label = navigationTranslations[file];
-      const text = link.querySelector(".menu-text");
-      if (label && text) text.textContent = label[index];
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      const translation = strings[element.dataset.i18nAriaLabel];
+      if (translation) element.setAttribute("aria-label", translation[index]);
+    });
+
+    document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+      const address = `${link.dataset.emailUser}${String.fromCharCode(64)}${link.dataset.emailDomain}`;
+      link.setAttribute("href", `mailto:${address}`);
+      link.setAttribute("aria-label", language === "zh" ? `发送邮件至 ${address}` : `Email ${address}`);
     });
 
     const footer = document.querySelector(".nav-footer-right");
     if (footer) footer.textContent = strings["footer.tagline"][index];
 
     const page = location.pathname.split("/").pop() || "index.html";
+    const secondaryTitle = document.querySelector(".quarto-secondary-nav-title");
+    if (secondaryTitle && page === "index.html") {
+      secondaryTitle.textContent = strings["coverage.title"][index];
+    }
+
+    document.querySelectorAll(".quarto-btn-toggle, .quarto-secondary-nav .no-decor[aria-label]").forEach((toggle) => {
+      toggle.setAttribute("aria-label", language === "zh" ? "切换侧栏导航" : "Toggle sidebar navigation");
+    });
+
     const pageTitles = {
       "index.html": ["Hongda Zhao | Notes on life, technology, and research", "赵宏达 | 生活、技术与研究随笔"],
-      "notes.html": ["Blog | Hongda Zhao", "博客 | 赵宏达"],
-      "research.html": ["Research | Hongda Zhao", "研究 | 赵宏达"],
-      "activities.html": ["Activities | Hongda Zhao", "活动 | 赵宏达"],
-      "about.html": ["About | Hongda Zhao", "关于 | 赵宏达"],
       "projects.html": ["Projects | Hongda Zhao", "项目 | 赵宏达"],
       "publications.html": ["Publications | Hongda Zhao", "论文 | 赵宏达"]
     };
@@ -327,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
 <div class="site-sidebar-profile">
-<a class="site-sidebar-home" href="./"> <img src="./assets/avatar-cat.jpg" width="1078" height="1105" alt="A Siamese cat looking up"> <strong>Hongda Zhao</strong> </a> <span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
+<a class="site-sidebar-home" href="./"> <img src="./assets/avatar-cat.jpg" width="1078" height="1105" alt=""> <strong>Hongda Zhao</strong> </a> <span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
 <p data-i18n="home.profile.summary">
 Research notes, technical work, and field observations.
 </p>
@@ -338,37 +290,12 @@ Research notes, technical work, and field observations.
       <a href="./">Hongda Zhao</a> 
     </div>
       </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blog</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./activities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activities</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<div class="site-sidebar-utilities" aria-label="Site utilities">
-<p><a class="site-sidebar-github" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a> <button class="language-toggle" type="button" aria-label="切换至中文">中文</button></p>
+<div class="site-sidebar-utilities">
+<nav class="site-sidebar-links" aria-label="External profiles" data-i18n-aria-label="sidebar.externalProfiles">
+<a class="site-sidebar-link" href="https://scholar.google.com/citations?user=cc-6KA8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://www.linkedin.com/in/hongda-zhao-0357b5405/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://www.inaturalist.org/people/hongdaz" target="_blank" rel="noopener noreferrer">iNaturalist <span aria-hidden="true">↗</span></a> <a class="site-sidebar-link site-sidebar-email" data-email-user="hongda" data-email-domain="scl.kyoto-u.ac.jp"><span data-i18n="sidebar.email">Email</span><small>hongda [at] scl.kyoto-u.ac.jp</small></a>
+</nav>
+<p><button class="language-toggle" type="button" aria-label="切换至中文">中文</button></p>
 </div>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
