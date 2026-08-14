@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - assets/gallery/**
 
 lang: en
 
@@ -39,7 +41,10 @@ website:
           <a class="site-sidebar-link" href="https://www.inaturalist.org/people/hongdaz" target="_blank" rel="noopener noreferrer"><img class="site-sidebar-icon site-sidebar-icon-inaturalist" src="/assets/icons/inaturalist.png" width="128" height="128" alt="" aria-hidden="true"><span>iNaturalist</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a>
           <a class="site-sidebar-link site-sidebar-email" data-email-user="hongda" data-email-domain="scl.kyoto-u.ac.jp"><img class="site-sidebar-icon" src="/assets/icons/email.svg" width="24" height="24" alt="" aria-hidden="true"><span class="site-sidebar-email-copy"><span data-i18n="sidebar.email">Email</span><small>hongda [at] scl.kyoto-u.ac.jp</small></span></a>
         </nav>
+        <div class="site-sidebar-actions">
         <button class="language-toggle" type="button" aria-label="切换至中文">中文</button>
+        <a class="site-sidebar-link site-sidebar-gallery" href="/gallery.html"><i class="bi bi-images site-sidebar-icon" aria-hidden="true"></i><span data-i18n="sidebar.gallery">Gallery</span><span class="site-sidebar-arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     contents: []
   page-footer:
