@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ab1217a48813c2fcabdea017e5bec043.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e53a554026d2c2e77977c11eee3bd6d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -122,12 +122,8 @@ ul.task-list li input[type="checkbox"] {
     "poster.eyebrow": ["Conference record", "学术会议记录"],
     "poster.title": ["Poster presentation at Viruses of Microbes 2024", "在 Viruses of Microbes 2024 上进行了海报展示"],
     "poster.lead": ["I presented a poster at Viruses of Microbes 2024 in Cairns, Australia.", "我在澳大利亚凯恩斯举行的 Viruses of Microbes 2024 上进行了海报展示。"],
-    "poster.image.label": ["POSTER / EVENT PHOTOGRAPH", "海报 / 活动照片"],
-    "poster.image.pending": ["Image to be added — poster, venue, conference badge, or presentation photograph.", "图片待添加——可使用海报、会场、参会证件或展示现场照片。"],
+    "poster.image.alt": ["Nine Viruses of Microbes 2024 attendees posing in front of crocodile sculptures in Cairns.", "九位 Viruses of Microbes 2024 与会者在凯恩斯的鳄鱼雕塑前合影。"],
     "poster.record.copy": ["Viruses of Microbes 2024 was held in Cairns from 15 to 19 July 2024. I presented this poster on 18 July.", "Viruses of Microbes 2024 于2024年7月15日至19日在凯恩斯举行。我于7月18日进行了这项海报展示。"],
-    "poster.format": ["Poster presentation", "海报展示"],
-    "poster.location": ["Cairns, Australia", "澳大利亚凯恩斯"],
-    "poster.note.pending": ["I will add a note about the presentation, discussions, and conference experience here.", "我会在这里补充展示内容、现场交流与参会感想。"],
     "award.eyebrow": ["Award record", "获奖记录"],
     "award.title": ["Received the ICR Award for Graduate Students", "荣获京大化研学生研究賞"],
     "award.lead": ["On 14 February 2025, I received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research.", "2025年2月14日，我荣获京大化研学生研究賞（京都大学化学研究所学生研究奖）。"],
@@ -189,6 +185,11 @@ ul.task-list li input[type="checkbox"] {
     document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
       const translation = strings[element.dataset.i18nAriaLabel];
       if (translation) element.setAttribute("aria-label", translation[index]);
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+      const translation = strings[element.dataset.i18nAlt];
+      if (translation) element.setAttribute("alt", translation[index]);
     });
 
     document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
