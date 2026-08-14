@@ -42,12 +42,12 @@ title-block-style: none
 </a>
 <a class="coverage-item coverage-item--internal" href="./highlights/current-biology-acceptance/">
 <time datetime="2024-04-30">2024.04.30</time>
-<span class="coverage-copy"><span><span data-i18n="coverage.currentBiology.before">My first-author paper on mirusviruses was accepted for publication in </span><em>Current Biology</em><span data-i18n="coverage.currentBiology.after">!</span></span></span>
+<span class="coverage-copy"><span><span data-i18n="coverage.currentBiology.before">My first-author paper on mirusviruses was accepted for publication in </span><em lang="en">Current Biology</em><span data-i18n="coverage.currentBiology.after">!</span></span></span>
 <b aria-hidden="true">→</b>
 </a>
 <a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer">
 <time datetime="2023-10-04">2023.10.04</time>
-<span class="coverage-copy"><span><span data-i18n="coverage.paper.before">My first paper was accepted for publication in </span><em>Virus Evolution</em><span data-i18n="coverage.paper.after">!</span></span><small lang="ja">修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
+<span class="coverage-copy"><span><span data-i18n="coverage.paper.before">My first paper was accepted for publication in </span><em lang="en">Virus Evolution</em><span data-i18n="coverage.paper.after">!</span></span><small lang="ja">修士1年のZhao Hongda君の論文が <em lang="en">Virus Evolution</em> に受理されました。おめでとうございます。</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
 <b aria-hidden="true">↗</b>
 </a>
 </div>

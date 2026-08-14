@@ -648,17 +648,9 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
 }
 
 .page-title {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: clamp(2.7rem, 6vw, 4.2rem);
   line-height: 1.08;
-}
-
-.page-lead {
-  max-width: 43rem;
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.7;
 }
 
 .content-section,
@@ -1535,30 +1527,14 @@ main.content:has(> .gallery-page) > #title-block-header {
   font-size: clamp(2.45rem, 6vw, 4.3rem);
 }
 
-.highlight-header .page-lead {
-  max-width: 46rem;
-}
-
 .highlight-media {
   margin: 0 0 clamp(3rem, 7vw, 5rem);
 }
 
-.media-placeholder-highlight {
-  min-height: clamp(15rem, 34vw, 22rem);
-  padding: clamp(1rem, 3vw, 1.5rem);
-  border-color: #d5ddda;
-  background: #f4f7f5;
-}
-
-.media-placeholder-highlight > span {
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.media-placeholder-highlight small {
-  max-width: 28rem;
+.highlight-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .highlight-image {
@@ -1621,10 +1597,6 @@ main.content:has(> .gallery-page) > #title-block-header {
 
 .highlight-facts dd {
   margin: 0;
-}
-
-.highlight-note-section {
-  padding-bottom: clamp(3rem, 7vw, 5rem);
 }
 
 .highlight-back {
@@ -1935,6 +1907,10 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   .activity-grid,
   .cv-header {
     grid-template-columns: 1fr;
+  }
+
+  .highlight-media-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .project-heading-grid .media-placeholder {
