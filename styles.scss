@@ -162,22 +162,52 @@ dd {
 }
 
 #quarto-sidebar .site-sidebar-link {
+  display: grid;
   min-height: 2.75rem;
   color: var(--accent) !important;
   font-size: 0.8rem;
   text-decoration: none;
-  align-content: center;
+  grid-template-columns: 1rem minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
 }
 
 #quarto-sidebar .site-sidebar-link:hover {
   color: var(--ink) !important;
 }
 
+#quarto-sidebar .site-sidebar-icon {
+  width: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+}
+
+#quarto-sidebar .site-sidebar-arrow {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+#quarto-sidebar .site-sidebar-link:hover .site-sidebar-icon,
+#quarto-sidebar .site-sidebar-link:focus-visible .site-sidebar-icon {
+  color: var(--ink);
+}
+
 #quarto-sidebar .site-sidebar-email {
-  display: grid;
   padding-block: 0.5rem;
-  gap: 0.1rem;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  align-items: start;
   line-height: 1.3;
+}
+
+#quarto-sidebar .site-sidebar-email .site-sidebar-icon {
+  margin-top: 0.12rem;
+}
+
+#quarto-sidebar .site-sidebar-email-copy {
+  display: grid;
+  gap: 0.1rem;
 }
 
 #quarto-sidebar .site-sidebar-email small {

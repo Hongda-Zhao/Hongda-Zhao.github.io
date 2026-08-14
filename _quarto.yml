@@ -33,11 +33,11 @@ website:
     footer: |
       <div class="site-sidebar-utilities">
         <nav class="site-sidebar-links" aria-label="External profiles" data-i18n-aria-label="sidebar.externalProfiles">
-          <a class="site-sidebar-link" href="https://scholar.google.com/citations?user=cc-6KA8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
-          <a class="site-sidebar-link" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="site-sidebar-link" href="https://www.linkedin.com/in/hongda-zhao-0357b5405/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a class="site-sidebar-link" href="https://www.inaturalist.org/people/hongdaz" target="_blank" rel="noopener noreferrer">iNaturalist <span aria-hidden="true">↗</span></a>
-          <a class="site-sidebar-link site-sidebar-email" data-email-user="hongda" data-email-domain="scl.kyoto-u.ac.jp"><span data-i18n="sidebar.email">Email</span><small>hongda [at] scl.kyoto-u.ac.jp</small></a>
+          <a class="site-sidebar-link" href="https://scholar.google.com/citations?user=cc-6KA8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><i class="bi bi-mortarboard site-sidebar-icon" aria-hidden="true"></i><span>Google Scholar</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a>
+          <a class="site-sidebar-link" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer"><i class="bi bi-github site-sidebar-icon" aria-hidden="true"></i><span>GitHub</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a>
+          <a class="site-sidebar-link" href="https://www.linkedin.com/in/hongda-zhao-0357b5405/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin site-sidebar-icon" aria-hidden="true"></i><span>LinkedIn</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a>
+          <a class="site-sidebar-link" href="https://www.inaturalist.org/people/hongdaz" target="_blank" rel="noopener noreferrer"><i class="bi bi-binoculars site-sidebar-icon" aria-hidden="true"></i><span>iNaturalist</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a>
+          <a class="site-sidebar-link site-sidebar-email" data-email-user="hongda" data-email-domain="scl.kyoto-u.ac.jp"><i class="bi bi-envelope-at site-sidebar-icon" aria-hidden="true"></i><span class="site-sidebar-email-copy"><span data-i18n="sidebar.email">Email</span><small>hongda [at] scl.kyoto-u.ac.jp</small></span></a>
         </nav>
         <button class="language-toggle" type="button" aria-label="切换至中文">中文</button>
       </div>
