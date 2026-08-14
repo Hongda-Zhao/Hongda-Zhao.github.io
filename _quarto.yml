@@ -15,9 +15,27 @@ website:
     card-style: summary_large_image
     image: assets/og.png
     image-alt: "Hongda Zhao — Bioinformatics and Computational Genomics"
-  navbar:
-    pinned: true
-    left:
+  bread-crumbs: false
+  sidebar:
+    style: floating
+    background: white
+    border: true
+    search: false
+    header: |
+      <div class="site-sidebar-profile">
+        <a class="site-sidebar-home" href="/">
+          <img src="/assets/avatar-cat.jpg" width="1078" height="1105" alt="A Siamese cat looking up">
+          <strong>Hongda Zhao</strong>
+        </a>
+        <span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
+        <p data-i18n="home.profile.summary">Research notes, technical work, and field observations.</p>
+      </div>
+    footer: |
+      <div class="site-sidebar-utilities" aria-label="Site utilities">
+        <a class="site-sidebar-github" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <button class="language-toggle" type="button" aria-label="切换至中文">中文</button>
+      </div>
+    contents:
       - href: notes.qmd
         text: Blog
       - href: research.qmd
@@ -26,10 +44,6 @@ website:
         text: Activities
       - href: about.qmd
         text: About
-    right:
-      - icon: github
-        href: https://github.com/Hongda-Zhao
-        aria-label: GitHub
   page-footer:
     left: "© Hongda Zhao"
     right: "Notes on life · technology · research"
@@ -38,6 +52,11 @@ format:
   html:
     theme:
       light: [cosmo, styles.scss]
+    grid:
+      sidebar-width: 210px
+      body-width: 820px
+      margin-width: 120px
+      gutter-width: 3rem
     include-in-header: head.html
     toc: false
     smooth-scroll: true

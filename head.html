@@ -10,10 +10,8 @@
     "footer.tagline": ["Notes on life · technology · research", "生活 · 技术 · 研究随笔"],
     "home.profile.fields": ["Bioinformatics · Computational genomics · AI for science", "生物信息学 · 计算基因组学 · AI for Science"],
     "home.profile.summary": ["Research notes, technical work, and field observations.", "研究笔记、技术实践与野外观察。"],
-    "home.kicker": ["A personal notebook", "个人笔记"],
-    "home.title": ["Notes on life, technology & research.", "生活、技术与研究随笔。"],
     "coverage.kicker": ["Selected mentions", "相关记录"],
-    "coverage.title": ["Coverage", "报道"],
+    "coverage.title": ["Coverage, notes on life, technology & research.", "报道、生活、技术与研究随笔。"],
     "coverage.source": ["Ogata Lab · Kyoto University", "京都大学 · 绪方研究室"],
     "coverage.2026": ["Hongda Zhao receives the FY2025 Bioinformatics Japan Student Award.", "赵宏达荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Lingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.", "孟令杰、张瑞轩和赵宏达在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
@@ -160,15 +158,15 @@
       if (translation) element.textContent = translation[index];
     });
 
-    const navTranslations = {
+    const navigationTranslations = {
       "notes.html": strings["nav.blog"],
       "research.html": strings["nav.research"],
       "activities.html": strings["nav.activities"],
       "about.html": strings["nav.about"]
     };
-    document.querySelectorAll(".navbar-nav.me-auto .nav-link").forEach((link) => {
+    document.querySelectorAll("#quarto-sidebar .sidebar-link").forEach((link) => {
       const file = (link.getAttribute("href") || "").split("/").pop();
-      const label = navTranslations[file];
+      const label = navigationTranslations[file];
       const text = link.querySelector(".menu-text");
       if (label && text) text.textContent = label[index];
     });
@@ -194,11 +192,10 @@
       document.title = pageTitles[page][index];
     }
 
-    const button = document.querySelector(".language-toggle");
-    if (button) {
+    document.querySelectorAll(".language-toggle").forEach((button) => {
       button.textContent = language === "en" ? "中文" : "EN";
       button.setAttribute("aria-label", language === "en" ? "切换至中文" : "Switch to English");
-    }
+    });
 
     if (persist) {
       try { localStorage.setItem(storageKey, language); } catch (_error) {}
@@ -206,19 +203,11 @@
   };
 
   window.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector(".navbar-nav.ms-auto");
-    if (nav && !nav.querySelector(".language-toggle")) {
-      const item = document.createElement("li");
-      item.className = "nav-item compact language-item";
-      const button = document.createElement("button");
-      button.className = "language-toggle";
-      button.type = "button";
+    document.querySelectorAll(".language-toggle").forEach((button) => {
       button.addEventListener("click", () => {
         setLanguage(document.documentElement.dataset.uiLang === "zh" ? "en" : "zh");
       });
-      item.appendChild(button);
-      nav.prepend(item);
-    }
+    });
     setLanguage(initialLanguage, false);
   });
 })();

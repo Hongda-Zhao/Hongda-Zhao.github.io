@@ -14,28 +14,10 @@ listing:
 ---
 
 ```{=html}
-<div class="blog-profile" role="complementary" aria-label="About the author">
-<img src="assets/avatar-cat.jpg" width="1078" height="1105" alt="A Siamese cat looking up" fetchpriority="high" decoding="async">
-<div>
-<strong>Hongda Zhao</strong>
-<span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
-<p data-i18n="home.profile.summary">Research notes, technical work, and field observations.</p>
-<nav aria-label="Author links">
-<a href="./about.html" data-i18n="nav.about">About</a>
-<a href="./research.html" data-i18n="nav.research">Research</a>
-</nav>
-</div>
-</div>
-
-<section class="blog-intro">
-<p class="blog-kicker" data-i18n="home.kicker">A personal notebook</p>
-<p class="blog-title" role="heading" aria-level="1" data-i18n="home.title">Notes on life, technology &amp; research.</p>
-</section>
-
 <section class="latest-heading">
 <div>
 <p class="blog-kicker" data-i18n="coverage.kicker">Selected mentions</p>
-<h2 id="coverage" data-i18n="coverage.title">Coverage</h2>
+<h1 id="coverage" data-i18n="coverage.title">Coverage, notes on life, technology &amp; research.</h1>
 </div>
 </section>
 
