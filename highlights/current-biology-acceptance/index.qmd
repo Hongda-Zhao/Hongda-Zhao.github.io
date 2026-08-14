@@ -1,5 +1,5 @@
 ---
-pagetitle: "Mirusvirus paper accepted for publication in Current Biology"
+pagetitle: "First-author paper on mirusviruses accepted for publication in Current Biology"
 description: "A first-author study of the host range and diversity of mirusviruses, accepted for publication in Current Biology."
 page-layout: full
 toc: false
@@ -10,7 +10,7 @@ title-block-style: none
 <div class="page-shell highlight-page">
 <header class="page-header highlight-header">
 <p class="highlight-meta"><span data-i18n="current.eyebrow">Publication record</span><time datetime="2024-04-30">2024.04.30</time></p>
-<h1 class="page-title" data-i18n="current.title" data-document-title>Mirusvirus paper accepted for publication in Current Biology</h1>
+<h1 class="page-title" data-i18n="current.title" data-document-title>First-author paper on mirusviruses accepted for publication in Current Biology</h1>
 <p class="page-lead" data-i18n="current.lead">My first-author study used eukaryotic genomic data to examine the host range and diversity of mirusviruses.</p>
 </header>
 
