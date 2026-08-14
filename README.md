@@ -1,34 +1,27 @@
 # Hongda Zhao — personal website
 
-This repository contains the source for [hongda-zhao.github.io](https://hongda-zhao.github.io), built with [Quarto](https://quarto.org/). The structure supports academic work, technical projects, activities, and personal writing without mixing everything into one long CV page.
+This repository contains the source for [hongda-zhao.github.io](https://hongda-zhao.github.io), built with [Quarto](https://quarto.org/). The public site is intentionally simple: one chronological notebook homepage, a small set of standalone detail pages, and external profile links in the sidebar.
 
 ## Where to add content
 
-The site is intentionally a visual skeleton. Search the `.qmd` files for `EDIT:`, `PHOTO:`, `PDF:`, and square-bracket placeholders such as `[Role · Institution]`.
+Search the `.qmd` files for `EDIT:`, `PHOTO:`, `PDF:`, and square-bracket placeholders when replacing unfinished content.
 
-- Homepage and featured evidence: `index.qmd`
-- Profile, education, experience, and personal interests: `about.qmd`
-- Research themes: `research.qmd`
-- Selected projects: `projects.qmd`
-- Publications and preprints: `publications.qmd`
-- Conferences, talks, teaching, service, and life photographs: `activities.qmd`
-- Life, technology, research, and activity writing: `notes.qmd`
-- Web CV and printable résumé: `cv.qmd`
-- New-note template: `posts/template/index.qmd`
+- Homepage notebook and its chronological entries: `index.qmd`
+- Standalone records linked from the homepage: `highlights/*/index.qmd`
+- Optional project and publication pages: `projects.qmd` and `publications.qmd`
 - Image replacement instructions: `assets/README.md`
 - Colors, typography, and layout: `styles.scss`
-- Navigation and site-wide settings: `_quarto.yml`
+- Sidebar links and site-wide settings: `_quarto.yml`
+- English and Chinese interface copy: `head.html`
 
-Keep the homepage short. Put detail on the corresponding inner page and link to evidence such as a paper, repository, poster, dataset, talk, or activity photograph.
+Keep each homepage entry short. Put longer personal notes, photographs, and evidence on a standalone page under `highlights/`.
 
 ## Recommended filling order
 
-1. Replace the homepage statement, current role, and opportunity preference.
-2. Complete the Profile and CV pages.
-3. Add two strong projects and two or three research themes.
-4. Add one academic activity, one community activity, and three personal photographs.
-5. Add publications and external evidence links.
-6. Publish the first note only after replacing its metadata and changing `draft: true` to `draft: false`.
+1. Replace the pending images and personal notes on the three existing highlight pages.
+2. Add future life, technology, research, and activity entries to the homepage in date order.
+3. Create a standalone detail page only when an entry needs more context or evidence.
+4. Keep external profile links current in `_quarto.yml`.
 
 ## Preview the site
 
@@ -42,15 +35,15 @@ Build the complete site before publishing:
 ./scripts/render.sh
 ```
 
-## Add a note
+## Add a standalone entry
 
-Copy the template folder, rename it, and update the YAML header:
+Copy an existing highlight folder, rename it, and update its content and translation keys:
 
 ```bash
-cp -R posts/template posts/my-note
+cp -R highlights/current-biology-acceptance highlights/my-new-entry
 ```
 
-The new note appears automatically on the Writing page after rendering. Use `Life`, `Technology`, `Research`, or `Activities` as its first category.
+Then add a corresponding row to `index.qmd`. Standalone pages are not added to the homepage automatically.
 
 ## Publishing
 

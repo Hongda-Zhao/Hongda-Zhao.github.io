@@ -83,8 +83,11 @@ dd {
 
 #quarto-sidebar {
   max-height: 100vh;
+  max-height: 100dvh;
   border-color: var(--rule) !important;
   background: var(--canvas);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 #quarto-sidebar > .sidebar-header {
@@ -135,32 +138,6 @@ dd {
   line-height: 1.5;
 }
 
-#quarto-sidebar .sidebar-menu-container {
-  margin: 1rem 1.25rem 0;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--rule);
-}
-
-#quarto-sidebar .sidebar-menu-container > ul {
-  margin: 0 !important;
-}
-
-#quarto-sidebar .sidebar-item-container {
-  margin-bottom: 0.15rem;
-}
-
-#quarto-sidebar .sidebar-link {
-  padding: 0.28rem 0;
-  color: var(--accent);
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-
-#quarto-sidebar .sidebar-link:hover,
-#quarto-sidebar .sidebar-link.active {
-  color: var(--ink);
-}
-
 #quarto-sidebar .sidebar-footer {
   padding: 0 1.25rem clamp(1.5rem, 4vh, 2.5rem);
 }
@@ -174,34 +151,56 @@ dd {
   justify-items: start;
 }
 
-.site-sidebar-utilities > p {
+.site-sidebar-links {
   display: grid;
-  margin: 0;
-  gap: 0.15rem;
-  justify-items: start;
+  width: 100%;
 }
 
-#quarto-sidebar .site-sidebar-github {
-  min-height: 2.5rem;
+.site-sidebar-utilities > p {
+  width: 100%;
+  margin: 0;
+}
+
+#quarto-sidebar .site-sidebar-link {
+  min-height: 2.75rem;
   color: var(--accent) !important;
   font-size: 0.8rem;
   text-decoration: none;
   align-content: center;
 }
 
-#quarto-sidebar .site-sidebar-github:hover {
+#quarto-sidebar .site-sidebar-link:hover {
   color: var(--ink) !important;
 }
 
+#quarto-sidebar .site-sidebar-email {
+  display: grid;
+  padding-block: 0.5rem;
+  gap: 0.1rem;
+  line-height: 1.3;
+}
+
+#quarto-sidebar .site-sidebar-email small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  overflow-wrap: anywhere;
+}
+
 .language-toggle {
-  min-height: 2.5rem;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: 0.45rem;
   padding: 0;
-  border: 0;
+  border-top: 1px solid var(--rule);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
   color: var(--accent);
   background: transparent;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .language-toggle:hover {
@@ -409,13 +408,6 @@ main.content:has(> .coverage-listing) {
   width: min(calc(100% - 3rem), 820px);
   margin-inline: auto;
   padding-block: clamp(3.25rem, 7vw, 5.25rem) 0;
-}
-
-.blog-kicker {
-  margin: 0 0 0.8rem;
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 600;
 }
 
 .latest-heading > a {

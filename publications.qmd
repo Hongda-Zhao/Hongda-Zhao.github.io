@@ -15,7 +15,7 @@ title-block-style: none
 <!-- EDIT: Add one line describing this list and replace the profile placeholders. -->
 <p class="page-lead" data-i18n="publications.lead">Peer-reviewed work, preprints, software, datasets, and other research outputs will be indexed here.</p>
 <div class="hero-actions">
-<span class="text-link placeholder-link" data-i18n="publications.scholar">Scholar profile to be added</span>
+<a class="text-link" href="https://scholar.google.com/citations?user=cc-6KA8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><span data-i18n="publications.scholar">Google Scholar</span> <span aria-hidden="true">↗</span></a>
 <span class="text-link placeholder-link" data-i18n="publications.orcid">ORCID to be added</span>
 </div>
 </div>
