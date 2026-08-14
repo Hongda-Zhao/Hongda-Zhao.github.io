@@ -11,15 +11,11 @@ title-block-style: none
 <header class="page-header highlight-header">
 <p class="highlight-meta"><span data-i18n="poster.eyebrow">Conference record</span><time datetime="2024-07-18">2024.07.18</time></p>
 <h1 class="page-title" data-i18n="poster.title" data-document-title>Poster presentation at Viruses of Microbes 2024</h1>
-<p class="page-lead" data-i18n="poster.lead">I presented work on the potential host spectrum of mirusviruses in Cairns, Australia.</p>
+<p class="page-lead" data-i18n="poster.lead">I presented a poster at Viruses of Microbes 2024 in Cairns, Australia.</p>
 </header>
 
-<!-- EDIT: Replace the placeholder below with an image such as <img class="highlight-image" src="cover.jpg" alt="Describe the image">. -->
 <figure class="highlight-media">
-<div class="media-placeholder media-placeholder-highlight" role="img" aria-label="Image placeholder">
-<span data-i18n="poster.image.label">POSTER / EVENT PHOTOGRAPH</span>
-<small data-i18n="poster.image.pending">Image to be added — poster, venue, conference badge, or presentation photograph.</small>
-</div>
+<img class="highlight-image highlight-image--portrait" src="vom-2024.webp" width="1279" height="1706" alt="Nine Viruses of Microbes 2024 attendees posing in front of crocodile sculptures in Cairns." data-i18n-alt="poster.image.alt" decoding="async">
 </figure>
 
 <section class="content-section">
@@ -30,26 +26,6 @@ title-block-style: none
 <nav class="highlight-links" aria-label="Conference links">
 <a href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> ↗</a>
 </nav>
-</div>
-</section>
-
-<section class="content-section">
-<h2 class="content-label" data-i18n="detail.details">Details</h2>
-<div class="prose-slot">
-<dl class="highlight-facts">
-<div><dt data-i18n="detail.meta.event">Event</dt><dd>Viruses of Microbes 2024</dd></div>
-<div><dt data-i18n="detail.meta.format">Format</dt><dd data-i18n="poster.format">Poster presentation</dd></div>
-<div><dt data-i18n="detail.meta.location">Location</dt><dd data-i18n="poster.location">Cairns, Australia</dd></div>
-<div><dt data-i18n="detail.meta.date">Date</dt><dd>2024.07.18</dd></div>
-</dl>
-</div>
-</section>
-
-<section class="content-section highlight-note-section">
-<h2 class="content-label" data-i18n="detail.personal">Personal note</h2>
-<div class="prose-slot">
-<!-- EDIT: Replace the following paragraph with your own note. -->
-<p class="placeholder-copy" data-i18n="poster.note.pending">I will add a note about the presentation, discussions, and conference experience here.</p>
 </div>
 </section>
 
