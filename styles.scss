@@ -1087,6 +1087,11 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
   border: 1px solid var(--rule);
 }
 
+.highlight-image--portrait {
+  width: min(100%, 46rem);
+  margin-inline: auto;
+}
+
 .highlight-prose > p:first-child {
   font-size: 1.05rem;
 }
