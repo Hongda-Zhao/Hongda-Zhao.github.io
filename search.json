@@ -11,7 +11,10 @@
     "href": "notes.html",
     "title": "Blog",
     "section": "",
-    "text": "A single stream of notes, without categories for now.\n\n\n\nThe blog is empty for now.\nPublished posts will be listed here by date.\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A single stream of notes, without categories for now.\n\n\n\nThe blog is empty for now.\nPublished posts will be listed here by date.\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Blog"
+    ]
   },
   {
     "objectID": "highlights/icr-student-research-award-2025/index.html",
@@ -32,14 +35,20 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Research\n\n\n\nResearch questions, methods, and outputs will be organised here as the archive develops.\n\n\n\n\n\nArea A\n\nResearch theme 01\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nArea B\n\nResearch theme 02\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nArea C\n\nResearch theme 03\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nRelated\n\nPublications\nProjects\nResearch notes"
+    "text": "Research\n\n\n\nResearch questions, methods, and outputs will be organised here as the archive develops.\n\n\n\n\n\nArea A\n\nResearch theme 01\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nArea B\n\nResearch theme 02\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nArea C\n\nResearch theme 03\nTheme summary to be added.\n\n\nQuestionTo be added\nApproachTo be added\nContributionTo be added\nEvidenceTo be added\n\n\n\n\nRelated\n\nPublications\nProjects\nResearch notes",
+    "crumbs": [
+      "Research"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "A short introduction",
     "section": "",
-    "text": "About\nA short introduction\nI am Hongda Zhao. This is my personal notebook for research questions, technical work, academic life, and observations beyond the screen.\n\n\n\nAbout me\n\n\n\nI work in bioinformatics and computational genomics, with a particular interest in viruses, genomes, and computational methods for biological discovery.\nI use this site to keep useful ideas in one place: notes from research, tools I want to remember, academic experiences, and small observations from everyday life.\n\n\n\n\n\nAway from the screen\n\nField observations\nI enjoy observing birds and biodiversity. Some of those photographs and field notes may appear here over time.\n\n\n\n\nContinue reading\n\nBlog\nResearch"
+    "text": "About\nA short introduction\nI am Hongda Zhao. This is my personal notebook for research questions, technical work, academic life, and observations beyond the screen.\n\n\n\nAbout me\n\n\n\nI work in bioinformatics and computational genomics, with a particular interest in viruses, genomes, and computational methods for biological discovery.\nI use this site to keep useful ideas in one place: notes from research, tools I want to remember, academic experiences, and small observations from everyday life.\n\n\n\n\n\nAway from the screen\n\nField observations\nI enjoy observing birds and biodiversity. Some of those photographs and field notes may appear here over time.\n\n\n\n\nContinue reading\n\nBlog\nResearch",
+    "crumbs": [
+      "About"
+    ]
   },
   {
     "objectID": "publications.html",
@@ -53,7 +62,10 @@
     "href": "activities.html",
     "title": "Activities",
     "section": "",
-    "text": "Activities\n\n\n\nA record of academic exchange, community contribution, and the experiences that shape work beyond the screen.\n\n\n\n\n\nAcademic exchange\nConferences, talks & visits\n\n\n\n\nACADEMIC / IMAGEEvent photograph to be added.\nDETAILS TO BE ADDED\nAcademic activity\nRole, venue, and outcome will appear here.\n\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nCommunity\nTeaching, service & leadership\n\n\n\n\nCOMMUNITY / IMAGETeaching, volunteering, or team photograph to be added.\nDETAILS TO BE ADDED\nCommunity activity\nContribution, audience, and outcome will appear here.\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nOutside work\nOutside the lab\n\n\n\nFIELD NOTE / 01Photograph to be added\nFIELD NOTE / 02Photograph to be added\nFIELD NOTE / 03Photograph to be added\n\n\nA note connecting these interests to scientific practice will be added here."
+    "text": "Activities\n\n\n\nA record of academic exchange, community contribution, and the experiences that shape work beyond the screen.\n\n\n\n\n\nAcademic exchange\nConferences, talks & visits\n\n\n\n\nACADEMIC / IMAGEEvent photograph to be added.\nDETAILS TO BE ADDED\nAcademic activity\nRole, venue, and outcome will appear here.\n\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nCommunity\nTeaching, service & leadership\n\n\n\n\nCOMMUNITY / IMAGETeaching, volunteering, or team photograph to be added.\nDETAILS TO BE ADDED\nCommunity activity\nContribution, audience, and outcome will appear here.\n\n\n—Activity timelineTo be added\n\n\n\n\n\n\nOutside work\nOutside the lab\n\n\n\nFIELD NOTE / 01Photograph to be added\nFIELD NOTE / 02Photograph to be added\nFIELD NOTE / 03Photograph to be added\n\n\nA note connecting these interests to scientific practice will be added here.",
+    "crumbs": [
+      "Activities"
+    ]
   },
   {
     "objectID": "highlights/current-biology-acceptance/index.html",
@@ -65,8 +77,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Hongda Zhao",
+    "title": "Coverage, notes on life, technology & research.",
     "section": "",
-    "text": "Hongda Zhao\nBioinformatics · Computational genomics · AI for science\nResearch notes, technical work, and field observations.\n\nAbout\nResearch\n\n\n\n\n\nA personal notebook\nNotes on life, technology & research.\n\n\n\n\nSelected mentions\nCoverage\n\n\n\n\n\n\n2026.03.05\nHongda Zhao receives the FY2025 Bioinformatics Japan Student Award.特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しましたOgata Lab · Kyoto University\n↗\n\n\n2025.12.22\nLingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。Ogata Lab · Kyoto University\n↗\n\n\n2025.02.14\nReceived the ICR Award for Graduate Students at Kyoto University.\n→\n\n\n2025.01.28\nSaki Kikuya, Komei Nagasaka, and Hongda Zhao gave their master’s thesis presentations. Their presentations and Q&A sessions were excellent. Well done after two years of hard work!菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。Ogata Lab · Kyoto University\n↗\n\n\n2024.07.18\nPoster presentation on the host spectrum of mirusviruses at Viruses of Microbes 2024 in Cairns.\n→\n\n\n2024.04.30\nFirst-author mirusvirus paper accepted for publication in Current Biology.\n→\n\n\n2023.10.04\nA paper by Hongda Zhao, then a first-year master’s student, was accepted for publication in Virus Evolution. Congratulations!修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。Ogata Lab · Kyoto University\n↗\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Selected mentions\nCoverage, notes on life, technology & research.\n\n\n\n\n\n\n2026.03.05\nHongda Zhao receives the FY2025 Bioinformatics Japan Student Award.特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しましたOgata Lab · Kyoto University\n↗\n\n\n2025.12.22\nLingjie Meng, Ruixuan Zhang, and Hongda Zhao gave oral presentations at the Giant Virus Biology Symposium in Tegernsee, Germany.ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。Ogata Lab · Kyoto University\n↗\n\n\n2025.02.14\nReceived the ICR Award for Graduate Students at Kyoto University.\n→\n\n\n2025.01.28\nSaki Kikuya, Komei Nagasaka, and Hongda Zhao gave their master’s thesis presentations. Their presentations and Q&A sessions were excellent. Well done after two years of hard work!菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。Ogata Lab · Kyoto University\n↗\n\n\n2024.07.18\nPoster presentation on the host spectrum of mirusviruses at Viruses of Microbes 2024 in Cairns.\n→\n\n\n2024.04.30\nFirst-author mirusvirus paper accepted for publication in Current Biology.\n→\n\n\n2023.10.04\nA paper by Hongda Zhao, then a first-year master’s student, was accepted for publication in Virus Evolution. Congratulations!修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。Ogata Lab · Kyoto University\n↗\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
