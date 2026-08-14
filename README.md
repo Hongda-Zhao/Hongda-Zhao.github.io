@@ -21,7 +21,7 @@ Keep each homepage entry short. Put longer personal notes, photographs, and evid
 
 ## Recommended filling order
 
-1. Replace the pending images and personal notes on the three existing highlight pages.
+1. Keep photographs and evidence links current on the existing highlight pages.
 2. Add future life, technology, research, and activity entries to the homepage in date order.
 3. Create a standalone detail page only when an entry needs more context or evidence.
 4. Keep external profile links current in `_quarto.yml`.

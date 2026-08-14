@@ -12,8 +12,6 @@ title-block-style: none
 <p class="page-code" data-i18n="common.projects">Projects</p>
 <div>
 <h1 class="page-title" data-i18n="common.projects">Projects</h1>
-<!-- EDIT: Add a short sentence explaining how you choose projects for this page. -->
-<p class="page-lead" data-i18n="projects.lead">Selected computational and research projects will be documented here as concise case studies.</p>
 </div>
 </header>
 

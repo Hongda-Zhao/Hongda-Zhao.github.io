@@ -11,7 +11,6 @@ title-block-style: none
 <header class="page-header highlight-header">
 <p class="highlight-meta"><span data-i18n="poster.eyebrow">Conference record</span><time datetime="2024-07-18">2024.07.18</time></p>
 <h1 class="page-title" data-i18n="poster.title" data-document-title>Poster presentation at Viruses of Microbes 2024</h1>
-<p class="page-lead" data-i18n="poster.lead">I presented a poster at Viruses of Microbes 2024 in Cairns, Australia.</p>
 </header>
 
 <figure class="highlight-media">

@@ -11,15 +11,11 @@ title-block-style: none
 <header class="page-header highlight-header">
 <p class="highlight-meta"><span data-i18n="award.eyebrow">Award record</span><time datetime="2025-02-14">2025.02.14</time></p>
 <h1 class="page-title" data-i18n="award.title" data-document-title>Received the ICR Award for Graduate Students</h1>
-<p class="page-lead" data-i18n="award.lead">On 14 February 2025, I received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research.</p>
 </header>
 
-<!-- EDIT: Replace the placeholder below with an image such as <img class="highlight-image" src="cover.jpg" alt="Describe the image">. -->
-<figure class="highlight-media">
-<div class="media-placeholder media-placeholder-highlight" role="img" aria-label="Image placeholder">
-<span data-i18n="award.image.label">CERTIFICATE / AWARD PHOTOGRAPH</span>
-<small data-i18n="award.image.pending">Image to be added — certificate, award ceremony, or presentation photograph.</small>
-</div>
+<figure class="highlight-media highlight-media-grid">
+<img class="highlight-image" src="icr-award-certificate.jpg" width="1702" height="1276" alt="Hongda Zhao and an award presenter display the open ICR Award certificate during the ceremony." data-i18n-alt="award.image.certificateAlt" decoding="async">
+<img class="highlight-image" src="icr-award-group.jpg" width="1702" height="1276" alt="Hongda Zhao, at far right, joins other recipients and an award presenter for a group photograph at the ICR award ceremony." data-i18n-alt="award.image.groupAlt" decoding="async">
 </figure>
 
 <section class="content-section">
@@ -41,14 +37,6 @@ title-block-style: none
 <div><dt data-i18n="detail.meta.venue">Venue</dt><dd data-i18n="award.venue">124th ICR Research Presentation Meeting</dd></div>
 <div><dt data-i18n="detail.meta.work">Work</dt><dd>Eukaryotic Genomic Data Uncover an Extensive Host Range of Mirusviruses</dd></div>
 </dl>
-</div>
-</section>
-
-<section class="content-section highlight-note-section">
-<h2 class="content-label" data-i18n="detail.personal">Personal note</h2>
-<div class="prose-slot">
-<!-- EDIT: Replace the following paragraph with your own note. -->
-<p class="placeholder-copy" data-i18n="award.note.pending">I will add a personal note about the award and the research here.</p>
 </div>
 </section>
 

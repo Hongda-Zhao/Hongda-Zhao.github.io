@@ -23,7 +23,7 @@ lightbox:
       <article class="gallery-region gallery-region--china">
         <header class="gallery-region-header">
           <h2 id="gallery-region-china-title" data-i18n="gallery.map.region.china">China</h2>
-          <span class="gallery-region-count" data-gallery-region-count="china">4 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="china">12 photographs</span>
         </header>
         <div id="gallery-map-china" class="gallery-map gallery-map--china" data-gallery-region="china" role="region" tabindex="-1" aria-label="Photograph locations in China" data-i18n-aria-label="gallery.map.region.chinaAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -33,7 +33,7 @@ lightbox:
       <article class="gallery-region gallery-region--japan">
         <header class="gallery-region-header">
           <h2 id="gallery-region-japan-title" data-i18n="gallery.map.region.japan">Japan</h2>
-          <span class="gallery-region-count" data-gallery-region-count="japan">18 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="japan">19 photographs</span>
         </header>
         <div id="gallery-map-japan" class="gallery-map gallery-map--japan" data-gallery-region="japan" role="region" tabindex="-1" aria-label="Photograph locations in Japan" data-i18n-aria-label="gallery.map.region.japanAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -44,7 +44,7 @@ lightbox:
     <div class="gallery-region-shortcuts" role="group" aria-label="Other photograph regions" data-i18n-aria-label="gallery.map.shortcutsAria">
       <button class="gallery-region-shortcut" type="button" data-gallery-open-region="australia">
         <span class="gallery-region-shortcut-name" data-i18n="gallery.map.region.australia">Australia</span>
-        <span class="gallery-region-shortcut-count" data-gallery-region-count="australia">1 photograph</span>
+        <span class="gallery-region-shortcut-count" data-gallery-region-count="australia">2 photographs</span>
         <span class="gallery-region-shortcut-arrow" aria-hidden="true">→</span>
       </button>
       <button class="gallery-region-shortcut" type="button" data-gallery-open-region="europe">
@@ -59,7 +59,15 @@ lightbox:
 
   <div class="gallery-grid" id="gallery-grid">
     <!-- China -->
-    <figure class="gallery-item gallery-item--wide">
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-06-08-canton-tower.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-06-08-canton-tower.webp" width="1279" height="1706" alt="Canton Tower rises above leafy trees beneath a blue sky and towering white clouds." data-i18n-alt="gallery.alt.cantonTower" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-06-08">2025.06.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.cantonTower">Canton Tower, Guangzhou</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--seven">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-06-05-shantou.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-06-05-shantou.webp" width="1224" height="816" alt="A dark-crested bird with a white throat perches on a ledge among soft-focus green leaves." data-i18n-alt="gallery.alt.shantou" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-06-05">2025.06.05</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.shantou">Shantou</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--seven">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2026-07-08-gansu.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2026-07-08-gansu.webp" width="1706" height="1279" alt="Layered red, orange, and pale hills form a colorful eroded landscape." data-i18n-alt="gallery.alt.gansu" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2026-07-08">2026.07.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.gansu">Zhangye Colorful Danxia Scenic Area</span></figcaption>
     </figure>
@@ -67,13 +75,37 @@ lightbox:
       <a class="gallery-lightbox lightbox" href="assets/gallery/2023-08-08-qinhuangdao.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2023-08-08-qinhuangdao.webp" width="1706" height="1279" alt="A quiet waterfront park framed by willow branches." data-i18n-alt="gallery.alt.qinhuangdao" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2023-08-08">2023.08.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.qinhuangdao">Pigeon Nest Park, Qinhuangdao</span></figcaption>
     </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2026-02-26-nanjing-museum.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2026-02-26-nanjing-museum.webp" width="1706" height="1279" alt="The traditional-style facade of Nanjing Museum features red columns, a sweeping tiled roof, and a blue name plaque." data-i18n-alt="gallery.alt.nanjingMuseum" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2026-02-26">2026.02.26</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.nanjingMuseum">Nanjing Museum</span></figcaption>
+    </figure>
     <figure class="gallery-item gallery-item--seven">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2023-08-15-chifeng.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2023-08-15-chifeng.webp" width="1706" height="1279" alt="Green rolling mountains beneath an expansive blue sky." data-i18n-alt="gallery.alt.chifeng" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2023-08-15">2023.08.15</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.chifeng">Chifeng</span></figcaption>
     </figure>
-    <figure class="gallery-item gallery-item--wide">
+    <figure class="gallery-item gallery-item--seven">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2026-07-06-qinghai.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2026-07-06-qinghai.webp" width="1280" height="960" alt="Monochrome desert mountains recede into a pale horizon." data-i18n-alt="gallery.alt.qinghai" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2026-07-06">2026.07.06</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.qinghai">Heidu Mountain Scenic Area, Mangya</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2026-07-10-jinan-pearl-spring.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2026-07-10-jinan-pearl-spring.webp" width="1706" height="1279" alt="An illuminated pavilion and willow trees reflect in the still water of Pearl Spring at blue hour." data-i18n-alt="gallery.alt.jinanPearlSpring" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2026-07-10">2026.07.10</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.jinanPearlSpring">Pearl Spring, Jinan</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-02-22-shanghai-jiao-tong-minhang.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-02-22-shanghai-jiao-tong-minhang.webp" width="1706" height="1279" alt="A Shanghai Jiao Tong University welcome sign stands behind orange flowerbeds on the Minhang Campus." data-i18n-alt="gallery.alt.shanghaiJiaoTong" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-02-22">2025.02.22</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.shanghaiJiaoTong">Shanghai Jiao Tong University, Minhang Campus</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--seven">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-03-01-taiyuan-ancient-county-town.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-03-01-taiyuan-ancient-county-town.webp" width="1706" height="1279" alt="Fireworks burst above the illuminated tiled roofs of Taiyuan Ancient County at night." data-i18n-alt="gallery.alt.taiyuanAncientTown" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-03-01">2025.03.01</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.taiyuanAncientTown">Taiyuan Ancient County</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-03-15-tianjin-century-clock.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-03-15-tianjin-century-clock.webp" width="1279" height="1706" alt="The illuminated Tianjin Century Clock, with its large dial and exposed gears, stands before high-rise buildings at night." data-i18n-alt="gallery.alt.tianjinCenturyClock" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-03-15">2025.03.15</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.tianjinCenturyClock">Tianjin Century Clock</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--seven">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-02-24-hangzhou-west-lake.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-02-24-hangzhou-west-lake.webp" width="1706" height="1279" alt="The illuminated Leifeng Pagoda rises above the wooded shore across West Lake at night." data-i18n-alt="gallery.alt.hangzhouWestLake" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-02-24">2025.02.24</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.hangzhouWestLake">West Lake and Leifeng Pagoda, Hangzhou</span></figcaption>
     </figure>
 
     <!-- Japan -->
@@ -137,7 +169,7 @@ lightbox:
       <a class="gallery-lightbox lightbox" href="assets/gallery/2022-10-23-odaigahara.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2022-10-23-odaigahara.webp" width="1706" height="1279" alt="A wooden boardwalk descends toward layered mountains beneath a clear sky." data-i18n-alt="gallery.alt.odaigahara" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2022-10-23">2022.10.23</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.odaigahara">Odaigahara Plateau</span></figcaption>
     </figure>
-    <figure class="gallery-item gallery-item--wide">
+    <figure class="gallery-item gallery-item--five">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2022-08-25-hiroshima.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2022-08-25-hiroshima.webp" width="1706" height="1279" alt="The Atomic Bomb Dome framed by green trees beneath a blue sky." data-i18n-alt="gallery.alt.hiroshima" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2022-08-25">2022.08.25</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.hiroshima">Atomic Bomb Dome</span></figcaption>
     </figure>
@@ -145,15 +177,23 @@ lightbox:
       <a class="gallery-lightbox lightbox" href="assets/gallery/2022-08-23-miyajima.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2022-08-23-miyajima.webp" width="1706" height="1279" alt="Illuminated Itsukushima Shrine reflected in the water beneath pine branches." data-i18n-alt="gallery.alt.miyajima" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2022-08-23">2022.08.23</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.miyajima">Itsukushima Shrine</span></figcaption>
     </figure>
-    <figure class="gallery-item gallery-item--five">
+    <figure class="gallery-item">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2025-08-12-ishigaki-blue-cave.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-08-12-ishigaki-blue-cave.webp" width="1279" height="1706" alt="Clear turquoise water below the rugged rock walls of the Blue Cave on Ishigaki Island." data-i18n-alt="gallery.alt.ishigakiBlueCave" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2025-08-12">2025.08.12</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.ishigakiBlueCave">Blue Cave, Ishigaki Island</span></figcaption>
+    </figure>
+    <figure class="gallery-item">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2025-08-08-ishigaki.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2025-08-08-ishigaki.webp" width="1279" height="1706" alt="A vivid pink sunset above silhouetted ships in Ishigaki Harbor." data-i18n-alt="gallery.alt.ishigaki" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2025-08-08">2025.08.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.ishigaki">Ishigaki Island</span></figcaption>
     </figure>
 
     <!-- Australia -->
-    <figure class="gallery-item gallery-item--wide">
+    <figure class="gallery-item gallery-item--seven">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2023-07-16-cairns.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2023-07-16-cairns.webp" width="1764" height="1279" alt="A heritage building at a Cairns intersection beneath a purple dusk sky." data-i18n-alt="gallery.alt.cairns" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2023-07-16">2023.07.16</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.cairns">Cairns</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2024-07-20-fitzroy-island.webp" data-gallery="photo-gallery"><img class="gallery-photo" src="assets/gallery/2024-07-20-fitzroy-island.webp" width="1280" height="1920" alt="Close-up of a large blue-green reef fish with maze-like markings underwater off Fitzroy Island." data-i18n-alt="gallery.alt.fitzroy" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2024-07-20">2024.07.20</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.fitzroy">Fitzroy Island, Great Barrier Reef</span></figcaption>
     </figure>
 
     <!-- Germany -->
