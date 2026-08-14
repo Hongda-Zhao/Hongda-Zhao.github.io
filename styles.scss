@@ -138,7 +138,8 @@ dd {
   line-height: 1.5;
 }
 
-#quarto-sidebar .sidebar-footer {
+#quarto-sidebar .sidebar-footer,
+#quarto-sidebar .quarto-sidebar-footer {
   padding: 0 1.25rem clamp(1.5rem, 4vh, 2.5rem);
 }
 
@@ -156,7 +157,8 @@ dd {
   width: 100%;
 }
 
-.site-sidebar-utilities > p {
+.site-sidebar-utilities > p,
+.site-sidebar-actions {
   width: 100%;
   margin: 0;
 }
@@ -233,6 +235,22 @@ dd {
 
 .language-toggle:hover {
   color: var(--ink);
+}
+
+#quarto-sidebar .site-sidebar-gallery {
+  margin-top: 0.15rem;
+  border-top: 1px solid var(--rule);
+}
+
+#quarto-sidebar .site-sidebar-gallery .site-sidebar-icon {
+  color: currentColor;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+#quarto-sidebar .site-sidebar-gallery[aria-current="page"] {
+  color: var(--ink) !important;
+  font-weight: 600;
 }
 
 .page-layout-full main.content {
@@ -672,6 +690,102 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
 
 .prose-slot > :first-child {
   margin-top: 0;
+}
+
+/* Gallery */
+
+.gallery-page {
+  width: min(calc(100% - 3rem), 1120px);
+}
+
+.gallery-header {
+  padding-bottom: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+main.content:has(> .gallery-page) > #title-block-header .page-title,
+.gallery-header .page-title {
+  font-size: clamp(3.1rem, 7vw, 5.5rem);
+  letter-spacing: -0.035em;
+}
+
+.gallery-title-sentinel {
+  display: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 2.5vw, 2rem);
+  row-gap: clamp(3rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.gallery-item {
+  min-width: 0;
+  margin: 0;
+  grid-column: span 6;
+}
+
+.gallery-item--wide {
+  grid-column: 1 / -1;
+}
+
+.gallery-item--five {
+  grid-column: span 5;
+}
+
+.gallery-item--seven {
+  grid-column: span 7;
+}
+
+.gallery-lightbox {
+  display: block;
+  color: inherit;
+  background: var(--surface);
+  cursor: zoom-in;
+  text-decoration: none;
+}
+
+.gallery-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  transition: opacity 140ms ease;
+}
+
+.gallery-lightbox:hover .gallery-photo {
+  opacity: 0.92;
+}
+
+.gallery-caption {
+  display: flex;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+  letter-spacing: 0.018em;
+  line-height: 1.45;
+  gap: 0.45rem;
+  align-items: baseline;
+}
+
+.gallery-caption time {
+  font-variant-numeric: tabular-nums;
+}
+
+.gallery-lightbox-loader {
+  display: none;
+}
+
+.glightbox-container .goverlay {
+  background: rgba(17, 23, 21, 0.96);
+}
+
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+  background-color: transparent;
 }
 
 .placeholder-copy,
@@ -1406,7 +1520,8 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
     padding-top: 1.5rem;
   }
 
-  #quarto-sidebar .sidebar-footer {
+  #quarto-sidebar .sidebar-footer,
+  #quarto-sidebar .quarto-sidebar-footer {
     padding-bottom: 1.5rem;
   }
 
@@ -1467,6 +1582,61 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   .activity-card {
     max-width: 18rem;
   }
+
+  .gallery-header {
+    padding-bottom: 2.6rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2.8rem;
+  }
+
+  .gallery-item,
+  .gallery-item--wide,
+  .gallery-item--five,
+  .gallery-item--seven {
+    grid-column: 1;
+  }
+
+  body:has(.gallery-page) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1rem
+      [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start]
+      minmax(0, 1fr)
+      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1rem
+      [screen-end];
+  }
+
+  body:has(.gallery-page) main.content.column-page-right {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding-inline: 1rem;
+    box-sizing: border-box;
+    grid-column: screen-start / screen-end !important;
+  }
+
+  main.content:has(> .gallery-page) > #title-block-header {
+    display: none;
+  }
+
+  .gallery-page {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-top: 3rem;
+  }
+
+  .gallery-grid,
+  .gallery-item,
+  .gallery-lightbox,
+  .gallery-photo {
+    min-width: 0;
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width: 520px) {
@@ -1627,6 +1797,8 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }

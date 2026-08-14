@@ -8,6 +8,8 @@ Search the `.qmd` files for `EDIT:`, `PHOTO:`, `PDF:`, and square-bracket placeh
 
 - Homepage notebook and its chronological entries: `index.qmd`
 - Standalone records linked from the homepage: `highlights/*/index.qmd`
+- Photo gallery, dates, places, and bilingual descriptions: `gallery.qmd`
+- Optimized gallery images: `assets/gallery/`
 - Optional project and publication pages: `projects.qmd` and `publications.qmd`
 - Image replacement instructions: `assets/README.md`
 - Colors, typography, and layout: `styles.scss`

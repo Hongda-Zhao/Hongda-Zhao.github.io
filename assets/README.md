@@ -14,6 +14,8 @@ Recommended files:
 
 Each placeholder in the `.qmd` files has a nearby `PHOTO:` comment containing the replacement HTML. Always write a factual `alt` description. Decorative images are less useful than evidence of work, participation, or perspective.
 
+Gallery photographs live in `assets/gallery/` as metadata-stripped WebP files. Add the corresponding date, place, and bilingual alt text in `gallery.qmd` and `head.html`, and avoid publishing identifiable group photographs without the participants' consent.
+
 ## Sidebar icons
 
 The profile links use local copies so they remain visible without a third-party icon request:
