@@ -1,6 +1,6 @@
 ---
 pagetitle: "Hongda Zhao | Notes on life, technology, and research"
-description: "A personal notebook by Hongda Zhao on research, technology, academic activities, and everyday life."
+description: "Notes by Hongda Zhao on life, technology, research, and academic activities."
 page-layout: full
 toc: false
 title-block-style: none
@@ -16,12 +16,11 @@ listing:
 ```{=html}
 <section class="latest-heading">
 <div>
-<p class="blog-kicker" data-i18n="coverage.kicker">Selected mentions</p>
-<h1 id="coverage" data-i18n="coverage.title">Coverage, notes on life, technology &amp; research.</h1>
+<h1 id="coverage" data-i18n="coverage.title">Notes on life, technology &amp; research.</h1>
 </div>
 </section>
 
-<section class="coverage-listing" aria-label="Coverage">
+<section class="coverage-listing" aria-label="Notes on life, technology and research">
 <div class="coverage-list">
 <a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e7%89%b9%e5%ae%9a%e9%9d%9e%e5%96%b6%e5%88%a9%e6%b4%bb%e5%8b%95%e6%b3%95%e4%ba%ba%e3%83%90%e3%82%a4%e3%82%aa%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%9e%e3%83%86%e3%82%a3%e3%82%af%e3%82%b9%e3%83%bb/" target="_blank" rel="noopener noreferrer">
 <time datetime="2026-03-05">2026.03.05</time>

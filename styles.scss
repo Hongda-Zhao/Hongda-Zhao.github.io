@@ -411,13 +411,6 @@ main.content:has(> .coverage-listing) {
   padding-block: clamp(3.25rem, 7vw, 5.25rem) 0;
 }
 
-.blog-kicker {
-  margin: 0 0 0.8rem;
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
 .latest-heading > a {
   color: var(--accent);
   font-size: 0.8rem;
