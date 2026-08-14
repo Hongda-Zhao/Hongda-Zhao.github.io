@@ -102,6 +102,7 @@ ul.task-list li input[type="checkbox"] {
     "gallery.map.region.chinaAria": ["Photograph locations in China", "中国的照片拍摄地点"],
     "gallery.map.region.australia": ["Australia", "澳大利亚"],
     "gallery.map.region.europe": ["Germany", "德国"],
+    "gallery.place.chongqingYangtze": ["Yangtze River, Chongqing", "重庆长江夜景"],
     "gallery.place.cantonTower": ["Canton Tower, Guangzhou", "广州塔"],
     "gallery.place.shantou": ["Shantou", "汕头市"],
     "gallery.place.gansu": ["Zhangye Colorful Danxia Scenic Area", "张掖七彩丹霞景区"],
@@ -124,6 +125,7 @@ ul.task-list li input[type="checkbox"] {
     "gallery.place.kobe": ["Akashi Kaikyo Bridge, Kobe", "神户明石海峡大桥"],
     "gallery.place.otsu": ["Otsu", "大津市"],
     "gallery.place.amanohashidate": ["Amanohashidate, Miyazu", "宫津市天桥立"],
+    "gallery.place.kyotoUjiCampus": ["Kyoto University, Uji Campus", "京都大学宇治校区"],
     "gallery.place.shiretoko": ["Shiretoko Goko Lakes", "知床五湖"],
     "gallery.place.tokyo": ["Tokyo Skytree", "东京晴空塔"],
     "gallery.place.tateshina": ["Lake Tateshina, Chino", "茅野市蓼科湖"],
@@ -136,6 +138,7 @@ ul.task-list li input[type="checkbox"] {
     "gallery.place.odaigahara": ["Odaigahara Plateau", "大台原高原"],
     "gallery.place.hiroshima": ["Atomic Bomb Dome", "原爆圆顶馆"],
     "gallery.place.miyajima": ["Itsukushima Shrine", "严岛神社"],
+    "gallery.alt.chongqingYangtze": ["A brightly lit cruise boat passes Chongqing’s illuminated skyline on the Yangtze River at night.", "夜色中，一艘灯火通明的游船驶过重庆长江沿岸，城市灯光倒映在水面上。"],
     "gallery.alt.cantonTower": ["Canton Tower rises above leafy trees beneath a blue sky and towering white clouds.", "广州塔从繁茂绿树后方升起，映衬着蓝天与大片白云。"],
     "gallery.alt.shantou": ["A dark-crested bird with a white throat perches on a ledge among soft-focus green leaves.", "一只深色羽冠、白色喉部的小鸟停在栏板上，四周绿叶虚化。"],
     "gallery.alt.gansu": ["Layered red, orange, and pale hills form a colorful eroded landscape.", "红色、橙色与浅色丘陵构成层叠的彩色地貌。"],
@@ -158,6 +161,7 @@ ul.task-list li input[type="checkbox"] {
     "gallery.alt.kobe": ["Sunset glints across a pebbled beach beside the Akashi Kaikyō Bridge.", "明石海峡大桥旁，夕阳照亮细石海滩。"],
     "gallery.alt.otsu": ["Sunbeams break through clouds over a reed-lined lake and mountains.", "阳光穿过云层，照向芦苇湖岸与群山。"],
     "gallery.alt.amanohashidate": ["Amanohashidate stretches across the bay beneath a textured sky.", "云层之下，天桥立横贯海湾。"],
+    "gallery.alt.kyotoUjiCampus": ["A group gathers around several computer screens in a lab office at Kyoto University’s Uji Campus.", "一群人在京都大学宇治校区的实验室办公室里围在几台电脑旁。"],
     "gallery.alt.shiretoko": ["Winter sunlight falls across snow-covered hills above a sea of clouds.", "冬日阳光洒在云海之上的雪原。"],
     "gallery.alt.tokyo": ["The blue-lit Tokyo Skytree rises into the night sky.", "蓝色灯光中的东京晴空塔耸入夜空。"],
     "gallery.alt.tateshina": ["Red maple leaves surround a sunset reflected on the lake.", "红枫环绕着倒映在湖面的夕阳。"],
@@ -468,7 +472,7 @@ Research notes, technical work, and field observations.
       <article class="gallery-region gallery-region--china">
         <header class="gallery-region-header">
           <h2 id="gallery-region-china-title" data-i18n="gallery.map.region.china" class="anchored">China</h2>
-          <span class="gallery-region-count" data-gallery-region-count="china">12 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="china">13 photographs</span>
         </header>
         <div id="gallery-map-china" class="gallery-map gallery-map--china" data-gallery-region="china" role="region" tabindex="-1" aria-label="Photograph locations in China" data-i18n-aria-label="gallery.map.region.chinaAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -478,7 +482,7 @@ Research notes, technical work, and field observations.
       <article class="gallery-region gallery-region--japan">
         <header class="gallery-region-header">
           <h2 id="gallery-region-japan-title" data-i18n="gallery.map.region.japan" class="anchored">Japan</h2>
-          <span class="gallery-region-count" data-gallery-region-count="japan">19 photographs</span>
+          <span class="gallery-region-count" data-gallery-region-count="japan">20 photographs</span>
         </header>
         <div id="gallery-map-japan" class="gallery-map gallery-map--japan" data-gallery-region="japan" role="region" tabindex="-1" aria-label="Photograph locations in Japan" data-i18n-aria-label="gallery.map.region.japanAria">
           <p class="gallery-map-loading" data-i18n="gallery.map.loading">Drawing the map…</p>
@@ -504,6 +508,10 @@ Research notes, technical work, and field observations.
 
   <div class="gallery-grid" id="gallery-grid">
     <!-- China -->
+    <figure class="gallery-item gallery-item--wide figure">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2024-04-30-chongqing-yangtze-river.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2024-04-30-chongqing-yangtze-river.webp" width="1706" height="1279" alt="A brightly lit cruise boat passes Chongqing’s illuminated skyline on the Yangtze River at night." data-i18n-alt="gallery.alt.chongqingYangtze" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2024-04-30">2024.04.30</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.chongqingYangtze">Yangtze River, Chongqing</span></figcaption>
+    </figure>
     <figure class="gallery-item gallery-item--five figure">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2025-06-08-canton-tower.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2025-06-08-canton-tower.webp" width="1279" height="1706" alt="Canton Tower rises above leafy trees beneath a blue sky and towering white clouds." data-i18n-alt="gallery.alt.cantonTower" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2025-06-08">2025.06.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.cantonTower">Canton Tower, Guangzhou</span></figcaption>
@@ -594,9 +602,13 @@ Research notes, technical work, and field observations.
       <a class="gallery-lightbox lightbox" href="assets/gallery/2024-07-27-otsu.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2024-07-27-otsu.webp" width="1706" height="1279" alt="Sunbeams break through clouds over a reed-lined lake and mountains." data-i18n-alt="gallery.alt.otsu" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2024-07-27">2024.07.27</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.otsu">Otsu</span></figcaption>
     </figure>
-    <figure class="gallery-item gallery-item--wide figure">
+    <figure class="gallery-item gallery-item--seven figure">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2024-06-08-amanohashidate.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2024-06-08-amanohashidate.webp" width="1706" height="1279" alt="Amanohashidate stretches across the bay beneath a textured sky." data-i18n-alt="gallery.alt.amanohashidate" loading="lazy" decoding="async"></a>
       <figcaption class="gallery-caption"><time datetime="2024-06-08">2024.06.08</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.amanohashidate">Amanohashidate, Miyazu</span></figcaption>
+    </figure>
+    <figure class="gallery-item gallery-item--five figure">
+      <a class="gallery-lightbox lightbox" href="assets/gallery/2022-10-25-kyoto-university-uji-campus.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2022-10-25-kyoto-university-uji-campus.webp" width="1707" height="1279" alt="A group gathers around several computer screens in a lab office at Kyoto University’s Uji Campus." data-i18n-alt="gallery.alt.kyotoUjiCampus" loading="lazy" decoding="async"></a>
+      <figcaption class="gallery-caption"><time datetime="2022-10-25">2022.10.25</time><span aria-hidden="true">·</span><span data-i18n="gallery.place.kyotoUjiCampus">Kyoto University, Uji Campus</span></figcaption>
     </figure>
     <figure class="gallery-item gallery-item--five figure">
       <a class="gallery-lightbox lightbox" href="assets/gallery/2022-11-05-nanzenji.webp" data-gallery="photo-gallery"><img class="gallery-photo figure-img" src="assets/gallery/2022-11-05-nanzenji.webp" width="1706" height="1279" alt="Autumn trees and a waterway beneath bright clouds near Nanzen-ji." data-i18n-alt="gallery.alt.nanzenji" loading="lazy" decoding="async"></a>
