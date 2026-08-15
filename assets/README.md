@@ -9,6 +9,11 @@
 
 Always record the image's real `width` and `height`, write a factual English alt, and add a Chinese alt through `data-i18n-alt` when the page supports language switching. Do not commit desktop originals or absolute local paths.
 
+## Site background
+
+- `backgrounds/kraft-paper.png` is the official 250 px derivative of [Kraft tileable 1024x1024](https://commons.wikimedia.org/wiki/File:Kraft_tileable_1024x1024.png) by Coyau, downloaded from Wikimedia Commons on 2026-08-15. Wikimedia Commons marks the source as public domain because it is ineligible for copyright.
+- The file is self-hosted and used only as a subtle decorative paper-fibre layer below the CSS grid. Keep the source link and provenance here when replacing or recompressing it.
+
 ## Privacy and provenance
 
 - Remove EXIF, GPS, XMP, device, and author metadata before publishing personal photographs.
