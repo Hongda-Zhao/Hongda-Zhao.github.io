@@ -25,7 +25,7 @@ website:
   bread-crumbs: false
   sidebar:
     style: floating
-    background: "#faf9f6"
+    background: "#654a38"
     border: true
     search: false
     header: |
