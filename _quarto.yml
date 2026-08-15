@@ -1,6 +1,7 @@
 project:
   type: website
   resources:
+    - assets/backgrounds/**
     - assets/gallery/**
     - assets/js/gallery-map.js
     - assets/map/**
@@ -24,7 +25,7 @@ website:
   bread-crumbs: false
   sidebar:
     style: floating
-    background: white
+    background: "#faf9f6"
     border: true
     search: false
     header: |

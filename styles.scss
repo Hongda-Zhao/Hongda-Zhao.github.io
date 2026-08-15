@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
 
-$canvas: #ffffff;
+$canvas: #faf9f6;
 $surface: #f7f9f8;
 $ink: #222826;
 $muted: #66706c;
@@ -15,7 +15,7 @@ $link-hover-color: #204f40;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 $font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 $headings-font-family: Georgia, "Times New Roman", serif;
-$headings-font-weight: 400;
+$headings-font-weight: 700;
 $border-radius: 0;
 $border-radius-sm: 0;
 $border-radius-lg: 0;
@@ -38,7 +38,14 @@ html {
 
 body {
   color: var(--ink);
-  background: var(--canvas);
+  background-color: var(--canvas);
+  background-image:
+    linear-gradient(rgba(47, 111, 91, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 111, 91, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba(250, 249, 246, 0.88), rgba(250, 249, 246, 0.88)),
+    url("/assets/backgrounds/kraft-paper.png");
+  background-repeat: repeat, repeat, no-repeat, repeat;
+  background-size: 32px 32px, 32px 32px, 100% 100%, 250px 250px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.68;
@@ -69,8 +76,17 @@ h5,
 h6 {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.015em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
 }
 
 p,
@@ -120,7 +136,7 @@ dd {
   margin-top: 1.2rem;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .site-sidebar-profile > span {
@@ -395,7 +411,7 @@ dd {
 .home-list strong {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .home-list small {
@@ -565,6 +581,7 @@ main.content:has(> .coverage-listing) {
 .coverage-copy > span {
   font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
   font-size: 1.02rem;
+  font-weight: 700;
   line-height: 1.55;
 }
 
@@ -670,7 +687,7 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
   color: var(--muted);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.5;
   text-transform: none;
@@ -814,6 +831,7 @@ main.content:has(> .gallery-page) > #title-block-header {
 .gallery-region-shortcut-name {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1.25;
 }
 
@@ -948,7 +966,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   border-bottom-color: var(--rule);
   border-radius: 0 !important;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(250, 249, 246, 0.94);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.25rem;
   line-height: 2.45rem;
@@ -975,7 +993,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: var(--canvas);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.78);
   transition: background-color 130ms ease, transform 130ms ease;
 }
 
@@ -998,7 +1016,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   border: 1px solid var(--accent);
   border-radius: 50%;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(250, 249, 246, 0.94);
   font-size: 0.7rem;
   font-weight: 700;
   line-height: 1;
@@ -1018,7 +1036,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   border: 1px solid var(--rule);
   border-radius: 0;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(250, 249, 246, 0.96);
   box-shadow: none;
   font-size: 0.72rem;
   line-height: 1.45;
@@ -1029,7 +1047,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   display: block;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.82rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .gallery-map .leaflet-tooltip-top::before {
@@ -1227,7 +1245,7 @@ main.content:has(> .gallery-page) > #title-block-header {
 }
 
 .timeline-row strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .timeline-row small {
@@ -1440,7 +1458,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   margin: 0 0 0.4rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .publication-row p {
@@ -1732,7 +1750,7 @@ main.content:has(> .gallery-page) > #title-block-header {
 .cv-role h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .cv-role p {
@@ -1761,7 +1779,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .cv-two-column {
@@ -1773,7 +1791,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   color: var(--muted);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* Quarto listing and footer */
@@ -1827,7 +1845,7 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 .quarto-listing-default .listing-title {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.45rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -1866,7 +1884,7 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 
   .quarto-secondary-nav {
     border-bottom: 1px solid var(--rule);
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(250, 249, 246, 0.97);
   }
 
 }
@@ -2146,6 +2164,12 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   a {
     color: inherit !important;
     text-decoration: none !important;
+  }
+}
+
+@media (forced-colors: active), (prefers-contrast: more) {
+  body {
+    background-image: none;
   }
 }
 
