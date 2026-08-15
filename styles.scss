@@ -516,6 +516,10 @@ main.content:has(> .coverage-listing) {
   padding-block: clamp(3.25rem, 7vw, 5.25rem) 0;
 }
 
+html:has(.coverage-listing) {
+  scroll-padding-top: 4.5rem;
+}
+
 .latest-heading > a {
   color: var(--accent);
   font-size: 0.8rem;
@@ -551,20 +555,21 @@ main.content:has(> .coverage-listing) {
 }
 
 .latest-heading {
-  display: flex;
+  position: relative;
   padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--ink);
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: end;
 }
 
-.latest-heading h1 {
-  margin: 0;
-  max-width: none;
-  font-size: clamp(2rem, 4.4vw, 3.25rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+.latest-heading-running {
+  display: none;
+}
+
+.latest-heading-sentinel {
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin-bottom: -1px;
+  pointer-events: none;
 }
 
 .blog-empty-guidance {
@@ -1931,6 +1936,68 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
     background: rgba(250, 249, 246, 0.97);
   }
 
+  body:has(.coverage-listing) #quarto-header {
+    transform: translateY(0) !important;
+  }
+
+  body:has(.coverage-listing) .quarto-secondary-nav-title {
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}
+
+@media (min-width: 992px) {
+  main.content:has(> .coverage-listing) > .latest-heading {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .latest-heading-running {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    min-height: 3.5rem;
+    padding-inline: 1.6rem;
+    border-bottom: 1px solid rgba(34, 40, 38, 0.82);
+    color: var(--ink);
+    background-color: var(--canvas);
+    background-image:
+      linear-gradient(rgba(250, 249, 246, 0.94), rgba(250, 249, 246, 0.94)),
+      url("/assets/backgrounds/kraft-paper.png");
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, 250px 250px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.25rem);
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease,
+      visibility 0s linear 160ms;
+    visibility: hidden;
+    align-items: center;
+  }
+
+  .latest-heading.is-stuck {
+    border-bottom-color: transparent;
+  }
+
+  .latest-heading.is-stuck .latest-heading-running {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 760px) {
@@ -2058,10 +2125,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 }
 
 @media (max-width: 520px) {
-  .latest-heading h1 {
-    font-size: clamp(2.1rem, 10.5vw, 2.8rem);
-  }
-
   .topic-index {
     padding-block: 0.8rem;
   }
@@ -2069,12 +2132,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   .topic-index > span:first-child {
     width: 100%;
     margin-right: 0;
-  }
-
-  .latest-heading {
-    align-items: start;
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .coverage-item {
@@ -2187,7 +2244,8 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   #quarto-sidebar,
   .quarto-secondary-nav,
   .page-footer,
-  .print-button {
+  .print-button,
+  .latest-heading-running {
     display: none !important;
   }
 
@@ -2219,6 +2277,10 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   #quarto-sidebar {
     background-image: none;
   }
+
+  .latest-heading-running {
+    background-image: none;
+  }
 }
 
 @media (forced-colors: active) {
@@ -2243,6 +2305,12 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   #quarto-sidebar img.site-sidebar-icon {
     filter: none;
     opacity: 1;
+  }
+
+  .latest-heading-running {
+    border-color: CanvasText;
+    color: CanvasText;
+    background-color: Canvas;
   }
 }
 
