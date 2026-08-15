@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-57e86ebc129598f0092936e43730ebcf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1428686591101e1153ef602d0d2d1a10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -287,6 +287,34 @@ ul.task-list li input[type="checkbox"] {
     });
   };
 
+  const setupHomeRunningHead = () => {
+    const runningHead = document.querySelector(
+      "main.content:has(> .coverage-listing) > .latest-heading"
+    );
+    if (!runningHead || !("IntersectionObserver" in window)) return;
+
+    const label = document.createElement("div");
+    label.className = "latest-heading-running";
+    label.setAttribute("aria-hidden", "true");
+
+    const labelText = document.createElement("span");
+    labelText.dataset.i18n = "coverage.title";
+    labelText.textContent = document.querySelector("#coverage")?.textContent.trim() || "";
+    label.append(labelText);
+    runningHead.prepend(label);
+
+    const sentinel = document.createElement("span");
+    sentinel.className = "latest-heading-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    runningHead.before(sentinel);
+
+    const observer = new IntersectionObserver(([entry]) => {
+      const isPastHeading = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      runningHead.classList.toggle("is-stuck", isPastHeading);
+    });
+    observer.observe(sentinel);
+  };
+
   const setLanguage = (language, persist = true) => {
     const index = language === "zh" ? 1 : 0;
     document.documentElement.dataset.uiLang = language;
@@ -370,6 +398,8 @@ ul.task-list li input[type="checkbox"] {
   };
 
   window.addEventListener("DOMContentLoaded", () => {
+    setupHomeRunningHead();
+
     const lightboxObserver = new MutationObserver(() => {
       if (document.querySelector(".glightbox-container")) {
         setLightboxLabels(document.documentElement.dataset.uiLang);
