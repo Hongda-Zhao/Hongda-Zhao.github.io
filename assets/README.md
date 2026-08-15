@@ -1,29 +1,30 @@
-# Image slots
+# Asset policy
 
-Put replacement images in this folder, use lowercase file names, and prefer `.webp` or optimized `.jpg` files.
+## Images
 
-Recommended files:
+- Shared site artwork lives directly in `assets/` (`avatar-cat.jpg`, `og.png`).
+- Gallery photographs live in `assets/gallery/` as metadata-stripped WebP files named `YYYY-MM-DD-place-slug.webp`.
+- Highlight images live beside their corresponding `highlights/<slug>/index.qmd` so each record remains self-contained.
+- `profile.jpg` is currently unreferenced; do not expose or reuse it unless the user explicitly asks.
 
-- `home.jpg` — wide 16:9 or 3:2 photograph for the homepage
-- `profile.jpg` — portrait, ideally 4:5
-- `project-a.jpg`, `project-b.jpg` — plots, workflows, screenshots, or poster crops
-- `activity-academic.jpg` — conference, talk, visit, or poster photograph
-- `activity-community.jpg` — teaching, volunteering, or team photograph
-- `life-01.jpg`, `life-02.jpg`, `life-03.jpg` — personal field-note photographs
-- `Hongda_Zhao_CV.pdf` — optional downloadable PDF after the web CV is complete
+Always record the image's real `width` and `height`, write a factual English alt, and add a Chinese alt through `data-i18n-alt` when the page supports language switching. Do not commit desktop originals or absolute local paths.
 
-Each placeholder in the `.qmd` files has a nearby `PHOTO:` comment containing the replacement HTML. Always write a factual `alt` description. Decorative images are less useful than evidence of work, participation, or perspective.
+## Privacy and provenance
 
-Gallery photographs live in `assets/gallery/` as metadata-stripped WebP files. Add the corresponding date, place, and bilingual alt text in `gallery.qmd` and `head.html`, and avoid publishing identifiable group photographs without the participants' consent.
+- Remove EXIF, GPS, XMP, device, and author metadata before publishing personal photographs.
+- Confirm consent before publishing identifiable group photographs.
+- Inspect workplace photographs for screens, papers, badges, contact details, and unpublished information.
+- Do not guess species, people, or locations in alt text; describe only what is visible and verified.
+- Prefer official publication, conference, university, and brand sources for third-party material.
 
 ## Sidebar icons
 
-The profile links use local copies so they remain visible without a third-party icon request:
+The profile links use local copies so they remain visible without third-party icon requests:
 
 - Google Scholar: [Simple Icons](https://simpleicons.org/)
-- GitHub: the official [Primer Octicons](https://primer.style/octicons/)
-- LinkedIn: the approved blue `[in]` mark from the official [LinkedIn brand site](https://brand.linkedin.com/in-logo)
+- GitHub: official [Primer Octicons](https://primer.style/octicons/)
+- LinkedIn: approved blue `[in]` mark from the official [LinkedIn brand site](https://brand.linkedin.com/in-logo)
 - Email: [Bootstrap Icons](https://icons.getbootstrap.com/)
-- iNaturalist: the official [iNaturalist press asset](https://www.inaturalist.org/pages/press)
+- iNaturalist: official [iNaturalist press asset](https://www.inaturalist.org/pages/press)
 
 Platform names and logos remain trademarks of their respective owners. They are used only to identify and link to Hongda Zhao's profiles on those services.

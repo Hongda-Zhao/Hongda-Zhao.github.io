@@ -2,7 +2,9 @@
 
 ## Add or move a photograph marker
 
-Edit only `gallery-places.js`; do not edit `gallery-map.js` for ordinary updates.
+For an ordinary map-record change, edit `gallery-places.js`; do not edit `gallery-map.js`.
+Adding a new photograph still requires the full four-source workflow in
+`.github/MAINTENANCE.md` (asset, Gallery card, map record, and translations).
 Copy this record and replace its values:
 
 ```js
