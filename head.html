@@ -207,6 +207,34 @@
     });
   };
 
+  const setupHomeRunningHead = () => {
+    const runningHead = document.querySelector(
+      "main.content:has(> .coverage-listing) > .latest-heading"
+    );
+    if (!runningHead || !("IntersectionObserver" in window)) return;
+
+    const label = document.createElement("div");
+    label.className = "latest-heading-running";
+    label.setAttribute("aria-hidden", "true");
+
+    const labelText = document.createElement("span");
+    labelText.dataset.i18n = "coverage.title";
+    labelText.textContent = document.querySelector("#coverage")?.textContent.trim() || "";
+    label.append(labelText);
+    runningHead.prepend(label);
+
+    const sentinel = document.createElement("span");
+    sentinel.className = "latest-heading-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    runningHead.before(sentinel);
+
+    const observer = new IntersectionObserver(([entry]) => {
+      const isPastHeading = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      runningHead.classList.toggle("is-stuck", isPastHeading);
+    });
+    observer.observe(sentinel);
+  };
+
   const setLanguage = (language, persist = true) => {
     const index = language === "zh" ? 1 : 0;
     document.documentElement.dataset.uiLang = language;
@@ -290,6 +318,8 @@
   };
 
   window.addEventListener("DOMContentLoaded", () => {
+    setupHomeRunningHead();
+
     const lightboxObserver = new MutationObserver(() => {
       if (document.querySelector(".glightbox-container")) {
         setLightboxLabels(document.documentElement.dataset.uiLang);
