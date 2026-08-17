@@ -8,7 +8,7 @@ twitter-card:
 lang: zh-CN
 image: figures/cover-evidence-first.png
 image-alt: "DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。"
-draft: true
+draft: false
 toc: true
 toc-location: right
 code-copy: true
