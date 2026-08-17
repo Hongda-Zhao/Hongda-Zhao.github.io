@@ -42,6 +42,83 @@
     "text": "Projects\n\n\n\n\n\n\n\nProject 01In preparation\n\n\nSelected project 01\nCase study details to be added.\n\n\nPROJECT VISUAL / 01Plot, workflow, poster, or interface to be added.\n\n\nProblemTo be added\nMy roleTo be added\nMethodsTo be added\nOutcomeTo be added\n\n\nEvidence links to be added\n\n\n\nProject 02In preparation\n\n\nSelected project 02\nCase study details to be added.\n\n\nPROJECT VISUAL / 02Plot, workflow, poster, or interface to be added.\n\n\nProblemTo be added\nMy roleTo be added\nMethodsTo be added\nOutcomeTo be added\n\n\nEvidence links to be added"
   },
   {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "2026 年 7 月 30 日，我在 GitHub 发布了 DJR-MCP Finder v0.1。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。\nDJR-MCP Finder 是一个面向病毒演化研究的蛋白质分类工具。它接收蛋白质 FASTA 序列，寻找可能具有 double-jelly-roll（DJR）折叠、并参与 Varidnaviria 病毒形态发生的主要衣壳蛋白候选。\n这篇文章不是使用说明，而是一次开发复盘：我为什么做这个工具，过程中哪些问题最难，以及 Codex 如何改变了我的工作方式。\n\n\n主要衣壳蛋白，也就是 major capsid protein（MCP），是许多双链 DNA 病毒构建衣壳的核心蛋白。对于使用 DJR 折叠 MCP 的病毒来说，这类蛋白也是研究病毒形态发生、基因组注释和深层演化关系的重要线索。\n困难在于，远缘 DJR-MCP 之间的序列相似性可能已经很低。只依赖已有注释或高序列相似性，容易漏掉远缘候选。\n但问题也不能简单地变成“找出所有 DJR 蛋白”。细胞生物中同样存在 DJR 蛋白，因此，具有 DJR 折叠并不等于它就是病毒 MCP。\nDJR-MCP Finder 的目标不是替用户自动作出最终鉴定，而是：\n\n从大量蛋白中筛出一份规模可控、证据边界清楚的候选清单，供后续结构、基因组邻域和病毒学分析继续判断。\n\n为此，我把任务拆成了三级：\n\nH1：判断蛋白是否具有 DJR 折叠；\nH2：在 DJR 蛋白中，判断它是否与病毒形态发生相关；\nH3：尝试归入两个样本较充分的已知病毒门。\n\nH3 证据不足时，工具输出 unknown/other。这只表示模型拒绝强行分类，并不代表发现了新的病毒门。\n\n\n\n我最早遇到的一个问题是：同一条 cellular DJR，在 H1 中必须是正例，在 H2 中却必须是负例。\n这并不是标注冲突。\nH1 问的是“它是不是 DJR”，而 H2 的前提已经是 DJR，问题变成“它是否与病毒形态发生相关”。如果把两个问题压成一张平坦的多分类表，cellular DJR 在生物学上的角色反而会被抹掉。\n最终，三个任务使用了不同的标签体系：\n\nH1 使用 560 条 VMA-DJR 和 500 条 cellular DJR 作为正例，使用 5,000 条 HardNeg 和 5,000 条普通背景蛋白作为负例；\nH2 只在 DJR 蛋白中区分 VMA-DJR 和 cellular DJR；\nH3 使用 Nucleocytoviricota 和 Preplasmiviricota 拟合分类器，其他样本只用于观察拒绝分类行为。\n\n这些正样本也不是从某一张数据库表中直接复制出来的。上游记录经过文献、结构证据和序列去重后，最终留下了 560 条 VMA-DJR。\n其中一部分是证据更充分的 Gold 样本，另一部分是按照固定结构参照和统一门槛筛选的 Silver_R3 样本。Silver_R3 是这个版本采用的数据规则，而不是一条永远不会变化的“真值线”。\n\n\n\n如果 H1 的负样本全是与 DJR 差异很大的普通蛋白，模型很容易得到漂亮的分数。但这种结果可能只说明它学会了蛋白长度、组成或数据库来源，并不代表它理解了我们真正关心的结构边界。\n因此，我另外构建了一组结构近邻负样本。\n候选最初来自 172,346 条 Foldseek 检索记录。经过质量过滤、去重、MMseqs2 聚类，以及序列、HMM 和结构层面对 DJR 正样本的排除后，最终选出了 5,000 条 HardNeg。\n有两个 representative 与正样本过于接近。我没有勉强把它们解释成负例，而是将它们放进 quarantine，暂时不参与训练。\n这组样本的目的很具体：检查模型是否会把与 DJR 相近、但经过多层排除证据支持为 H1 负例的蛋白误判为正例。\n我没有做完全可比的“加入 HardNeg 前后”消融，因此不会声称它让性能提高了多少。能够确认的是，冻结输入可以重放出相同的代表与最终输出，排除规则和 G0–G6 recovery gates 也都可以审计；项目并不声称所有原始中间文件都被保留或逐字节一致。\n[图 1：三级任务中的标签变化，以及 HardNeg 的构建过程]\n\n\n\n蛋白质数据中的两条记录即使不完全相同，也可能属于同一家族，或者来自同一个上游 cluster。\n如果把每一行独立随机分到 Train、Validation 和 Test，模型可能在 Test 中遇到训练样本的近亲。最终分数看起来很好，实际上却高估了泛化能力。\n为减少这种泄漏，我先建立了一张关系图，把以下关系连接起来：\n\n完全相同的标准化序列；\n相同的 source cluster；\n已知的历史或全局 component 关系；\nMMseqs2 identity 不低于 30%，且双向 coverage 不低于 80% 的序列关系。\n\n关系图中的每个连通分量称为一个 relation component。切分数据时，我移动的不是单条序列，而是整个 component。\n11,060 条建模记录最终形成了 9,262 个含建模样本的 components。按照冻结后的 component 大小估算，如果仍然逐行随机进行 60/20/20 切分，预计约有 348 个 components 会跨越多个数据集。\n采用 component-aware split 后，我又使用独立流程检查了三对 split。完全重复序列、component 重叠，以及达到既定 identity 和 coverage 门槛的残留关系均为 0。\n这不能证明 30% identity 以下的所有远同源关系都已消失，但它至少让我能准确说明：哪些关系被隔离了、使用了什么标准，以及如何复查。\n[图 2：逐行切分与 relation-component 切分的区别]\n\n\n\n我使用同一份冻结的 Train-only 五折 component map，比较了 14 种蛋白表征模型。\n模型首先需要通过每个 Head 的 Validation gate，再在相同 folds 上进行 paired one-standard-error 比较。最终有 8 个模型通过全部 gates，但只有 ESM-C 6B 进入 one-SE 集合，因此它被冻结为 Model V0。\n这里的开发期分数来自 Train-CV，不是 Test 成绩。\n这一阶段还暴露过一个很有代表性的错误。\nESM-2 650M 的一批 sigmoid probabilities 饱和成了精确的 0 和 1，计算得到的 AP 只有约 0.857。改用保留排序信息的 raw decision scores 后，同一批预测的 AP 变成约 0.998。\n模型并没有突然变强。改变的是指标的输入。\n这件事让我意识到，metric contract 并不是结果出来以后才需要检查的工程细节，而是模型选择本身的一部分。\n[图 3：14 种蛋白表征的开发期比较]\n\n\n\nV0 冻结以后，我又得到一个综合分略高的 mixed nominee。\n它的 Train-CV 分数比 V0 高约 0.0005，但在 viral strict cluster 诊断中表现更差，最慢推理路径也更耗时。因此，我将它记录为 recommended_for_external_confirmation，而没有因为一个很小的分数差异重新改写已经冻结的选择。\n这里重要的不是哪一个模型排第一，而是发布规则是否能抵抗开发过程中的反复试探。\n\n\n\n项目保留了一批包含 2,214 条记录的 protected Test。\n这批 Test 曾经为较早的 ESM-2 650M 版本打开过。后来选出的 ESM-C 6B 和 mixed nominee 都没有再次访问它，因此它们的模型级状态是 not_evaluated。\n我决定不重新打开旧 Test。下一次真正独立的评估，需要建立一批与现有 source components 分离的 external lockbox。\n以前我可能会觉得，一张没有完整 Test 指标的结果表是不完整的。现在我更愿意保留 not_evaluated，因为它清楚地说明了 Test 没有被用来追逐更漂亮的结果。\n\n\n\n过去我使用 AI，通常只是解决一个局部代码问题。这个项目中，我第一次让 Codex 围绕同一个仓库持续参与工作。\n它帮助我：\n\n起草和修改脚本；\n运行测试并整理日志；\n比较中间结果；\n扩展文献检索词；\n检查引用、数据泄漏和指标实现；\n为复杂步骤生成检查清单。\n\n但每一轮仍然从我定义科学问题和限制条件开始。\nAgent 返回的文献、标签建议和方法选项都只是待核对材料。涉及 Gold、Silver 和样本纳入时，我仍然回到论文原文、图表和数据库记录。规则写进代码后，我会继续检查 diff、日志、冻结文件和关键产物，发现问题后再修改和重算。\nCodex 最有帮助的地方，并不是替我决定“什么是正确答案”，而是让我能够同时推进检索、实现、测试和复查，更快发现不同环节之间的矛盾。\n按我自己的开发记录和回忆，从最初设计到完成第一版 benchmark，这个项目大约用了两个月。没有这种协作方式，开发周期可能会更长。但决定数据边界、判断生物学证据和承担最终结论的仍然是我。\n\n\n\n\n\nDJR 是有用的结构证据，但它不等于病毒身份。cellular DJR 的存在迫使我把 H1 和 H2 分开，也提醒我，模型输出之后仍然需要结构、基因组邻域和病毒学证据继续判断。\n\n\n\n回头看，这个项目很大一部分时间都花在样本收集、Silver positive 验证、负样本构建和代表序列选择上。\n蛋白语言模型可以提供强大的表征，但如果正负样本定义不清楚，或者 Test 中混入了训练样本的近亲，再高的分数也很难解释。\n\n\n\n通过这次 benchmark，我没有得到足以证明蛋白语言模型在同源物识别上远超传统序列比对或 profile HMM 的证据。需要说明的是，这里的 14 模型 benchmark 比较的是不同蛋白语言模型表征，并不是与 MMseqs2 或 HMM 的严格正面对照；因此，这更接近我在开发过程中的方法判断，而不是一个性能倍数结论。\n传统方法仍然能够提供可解释的匹配、明确的阈值和可追溯的命中关系。蛋白语言模型的价值更像是补充：在序列相似性较弱、分类边界复杂时帮助排序候选。实际工作中，我更愿意让两类方法互相校验，而不是让其中一种取代另一种。\n\n\n\n不确定的样本可以进入 quarantine，证据不足的分类可以输出 unknown/other，没有独立评估的模型可以保留 not_evaluated。\n这些状态看起来不如一个完整、漂亮的结果表吸引人，但它们能更准确地表达证据目前走到了哪里。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#为什么要寻找-djr-mcp",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#为什么要寻找-djr-mcp",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "主要衣壳蛋白，也就是 major capsid protein（MCP），是许多双链 DNA 病毒构建衣壳的核心蛋白。对于使用 DJR 折叠 MCP 的病毒来说，这类蛋白也是研究病毒形态发生、基因组注释和深层演化关系的重要线索。\n困难在于，远缘 DJR-MCP 之间的序列相似性可能已经很低。只依赖已有注释或高序列相似性，容易漏掉远缘候选。\n但问题也不能简单地变成“找出所有 DJR 蛋白”。细胞生物中同样存在 DJR 蛋白，因此，具有 DJR 折叠并不等于它就是病毒 MCP。\nDJR-MCP Finder 的目标不是替用户自动作出最终鉴定，而是：\n\n从大量蛋白中筛出一份规模可控、证据边界清楚的候选清单，供后续结构、基因组邻域和病毒学分析继续判断。\n\n为此，我把任务拆成了三级：\n\nH1：判断蛋白是否具有 DJR 折叠；\nH2：在 DJR 蛋白中，判断它是否与病毒形态发生相关；\nH3：尝试归入两个样本较充分的已知病毒门。\n\nH3 证据不足时，工具输出 unknown/other。这只表示模型拒绝强行分类，并不代表发现了新的病毒门。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#最难的部分是定义标签",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#最难的部分是定义标签",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "我最早遇到的一个问题是：同一条 cellular DJR，在 H1 中必须是正例，在 H2 中却必须是负例。\n这并不是标注冲突。\nH1 问的是“它是不是 DJR”，而 H2 的前提已经是 DJR，问题变成“它是否与病毒形态发生相关”。如果把两个问题压成一张平坦的多分类表，cellular DJR 在生物学上的角色反而会被抹掉。\n最终，三个任务使用了不同的标签体系：\n\nH1 使用 560 条 VMA-DJR 和 500 条 cellular DJR 作为正例，使用 5,000 条 HardNeg 和 5,000 条普通背景蛋白作为负例；\nH2 只在 DJR 蛋白中区分 VMA-DJR 和 cellular DJR；\nH3 使用 Nucleocytoviricota 和 Preplasmiviricota 拟合分类器，其他样本只用于观察拒绝分类行为。\n\n这些正样本也不是从某一张数据库表中直接复制出来的。上游记录经过文献、结构证据和序列去重后，最终留下了 560 条 VMA-DJR。\n其中一部分是证据更充分的 Gold 样本，另一部分是按照固定结构参照和统一门槛筛选的 Silver_R3 样本。Silver_R3 是这个版本采用的数据规则，而不是一条永远不会变化的“真值线”。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#hardneg不能只选择容易区分的负样本",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#hardneg不能只选择容易区分的负样本",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "如果 H1 的负样本全是与 DJR 差异很大的普通蛋白，模型很容易得到漂亮的分数。但这种结果可能只说明它学会了蛋白长度、组成或数据库来源，并不代表它理解了我们真正关心的结构边界。\n因此，我另外构建了一组结构近邻负样本。\n候选最初来自 172,346 条 Foldseek 检索记录。经过质量过滤、去重、MMseqs2 聚类，以及序列、HMM 和结构层面对 DJR 正样本的排除后，最终选出了 5,000 条 HardNeg。\n有两个 representative 与正样本过于接近。我没有勉强把它们解释成负例，而是将它们放进 quarantine，暂时不参与训练。\n这组样本的目的很具体：检查模型是否会把与 DJR 相近、但经过多层排除证据支持为 H1 负例的蛋白误判为正例。\n我没有做完全可比的“加入 HardNeg 前后”消融，因此不会声称它让性能提高了多少。能够确认的是，冻结输入可以重放出相同的代表与最终输出，排除规则和 G0–G6 recovery gates 也都可以审计；项目并不声称所有原始中间文件都被保留或逐字节一致。\n[图 1：三级任务中的标签变化，以及 HardNeg 的构建过程]"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#数据切分的单位不应该是一条序列",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#数据切分的单位不应该是一条序列",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "蛋白质数据中的两条记录即使不完全相同，也可能属于同一家族，或者来自同一个上游 cluster。\n如果把每一行独立随机分到 Train、Validation 和 Test，模型可能在 Test 中遇到训练样本的近亲。最终分数看起来很好，实际上却高估了泛化能力。\n为减少这种泄漏，我先建立了一张关系图，把以下关系连接起来：\n\n完全相同的标准化序列；\n相同的 source cluster；\n已知的历史或全局 component 关系；\nMMseqs2 identity 不低于 30%，且双向 coverage 不低于 80% 的序列关系。\n\n关系图中的每个连通分量称为一个 relation component。切分数据时，我移动的不是单条序列，而是整个 component。\n11,060 条建模记录最终形成了 9,262 个含建模样本的 components。按照冻结后的 component 大小估算，如果仍然逐行随机进行 60/20/20 切分，预计约有 348 个 components 会跨越多个数据集。\n采用 component-aware split 后，我又使用独立流程检查了三对 split。完全重复序列、component 重叠，以及达到既定 identity 和 coverage 门槛的残留关系均为 0。\n这不能证明 30% identity 以下的所有远同源关系都已消失，但它至少让我能准确说明：哪些关系被隔离了、使用了什么标准，以及如何复查。\n[图 2：逐行切分与 relation-component 切分的区别]"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#模型选择不能只看排行榜第一名",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#模型选择不能只看排行榜第一名",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "我使用同一份冻结的 Train-only 五折 component map，比较了 14 种蛋白表征模型。\n模型首先需要通过每个 Head 的 Validation gate，再在相同 folds 上进行 paired one-standard-error 比较。最终有 8 个模型通过全部 gates，但只有 ESM-C 6B 进入 one-SE 集合，因此它被冻结为 Model V0。\n这里的开发期分数来自 Train-CV，不是 Test 成绩。\n这一阶段还暴露过一个很有代表性的错误。\nESM-2 650M 的一批 sigmoid probabilities 饱和成了精确的 0 和 1，计算得到的 AP 只有约 0.857。改用保留排序信息的 raw decision scores 后，同一批预测的 AP 变成约 0.998。\n模型并没有突然变强。改变的是指标的输入。\n这件事让我意识到，metric contract 并不是结果出来以后才需要检查的工程细节，而是模型选择本身的一部分。\n[图 3：14 种蛋白表征的开发期比较]"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#分数稍高不代表应该替换冻结模型",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#分数稍高不代表应该替换冻结模型",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "V0 冻结以后，我又得到一个综合分略高的 mixed nominee。\n它的 Train-CV 分数比 V0 高约 0.0005，但在 viral strict cluster 诊断中表现更差，最慢推理路径也更耗时。因此，我将它记录为 recommended_for_external_confirmation，而没有因为一个很小的分数差异重新改写已经冻结的选择。\n这里重要的不是哪一个模型排第一，而是发布规则是否能抵抗开发过程中的反复试探。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#not_evaluated-也可以是一种有意义的结果",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#not_evaluated-也可以是一种有意义的结果",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "项目保留了一批包含 2,214 条记录的 protected Test。\n这批 Test 曾经为较早的 ESM-2 650M 版本打开过。后来选出的 ESM-C 6B 和 mixed nominee 都没有再次访问它，因此它们的模型级状态是 not_evaluated。\n我决定不重新打开旧 Test。下一次真正独立的评估，需要建立一批与现有 source components 分离的 external lockbox。\n以前我可能会觉得，一张没有完整 Test 指标的结果表是不完整的。现在我更愿意保留 not_evaluated，因为它清楚地说明了 Test 没有被用来追逐更漂亮的结果。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#codex-帮我加快了什么",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#codex-帮我加快了什么",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "过去我使用 AI，通常只是解决一个局部代码问题。这个项目中，我第一次让 Codex 围绕同一个仓库持续参与工作。\n它帮助我：\n\n起草和修改脚本；\n运行测试并整理日志；\n比较中间结果；\n扩展文献检索词；\n检查引用、数据泄漏和指标实现；\n为复杂步骤生成检查清单。\n\n但每一轮仍然从我定义科学问题和限制条件开始。\nAgent 返回的文献、标签建议和方法选项都只是待核对材料。涉及 Gold、Silver 和样本纳入时，我仍然回到论文原文、图表和数据库记录。规则写进代码后，我会继续检查 diff、日志、冻结文件和关键产物，发现问题后再修改和重算。\nCodex 最有帮助的地方，并不是替我决定“什么是正确答案”，而是让我能够同时推进检索、实现、测试和复查，更快发现不同环节之间的矛盾。\n按我自己的开发记录和回忆，从最初设计到完成第一版 benchmark，这个项目大约用了两个月。没有这种协作方式，开发周期可能会更长。但决定数据边界、判断生物学证据和承担最终结论的仍然是我。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#总结",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/review-draft.html#总结",
+    "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
+    "section": "",
+    "text": "DJR 是有用的结构证据，但它不等于病毒身份。cellular DJR 的存在迫使我把 H1 和 H2 分开，也提醒我，模型输出之后仍然需要结构、基因组邻域和病毒学证据继续判断。\n\n\n\n回头看，这个项目很大一部分时间都花在样本收集、Silver positive 验证、负样本构建和代表序列选择上。\n蛋白语言模型可以提供强大的表征，但如果正负样本定义不清楚，或者 Test 中混入了训练样本的近亲，再高的分数也很难解释。\n\n\n\n通过这次 benchmark，我没有得到足以证明蛋白语言模型在同源物识别上远超传统序列比对或 profile HMM 的证据。需要说明的是，这里的 14 模型 benchmark 比较的是不同蛋白语言模型表征，并不是与 MMseqs2 或 HMM 的严格正面对照；因此，这更接近我在开发过程中的方法判断，而不是一个性能倍数结论。\n传统方法仍然能够提供可解释的匹配、明确的阈值和可追溯的命中关系。蛋白语言模型的价值更像是补充：在序列相似性较弱、分类边界复杂时帮助排序候选。实际工作中，我更愿意让两类方法互相校验，而不是让其中一种取代另一种。\n\n\n\n不确定的样本可以进入 quarantine，证据不足的分类可以输出 unknown/other，没有独立评估的模型可以保留 not_evaluated。\n这些状态看起来不如一个完整、漂亮的结果表吸引人，但它们能更准确地表达证据目前走到了哪里。"
+  },
+  {
+    "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/source-data/figure-qa.html",
+    "href": "posts/djr-mcp-finder-evidence-first-ai4s/source-data/figure-qa.html",
+    "title": "Figure QA notes",
+    "section": "",
+    "text": "Figure QA notes\n\nTarget: responsive web article with an 820 px body column, not a journal submission.\nCore conclusion: a reliable AI4S result depends on auditable evidence boundaries, not the largest development score alone.\nArchetypes: evidence-flow cover; label matrix plus selection funnel; conceptual split schematic plus quantitative audit; model-selection lollipop plus decision cards; end-to-end provenance workflow.\nBackend: Python/Matplotlib only for drawing, previewing, and export.\nSource data: figure-data.json; the row-split expectation is an explicitly labelled derivation from the frozen component-size histogram.\nExclusions: none performed by the plotting script. The script reads all values in the compact source record that are used by the figures.\nExports: SVG is the primary web asset, PDF preserves editable text, and 320 dpi PNG is the visual-review/fallback asset. TIFF is intentionally omitted because the deliverable is a web article and every panel is vector line art rather than microscopy or photography.\nWidth warning: the 12–12.5 inch design canvas targets responsive browser scaling and is intentionally wider than common 89/183 mm journal defaults.\nColor: labels and direct text accompany color; red/green is never the only carrier of meaning.\nStatistics: the figures report frozen Train-only five-fold selection values and a deterministic split-risk expectation. They do not display a Test result, confidence interval, causal HardNeg effect, or external-generalization claim.\nVisual review: inspect SVG/PNG at full size and at the rendered article width; verify text remains readable and no label is clipped or overlapped."
+  },
+  {
     "objectID": "gallery.html",
     "href": "gallery.html",
     "title": "Hongda Zhao",

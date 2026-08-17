@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>figure-qa – Hongda Zhao</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-51d853521296e6379f017a3f3ab68ecb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta name="theme-color" content="#faf9f6">
+<script>
+(() => {
+  const storageKey = "hongda-site-language";
+  const strings = {
+    "footer.tagline": ["Notes on life · technology · research", "生活 · 技术 · 研究随笔"],
+    "sidebar.externalProfiles": ["External profiles", "外部主页"],
+    "sidebar.email": ["Email", "邮箱"],
+    "sidebar.gallery": ["Gallery", "相册"],
+    "home.profile.fields": ["Bioinformatics · Computational genomics · AI for science", "生物信息学 · 计算基因组学 · AI for Science"],
+    "home.profile.summary": ["Research notes, technical work, and field observations.", "研究笔记、技术实践与野外观察。"],
+    "gallery.title": ["Gallery", "相册"],
+    "gallery.map.sectionAria": ["Photograph location maps", "照片拍摄地点地图"],
+    "gallery.map.aria": ["Regional maps of photograph locations", "照片拍摄地点区域地图"],
+    "gallery.map.shortcutsAria": ["Other photograph regions", "其他照片地区"],
+    "gallery.map.loading": ["Drawing the map…", "正在绘制地图…"],
+    "gallery.map.skip": ["Skip maps and browse photographs by location", "跳过地图，按地点浏览照片"],
+    "gallery.map.creditsAria": ["Map sources", "地图来源"],
+    "gallery.map.region.japan": ["Japan", "日本"],
+    "gallery.map.region.japanAria": ["Photograph locations in Japan", "日本的照片拍摄地点"],
+    "gallery.map.region.china": ["China", "中国"],
+    "gallery.map.region.chinaAria": ["Photograph locations in China", "中国的照片拍摄地点"],
+    "gallery.map.region.australia": ["Australia", "澳大利亚"],
+    "gallery.map.region.europe": ["Germany", "德国"],
+    "gallery.place.chongqingYangtze": ["Yangtze River, Chongqing", "重庆长江夜景"],
+    "gallery.place.cantonTower": ["Canton Tower, Guangzhou", "广州塔"],
+    "gallery.place.shantou": ["Shantou", "汕头市"],
+    "gallery.place.gansu": ["Zhangye Colorful Danxia Scenic Area", "张掖七彩丹霞景区"],
+    "gallery.place.qinghai": ["Heidu Mountain Scenic Area, Mangya", "茫崖黑独山风景区"],
+    "gallery.place.nanjingMuseum": ["Nanjing Museum", "南京博物院"],
+    "gallery.place.jinanPearlSpring": ["Pearl Spring, Jinan", "济南珍珠泉"],
+    "gallery.place.shanghaiJiaoTong": ["Shanghai Jiao Tong University, Minhang Campus", "上海交通大学闵行校区"],
+    "gallery.place.taiyuanAncientTown": ["Taiyuan Ancient County", "太原古县城"],
+    "gallery.place.tianjinCenturyClock": ["Tianjin Century Clock", "天津世纪钟"],
+    "gallery.place.hangzhouWestLake": ["West Lake and Leifeng Pagoda, Hangzhou", "杭州西湖与雷峰塔"],
+    "gallery.place.shima": ["Dolphin Island, Toba", "鸟羽海豚岛"],
+    "gallery.place.otaru": ["Mount Tengu, Otaru", "小樽天狗山"],
+    "gallery.place.tateishi": ["Tateishi Park, Suwa", "诹访市立石公园"],
+    "gallery.place.kreuth": ["Tagungsstätte Schloss Ringberg, Tegernsee", "泰根湖林贝格城堡会议中心"],
+    "gallery.place.munich": ["New Town Hall, Munich", "慕尼黑新市政厅"],
+    "gallery.place.kawachinagano": ["Mount Iwawaki", "岩涌山"],
+    "gallery.place.wakasa": ["Rainbow Line Summit Park, Wakasa", "若狭彩虹线山顶公园"],
+    "gallery.place.ishigakiBlueCave": ["Blue Cave, Ishigaki Island", "石垣岛青之洞窟"],
+    "gallery.place.ishigaki": ["Ishigaki Island", "石垣岛"],
+    "gallery.place.kobe": ["Akashi Kaikyo Bridge, Kobe", "神户明石海峡大桥"],
+    "gallery.place.otsu": ["Otsu", "大津市"],
+    "gallery.place.amanohashidate": ["Amanohashidate, Miyazu", "宫津市天桥立"],
+    "gallery.place.kyotoUjiCampus": ["Kyoto University, Uji Campus", "京都大学宇治校区"],
+    "gallery.place.shiretoko": ["Shiretoko Goko Lakes", "知床五湖"],
+    "gallery.place.tokyo": ["Tokyo Skytree", "东京晴空塔"],
+    "gallery.place.tateshina": ["Lake Tateshina, Chino", "茅野市蓼科湖"],
+    "gallery.place.chifeng": ["Chifeng", "赤峰市"],
+    "gallery.place.qinhuangdao": ["Pigeon Nest Park, Qinhuangdao", "秦皇岛鸽子窝公园"],
+    "gallery.place.cairns": ["Cairns", "凯恩斯"],
+    "gallery.place.fitzroy": ["Fitzroy Island, Great Barrier Reef", "大堡礁菲茨罗伊岛"],
+    "gallery.place.noboribetsu": ["Noboribetsu Jigokudani", "登别地狱谷"],
+    "gallery.place.nanzenji": ["Nanzen-ji Temple Area", "南禅寺周边"],
+    "gallery.place.odaigahara": ["Odaigahara Plateau", "大台原高原"],
+    "gallery.place.hiroshima": ["Atomic Bomb Dome", "原爆圆顶馆"],
+    "gallery.place.miyajima": ["Itsukushima Shrine", "严岛神社"],
+    "gallery.alt.chongqingYangtze": ["A brightly lit cruise boat passes Chongqing’s illuminated skyline on the Yangtze River at night.", "夜色中，一艘灯火通明的游船驶过重庆长江沿岸，城市灯光倒映在水面上。"],
+    "gallery.alt.cantonTower": ["Canton Tower rises above leafy trees beneath a blue sky and towering white clouds.", "广州塔从繁茂绿树后方升起，映衬着蓝天与大片白云。"],
+    "gallery.alt.shantou": ["A dark-crested bird with a white throat perches on a ledge among soft-focus green leaves.", "一只深色羽冠、白色喉部的小鸟停在栏板上，四周绿叶虚化。"],
+    "gallery.alt.gansu": ["Layered red, orange, and pale hills form a colorful eroded landscape.", "红色、橙色与浅色丘陵构成层叠的彩色地貌。"],
+    "gallery.alt.qinghai": ["Monochrome desert mountains recede into a pale horizon.", "单色荒漠群山延伸至苍白的地平线。"],
+    "gallery.alt.nanjingMuseum": ["The traditional-style facade of Nanjing Museum features red columns, a sweeping tiled roof, and a blue name plaque.", "南京博物院传统式样的外立面上，红柱、舒展的琉璃瓦屋顶与蓝底馆名匾额清晰可见。"],
+    "gallery.alt.jinanPearlSpring": ["An illuminated pavilion and willow trees reflect in the still water of Pearl Spring at blue hour.", "蓝调时刻，亮灯的亭阁与垂柳倒映在珍珠泉平静的水面上。"],
+    "gallery.alt.shanghaiJiaoTong": ["A Shanghai Jiao Tong University welcome sign stands behind orange flowerbeds on the Minhang Campus.", "上海交通大学闵行校区内，橙色花坛后立着“上海交通大学欢迎您”的校名装置。"],
+    "gallery.alt.taiyuanAncientTown": ["Fireworks burst above the illuminated tiled roofs of Taiyuan Ancient County at night.", "夜幕下，烟花绽放在灯火通明的太原古县城屋顶上空。"],
+    "gallery.alt.tianjinCenturyClock": ["The illuminated Tianjin Century Clock, with its large dial and exposed gears, stands before high-rise buildings at night.", "夜幕下，带有大型表盘和外露齿轮的天津世纪钟亮起灯光，背后是城市高楼。"],
+    "gallery.alt.hangzhouWestLake": ["The illuminated Leifeng Pagoda rises above the wooded shore across West Lake at night.", "夜色中，亮灯的雷峰塔耸立在西湖对岸的林木之上。"],
+    "gallery.alt.shima": ["Forest steps descend through dense greenery toward the turquoise sea.", "林间台阶穿过茂密绿意，通向碧蓝海面。"],
+    "gallery.alt.otaru": ["Snow-covered Otaru and its harbor during blue hour.", "蓝调时刻覆雪的小樽与港湾。"],
+    "gallery.alt.tateishiNight": ["Lake Suwa and the city lights seen from Tateishi Park at night.", "夜晚从立石公园眺望诹访湖与城市灯火。"],
+    "gallery.alt.kreuth": ["A lakeside town and surrounding hills during blue hour.", "蓝调时刻的湖畔城镇与群山。"],
+    "gallery.alt.munich": ["Munich’s illuminated New Town Hall above a Christmas market.", "圣诞市集上方灯火通明的慕尼黑新市政厅。"],
+    "gallery.alt.kawachinagano": ["A mountain trail curves through sunlit silver grass.", "山径穿过阳光下的芒草。"],
+    "gallery.alt.wakasa": ["Lakes and forested mountains recede beneath an overcast sky.", "湖泊与森林山峦延伸至阴云之下。"],
+    "gallery.alt.ishigakiBlueCave": ["Clear turquoise water below the rugged rock walls of the Blue Cave on Ishigaki Island.", "石垣岛青之洞窟的崎岖岩壁下，清澈的碧蓝海水泛着微波。"],
+    "gallery.alt.ishigaki": ["A vivid pink sunset above silhouetted ships in Ishigaki Harbor.", "鲜艳晚霞笼罩石垣港中船只的剪影。"],
+    "gallery.alt.kobe": ["Sunset glints across a pebbled beach beside the Akashi Kaikyō Bridge.", "明石海峡大桥旁，夕阳照亮细石海滩。"],
+    "gallery.alt.otsu": ["Sunbeams break through clouds over a reed-lined lake and mountains.", "阳光穿过云层，照向芦苇湖岸与群山。"],
+    "gallery.alt.amanohashidate": ["Amanohashidate stretches across the bay beneath a textured sky.", "云层之下，天桥立横贯海湾。"],
+    "gallery.alt.kyotoUjiCampus": ["A group gathers around several computer screens in a lab office at Kyoto University’s Uji Campus.", "一群人在京都大学宇治校区的实验室办公室里围在几台电脑旁。"],
+    "gallery.alt.shiretoko": ["Winter sunlight falls across snow-covered hills above a sea of clouds.", "冬日阳光洒在云海之上的雪原。"],
+    "gallery.alt.tokyo": ["The blue-lit Tokyo Skytree rises into the night sky.", "蓝色灯光中的东京晴空塔耸入夜空。"],
+    "gallery.alt.tateshina": ["Red maple leaves surround a sunset reflected on the lake.", "红枫环绕着倒映在湖面的夕阳。"],
+    "gallery.alt.tateishiDay": ["Autumn branches frame a view of Lake Suwa and the city below.", "秋叶间俯瞰诹访湖与山下城区。"],
+    "gallery.alt.chifeng": ["Green rolling mountains beneath an expansive blue sky.", "辽阔蓝天下连绵的绿色山峦。"],
+    "gallery.alt.qinhuangdao": ["A quiet waterfront park framed by willow branches.", "柳枝掩映下的宁静海滨公园。"],
+    "gallery.alt.cairns": ["A heritage building at a Cairns intersection beneath a purple dusk sky.", "紫色暮空下，凯恩斯街角的历史建筑。"],
+    "gallery.alt.fitzroy": ["Close-up of a large blue-green reef fish with maze-like markings underwater off Fitzroy Island.", "菲茨罗伊岛附近水下，一条带迷宫状纹路的蓝绿色大型珊瑚礁鱼近距离游过。"],
+    "gallery.alt.noboribetsu": ["Steam rises through a snow-covered geothermal valley at sunset.", "夕阳下，蒸汽从覆雪的地热山谷中升起。"],
+    "gallery.alt.nanzenji": ["Autumn trees and a waterway beneath bright clouds near Nanzen-ji.", "南禅寺附近，秋树与水道映在明亮的云层下。"],
+    "gallery.alt.odaigahara": ["A wooden boardwalk descends toward layered mountains beneath a clear sky.", "木栈道通向晴空下层叠的群山。"],
+    "gallery.alt.hiroshima": ["The Atomic Bomb Dome framed by green trees beneath a blue sky.", "绿树与蓝天下的广岛原爆圆顶馆。"],
+    "gallery.alt.miyajima": ["Illuminated Itsukushima Shrine reflected in the water beneath pine branches.", "松枝下，亮灯的严岛神社倒映在水面。"],
+    "gallery.lightbox.close": ["Close photo viewer", "关闭照片查看器"],
+    "gallery.lightbox.previous": ["Previous photo", "上一张照片"],
+    "gallery.lightbox.next": ["Next photo", "下一张照片"],
+    "gallery.lightbox.viewer": ["Photo viewer", "照片查看器"],
+    "coverage.title": ["Notes on life, technology & research.", "生活、技术与研究随笔。"],
+    "coverage.aria": ["Notes on life, technology and research", "生活、技术与研究随笔"],
+    "coverage.source": ["Kyoto University · Ogata Lab", "京都大学 · 绪方研究室"],
+    "coverage.source.icr": ["Kyoto University · Institute for Chemical Research", "京都大学 · 化学研究所"],
+    "coverage.officialSource": ["Official source", "官方来源"],
+    "coverage.source.bioJapan.aria": ["Official source: Bioinformatics Japan award (opens in a new tab)", "官方来源：Bioinformatics Japan 奖项（在新标签页打开）"],
+    "coverage.source.symposium.aria": ["Official source: Giant Virus Biology Symposium (opens in a new tab)", "官方来源：巨型病毒生物学研讨会（在新标签页打开）"],
+    "coverage.source.icrAward.aria": ["Official source: ICR award (opens in a new tab)", "官方来源：京大化研学生研究奖（在新标签页打开）"],
+    "coverage.source.thesis.aria": ["Official source: master’s thesis presentation (opens in a new tab)", "官方来源：硕士论文发表（在新标签页打开）"],
+    "coverage.source.poster.aria": ["Official source: Viruses of Microbes 2024 (opens in a new tab)", "官方来源：Viruses of Microbes 2024（在新标签页打开）"],
+    "coverage.source.currentBiology.aria": ["Official source: Current Biology article (opens in a new tab)", "官方来源：《Current Biology》正式论文（在新标签页打开）"],
+    "coverage.source.virusEvolution.aria": ["Official source: Virus Evolution announcement (opens in a new tab)", "官方来源：《Virus Evolution》论文公告（在新标签页打开）"],
+    "coverage.2026": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
+    "coverage.symposium": ["Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
+    "coverage.award": ["Received the ICR Award for Graduate Students.", "荣获京大化研学生研究賞。"],
+    "coverage.thesis": ["Completed my master’s thesis presentation and Q&A.", "完成硕士论文汇报与问答。"],
+    "coverage.poster": ["Presented a poster at Viruses of Microbes 2024 in Cairns, Australia.", "在澳大利亚凯恩斯举行的 Viruses of Microbes 2024 上进行了海报展示。"],
+    "coverage.currentBiology.before": ["My first-author paper on mirusviruses was accepted for publication in ", "第一作者 mirusvirus 研究论文获《"],
+    "coverage.currentBiology.after": ["!", "》录用！"],
+    "coverage.paper.before": ["My first paper was accepted for publication in ", "第一篇论文获《"],
+    "coverage.paper.after": ["!", "》录用！"],
+    "detail.record": ["Record", "记录"],
+    "detail.details": ["Details", "详情"],
+    "detail.back": ["Back to notes", "返回随笔"],
+    "detail.back.aria": ["Back to notes", "返回随笔"],
+    "detail.summary": ["Record sheet", "记录档案"],
+    "detail.links.aria": ["Record sources", "记录来源"],
+    "detail.meta.event": ["Event", "会议"],
+    "detail.meta.date": ["Date", "日期"],
+    "detail.meta.dates": ["Dates", "日期"],
+    "detail.meta.location": ["Location", "地点"],
+    "detail.meta.format": ["Format", "形式"],
+    "detail.meta.award": ["Award", "奖项"],
+    "detail.meta.work": ["Work", "研究题目"],
+    "detail.meta.lecture": ["Award lecture", "获奖报告"],
+    "detail.meta.talk": ["Talk", "报告题目"],
+    "detail.meta.thesis": ["Thesis", "硕士论文"],
+    "detail.meta.venue": ["Venue", "场合"],
+    "detail.meta.organization": ["Organization", "主办机构"],
+    "detail.meta.announcement": ["Lab announcement", "实验室公告"],
+    "detail.meta.milestone": ["Milestone", "学业阶段"],
+    "detail.meta.institution": ["Institution", "机构"],
+    "detail.meta.laboratory": ["Laboratory", "研究室"],
+    "detail.meta.role": ["Role", "作者身份"],
+    "detail.meta.accepted": ["Accepted", "正式接收"],
+    "detail.meta.published": ["Published", "在线发表"],
+    "detail.link.article": ["Read the article", "查看论文"],
+    "detail.link.event": ["Conference website", "会议网站"],
+    "detail.link.source": ["Official announcement", "官方公告"],
+    "detail.link.program": ["Official program", "官方议程"],
+    "detail.link.labAnnouncement": ["Ogata Lab announcement", "绪方研究室公告"],
+    "bioJapan.eyebrow": ["Award record", "获奖记录"],
+    "bioJapan.title": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan", "荣获 NPO Bioinformatics Japan 2025年度学生鼓励奖"],
+    "bioJapan.image.alt": ["Hongda Zhao and an award presenter hold the FY2025 Bioinformatics Japan Student Encouragement Award certificate.", "赵宏达与颁奖嘉宾共同展示2025年度 Bioinformatics Japan 学生鼓励奖证书。"],
+    "bioJapan.award": ["FY2025 Student Encouragement Award", "2025年度学生鼓励奖（令和7年度学生奨励賞）"],
+    "bioJapan.organization": ["NPO Bioinformatics Japan", "特定非营利活动法人 Bioinformatics Japan"],
+    "bioJapan.venue": ["Room CB207, Kyoto University Uji Campus", "京都大学宇治校区 CB207室"],
+    "bioJapan.record.copy": ["On 5 March 2026, I received NPO Bioinformatics Japan’s FY2025 Student Encouragement Award at Kyoto University’s Uji Campus. After the ceremony, I gave a 30-minute award lecture on a bioinformatic framework for identifying large and giant endogenous dsDNA viral elements across eukaryotic genomes.", "2026年3月5日，我在京都大学宇治校区举行的表彰仪式上获颁 NPO Bioinformatics Japan 2025年度学生鼓励奖。表彰仪式后，我作了30分钟的获奖报告，介绍一套用于在真核生物基因组中识别大型及巨型内源性双链 DNA 病毒元件的生物信息学框架。"],
+    "bioJapan.research.copy": ["The framework supports the detection, taxonomic assignment, and phylogenetic reconstruction of endogenous viral regions, helping expand our view of eukaryote–virus associations and long-term virus–host coevolution.", "该框架支持内源性病毒区域的检测、分类学归属与系统发育重建，从而拓展对真核生物—病毒关联及长期病毒—宿主共同进化的认识。"],
+    "symposiumDetail.eyebrow": ["Conference record", "学术会议记录"],
+    "symposiumDetail.title": ["Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology", "在第六届 Ringberg 巨型病毒生物学研讨会上作口头报告"],
+    "symposiumDetail.image.alt": ["Hongda Zhao gives an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "赵宏达在德国 Tegernsee 举行的 Giant Virus Biology Symposium 上作口头报告。"],
+    "symposiumDetail.location": ["Schloss Ringberg, near Tegernsee, Germany", "德国 Tegernsee 附近的 Ringberg Castle"],
+    "symposiumDetail.format": ["Oral presentation · 15 December 2025", "口头报告 · 2025年12月15日"],
+    "symposiumDetail.record.copy": ["From 15 to 19 December 2025, I attended the 6th Ringberg Symposium on Giant Virus Biology at Ringberg Castle near Tegernsee, Germany. On 15 December, I gave an oral presentation on a computational framework for detecting the dsDNA viral landscape in eukaryotic genomes.", "2025年12月15日至19日，我在德国 Tegernsee 附近的 Ringberg Castle 参加第六届 Ringberg 巨型病毒生物学研讨会，并于12月15日作口头报告，介绍一套用于描绘真核生物基因组中双链 DNA 病毒图景的计算框架。"],
+    "symposiumDetail.context.copy": ["The presentation was co-authored with Lingjie Meng, Ruixuan Zhang, Morgan Gaïa, and Hiroyuki Ogata. Lingjie Meng and Ruixuan Zhang from the Ogata Lab also gave oral presentations at the meeting.", "该报告由我与孟令杰、张瑞轩、Morgan Gaïa 和绪方博之共同完成。绪方研究室的孟令杰和张瑞轩也在本次会议上作了口头报告。"],
+    "thesisDetail.eyebrow": ["Academic milestone", "学业记录"],
+    "thesisDetail.title": ["Master’s thesis presentation and Q&A", "硕士论文汇报与问答"],
+    "thesisDetail.image.alt": ["A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&A.", "硕士论文发表与问答结束后，一行人在京都大学理学研究科2号馆外合影。"],
+    "thesisDetail.milestone": ["Master’s thesis presentation and Q&A", "硕士论文发表与问答"],
+    "thesisDetail.institution": ["Kyoto University", "京都大学"],
+    "thesisDetail.laboratory": ["Ogata Lab", "绪方研究室"],
+    "thesisDetail.record.copy": ["On 28 January 2025, I presented and discussed my master’s thesis at Kyoto University. The session also included master’s thesis presentations by Saki Kikuya and Komei Nagasaka.", "2025年1月28日，我在京都大学完成了硕士论文汇报与问答。同日，菊矢咲季与长坂孔明也进行了硕士论文发表。"],
+    "thesisDetail.context.copy": ["The lab lists the thesis under its 2025 master’s theses. Its formal title is retained above in English.", "实验室已将该论文列入2025年硕士论文名单；上方保留了正式英文题名。"],
+    "virusEvolution.eyebrow": ["Publication record", "论文记录"],
+    "virusEvolution.title.before": ["My first paper in ", "首篇论文发表于《"],
+    "virusEvolution.title.after": ["", "》"],
+    "virusEvolution.image.alt": ["First page of the 2023 Virus Evolution research article, showing the journal masthead, title, author list, and abstract.", "《Virus Evolution》2023年研究论文首页，可见期刊刊头、论文标题、作者名单与摘要。"],
+    "virusEvolution.role": ["First author", "第一作者"],
+    "virusEvolution.record.copy": ["On 4 October 2023, Ogata Lab announced my first paper in Virus Evolution. The journal records formal acceptance on 25 October and online publication on 31 October 2023.", "2023年10月4日，绪方研究室发布了我的首篇《Virus Evolution》论文获接收的消息。期刊记录显示，论文于10月25日正式接收，并于10月31日在线发表。"],
+    "virusEvolution.research.copy": ["The study identified a continuous 1.5-Mb putative endogenous viral region on chromosome 8 of Rhizophagus irregularis strain 4401. Genomic and phylogenetic evidence links it to Asfarviridae-related large dsDNA viruses and supports a relatively recent viral integration.", "研究在丛枝菌根真菌不规则根孢囊霉（Rhizophagus irregularis）4401菌株的8号染色体上，鉴定到一段连续1.5 Mb的推定内源性病毒区域。基因组与系统发育证据表明，它与非洲猪瘟病毒科相关的大型双链 DNA 病毒有关，并支持一次较近期的病毒整合事件。"],
+    "current.eyebrow": ["Publication record", "论文记录"],
+    "current.title.before": ["First-author paper on mirusviruses accepted for publication in ", "第一作者 mirusvirus 研究论文获《"],
+    "current.title.after": ["", "》录用"],
+    "current.image.alt": ["Current Biology article summary with a graphical abstract showing the broad eukaryotic host range, phylogenetic diversity, and three circular genomes of mirusviruses.", "《Current Biology》论文摘要页及图文摘要，展示 mirusvirus 广泛的真核宿主范围、系统发育多样性与三个环状病毒基因组。"],
+    "current.record.copy": ["The manuscript was accepted on 30 April 2024 and published online on 27 May 2024.", "论文于2024年4月30日获接收，并于2024年5月27日在线发表。"],
+    "current.research.copy": ["The study examines mirusvirus signals in eukaryotic genomic data and shows that these viruses likely infect a broad range of eukaryotes across diverse environments.", "这项研究考察了真核生物基因组数据中的 mirusvirus 信号，结果表明这类病毒可能感染来自多种环境的广泛真核生物宿主。"],
+    "poster.eyebrow": ["Conference record", "学术会议记录"],
+    "poster.title": ["Poster presentation at Viruses of Microbes 2024", "在 Viruses of Microbes 2024 上进行了海报展示"],
+    "poster.posterImage.alt": ["Scientific poster on the broad host spectrum of mirusviruses, presenting host-range, genomic-region, and phylogenetic analyses.", "关于 mirusvirus 广泛宿主范围的科学海报，展示宿主范围、病毒基因组区域与系统发育分析。"],
+    "poster.image.alt": ["Nine Viruses of Microbes 2024 attendees posing in front of crocodile sculptures in Cairns.", "九位 Viruses of Microbes 2024 与会者在凯恩斯的鳄鱼雕塑前合影。"],
+    "poster.record.copy": ["Viruses of Microbes 2024 was held in Cairns from 15 to 19 July 2024. I presented this poster on 18 July.", "Viruses of Microbes 2024 于2024年7月15日至19日在凯恩斯举行。我于7月18日进行了这项海报展示。"],
+    "award.eyebrow": ["Award record", "获奖记录"],
+    "award.title": ["Received the ICR Award for Graduate Students", "荣获京大化研学生研究賞"],
+    "award.image.certificateAlt": ["Hongda Zhao and an award presenter display the open ICR Award certificate during the ceremony.", "颁奖仪式上，赵宏达与颁奖嘉宾共同展示打开的京大化研学生研究賞证书。"],
+    "award.image.groupAlt": ["Hongda Zhao, at far right, joins other recipients and an award presenter for a group photograph at the ICR award ceremony.", "京大化研学生研究賞颁奖仪式上，赵宏达（最右）与其他获奖者及颁奖嘉宾合影。"],
+    "award.record.copy": ["The award was presented at the 124th ICR Research Presentation Meeting, where I also gave an award lecture about the research.", "该奖项在第124回京都大学化学研究所研究发表会上颁发，我也在会上就获奖研究作了报告。"],
+    "award.name": ["ICR Award for Graduate Students", "京大化研学生研究賞（京都大学化学研究所学生研究奖）"],
+    "award.venue": ["124th ICR Research Presentation Meeting", "京都大学化学研究所第124回研究发表会"],
+    "common.pending": ["To be added", "待补充"],
+    "common.publications": ["Publications", "论文"],
+    "common.projects": ["Projects", "项目"],
+    "projects.p1": ["Project 01", "项目 01"],
+    "projects.p2": ["Project 02", "项目 02"],
+    "projects.preparing": ["In preparation", "准备中"],
+    "projects.title1": ["Selected project 01", "精选项目 01"],
+    "projects.title2": ["Selected project 02", "精选项目 02"],
+    "projects.case": ["Case study details to be added.", "案例详情待补充。"],
+    "projects.visual": ["Plot, workflow, poster, or interface to be added.", "图表、流程、海报或界面待补充。"],
+    "projects.visual1": ["PROJECT VISUAL / 01", "项目图片 / 01"],
+    "projects.visual2": ["PROJECT VISUAL / 02", "项目图片 / 02"],
+    "projects.problem": ["Problem", "问题"],
+    "projects.role": ["My role", "我的角色"],
+    "projects.methods": ["Methods", "方法"],
+    "projects.outcome": ["Outcome", "成果"],
+    "projects.links": ["Evidence links to be added", "相关链接待补充"],
+    "publications.scholar": ["Google Scholar", "Google Scholar"],
+    "publications.orcid": ["ORCID to be added", "ORCID 待补充"],
+    "publications.peer": ["Peer-reviewed", "同行评议论文"],
+    "publications.preprints": ["Preprints", "预印本"],
+    "publications.other": ["Other outputs", "其他成果"],
+    "publications.details": ["Publication details to be added", "论文信息待补充"],
+    "publications.preprintDetails": ["Preprint details to be added", "预印本信息待补充"],
+    "publications.otherDetails": ["Other outputs to be added", "其他成果待补充"],
+    "publications.citation": ["Citation and evidence links will appear here.", "引用信息与相关链接将显示在这里。"],
+    "publications.outputCopy": ["Software, datasets, posters, or technical reports will appear here.", "软件、数据集、海报或技术报告将显示在这里。"]
+  };
+
+  const initialLanguage = (() => {
+    try { return localStorage.getItem(storageKey) === "zh" ? "zh" : "en"; }
+    catch (_error) { return "en"; }
+  })();
+
+  document.documentElement.dataset.uiLang = initialLanguage;
+  document.documentElement.lang = initialLanguage === "zh" ? "zh-CN" : "en";
+
+  const setLightboxLabels = (language) => {
+    const index = language === "zh" ? 1 : 0;
+    const controls = [
+      [".gclose", "gallery.lightbox.close"],
+      [".gprev", "gallery.lightbox.previous"],
+      [".gnext", "gallery.lightbox.next"]
+    ];
+
+    controls.forEach(([selector, key]) => {
+      document.querySelectorAll(selector).forEach((control) => {
+        control.setAttribute("aria-label", strings[key][index]);
+        control.setAttribute("title", strings[key][index]);
+      });
+    });
+
+    document.querySelectorAll(".glightbox-container").forEach((dialog) => {
+      dialog.setAttribute("role", "dialog");
+      dialog.setAttribute("aria-modal", "true");
+      dialog.setAttribute("aria-label", strings["gallery.lightbox.viewer"][index]);
+    });
+
+    const triggers = document.querySelectorAll(".gallery-lightbox");
+    document.querySelectorAll(".glightbox-container .gslide").forEach((slide, slideIndex) => {
+      const dialogImage = slide.querySelector(".gslide-image img");
+      const sourceImage = triggers[slideIndex]?.querySelector("img");
+      if (dialogImage && sourceImage) dialogImage.setAttribute("alt", sourceImage.getAttribute("alt") || "");
+    });
+  };
+
+  const setupHomeRunningHead = () => {
+    const runningHead = document.querySelector(
+      "main.content:has(> .coverage-listing) > .latest-heading"
+    );
+    if (!runningHead || !("IntersectionObserver" in window)) return;
+
+    const label = document.createElement("div");
+    label.className = "latest-heading-running";
+    label.setAttribute("aria-hidden", "true");
+
+    const labelText = document.createElement("span");
+    labelText.dataset.i18n = "coverage.title";
+    labelText.textContent = document.querySelector("#coverage")?.textContent.trim() || "";
+    label.append(labelText);
+    runningHead.prepend(label);
+
+    const sentinel = document.createElement("span");
+    sentinel.className = "latest-heading-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    runningHead.before(sentinel);
+
+    const observer = new IntersectionObserver(([entry]) => {
+      const isPastHeading = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      runningHead.classList.toggle("is-stuck", isPastHeading);
+    });
+    observer.observe(sentinel);
+  };
+
+  const setLanguage = (language, persist = true) => {
+    const index = language === "zh" ? 1 : 0;
+    document.documentElement.dataset.uiLang = language;
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const translation = strings[element.dataset.i18n];
+      if (translation) element.textContent = translation[index];
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      const translation = strings[element.dataset.i18nAriaLabel];
+      if (translation) element.setAttribute("aria-label", translation[index]);
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+      const translation = strings[element.dataset.i18nAlt];
+      if (translation) element.setAttribute("alt", translation[index]);
+    });
+
+    document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
+      const address = `${link.dataset.emailUser}${String.fromCharCode(64)}${link.dataset.emailDomain}`;
+      link.setAttribute("href", `mailto:${address}`);
+      link.setAttribute("aria-label", language === "zh" ? `发送邮件至 ${address}` : `Email ${address}`);
+    });
+
+    const footer = document.querySelector(".nav-footer-right");
+    if (footer) footer.textContent = strings["footer.tagline"][index];
+
+    const page = location.pathname.split("/").pop() || "index.html";
+    let secondaryTitle = document.querySelector(".quarto-secondary-nav-title");
+    const translatedPageTitle = document.querySelector("[data-document-title]");
+    const isGalleryPage = Boolean(document.querySelector(".gallery-page"));
+    if (secondaryTitle && isGalleryPage) {
+      if (secondaryTitle.tagName === "H1") {
+        const secondaryLabel = document.createElement("span");
+        secondaryLabel.className = secondaryTitle.className;
+        secondaryLabel.setAttribute("aria-hidden", "true");
+        secondaryTitle.replaceWith(secondaryLabel);
+        secondaryTitle = secondaryLabel;
+      }
+      secondaryTitle.textContent = "";
+    } else if (secondaryTitle && translatedPageTitle) {
+      secondaryTitle.textContent = translatedPageTitle.textContent.trim();
+    } else if (secondaryTitle && page === "index.html") {
+      secondaryTitle.textContent = strings["coverage.title"][index];
+    }
+
+    document.querySelectorAll(".quarto-btn-toggle, .quarto-secondary-nav .no-decor[aria-label]").forEach((toggle) => {
+      toggle.setAttribute("aria-label", language === "zh" ? "切换侧栏导航" : "Toggle sidebar navigation");
+    });
+
+    const pageTitles = {
+      "index.html": ["Hongda Zhao | Notes on life, technology, and research", "赵宏达 | 生活、技术与研究随笔"],
+      "projects.html": ["Projects | Hongda Zhao", "项目 | 赵宏达"],
+      "publications.html": ["Publications | Hongda Zhao", "论文 | 赵宏达"]
+    };
+    const documentTitle = document.querySelector("[data-document-title]");
+    if (documentTitle) {
+      const siteName = language === "zh" ? "赵宏达" : "Hongda Zhao";
+      document.title = `${documentTitle.textContent.trim()} | ${siteName}`;
+    } else if (pageTitles[page]) {
+      document.title = pageTitles[page][index];
+    }
+
+    document.querySelectorAll(".language-toggle").forEach((button) => {
+      button.textContent = language === "en" ? "中文" : "EN";
+      button.setAttribute("aria-label", language === "en" ? "切换至中文" : "Switch to English");
+    });
+
+    document.querySelectorAll(".site-sidebar-gallery").forEach((link) => {
+      if (page === "gallery.html") link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+
+    setLightboxLabels(language);
+
+    if (persist) {
+      try { localStorage.setItem(storageKey, language); } catch (_error) {}
+    }
+  };
+
+  window.addEventListener("DOMContentLoaded", () => {
+    setupHomeRunningHead();
+
+    const lightboxObserver = new MutationObserver(() => {
+      if (document.querySelector(".glightbox-container")) {
+        setLightboxLabels(document.documentElement.dataset.uiLang);
+      }
+    });
+    lightboxObserver.observe(document.body, { childList: true, subtree: true });
+
+    document.querySelectorAll(".language-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(document.documentElement.dataset.uiLang === "zh" ? "en" : "zh");
+      });
+    });
+    setLanguage(initialLanguage, false);
+  });
+})();
+</script>
+
+
+<meta property="og:title" content="Hongda Zhao">
+<meta property="og:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/source-data/assets/og.png">
+<meta property="og:site_name" content="Hongda Zhao">
+<meta property="og:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta name="twitter:title" content="Hongda Zhao">
+<meta name="twitter:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/source-data/assets/og.png">
+<meta name="twitter:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"></h1>
+        </a>     
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
+<div class="site-sidebar-profile">
+<a class="site-sidebar-home" href="../../../"> <img src="../../../assets/avatar-cat.jpg" width="1078" height="1105" alt=""> <strong>Hongda Zhao</strong> </a> <span data-i18n="home.profile.fields">Bioinformatics · Computational genomics · AI for science</span>
+<p data-i18n="home.profile.summary">
+Research notes, technical work, and field observations.
+</p>
+</div>
+</div></div>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">Hongda Zhao</a> 
+    </div>
+      </div>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<div class="site-sidebar-utilities">
+<nav class="site-sidebar-links" aria-label="External profiles" data-i18n-aria-label="sidebar.externalProfiles">
+<a class="site-sidebar-link" href="https://scholar.google.com/citations?user=cc-6KA8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><img class="site-sidebar-icon site-sidebar-icon-brand" src="../../../assets/icons/google-scholar.svg" width="24" height="24" alt="" aria-hidden="true"><span>Google Scholar</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://github.com/Hongda-Zhao" target="_blank" rel="noopener noreferrer"><img class="site-sidebar-icon" src="../../../assets/icons/github.svg" width="24" height="24" alt="" aria-hidden="true"><span>GitHub</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://www.linkedin.com/in/hongda-zhao-0357b5405/" target="_blank" rel="noopener noreferrer"><img class="site-sidebar-icon site-sidebar-icon-brand" src="../../../assets/icons/linkedin.png" width="635" height="540" alt="" aria-hidden="true"><span>LinkedIn</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a> <a class="site-sidebar-link" href="https://www.inaturalist.org/people/hongdaz" target="_blank" rel="noopener noreferrer"><img class="site-sidebar-icon site-sidebar-icon-brand site-sidebar-icon-inaturalist" src="../../../assets/icons/inaturalist.png" width="128" height="128" alt="" aria-hidden="true"><span>iNaturalist</span><span class="site-sidebar-arrow" aria-hidden="true">↗</span></a> <a class="site-sidebar-link site-sidebar-email" data-email-user="hongda" data-email-domain="scl.kyoto-u.ac.jp"><img class="site-sidebar-icon" src="../../../assets/icons/email.svg" width="24" height="24" alt="" aria-hidden="true"><span class="site-sidebar-email-copy"><span data-i18n="sidebar.email">Email</span><small>hongda [at] scl.kyoto-u.ac.jp</small></span></a>
+</nav>
+<div class="site-sidebar-actions">
+<button class="language-toggle" type="button" aria-label="切换至中文">中文</button> <a class="site-sidebar-link site-sidebar-gallery" href="../../../gallery.html"><i class="bi bi-images site-sidebar-icon" aria-hidden="true"></i><span data-i18n="sidebar.gallery">Gallery</span><span class="site-sidebar-arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</div></div></nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="figure-qa-notes" class="level1">
+<h1>Figure QA notes</h1>
+<ul>
+<li>Target: responsive web article with an 820 px body column, not a journal submission.</li>
+<li>Core conclusion: a reliable AI4S result depends on auditable evidence boundaries, not the largest development score alone.</li>
+<li>Archetypes: evidence-flow cover; label matrix plus selection funnel; conceptual split schematic plus quantitative audit; model-selection lollipop plus decision cards; end-to-end provenance workflow.</li>
+<li>Backend: Python/Matplotlib only for drawing, previewing, and export.</li>
+<li>Source data: <code>figure-data.json</code>; the row-split expectation is an explicitly labelled derivation from the frozen component-size histogram.</li>
+<li>Exclusions: none performed by the plotting script. The script reads all values in the compact source record that are used by the figures.</li>
+<li>Exports: SVG is the primary web asset, PDF preserves editable text, and 320 dpi PNG is the visual-review/fallback asset. TIFF is intentionally omitted because the deliverable is a web article and every panel is vector line art rather than microscopy or photography.</li>
+<li>Width warning: the 12–12.5 inch design canvas targets responsive browser scaling and is intentionally wider than common 89/183 mm journal defaults.</li>
+<li>Color: labels and direct text accompany color; red/green is never the only carrier of meaning.</li>
+<li>Statistics: the figures report frozen Train-only five-fold selection values and a deterministic split-risk expectation. They do not display a Test result, confidence interval, causal HardNeg effect, or external-generalization claim.</li>
+<li>Visual review: inspect SVG/PNG at full size and at the rendered article width; verify text remains readable and no label is clipped or overlapped.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hongda-zhao\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Hongda Zhao</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Notes on life · technology · research</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
