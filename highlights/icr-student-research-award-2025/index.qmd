@@ -22,8 +22,8 @@ title-block-style: none
 <h2 class="content-label" data-i18n="detail.record">Record</h2>
 <div class="prose-slot highlight-prose">
 <p data-i18n="award.record.copy">The award was presented at the 124th ICR Research Presentation Meeting, where I also gave an award lecture about the research.</p>
-<nav class="highlight-links" aria-label="Award links">
-<a href="https://www.kuicr.kyoto-u.ac.jp/sites/news/news_250214/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.source">Official announcement</span> ↗</a>
+<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
+<a href="https://www.kuicr.kyoto-u.ac.jp/sites/news/news_250214/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.source">Official announcement</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>
@@ -40,8 +40,8 @@ title-block-style: none
 </div>
 </section>
 
-<nav class="highlight-back" aria-label="Back">
-<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to coverage</span></a>
+<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
+<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
 </nav>
 </div>
 ```

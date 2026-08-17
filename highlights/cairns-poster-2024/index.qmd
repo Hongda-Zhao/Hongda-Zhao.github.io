@@ -22,14 +22,14 @@ title-block-style: none
 <div class="prose-slot highlight-prose">
 <p data-i18n="poster.record.copy">Viruses of Microbes 2024 was held in Cairns from 15 to 19 July 2024. I presented this poster on 18 July.</p>
 <p class="highlight-citation">Zhao H., Meng L., Hikida H., Ogata H. “Eukaryotic genomic analysis reveals broad host spectrum of a novel viral group: mirusviruses.”</p>
-<nav class="highlight-links" aria-label="Conference links">
-<a href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> ↗</a>
+<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
+<a href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>
 
-<nav class="highlight-back" aria-label="Back">
-<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to coverage</span></a>
+<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
+<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
 </nav>
 </div>
 ```
