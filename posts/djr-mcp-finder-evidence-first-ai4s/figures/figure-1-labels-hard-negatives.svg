@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="532.8pt" viewBox="0 0 864 532.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-17T17:33:34.635887</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>matplotlib</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 532.8
+L 864 532.8
+L 864 0
+L 0 0
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 51.84 153.55296
+L 425.214247 153.55296
+L 425.214247 123.18336
+L 51.84 123.18336
+z
+" clip-path="url(#p8773e10579)" style="fill: #654a38"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 51.84 210.24288
+L 425.214247 210.24288
+L 425.214247 161.65152
+L 51.84 161.65152
+z
+" clip-path="url(#p8773e10579)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 51.84 266.9328
+L 425.214247 266.9328
+L 425.214247 218.34144
+L 51.84 218.34144
+z
+" clip-path="url(#p8773e10579)" style="fill: #f0efeb"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 51.84 323.62272
+L 425.214247 323.62272
+L 425.214247 275.03136
+L 51.84 275.03136
+z
+" clip-path="url(#p8773e10579)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 51.84 380.31264
+L 425.214247 380.31264
+L 425.214247 331.72128
+L 51.84 331.72128
+z
+" clip-path="url(#p8773e10579)" style="fill: #f0efeb"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 55.573742 462.513024
+L 421.480504 462.513024
+Q 428.201241 462.513024 428.201241 455.22432
+L 428.201241 386.38656
+Q 428.201241 379.097856 421.480504 379.097856
+L 55.573742 379.097856
+Q 48.853006 379.097856 48.853006 386.38656
+L 48.853006 455.22432
+Q 48.853006 462.513024 55.573742 462.513024
+z
+" clip-path="url(#p8773e10579)" style="fill: #dce9f0; stroke: #356a8a; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #222725; font: 700 15px 'sans-serif'; text-anchor: start" x="51.84" y="94.179623" transform="rotate(-0, 51.84, 94.179623)">a  标签随问题变化</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #ffffff; font: 700 10.5px 'sans-serif'; text-anchor: start" x="57.440614" y="141.11554" transform="rotate(-0, 57.440614, 141.11554)">数据组</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #ffffff; font: 700 10.5px 'sans-serif'; text-anchor: start" x="197.455956" y="141.11554" transform="rotate(-0, 197.455956, 141.11554)">n</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #ffffff; font: 700 10.5px 'sans-serif'; text-anchor: start" x="257.195836" y="141.11554" transform="rotate(-0, 257.195836, 141.11554)">H1</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #ffffff; font: 700 10.5px 'sans-serif'; text-anchor: start" x="313.201973" y="141.11554" transform="rotate(-0, 313.201973, 141.11554)">H2</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #ffffff; font: 700 10.5px 'sans-serif'; text-anchor: start" x="369.20811" y="141.11554" transform="rotate(-0, 369.20811, 141.11554)">H3</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="57.440614" y="190.921684" transform="rotate(-0, 57.440614, 190.921684)">VMA-DJR</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="197.455956" y="190.921684" transform="rotate(-0, 197.455956, 190.921684)">560</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #2f6b4f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="257.195836" y="190.921684" transform="rotate(-0, 257.195836, 190.921684)">正</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #2f6b4f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="313.201973" y="190.921684" transform="rotate(-0, 313.201973, 190.921684)">正</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #222725; font: 9.2px 'sans-serif'; text-anchor: start" x="369.20811" y="190.851871" transform="rotate(-0, 369.20811, 190.851871)">已知类 / reject</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="57.440614" y="247.611604" transform="rotate(-0, 57.440614, 247.611604)">cellular DJR</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="197.455956" y="247.611604" transform="rotate(-0, 197.455956, 247.611604)">500</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #2f6b4f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="257.195836" y="247.611604" transform="rotate(-0, 257.195836, 247.611604)">正</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #a8443f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="313.201973" y="247.611604" transform="rotate(-0, 313.201973, 247.611604)">负</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #222725; font: 9.2px 'sans-serif'; text-anchor: start" x="369.20811" y="247.246385" transform="rotate(-0, 369.20811, 247.246385)">不适用</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="57.440614" y="304.275274" transform="rotate(-0, 57.440614, 304.275274)">HardNeg</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="197.455956" y="304.301524" transform="rotate(-0, 197.455956, 304.301524)">5,000</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #a8443f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="257.195836" y="304.301524" transform="rotate(-0, 257.195836, 304.301524)">负</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="313.201973" y="304.301524" transform="rotate(-0, 313.201973, 304.301524)">—</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #222725; font: 9.2px 'sans-serif'; text-anchor: start" x="369.20811" y="303.936305" transform="rotate(-0, 369.20811, 303.936305)">—</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="57.440614" y="360.965194" transform="rotate(-0, 57.440614, 360.965194)">background</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="197.455956" y="360.991444" transform="rotate(-0, 197.455956, 360.991444)">5,000</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #a8443f; font: 700 10.5px 'sans-serif'; text-anchor: start" x="257.195836" y="360.991444" transform="rotate(-0, 257.195836, 360.991444)">负</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #222725; font: 10.5px 'sans-serif'; text-anchor: start" x="313.201973" y="360.991444" transform="rotate(-0, 313.201973, 360.991444)">—</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #222725; font: 9.2px 'sans-serif'; text-anchor: start" x="369.20811" y="360.626225" transform="rotate(-0, 369.20811, 360.626225)">—</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #356a8a; font: 700 11.5px 'sans-serif'; text-anchor: start" x="61.174356" y="399.749184" transform="rotate(-0, 61.174356, 399.749184)">正类也有证据层级</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #222725; font: 10.4px 'sans-serif'; text-anchor: start" x="61.174356" y="417.566016" transform="rotate(-0, 61.174356, 417.566016)">65 Gold + 495 Silver_R3 = 560 条 exact-unique VMA-DJR</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'; text-anchor: start" x="61.174356" y="433.763136" transform="rotate(-0, 61.174356, 433.763136)">H3 只用 532 条拟合两个样本充分的门；其余 28 条只做 reject diagnostic。</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #a8443f; font: 700 9.5px 'sans-serif'; text-anchor: start" x="61.174356" y="447.935616" transform="rotate(-0, 61.174356, 447.935616)">unknown/other = 拒绝强分，而不是“发现未知病毒”。</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 508.591588 156.792384
+L 822.915261 156.792384
+Q 827.051099 156.792384 827.051099 151.933248
+L 827.051099 126.017856
+Q 827.051099 121.15872 822.915261 121.15872
+L 508.591588 121.15872
+Q 504.45575 121.15872 504.45575 126.017856
+L 504.45575 151.933248
+Q 504.45575 156.792384 508.591588 156.792384
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 564.263677 195.260544
+L 767.243173 195.260544
+Q 771.37901 195.260544 771.37901 190.401408
+L 771.37901 164.486016
+Q 771.37901 159.62688 767.243173 159.62688
+L 564.263677 159.62688
+Q 560.127839 159.62688 560.127839 164.486016
+L 560.127839 190.401408
+Q 560.127839 195.260544 564.263677 195.260544
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 564.264969 233.728704
+L 767.24188 233.728704
+Q 771.377718 233.728704 771.377718 228.869568
+L 771.377718 202.954176
+Q 771.377718 198.09504 767.24188 198.09504
+L 564.264969 198.09504
+Q 560.129131 198.09504 560.129131 202.954176
+L 560.129131 228.869568
+Q 560.129131 233.728704 564.264969 233.728704
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 568.378002 272.196864
+L 763.128847 272.196864
+Q 767.264685 272.196864 767.264685 267.337728
+L 767.264685 241.422336
+Q 767.264685 236.5632 763.128847 236.5632
+L 568.378002 236.5632
+Q 564.242165 236.5632 564.242165 241.422336
+L 564.242165 267.337728
+Q 564.242165 272.196864 568.378002 272.196864
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 591.169987 310.665024
+L 740.336862 310.665024
+Q 744.4727 310.665024 744.4727 305.805888
+L 744.4727 279.890496
+Q 744.4727 275.03136 740.336862 275.03136
+L 591.169987 275.03136
+Q 587.034149 275.03136 587.034149 279.890496
+L 587.034149 305.805888
+Q 587.034149 310.665024 591.169987 310.665024
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 591.172534 349.133184
+L 740.334315 349.133184
+Q 744.470153 349.133184 744.470153 344.274048
+L 744.470153 318.358656
+Q 744.470153 313.49952 740.334315 313.49952
+L 591.172534 313.49952
+Q 587.036696 313.49952 587.036696 318.358656
+L 587.036696 344.274048
+Q 587.036696 349.133184 591.172534 349.133184
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 600.095361 387.601344
+L 731.411488 387.601344
+Q 735.547326 387.601344 735.547326 382.742208
+L 735.547326 356.826816
+Q 735.547326 351.96768 731.411488 351.96768
+L 600.095361 351.96768
+Q 595.959523 351.96768 595.959523 356.826816
+L 595.959523 382.742208
+Q 595.959523 387.601344 600.095361 387.601344
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #dfece5; stroke: #2f6b4f; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_31">
+    <text style="fill: #222725; font: 700 15px 'sans-serif'; text-anchor: start" x="493.426849" y="95.201498" transform="rotate(-0, 493.426849, 95.201498)">b  Hard-negative 构造漏斗</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="513.416732" y="141.937011" transform="rotate(-0, 513.416732, 141.937011)">Foldseek raw rows</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="818.090117" y="142.330324" transform="rotate(-0, 818.090117, 142.330324)">172,346</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 665.753425 157.574559
+Q 665.753425 157.600614 665.753425 156.508635
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 152.908635
+L 665.753425 156.508635
+L 663.953425 152.908635
+L 667.553425 152.908635
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_34">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="569.088821" y="180.405171" transform="rotate(-0, 569.088821, 180.405171)">strict-pass rows</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="762.418029" y="180.798484" transform="rotate(-0, 762.418029, 180.798484)">42,266</text>
+   </g>
+   <g id="patch_16">
+    <path d="M 665.753425 196.042719
+Q 665.753425 196.068774 665.753425 194.976795
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 191.376795
+L 665.753425 194.976795
+L 663.953425 191.376795
+L 667.553425 191.376795
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_36">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="569.090113" y="218.850581" transform="rotate(-0, 569.090113, 218.850581)">unique structural targets</text>
+   </g>
+   <g id="text_37">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="762.416736" y="219.266644" transform="rotate(-0, 762.416736, 219.266644)">42,264</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 665.753425 234.510879
+Q 665.753425 234.536934 665.753425 233.444955
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 229.844955
+L 665.753425 233.444955
+L 663.953425 229.844955
+L 667.553425 229.844955
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_38">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="573.203146" y="257.350733" transform="rotate(-0, 573.203146, 257.350733)">Tier1 clustering inputs</text>
+   </g>
+   <g id="text_39">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="758.303703" y="257.734804" transform="rotate(-0, 758.303703, 257.734804)">36,138</text>
+   </g>
+   <g id="patch_18">
+    <path d="M 665.753425 272.979039
+Q 665.753425 273.005094 665.753425 271.913115
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 268.313115
+L 665.753425 271.913115
+L 663.953425 268.313115
+L 667.553425 268.313115
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_40">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="595.995131" y="295.877901" transform="rotate(-0, 595.995131, 295.877901)">MMseqs2 reps</text>
+   </g>
+   <g id="text_41">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="735.511718" y="296.202964" transform="rotate(-0, 735.511718, 296.202964)">10,880</text>
+   </g>
+   <g id="patch_19">
+    <path d="M 665.753425 311.447199
+Q 665.753425 311.473254 665.753425 310.381275
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 306.781275
+L 665.753425 310.381275
+L 663.953425 306.781275
+L 667.553425 306.781275
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_42">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="595.997678" y="334.277811" transform="rotate(-0, 595.997678, 334.277811)">H1-negative pass</text>
+   </g>
+   <g id="text_43">
+    <text style="fill: #c27a10; font: 700 10.5px 'sans-serif'; text-anchor: end" x="735.509171" y="334.671124" transform="rotate(-0, 735.509171, 334.671124)">10,878</text>
+   </g>
+   <g id="patch_20">
+    <path d="M 665.753425 349.915359
+Q 665.753425 349.941414 665.753425 348.849435
+" clip-path="url(#pa82314a1a1)" style="fill: none; stroke: #66706b; stroke-linecap: round"/>
+    <path d="M 667.553425 345.249435
+L 665.753425 348.849435
+L 663.953425 345.249435
+L 667.553425 345.249435
+z
+" clip-path="url(#pa82314a1a1)" style="fill: #66706b; stroke: #66706b; stroke-linecap: round"/>
+   </g>
+   <g id="text_44">
+    <text style="fill: #222725; font: 9.1px 'sans-serif'; text-anchor: start" x="604.920505" y="372.723221" transform="rotate(-0, 604.920505, 372.723221)">selected HardNeg</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #2f6b4f; font: 700 10.5px 'sans-serif'; text-anchor: end" x="726.586344" y="373.139284" transform="rotate(-0, 726.586344, 373.139284)">5,000</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #a8443f; font: 700 10.2px 'sans-serif'; text-anchor: start" x="510.659507" y="420.80544" transform="rotate(-0, 510.659507, 420.80544)">2 个 near-positive representatives 被 quarantine</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #66706b; font: 9.4px 'sans-serif'; text-anchor: start" x="510.659507" y="437.407488" transform="rotate(-0, 510.659507, 437.407488)">exact / MMseqs2 / HMM / Foldseek 对 DJR positives 全部排除</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #2f6b4f; font: 700 9.4px 'sans-serif'; text-anchor: start" x="510.659507" y="452.794752" transform="rotate(-0, 510.659507, 452.794752)">G0–G6：7/7 operational recovery gates PASS</text>
+   </g>
+  </g>
+  <g id="text_49">
+   <text style="fill: #222725; font: 700 23px 'sans-serif'; text-anchor: start" x="51.84" y="31.968" transform="rotate(-0, 51.84, 31.968)">同一条 cellular DJR，为什么会有两个标签</text>
+  </g>
+  <g id="text_50">
+   <text style="fill: #66706b; font: 11.5px 'sans-serif'; text-anchor: start" x="51.84" y="55.944" transform="rotate(-0, 51.84, 55.944)">同一条 cellular DJR 在 H1 是正例、在 H2 却是负例；HardNeg 则专门逼近 H1 的决策边界。</text>
+  </g>
+  <g id="text_51">
+   <text style="fill: #66706b; font: 8.8px 'sans-serif'; text-anchor: start" x="51.84" y="514.152" transform="rotate(-0, 51.84, 514.152)">图 1｜三级任务中的标签变化与 HardNeg 构建。项目没有 HardNeg 有/无消融，因此不报告因果增益。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8773e10579">
+   <rect x="51.84" y="74.592" width="373.374247" height="404.928"/>
+  </clipPath>
+  <clipPath id="pa82314a1a1">
+   <rect x="493.426849" y="74.592" width="344.653151" height="404.928"/>
+  </clipPath>
+ </defs>
+</svg>
