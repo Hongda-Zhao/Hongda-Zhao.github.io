@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1428686591101e1153ef602d0d2d1a10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6499249bcb6d9e85e488579e3ea18814.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -179,10 +179,19 @@ ul.task-list li input[type="checkbox"] {
     "coverage.title": ["Notes on life, technology & research.", "生活、技术与研究随笔。"],
     "coverage.aria": ["Notes on life, technology and research", "生活、技术与研究随笔"],
     "coverage.source": ["Kyoto University · Ogata Lab", "京都大学 · 绪方研究室"],
-    "coverage.2026": ["Received the FY2025 Student Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
+    "coverage.source.icr": ["Kyoto University · Institute for Chemical Research", "京都大学 · 化学研究所"],
+    "coverage.officialSource": ["Official source", "官方来源"],
+    "coverage.source.bioJapan.aria": ["Official source: Bioinformatics Japan award (opens in a new tab)", "官方来源：Bioinformatics Japan 奖项（在新标签页打开）"],
+    "coverage.source.symposium.aria": ["Official source: Giant Virus Biology Symposium (opens in a new tab)", "官方来源：巨型病毒生物学研讨会（在新标签页打开）"],
+    "coverage.source.icrAward.aria": ["Official source: ICR award (opens in a new tab)", "官方来源：京大化研学生研究奖（在新标签页打开）"],
+    "coverage.source.thesis.aria": ["Official source: master’s thesis presentation (opens in a new tab)", "官方来源：硕士论文发表（在新标签页打开）"],
+    "coverage.source.poster.aria": ["Official source: Viruses of Microbes 2024 (opens in a new tab)", "官方来源：Viruses of Microbes 2024（在新标签页打开）"],
+    "coverage.source.currentBiology.aria": ["Official source: Current Biology article (opens in a new tab)", "官方来源：《Current Biology》正式论文（在新标签页打开）"],
+    "coverage.source.virusEvolution.aria": ["Official source: Virus Evolution announcement (opens in a new tab)", "官方来源：《Virus Evolution》论文公告（在新标签页打开）"],
+    "coverage.2026": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
     "coverage.award": ["Received the ICR Award for Graduate Students.", "荣获京大化研学生研究賞。"],
-    "coverage.thesis": ["Successfully defended my master’s thesis, bringing my master’s studies to a close!", "硕士阶段告一段，完成了硕士答辩！"],
+    "coverage.thesis": ["Completed my master’s thesis presentation and Q&A.", "完成硕士论文汇报与问答。"],
     "coverage.poster": ["Presented a poster at Viruses of Microbes 2024 in Cairns, Australia.", "在澳大利亚凯恩斯举行的 Viruses of Microbes 2024 上进行了海报展示。"],
     "coverage.currentBiology.before": ["My first-author paper on mirusviruses was accepted for publication in ", "第一作者 mirusvirus 研究论文获《"],
     "coverage.currentBiology.after": ["!", "》录用！"],
@@ -191,16 +200,63 @@ ul.task-list li input[type="checkbox"] {
     "detail.record": ["Record", "记录"],
     "detail.details": ["Details", "详情"],
     "detail.back": ["Back to notes", "返回随笔"],
+    "detail.back.aria": ["Back to notes", "返回随笔"],
+    "detail.summary": ["Record sheet", "记录档案"],
+    "detail.links.aria": ["Record sources", "记录来源"],
     "detail.meta.event": ["Event", "会议"],
     "detail.meta.date": ["Date", "日期"],
+    "detail.meta.dates": ["Dates", "日期"],
     "detail.meta.location": ["Location", "地点"],
     "detail.meta.format": ["Format", "形式"],
     "detail.meta.award": ["Award", "奖项"],
     "detail.meta.work": ["Work", "研究题目"],
+    "detail.meta.lecture": ["Award lecture", "获奖报告"],
+    "detail.meta.talk": ["Talk", "报告题目"],
+    "detail.meta.thesis": ["Thesis", "硕士论文"],
     "detail.meta.venue": ["Venue", "场合"],
+    "detail.meta.organization": ["Organization", "主办机构"],
+    "detail.meta.announcement": ["Lab announcement", "实验室公告"],
+    "detail.meta.milestone": ["Milestone", "学业阶段"],
+    "detail.meta.institution": ["Institution", "机构"],
+    "detail.meta.laboratory": ["Laboratory", "研究室"],
+    "detail.meta.role": ["Role", "作者身份"],
+    "detail.meta.accepted": ["Accepted", "正式接收"],
+    "detail.meta.published": ["Published", "在线发表"],
     "detail.link.article": ["Read the article", "查看论文"],
     "detail.link.event": ["Conference website", "会议网站"],
     "detail.link.source": ["Official announcement", "官方公告"],
+    "detail.link.program": ["Official program", "官方议程"],
+    "detail.link.labAnnouncement": ["Ogata Lab announcement", "绪方研究室公告"],
+    "bioJapan.eyebrow": ["Award record", "获奖记录"],
+    "bioJapan.title": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan", "荣获 NPO Bioinformatics Japan 2025年度学生鼓励奖"],
+    "bioJapan.image.alt": ["Hongda Zhao and an award presenter hold the FY2025 Bioinformatics Japan Student Encouragement Award certificate.", "赵宏达与颁奖嘉宾共同展示2025年度 Bioinformatics Japan 学生鼓励奖证书。"],
+    "bioJapan.award": ["FY2025 Student Encouragement Award", "2025年度学生鼓励奖（令和7年度学生奨励賞）"],
+    "bioJapan.organization": ["NPO Bioinformatics Japan", "特定非营利活动法人 Bioinformatics Japan"],
+    "bioJapan.venue": ["Room CB207, Kyoto University Uji Campus", "京都大学宇治校区 CB207室"],
+    "bioJapan.record.copy": ["On 5 March 2026, I received NPO Bioinformatics Japan’s FY2025 Student Encouragement Award at Kyoto University’s Uji Campus. After the ceremony, I gave a 30-minute award lecture on a bioinformatic framework for identifying large and giant endogenous dsDNA viral elements across eukaryotic genomes.", "2026年3月5日，我在京都大学宇治校区举行的表彰仪式上获颁 NPO Bioinformatics Japan 2025年度学生鼓励奖。表彰仪式后，我作了30分钟的获奖报告，介绍一套用于在真核生物基因组中识别大型及巨型内源性双链 DNA 病毒元件的生物信息学框架。"],
+    "bioJapan.research.copy": ["The framework supports the detection, taxonomic assignment, and phylogenetic reconstruction of endogenous viral regions, helping expand our view of eukaryote–virus associations and long-term virus–host coevolution.", "该框架支持内源性病毒区域的检测、分类学归属与系统发育重建，从而拓展对真核生物—病毒关联及长期病毒—宿主共同进化的认识。"],
+    "symposiumDetail.eyebrow": ["Conference record", "学术会议记录"],
+    "symposiumDetail.title": ["Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology", "在第六届 Ringberg 巨型病毒生物学研讨会上作口头报告"],
+    "symposiumDetail.image.alt": ["Hongda Zhao gives an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "赵宏达在德国 Tegernsee 举行的 Giant Virus Biology Symposium 上作口头报告。"],
+    "symposiumDetail.location": ["Schloss Ringberg, near Tegernsee, Germany", "德国 Tegernsee 附近的 Ringberg Castle"],
+    "symposiumDetail.format": ["Oral presentation · 15 December 2025", "口头报告 · 2025年12月15日"],
+    "symposiumDetail.record.copy": ["From 15 to 19 December 2025, I attended the 6th Ringberg Symposium on Giant Virus Biology at Ringberg Castle near Tegernsee, Germany. On 15 December, I gave an oral presentation on a computational framework for detecting the dsDNA viral landscape in eukaryotic genomes.", "2025年12月15日至19日，我在德国 Tegernsee 附近的 Ringberg Castle 参加第六届 Ringberg 巨型病毒生物学研讨会，并于12月15日作口头报告，介绍一套用于描绘真核生物基因组中双链 DNA 病毒图景的计算框架。"],
+    "symposiumDetail.context.copy": ["The presentation was co-authored with Lingjie Meng, Ruixuan Zhang, Morgan Gaïa, and Hiroyuki Ogata. Lingjie Meng and Ruixuan Zhang from the Ogata Lab also gave oral presentations at the meeting.", "该报告由我与孟令杰、张瑞轩、Morgan Gaïa 和绪方博之共同完成。绪方研究室的孟令杰和张瑞轩也在本次会议上作了口头报告。"],
+    "thesisDetail.eyebrow": ["Academic milestone", "学业记录"],
+    "thesisDetail.title": ["Master’s thesis presentation and Q&A", "硕士论文汇报与问答"],
+    "thesisDetail.image.alt": ["A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&A.", "硕士论文发表与问答结束后，一行人在京都大学理学研究科2号馆外合影。"],
+    "thesisDetail.milestone": ["Master’s thesis presentation and Q&A", "硕士论文发表与问答"],
+    "thesisDetail.institution": ["Kyoto University", "京都大学"],
+    "thesisDetail.laboratory": ["Ogata Lab", "绪方研究室"],
+    "thesisDetail.record.copy": ["On 28 January 2025, I presented and discussed my master’s thesis at Kyoto University. The session also included master’s thesis presentations by Saki Kikuya and Komei Nagasaka.", "2025年1月28日，我在京都大学完成了硕士论文汇报与问答。同日，菊矢咲季与长坂孔明也进行了硕士论文发表。"],
+    "thesisDetail.context.copy": ["The lab lists the thesis under its 2025 master’s theses. Its formal title is retained above in English.", "实验室已将该论文列入2025年硕士论文名单；上方保留了正式英文题名。"],
+    "virusEvolution.eyebrow": ["Publication record", "论文记录"],
+    "virusEvolution.title.before": ["My first paper in ", "首篇论文发表于《"],
+    "virusEvolution.title.after": ["", "》"],
+    "virusEvolution.image.alt": ["First page of the 2023 Virus Evolution research article, showing the journal masthead, title, author list, and abstract.", "《Virus Evolution》2023年研究论文首页，可见期刊刊头、论文标题、作者名单与摘要。"],
+    "virusEvolution.role": ["First author", "第一作者"],
+    "virusEvolution.record.copy": ["On 4 October 2023, Ogata Lab announced my first paper in Virus Evolution. The journal records formal acceptance on 25 October and online publication on 31 October 2023.", "2023年10月4日，绪方研究室发布了我的首篇《Virus Evolution》论文获接收的消息。期刊记录显示，论文于10月25日正式接收，并于10月31日在线发表。"],
+    "virusEvolution.research.copy": ["The study identified a continuous 1.5-Mb putative endogenous viral region on chromosome 8 of Rhizophagus irregularis strain 4401. Genomic and phylogenetic evidence links it to Asfarviridae-related large dsDNA viruses and supports a relatively recent viral integration.", "研究在丛枝菌根真菌不规则根孢囊霉（Rhizophagus irregularis）4401菌株的8号染色体上，鉴定到一段连续1.5 Mb的推定内源性病毒区域。基因组与系统发育证据表明，它与非洲猪瘟病毒科相关的大型双链 DNA 病毒有关，并支持一次较近期的病毒整合事件。"],
     "current.eyebrow": ["Publication record", "论文记录"],
     "current.title.before": ["First-author paper on mirusviruses accepted for publication in ", "第一作者 mirusvirus 研究论文获《"],
     "current.title.after": ["", "》录用"],
@@ -492,14 +548,14 @@ Research notes, technical work, and field observations.
 <div class="prose-slot highlight-prose">
 <p data-i18n="poster.record.copy">Viruses of Microbes 2024 was held in Cairns from 15 to 19 July 2024. I presented this poster on 18 July.</p>
 <p class="highlight-citation">Zhao H., Meng L., Hikida H., Ogata H. “Eukaryotic genomic analysis reveals broad host spectrum of a novel viral group: mirusviruses.”</p>
-<nav class="highlight-links" aria-label="Conference links">
-<a href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> ↗</a>
+<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
+<a href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>
 
-<nav class="highlight-back" aria-label="Back">
-<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to coverage</span></a>
+<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
+<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
 </nav>
 </div>
 
