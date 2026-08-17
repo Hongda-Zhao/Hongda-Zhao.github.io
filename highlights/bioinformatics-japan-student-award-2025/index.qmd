@@ -13,6 +13,10 @@ title-block-style: none
 <h1 class="page-title" data-i18n="bioJapan.title" data-document-title>Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan</h1>
 </header>
 
+<figure class="highlight-media">
+<img class="highlight-image highlight-image--compact" src="student-encouragement-award.webp" width="670" height="377" alt="Hongda Zhao and an award presenter hold the FY2025 Bioinformatics Japan Student Encouragement Award certificate." data-i18n-alt="bioJapan.image.alt" decoding="async">
+</figure>
+
 <section class="highlight-docket" aria-labelledby="biojapan-docket-title">
 <p class="highlight-docket-label" id="biojapan-docket-title" data-i18n="detail.summary">Record sheet</p>
 <dl class="highlight-facts">

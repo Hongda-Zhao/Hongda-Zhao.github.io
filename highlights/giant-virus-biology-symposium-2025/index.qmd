@@ -13,6 +13,10 @@ title-block-style: none
 <h1 class="page-title" data-i18n="symposiumDetail.title" data-document-title>Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology</h1>
 </header>
 
+<figure class="highlight-media">
+<img class="highlight-image highlight-image--compact" src="oral-presentation.webp" width="670" height="503" alt="Hongda Zhao gives an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany." data-i18n-alt="symposiumDetail.image.alt" decoding="async">
+</figure>
+
 <section class="highlight-docket" aria-labelledby="symposium-docket-title">
 <p class="highlight-docket-label" id="symposium-docket-title" data-i18n="detail.summary">Record sheet</p>
 <dl class="highlight-facts">
@@ -31,9 +35,7 @@ title-block-style: none
 <p data-i18n="symposiumDetail.record.copy">From 15 to 19 December 2025, I attended the 6th Ringberg Symposium on Giant Virus Biology at Ringberg Castle near Tegernsee, Germany. On 15 December, I gave an oral presentation on a computational framework for detecting the dsDNA viral landscape in eukaryotic genomes.</p>
 <p data-i18n="symposiumDetail.context.copy">The presentation was co-authored with Lingjie Meng, Ruixuan Zhang, Morgan Gaïa, and Hiroyuki Ogata. Lingjie Meng and Ruixuan Zhang from the Ogata Lab also gave oral presentations at the meeting.</p>
 <nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
-<a href="https://cls.kuicr.kyoto-u.ac.jp/oral_poster/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.presentationRecord">Presentation record</span> <span aria-hidden="true">↗</span></a>
 <a href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.labAnnouncement">Ogata Lab announcement</span> <span aria-hidden="true">↗</span></a>
-<a href="https://www.schloss-ringberg.de/home" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.venue">Conference venue</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>

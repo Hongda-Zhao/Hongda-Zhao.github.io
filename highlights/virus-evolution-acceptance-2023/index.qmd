@@ -13,6 +13,10 @@ title-block-style: none
 <h1 class="page-title" data-document-title><span data-i18n="virusEvolution.title.before">My first paper in </span><em lang="en">Virus Evolution</em><span data-i18n="virusEvolution.title.after"></span></h1>
 </header>
 
+<figure class="highlight-media">
+<img class="highlight-image" src="virus-evolution-article.webp" width="1702" height="1156" alt="First page of the 2023 Virus Evolution research article, showing the journal masthead, title, author list, and abstract." data-i18n-alt="virusEvolution.image.alt" decoding="async">
+</figure>
+
 <section class="highlight-docket" aria-labelledby="virus-evolution-docket-title">
 <p class="highlight-docket-label" id="virus-evolution-docket-title" data-i18n="detail.summary">Record sheet</p>
 <dl class="highlight-facts">
@@ -32,8 +36,6 @@ title-block-style: none
 <p data-i18n="virusEvolution.research.copy">The study identified a continuous 1.5-Mb putative endogenous viral region on chromosome 8 of Rhizophagus irregularis strain 4401. Genomic and phylogenetic evidence links it to Asfarviridae-related large dsDNA viruses and supports a relatively recent viral integration.</p>
 <nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
 <a href="https://academic.oup.com/ve/article/9/2/vead064/7334491" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.article">Read the article</span> <span aria-hidden="true">↗</span></a>
-<a href="https://doi.org/10.1093/ve/vead064" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a>
-<a href="https://pubmed.ncbi.nlm.nih.gov/37953976/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.pubmed">PubMed record</span> <span aria-hidden="true">↗</span></a>
 <a href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.labAnnouncement">Ogata Lab announcement</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>

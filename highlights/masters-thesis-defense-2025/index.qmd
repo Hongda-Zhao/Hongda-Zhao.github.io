@@ -13,6 +13,10 @@ title-block-style: none
 <h1 class="page-title" data-i18n="thesisDetail.title" data-document-title>Master’s thesis presentation and Q&amp;A</h1>
 </header>
 
+<figure class="highlight-media">
+<img class="highlight-image" src="masters-thesis-group.webp" width="1840" height="1035" alt="A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&amp;A." data-i18n-alt="thesisDetail.image.alt" decoding="async">
+</figure>
+
 <section class="highlight-docket" aria-labelledby="thesis-docket-title">
 <p class="highlight-docket-label" id="thesis-docket-title" data-i18n="detail.summary">Record sheet</p>
 <dl class="highlight-facts">
@@ -31,7 +35,6 @@ title-block-style: none
 <p data-i18n="thesisDetail.context.copy">The lab lists the thesis under its 2025 master’s theses. Its formal title is retained above in English.</p>
 <nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
 <a href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.labAnnouncement">Ogata Lab announcement</span> <span aria-hidden="true">↗</span></a>
-<a href="https://cls.kuicr.kyoto-u.ac.jp/education/theses_public/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.thesisList">Master’s thesis list</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>
