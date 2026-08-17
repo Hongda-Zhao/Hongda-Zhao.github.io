@@ -15,41 +15,97 @@ title-block-style: none
 
 <section class="coverage-listing" aria-label="Notes on life, technology and research" data-i18n-aria-label="coverage.aria">
 <div class="coverage-list">
-<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e7%89%b9%e5%ae%9a%e9%9d%9e%e5%96%b6%e5%88%a9%e6%b4%bb%e5%8b%95%e6%b3%95%e4%ba%ba%e3%83%90%e3%82%a4%e3%82%aa%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%9e%e3%83%86%e3%82%a3%e3%82%af%e3%82%b9%e3%83%bb/" target="_blank" rel="noopener noreferrer">
+<article class="coverage-item">
 <time datetime="2026-03-05">2026.03.05</time>
-<span class="coverage-copy"><span data-i18n="coverage.2026">Received the FY2025 Student Award from NPO Bioinformatics Japan.</span><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
-<b aria-hidden="true">↗</b>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/bioinformatics-japan-student-award-2025/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.2026">Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.</h2><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small></div>
+<b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer">
+<div class="coverage-source-line">
+<span>NPO Bioinformatics Japan</span>
+<a class="coverage-item-source" href="https://www.bioinformatics.jp/ja/workshop11.html" target="_blank" rel="noopener noreferrer" aria-label="Official source: Bioinformatics Japan award (opens in a new tab)" data-i18n-aria-label="coverage.source.bioJapan.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2025-12-22">2025.12.22</time>
-<span class="coverage-copy"><span data-i18n="coverage.symposium">Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.</span><small lang="ja">ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
-<b aria-hidden="true">↗</b>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/giant-virus-biology-symposium-2025/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.symposium">Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.</h2><small lang="ja">ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。</small></div>
+<b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--internal" href="./highlights/icr-student-research-award-2025/">
+<div class="coverage-source-line">
+<span data-i18n="coverage.source">Kyoto University · Ogata Lab</span>
+<a class="coverage-item-source" href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer" aria-label="Official source: Giant Virus Biology Symposium (opens in a new tab)" data-i18n-aria-label="coverage.source.symposium.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2025-02-14">2025.02.14</time>
-<span class="coverage-copy"><span data-i18n="coverage.award">Received the ICR Award for Graduate Students.</span></span>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/icr-student-research-award-2025/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.award">Received the ICR Award for Graduate Students.</h2></div>
 <b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer">
+<div class="coverage-source-line">
+<span data-i18n="coverage.source.icr">Kyoto University · Institute for Chemical Research</span>
+<a class="coverage-item-source" href="https://www.kuicr.kyoto-u.ac.jp/sites/news/news_250214/" target="_blank" rel="noopener noreferrer" aria-label="Official source: ICR award (opens in a new tab)" data-i18n-aria-label="coverage.source.icrAward.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2025-01-28">2025.01.28</time>
-<span class="coverage-copy"><span data-i18n="coverage.thesis">Successfully defended my master’s thesis, bringing my master’s studies to a close!</span><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
-<b aria-hidden="true">↗</b>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/masters-thesis-defense-2025/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.thesis">Completed my master’s thesis presentation and Q&amp;A.</h2><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。</small></div>
+<b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--internal" href="./highlights/cairns-poster-2024/">
+<div class="coverage-source-line">
+<span data-i18n="coverage.source">Kyoto University · Ogata Lab</span>
+<a class="coverage-item-source" href="https://cls.kuicr.kyoto-u.ac.jp/%e8%8f%8a%e7%9f%a2-%e5%92%b2%e5%ad%a3%e3%81%95%e3%82%93%e3%80%81%e9%95%b7%e5%9d%82-%e5%ad%94%e6%98%8e%e3%81%95%e3%82%93%e3%80%81%e8%b6%99-%e5%ae%8f%e9%81%94%ef%bc%88%e3%82%b8%e3%83%a3%e3%82%aa/" target="_blank" rel="noopener noreferrer" aria-label="Official source: master’s thesis presentation (opens in a new tab)" data-i18n-aria-label="coverage.source.thesis.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2024-07-18">2024.07.18</time>
-<span class="coverage-copy"><span data-i18n="coverage.poster">Presented a poster at Viruses of Microbes 2024 in Cairns, Australia.</span></span>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/cairns-poster-2024/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.poster">Presented a poster at Viruses of Microbes 2024 in Cairns, Australia.</h2></div>
 <b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--internal" href="./highlights/current-biology-acceptance/">
+<div class="coverage-source-line">
+<span>Viruses of Microbes 2024</span>
+<a class="coverage-item-source" href="https://www.theasm.org.au/asm-conferences-and-events/2024/7/15/viruses-of-microbes-2024" target="_blank" rel="noopener noreferrer" aria-label="Official source: Viruses of Microbes 2024 (opens in a new tab)" data-i18n-aria-label="coverage.source.poster.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2024-04-30">2024.04.30</time>
-<span class="coverage-copy"><span><span data-i18n="coverage.currentBiology.before">My first-author paper on mirusviruses was accepted for publication in </span><em lang="en">Current Biology</em><span data-i18n="coverage.currentBiology.after">!</span></span></span>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/current-biology-acceptance/">
+<div class="coverage-copy"><h2 class="no-anchor"><span data-i18n="coverage.currentBiology.before">My first-author paper on mirusviruses was accepted for publication in </span><em lang="en">Current Biology</em><span data-i18n="coverage.currentBiology.after">!</span></h2></div>
 <b aria-hidden="true">→</b>
 </a>
-<a class="coverage-item coverage-item--external" href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer">
+<div class="coverage-source-line">
+<span><em lang="en">Current Biology</em></span>
+<a class="coverage-item-source" href="https://www.cell.com/current-biology/fulltext/S0960-9822(24)00598-0" target="_blank" rel="noopener noreferrer" aria-label="Official source: Current Biology article (opens in a new tab)" data-i18n-aria-label="coverage.source.currentBiology.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
 <time datetime="2023-10-04">2023.10.04</time>
-<span class="coverage-copy"><span><span data-i18n="coverage.paper.before">My first paper was accepted for publication in </span><em lang="en">Virus Evolution</em><span data-i18n="coverage.paper.after">!</span></span><small lang="ja">修士1年のZhao Hongda君の論文が <em lang="en">Virus Evolution</em> に受理されました。おめでとうございます。</small><em class="coverage-item-source" data-i18n="coverage.source">Kyoto University · Ogata Lab</em></span>
-<b aria-hidden="true">↗</b>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/virus-evolution-acceptance-2023/">
+<div class="coverage-copy"><h2 class="no-anchor"><span data-i18n="coverage.paper.before">My first paper was accepted for publication in </span><em lang="en">Virus Evolution</em><span data-i18n="coverage.paper.after">!</span></h2><small lang="ja">修士1年のZhao Hongda君の論文が <em lang="en">Virus Evolution</em> に受理されました。おめでとうございます。</small></div>
+<b aria-hidden="true">→</b>
 </a>
+<div class="coverage-source-line">
+<span data-i18n="coverage.source">Kyoto University · Ogata Lab</span>
+<a class="coverage-item-source" href="https://cls.kuicr.kyoto-u.ac.jp/%e4%bf%ae%e5%a3%ab1%e5%b9%b4%e3%81%aezhao-hongda%e5%90%9b%e3%81%ae%e8%ab%96%e6%96%87%e3%81%8c-virus-evolution-%e3%81%ab%e5%8f%97%e7%90%86%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f%e3%80%82%e3%81%8a/" target="_blank" rel="noopener noreferrer" aria-label="Official source: Virus Evolution announcement (opens in a new tab)" data-i18n-aria-label="coverage.source.virusEvolution.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
 </div>
 </section>
 ```

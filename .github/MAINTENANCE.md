@@ -30,7 +30,7 @@ flowchart LR
 | 视觉与响应式布局 | `styles.scss` | 白底、绿色强调、字体、侧栏、首页、详情页和 Gallery |
 | 中英文与全站交互 | `head.html` | 翻译表、语言切换、邮箱还原、标题和灯箱无障碍标签 |
 | 首页随笔 | `index.qmd` | 手工维护的时间线，不会自动收集其他页面 |
-| 独立记录 | `highlights/<slug>/index.qmd` | 图片与该页放在同一目录 |
+| 独立记录 | `highlights/<slug>/index.qmd` | 可用自有/获授权图片；无合适图片时使用文字记录档案 |
 | 相册卡片 | `gallery.qmd` | 日期、图片、地点 key、alt key 和 12 栏布局 |
 | 相册图片 | `assets/gallery/` | 去除元数据的 WebP |
 | 相册行政区映射 | `assets/map/gallery-places.js` | 照片 ID、地区与 ISO 3166-2 行政区 |
@@ -50,10 +50,10 @@ flowchart LR
 - 首页桌面端的大标题正常随页面滚动；标题离开视口后，在正文栏顶部显示紧凑的期刊式 running head。移动端复用 Quarto 顶部标题栏，不叠加第二层标题。
 - 标题使用 Georgia/Times，正文使用系统无衬线字体；不要引入新的 Web font 或 UI 框架。
 - 左侧栏顺序保持：猫头像与姓名 → 领域和一句简介 → 外部主页与邮箱 → 语言按钮 → Gallery。
-- 首页条目只写事实性的一两句话；详细内容和证据放进 Highlight。
+- 首页每条记录的主标题都链接到本地 Highlight，并在下方单独保留可见的官方外部来源；首页只写事实性的一两句话，详细内容和证据放进 Highlight。
 - 外部链接使用 `↗`、`target="_blank" rel="noopener noreferrer"`；站内链接使用 `→`。
 - 期刊名使用 `<em lang="en">Journal Name</em>`；不要在翻译字符串内写 HTML。
-- Highlight 保持“记录类型与日期 → 标题 → 图片 → 事实与证据链接 → 返回首页”的结构，不添加“待补充的个人记录”等批注。
+- Highlight 保持“记录类型与日期 → 标题 → 获授权图片或文字记录档案 → 事实与证据链接 → 返回首页”的结构；没有合适图片时不要复制或热链外站图片，也不添加“待补充的个人记录”等批注。
 - Gallery 顶部只显示中国、日本地图；澳大利亚和德国使用快捷按钮。地图标记跳到网页中的照片，点击照片才打开灯箱。
 - 新布局必须在桌面和手机上成立，并保留键盘焦点、`prefers-reduced-motion` 和事实性 alt。
 
@@ -61,16 +61,17 @@ flowchart LR
 
 ### 新增首页条目
 
-1. 在 `index.qmd` 中按日期倒序插入完整的 `<a class="coverage-item ...">`。
+1. 在 `index.qmd` 中按日期倒序插入完整的 `<article class="coverage-item">`，其中 `.coverage-record-link` 指向本地 Highlight，`.coverage-item-source` 指向官方外部来源。
 2. 同时维护 `datetime="YYYY-MM-DD"` 与显示日期 `YYYY.MM.DD`。
-3. 在 `head.html` 添加英文和中文；日语原公告使用 `<small lang="ja">` 保留原文。
-4. 外部报道使用 `coverage-item--external`；站内详情使用 `coverage-item--internal`。
+3. 记录题名使用 `<h2 class="no-anchor">`；`no-anchor` 会阻止 Quarto 在站内链接内再注入标题锚点。
+4. 在 `head.html` 添加英文和中文；日语原公告使用 `<small lang="ja">` 保留原文。
+5. 站内主链接使用 `→`；官方来源使用 `↗`、`target="_blank" rel="noopener noreferrer"`，两者必须是独立链接，不能嵌套。
 
 ### 新增 Highlight
 
 1. 复制结构最接近的 `highlights/<existing>/`，新目录使用小写 ASCII kebab-case。
-2. 更新 front matter、日期、标题、图片、正文和官方证据链接。
-3. 图片写真实 `width`、`height`、英文 alt，并用 `data-i18n-alt` 提供中文 alt。
+2. 更新 front matter、日期、标题、正文和官方证据链接；没有可安全复用的图片时采用 `.highlight-docket` 文字档案。
+3. 如有图片，写真实 `width`、`height`、英文 alt，并用 `data-i18n-alt` 提供中文 alt。
 4. 可切换文字在 `head.html` 添加成对翻译；标题保留 `data-document-title`。
 5. 在 `index.qmd` 手工增加对应站内条目；Highlight 不会自动出现在首页。
 
