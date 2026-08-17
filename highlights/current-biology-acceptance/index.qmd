@@ -14,7 +14,7 @@ title-block-style: none
 </header>
 
 <figure class="highlight-media">
-<img class="highlight-image" src="current-biology-graphical-abstract.png" width="1092" height="1188" alt="Current Biology graphical abstract showing mirusvirus signals across eight eukaryotic supergroups, their phylogenetic diversity and capsid structures, and three circular mirusvirus genomes." data-i18n-alt="current.image.alt" decoding="async">
+<img class="highlight-image" src="current-biology-article-summary.webp" width="1060" height="842" alt="Current Biology article summary with a graphical abstract showing the broad eukaryotic host range, phylogenetic diversity, and three circular genomes of mirusviruses." data-i18n-alt="current.image.alt" decoding="async">
 </figure>
 
 <section class="content-section">
