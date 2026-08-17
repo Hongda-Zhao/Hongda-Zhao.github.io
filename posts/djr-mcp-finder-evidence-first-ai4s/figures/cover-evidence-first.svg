@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="486pt" viewBox="0 0 864 486" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-17T17:33:33.627231</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>matplotlib</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 486
+L 864 486
+L 864 0
+L 0 0
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 56.16 358.668
+L 198.72 358.668
+Q 214.272 358.668 214.272 349.92
+L 214.272 281.88
+Q 214.272 273.132 198.72 273.132
+L 56.16 273.132
+Q 40.608 273.132 40.608 281.88
+L 40.608 349.92
+Q 40.608 358.668 56.16 358.668
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #dce9f0; stroke: #356a8a; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 237.6 358.668
+L 380.16 358.668
+Q 395.712 358.668 395.712 349.92
+L 395.712 281.88
+Q 395.712 273.132 380.16 273.132
+L 237.6 273.132
+Q 222.048 273.132 222.048 281.88
+L 222.048 349.92
+Q 222.048 358.668 237.6 358.668
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #f4e7cd; stroke: #c27a10; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 419.04 358.668
+L 561.6 358.668
+Q 577.152 358.668 577.152 349.92
+L 577.152 281.88
+Q 577.152 273.132 561.6 273.132
+L 419.04 273.132
+Q 403.488 273.132 403.488 281.88
+L 403.488 349.92
+Q 403.488 358.668 419.04 358.668
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #dfece5; stroke: #2f6b4f; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 600.48 358.668
+L 743.04 358.668
+Q 758.592 358.668 758.592 349.92
+L 758.592 281.88
+Q 758.592 273.132 743.04 273.132
+L 600.48 273.132
+Q 584.928 273.132 584.928 281.88
+L 584.928 349.92
+Q 584.928 358.668 600.48 358.668
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #dce9f0; stroke: #356a8a; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 751.68 280.908
+L 825.12 280.908
+Q 840.672 280.908 840.672 272.16
+L 840.672 189.54
+Q 840.672 180.792 825.12 180.792
+L 751.68 180.792
+Q 736.128 180.792 736.128 189.54
+L 736.128 272.16
+Q 736.128 280.908 751.68 280.908
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #dfece5; stroke: #2f6b4f; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 751.68 392.688
+L 825.12 392.688
+Q 840.672 392.688 840.672 383.94
+L 840.672 320.76
+Q 840.672 312.012 825.12 312.012
+L 751.68 312.012
+Q 736.128 312.012 736.128 320.76
+L 736.128 383.94
+Q 736.128 392.688 751.68 392.688
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #f2dfdc; stroke: #a8443f; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 755.136 308.61
+L 821.664 308.61
+" clip-path="url(#p68e24fe60c)" style="fill: none; stroke: #a8443f; stroke-width: 4; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #2f6b4f; font: 700 14px 'sans-serif'; text-anchor: start" x="51.84" y="47.673125" transform="rotate(-0, 51.84, 47.673125)">V0.1 · RELEASED 2026-07-30</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #222725; font: 700 27px 'sans-serif'" transform="translate(51.84 108.160313)">做 DJR-MCP Finder 的两个月</text>
+    <text style="fill: #222725; font: 700 27px 'sans-serif'" transform="translate(51.84 136.004738)">AI-assisted 结构生物学工具加速病毒演化学分析</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #66706b; font: 14px 'sans-serif'" transform="translate(51.84 206.131563)">从标签、HardNeg 和 component split，</text>
+    <text style="fill: #66706b; font: 14px 'sans-serif'" transform="translate(51.84 226.091406)">到模型选择与 Agent 协作。</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #222725; font: 700 13px 'sans-serif'; text-anchor: start" x="63.072" y="298.89" transform="rotate(-0, 63.072, 298.89)">证据分层</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(63.072 326.578406)">Gold / Silver</text>
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(63.072 337.248687)">conditional labels</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 212.813367 315.9
+Q 218.159482 315.9 221.828546 315.9
+" clip-path="url(#p68e24fe60c)" style="fill: none; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 217.028546 313.5
+L 221.828546 315.9
+L 217.028546 318.3
+L 217.028546 313.5
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #66706b; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #222725; font: 700 13px 'sans-serif'; text-anchor: start" x="244.512" y="298.89" transform="rotate(-0, 244.512, 298.89)">边界样本</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(244.512 326.712)">5,000 HardNeg</text>
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(244.512 337.600781)">2 quarantined</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 394.253367 315.9
+Q 399.599482 315.9 403.268546 315.9
+" clip-path="url(#p68e24fe60c)" style="fill: none; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 398.468546 313.5
+L 403.268546 315.9
+L 398.468546 318.3
+L 398.468546 313.5
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #66706b; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="fill: #222725; font: 700 13px 'sans-serif'; text-anchor: start" x="425.952" y="298.89" transform="rotate(-0, 425.952, 298.89)">关系隔离</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(425.952 326.720906)">27,427-node graph</text>
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(425.952 337.542)">component-safe split</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 575.693367 315.9
+Q 581.039482 315.9 584.708546 315.9
+" clip-path="url(#p68e24fe60c)" style="fill: none; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 579.908546 313.5
+L 584.708546 315.9
+L 579.908546 318.3
+L 579.908546 313.5
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #66706b; stroke: #66706b; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #222725; font: 700 13px 'sans-serif'; text-anchor: start" x="607.392" y="298.89" transform="rotate(-0, 607.392, 298.89)">开发选择</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(607.392 326.578406)">14 models</text>
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'" transform="translate(607.392 337.398312)">head gates + paired SE</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #2f6b4f; font: 700 18px 'sans-serif'; text-anchor: middle" x="788.4" y="213.84" transform="rotate(-0, 788.4, 213.84)">V0</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #222725; font: 700 10.5px 'sans-serif'; text-anchor: middle" x="788.4" y="240.57" transform="rotate(-0, 788.4, 240.57)">ESM-C 6B</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'; text-anchor: middle" x="788.4" y="259.524" transform="rotate(-0, 788.4, 259.524)">S = 0.997145</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 709.338516 314.089069
+Q 725.760378 279.449202 741.320155 246.627798
+" clip-path="url(#p68e24fe60c)" style="fill: none; stroke: #2f6b4f; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 737.095316 249.936987
+L 741.320155 246.627798
+L 741.432603 251.993183
+L 737.095316 249.936987
+z
+" clip-path="url(#p68e24fe60c)" style="fill: #2f6b4f; stroke: #2f6b4f; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #a8443f; font: 700 11.2px 'sans-serif'; text-anchor: middle" x="788.4" y="339.228" transform="rotate(-0, 788.4, 339.228)">V0 / TEST</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #222725; font: 8.9px 'sans-serif'; text-anchor: middle" x="788.4" y="361.584" transform="rotate(-0, 788.4, 361.584)">not_evaluated</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #66706b; font: 8.6px 'sans-serif'; text-anchor: middle" x="788.4" y="377.136" transform="rotate(-0, 788.4, 377.136)">历史 cohort</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #a8443f; font: 700 8.2px 'sans-serif'; text-anchor: middle" x="788.4" y="298.89" transform="rotate(-0, 788.4, 298.89)">firewall</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #654a38; font: 700 13px 'sans-serif'; text-anchor: start" x="47.52" y="434.97" transform="rotate(-0, 47.52, 434.97)">先把科学问题定义清楚，再谈模型分数。</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #66706b; font: 9.5px 'sans-serif'; text-anchor: start" x="47.52" y="454.41" transform="rotate(-0, 47.52, 454.41)">V0.1 · released 2026-07-30 16:09 JST</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p68e24fe60c">
+   <rect x="0" y="0" width="864" height="486"/>
+  </clipPath>
+ </defs>
+</svg>

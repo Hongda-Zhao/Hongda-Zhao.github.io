@@ -1,0 +1,156 @@
+{
+  "snapshot": {
+    "date": "2026-08-17",
+    "project": "DJR-MCP Finder project V0",
+    "dataset_release": "data-curation V3 -> project V0",
+    "dataset_seed": 20260722,
+    "development_score_is_test_metric": false
+  },
+  "cascade": [
+    {
+      "head": "H1",
+      "question": "DJR fold or non-DJR?",
+      "positive": "VMA-DJR + cellular DJR",
+      "negative": "HardNeg + background"
+    },
+    {
+      "head": "H2",
+      "question": "Viral morphogenesis-associated?",
+      "positive": "VMA-DJR",
+      "negative": "cellular DJR"
+    },
+    {
+      "head": "H3",
+      "question": "Known phylum or reject?",
+      "positive": "two sufficiently sampled phyla",
+      "negative": "not applicable",
+      "reject": "unknown/other is an abstention, not novel-virus discovery"
+    }
+  ],
+  "dataset": {
+    "viral_vma_djr": 560,
+    "viral_gold_exact_representatives": 65,
+    "viral_silver_r3_exact_representatives": 495,
+    "cellular_djr": 500,
+    "hard_non_djr": 5000,
+    "background_non_djr": 5000,
+    "total_representatives": 11060,
+    "head3_known_fit": 532,
+    "head3_reject_diagnostic": 28
+  },
+  "hardnegative_funnel": [
+    {"stage": "Foldseek raw rows", "count": 172346},
+    {"stage": "strict-pass rows", "count": 42266},
+    {"stage": "unique structural targets", "count": 42264},
+    {"stage": "Tier1 clustering inputs", "count": 36138},
+    {"stage": "MMseqs2 representatives", "count": 10880},
+    {"stage": "H1-negative pass", "count": 10878},
+    {"stage": "selected HardNeg", "count": 5000}
+  ],
+  "hardnegative_quarantine": 2,
+  "hardnegative_recovery_gates": 7,
+  "split": {
+    "train": 6634,
+    "validation": 2212,
+    "test": 2214,
+    "component_graph_nodes": 27427,
+    "model_bearing_components": 9262,
+    "multi_record_model_components": 546,
+    "expected_spanning_components_if_independent_row_split_60_20_20": 348.40556872806576,
+    "residual_qualifying_cross_split_edges": 0,
+    "mmseqs_min_identity": 0.3,
+    "mmseqs_min_bidirectional_coverage": 0.8,
+    "component_size_histogram": {
+      "1": 8716,
+      "2": 397,
+      "3": 74,
+      "4": 31,
+      "5": 16,
+      "6": 2,
+      "7": 7,
+      "8": 3,
+      "9": 1,
+      "10": 3,
+      "11": 1,
+      "12": 1,
+      "15": 2,
+      "18": 1,
+      "20": 1,
+      "21": 1,
+      "28": 1,
+      "62": 1,
+      "101": 1,
+      "227": 1,
+      "470": 1
+    }
+  },
+  "model_selection": {
+    "candidate_count": 14,
+    "validation_gate_pass_count": 8,
+    "paired_one_se_count": 1,
+    "weights": {"H1_AP": 0.6, "H2_AP": 0.3, "H3_macro_F1": 0.1},
+    "models": [
+      {"name": "ESM-C 6B", "score": 0.9971447092078872, "gate": "PASS", "selected": true},
+      {"name": "ESM-2 3B", "score": 0.9948729683683369, "gate": "PASS", "selected": false},
+      {"name": "ESM-C 300M", "score": 0.9934441424904288, "gate": "PASS", "selected": false},
+      {"name": "ProstT5", "score": 0.9931844807127662, "gate": "PASS", "selected": false},
+      {"name": "ProtT5-XL-U50", "score": 0.992471766284924, "gate": "PASS", "selected": false},
+      {"name": "ESM3-open 1.4B", "score": 0.9924158492446997, "gate": "PASS", "selected": false},
+      {"name": "ESM-C 600M", "score": 0.9921932098747291, "gate": "PASS", "selected": false},
+      {"name": "ESM-2 650M", "score": 0.9903763009547875, "gate": "PASS", "selected": false},
+      {"name": "MIMIC 1.0", "score": 0.9893334879902878, "gate": "FAIL H3", "selected": false},
+      {"name": "ProTrek 650M", "score": 0.9874114203535107, "gate": "FAIL H3", "selected": false},
+      {"name": "AMPLIFY 350M", "score": 0.9853629766917876, "gate": "FAIL H1,H3", "selected": false},
+      {"name": "ProtSent 150M", "score": 0.9846703604015705, "gate": "FAIL H1,H3", "selected": false},
+      {"name": "ESM-2 150M", "score": 0.9828409321736162, "gate": "FAIL H3", "selected": false},
+      {"name": "Ankh3 Large", "score": 0.9818028041853848, "gate": "FAIL H3", "selected": false}
+    ],
+    "selected_head_metrics": {
+      "H1_AP": 0.9984698689777659,
+      "H2_AP": 1.0,
+      "H3_macro_F1": 0.980627878212277
+    },
+    "selected_test_status": "not_evaluated"
+  },
+  "post_freeze_comparison": {
+    "released_all_esmc_6b": {
+      "score": 0.9971447092078872,
+      "viral_strict_clusters_correct": 55,
+      "viral_strict_clusters_total": 69,
+      "always_on_seconds_per_sequence": 0.059530566202284634,
+      "worst_case_seconds_per_sequence": 0.059530566202284634,
+      "test_status": "not_evaluated",
+      "release_status": "frozen V0"
+    },
+    "mixed_nominee": {
+      "name": "H1/H2 ESM-2 3B + H3 ESM-C 6B",
+      "score": 0.9976446243098959,
+      "viral_strict_clusters_correct": 52,
+      "viral_strict_clusters_total": 69,
+      "always_on_seconds_per_sequence": 0.023524190375924944,
+      "worst_case_seconds_per_sequence": 0.08305475657820957,
+      "test_status": "not_evaluated",
+      "release_status": "external confirmation required"
+    }
+  },
+  "reproducibility": {
+    "steps": [
+      "versioned sources + SHA-256",
+      "evidence-tiered conditional labels",
+      "global similarity/component graph",
+      "component-safe Train/Validation/Test",
+      "independent post-split leakage audit",
+      "frozen shared Train-only CV folds",
+      "fixed checkpoint and embedding contract",
+      "Validation calibration + headwise gates + paired one-SE",
+      "frozen model, thresholds and selection identity",
+      "content-addressed single-use Test ledger",
+      "post-freeze diagnostics cannot feed back",
+      "compact evidence core + checksum-bound archive"
+    ],
+    "schema5_independent_gates_passed": "20/20",
+    "schema5_endpoints_recomputed": 289,
+    "schema5_materialization_attestations": "24/24",
+    "schema5_test_rows": 0
+  }
+}
