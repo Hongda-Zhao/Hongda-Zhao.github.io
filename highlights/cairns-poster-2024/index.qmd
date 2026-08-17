@@ -13,9 +13,14 @@ title-block-style: none
 <h1 class="page-title" data-i18n="poster.title" data-document-title>Poster presentation at Viruses of Microbes 2024</h1>
 </header>
 
-<figure class="highlight-media">
-<img class="highlight-image highlight-image--portrait" src="vom-2024.webp" width="1279" height="1706" alt="Nine Viruses of Microbes 2024 attendees posing in front of crocodile sculptures in Cairns." data-i18n-alt="poster.image.alt" decoding="async">
+<div class="highlight-media-stack">
+<figure class="highlight-media-item highlight-media-item--poster">
+<img class="highlight-image" src="cairns-mirusvirus-poster-2024.webp" width="1352" height="1928" alt="Scientific poster on the broad host spectrum of mirusviruses, presenting host-range, genomic-region, and phylogenetic analyses." data-i18n-alt="poster.posterImage.alt" decoding="async">
 </figure>
+<figure class="highlight-media-item">
+<img class="highlight-image highlight-image--portrait" src="vom-2024.webp" width="1279" height="1706" alt="Nine Viruses of Microbes 2024 attendees posing in front of crocodile sculptures in Cairns." data-i18n-alt="poster.image.alt" loading="lazy" decoding="async">
+</figure>
+</div>
 
 <section class="content-section">
 <h2 class="content-label" data-i18n="detail.record">Record</h2>
