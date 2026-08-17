@@ -50,6 +50,7 @@ flowchart LR
 - 首页桌面端的大标题正常随页面滚动；标题离开视口后，在正文栏顶部显示紧凑的期刊式 running head。移动端复用 Quarto 顶部标题栏，不叠加第二层标题。
 - 标题使用 Georgia/Times，正文使用系统无衬线字体；不要引入新的 Web font 或 UI 框架。
 - 左侧栏顺序保持：猫头像与姓名 → 领域和一句简介 → 外部主页与邮箱 → 语言按钮 → Gallery。
+- Google Scholar、LinkedIn 和 iNaturalist 使用获授权素材的品牌原色；GitHub 保持官方高对比单色，Email 与 Gallery 使用站点自身的导航色，不为追求“全彩”添加非官方品牌色。
 - 首页每条记录的主标题都链接到本地 Highlight，并在下方单独保留可见的官方外部来源；首页只写事实性的一两句话，详细内容和证据放进 Highlight。
 - 外部链接使用 `↗`、`target="_blank" rel="noopener noreferrer"`；站内链接使用 `→`。
 - 期刊名使用 `<em lang="en">Journal Name</em>`；不要在翻译字符串内写 HTML。
