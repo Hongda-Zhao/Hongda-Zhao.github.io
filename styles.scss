@@ -602,7 +602,7 @@ html:has(.coverage-listing) {
   display: grid;
   padding-block: 1.2rem;
   border-bottom: 1px solid var(--rule);
-  grid-template-columns: 6.5rem minmax(0, 1fr);
+  grid-template-columns: 8rem minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
 }
@@ -616,6 +616,22 @@ html:has(.coverage-listing) {
   color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
+}
+
+.coverage-meta {
+  display: flex;
+  min-width: 0;
+  gap: 0.4rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.coverage-type {
+  color: var(--accent);
+  font-size: 0.61rem;
+  font-weight: 650;
+  letter-spacing: 0.045em;
+  line-height: 1.35;
 }
 
 .coverage-entry {

@@ -16,20 +16,26 @@ title-block-style: none
 <section class="coverage-listing" aria-label="Notes on life, technology and research" data-i18n-aria-label="coverage.aria">
 <div class="coverage-list">
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2026-07-30">2026.07.30</time>
+<span class="coverage-type" data-i18n="coverage.techBlog">Tech Blog</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./posts/djr-mcp-finder-evidence-first-ai4s/">
-<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.djrMcpFinder">Two months building DJR-MCP Finder: AI-assisted structural biology for virus evolution.</h2></div>
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.djrMcpFinder">Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.</h2></div>
 <b aria-hidden="true">→</b>
 </a>
 <div class="coverage-source-line">
 <span>DJR-MCP Finder v0.1</span>
-<a class="coverage-item-source" href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1" target="_blank" rel="noopener noreferrer" aria-label="Official source: DJR-MCP Finder v0.1 release (opens in a new tab)" data-i18n-aria-label="coverage.source.djrMcpFinder.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+<a class="coverage-item-source" href="https://github.com/Hongda-Zhao/DJR-MCP-Finder" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository (opens in a new tab)" data-i18n-aria-label="coverage.githubRepository.aria"><span data-i18n="coverage.githubRepository">GitHub repository</span> <span aria-hidden="true">↗</span></a>
 </div>
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2026-03-05">2026.03.05</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/bioinformatics-japan-student-award-2025/">
 <div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.2026">Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.</h2><small lang="ja">特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました</small></div>
@@ -42,7 +48,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2025-12-22">2025.12.22</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/giant-virus-biology-symposium-2025/">
 <div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.symposium">Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.</h2><small lang="ja">ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。</small></div>
@@ -55,7 +64,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2025-02-14">2025.02.14</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/icr-student-research-award-2025/">
 <div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.award">Received the ICR Award for Graduate Students.</h2></div>
@@ -68,7 +80,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2025-01-28">2025.01.28</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/masters-thesis-defense-2025/">
 <div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.thesis">Completed my master’s thesis presentation and Q&amp;A.</h2><small lang="ja">菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。</small></div>
@@ -81,7 +96,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2024-07-18">2024.07.18</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/cairns-poster-2024/">
 <div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.poster">Presented a poster at Viruses of Microbes 2024 in Cairns, Australia.</h2></div>
@@ -94,7 +112,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2024-04-30">2024.04.30</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/current-biology-acceptance/">
 <div class="coverage-copy"><h2 class="no-anchor"><span data-i18n="coverage.currentBiology.before">My first-author paper on mirusviruses was accepted for publication in </span><em lang="en">Current Biology</em><span data-i18n="coverage.currentBiology.after">!</span></h2></div>
@@ -107,7 +128,10 @@ title-block-style: none
 </div>
 </article>
 <article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2023-10-04">2023.10.04</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/virus-evolution-acceptance-2023/">
 <div class="coverage-copy"><h2 class="no-anchor"><span data-i18n="coverage.paper.before">My first paper was accepted for publication in </span><em lang="en">Virus Evolution</em><span data-i18n="coverage.paper.after">!</span></h2><small lang="ja">修士1年のZhao Hongda君の論文が <em lang="en">Virus Evolution</em> に受理されました。おめでとうございます。</small></div>
