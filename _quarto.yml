@@ -1,10 +1,16 @@
 project:
   type: website
+  render:
+    - index.qmd
+    - gallery.qmd
+    - highlights/*/index.qmd
+    - posts/*/index.qmd
   resources:
     - assets/backgrounds/**
     - assets/gallery/**
     - assets/js/gallery-map.js
-    - assets/map/**
+    - assets/map/*.js
+    - assets/map/terrain/**
     - assets/vendor/leaflet/**
     - assets/vendor/leaflet-markercluster/**
 

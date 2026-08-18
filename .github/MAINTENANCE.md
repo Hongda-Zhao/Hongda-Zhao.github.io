@@ -41,6 +41,8 @@ flowchart LR
 
 `_site/` 和 `.quarto/` 是生成物与缓存，不是源代码。禁止手工编辑，正常任务不提交；只有用户明确要求交付生成产物时才例外。
 
+`_quarto.yml` 中的 `project.render` 是公开发布的白名单，只允许首页、Gallery、`highlights/<slug>/index.qmd` 和 `posts/<slug>/index.qmd`。内部草稿、源数据、QA 记录与构建脚本不得放入这些路径；不要依赖“没有导航链接”来隐藏文件。`assets/map/README.md` 仅供仓库维护使用，地图资源规则只复制运行时 JS 与底图，不公开该说明文件。
+
 ## 3. 设计约束
 
 - 视觉风格保持简洁、编辑式和学术笔记感：暖白纸张底（`#faf9f6`）、深灰正文、森林绿链接、细灰线；内容卡片不使用商业化阴影或大圆角，保留头像与地图标记现有的功能性圆形样式。
@@ -132,19 +134,18 @@ git diff --check       # 空白与补丁检查
 - 桌面与手机宽度，无横向溢出。
 - 默认英文和中文切换；可见文字、ARIA 与 alt 都能更新。
 - 图片、内部链接、外部链接与浏览器标题。
+- `_site/sitemap.xml`、`_site/search.json` 与输出目录只包含 `project.render` 白名单中的正式页面；内部文件名和已删除路由均不存在。
 - Gallery 卡片、图片文件、地图 photo ID、admin code 和翻译 key 一一对应。
 - 地图计数、行政区着色、标记滚动、快捷按钮和灯箱顺序。
 - `git status` 中没有 `_site/`、`.quarto/`、桌面原图或无关文件。
 
 仓库改动遵循 `AGENTS.md`：从最新 `main` 建立 `codex/*` 分支，验证后自动创建 Draft PR；不要直接推送、force-push 或合并 `main`。
 
-## 8. 当前非主线页面
+## 8. 内部模板与发布边界
 
-- `projects.qmd` 和 `publications.qmd` 是未加入导航的占位页面，但仍可能被 Quarto 构建并通过直链访问。
-- `posts/template/` 是 draft 写作模板；当前首页和 Highlight 不依赖它。
-- `assets/profile.jpg` 当前没有被页面引用。
-
-除非用户明确决定启用或删除它们，新任务不要把这些占位内容加入侧栏，也不要把它们当成当前设计的一部分。
+- `projects.qmd`、`publications.qmd` 及其占位文案已删除。未来只有在内容完成时，才新建页面并同时加入 `project.render`。
+- 正式文章目录只保留 `index.qmd` 与它实际引用的成品图片；不把 review draft、figure QA、绘图脚本、源数据或未引用的输出格式放在可发布的文章目录中。
+- 新建正式文章时使用 `posts/<slug>/index.qmd`；如需写作模板或内部工作记录，应放在 `posts/` 与 `highlights/` 之外的非发布目录。
 
 ## 9. 新对话使用方式
 

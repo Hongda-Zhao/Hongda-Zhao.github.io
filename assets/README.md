@@ -5,7 +5,6 @@
 - Shared site artwork lives directly in `assets/` (`avatar-cat.jpg`, `og.png`).
 - Gallery photographs live in `assets/gallery/` as metadata-stripped WebP files named `YYYY-MM-DD-place-slug.webp`.
 - Highlight images live beside their corresponding `highlights/<slug>/index.qmd` so each record remains self-contained.
-- `profile.jpg` is currently unreferenced; do not expose or reuse it unless the user explicitly asks.
 
 Always record the image's real `width` and `height`, write a factual English alt, and add a Chinese alt through `data-i18n-alt` when the page supports language switching. Do not commit desktop originals or absolute local paths.
 
