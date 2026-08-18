@@ -1,5 +1,5 @@
 ---
-title: "Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution"
+title: "Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution."
 description-meta: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
 open-graph:
   description: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
