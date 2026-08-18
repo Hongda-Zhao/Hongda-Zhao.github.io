@@ -4,7 +4,7 @@
     "href": "posts/djr-mcp-finder-evidence-first-ai4s/index.html",
     "title": "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析",
     "section": "",
-    "text": "Read in English·中文\n2026 年 7 月 30 日，我在 GitHub 发布了 DJR-MCP Finder v0.1。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。\nDJR-MCP Finder 是一个面向病毒演化研究的蛋白质分类工具。它接收蛋白质 FASTA 序列，寻找可能具有 double-jelly-roll（DJR）折叠、并参与 Varidnaviria 病毒形态发生的主要衣壳蛋白候选。\n这篇文章不是使用说明，而是一次开发复盘：我为什么做这个工具，过程中哪些问题最难，以及 Codex 如何改变了我的工作方式。"
+    "text": "2026 年 7 月 30 日，我在 GitHub 发布了 DJR-MCP Finder v0.1。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。\nDJR-MCP Finder 是一个面向病毒演化研究的蛋白质分类工具。它接收蛋白质 FASTA 序列，寻找可能具有 double-jelly-roll（DJR）折叠、并参与 Varidnaviria 病毒形态发生的主要衣壳蛋白候选。\n这篇文章不是使用说明，而是一次开发复盘：我为什么做这个工具，过程中哪些问题最难，以及 Codex 如何改变了我的工作方式。"
   },
   {
     "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/index.html#为什么要寻找-djr-mcp",
@@ -144,7 +144,7 @@
     "href": "posts/djr-mcp-finder-evidence-first-ai4s-en/index.html",
     "title": "Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution",
     "section": "",
-    "text": "English·中文\nOn 30 July 2026, I released DJR-MCP Finder v0.1 on GitHub. This was the project’s first formal release. Here, v0.1 is the software release number, while the released model is called Model V0. The mixed nominee discussed later remains an experimental candidate.\nDJR-MCP Finder is a protein classifier for viral evolution research. It accepts protein FASTA sequences and searches for candidate major capsid proteins that may adopt the double-jelly-roll (DJR) fold and be associated with viral morphogenesis. The project was developed in the context of DJR-MCP lineages within Varidnaviria; it does not claim that every member of the realm uses a DJR-MCP.\nThis article is not a user guide. It is a development retrospective: why I built the tool, which decisions proved most difficult, and how working with Codex changed the way I developed it."
+    "text": "On 30 July 2026, I released DJR-MCP Finder v0.1 on GitHub. This was the project’s first formal release. Here, v0.1 is the software release number, while the released model is called Model V0. The mixed nominee discussed later remains an experimental candidate.\nDJR-MCP Finder is a protein classifier for viral evolution research. It accepts protein FASTA sequences and searches for candidate major capsid proteins that may adopt the double-jelly-roll (DJR) fold and be associated with viral morphogenesis. The project was developed in the context of DJR-MCP lineages within Varidnaviria; it does not claim that every member of the realm uses a DJR-MCP.\nThis article is not a user guide. It is a development retrospective: why I built the tool, which decisions proved most difficult, and how working with Codex changed the way I developed it."
   },
   {
     "objectID": "posts/djr-mcp-finder-evidence-first-ai4s-en/index.html#why-look-for-djr-mcps",

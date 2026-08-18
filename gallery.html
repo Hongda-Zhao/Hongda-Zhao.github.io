@@ -484,11 +484,6 @@ ul.task-list li input[type="checkbox"] {
       });
     });
 
-    document.querySelectorAll("[data-language-target]").forEach((link) => {
-      link.addEventListener("click", () => {
-        try { localStorage.setItem(storageKey, link.dataset.languageTarget); } catch (_error) {}
-      });
-    });
     setLanguage(initialLanguage, false);
   });
 })();

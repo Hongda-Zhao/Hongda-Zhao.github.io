@@ -481,11 +481,6 @@ ul.task-list li input[type="checkbox"] {
       });
     });
 
-    document.querySelectorAll("[data-language-target]").forEach((link) => {
-      link.addEventListener("click", () => {
-        try { localStorage.setItem(storageKey, link.dataset.languageTarget); } catch (_error) {}
-      });
-    });
     setLanguage(initialLanguage, false);
   });
 })();
@@ -615,18 +610,6 @@ Research notes, technical work, and field observations.
 body.fixed-language-content .quarto-secondary-nav-title {
   display: none;
 }
-#quarto-document-content .article-language-switch {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.55rem;
-  margin: 0 0 1.8rem;
-  color: #66706b;
-  font-size: 0.86rem;
-}
-#quarto-document-content .article-language-switch [aria-current="page"] {
-  color: #222725;
-  font-weight: 700;
-}
 #quarto-document-content .article-figure { margin: 1.6rem 0; }
 #quarto-document-content .figure-scroll {
   max-width: 100%;
@@ -664,9 +647,6 @@ body.fixed-language-content .quarto-secondary-nav-title {
   }
 }
 </style>
-<nav class="article-language-switch" aria-label="文章语言">
-<a href="../djr-mcp-finder-evidence-first-ai4s-en/" hreflang="en" lang="en" data-language-target="en">Read in English</a><span aria-hidden="true">·</span><span aria-current="page">中文</span>
-</nav>
 <p>2026 年 7 月 30 日，我在 GitHub 发布了 <a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1">DJR-MCP Finder v0.1</a>。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。</p>
 <p><a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder">DJR-MCP Finder</a> 是一个面向病毒演化研究的蛋白质分类工具。它接收蛋白质 FASTA 序列，寻找可能具有 double-jelly-roll（DJR）折叠、并参与 Varidnaviria 病毒形态发生的主要衣壳蛋白候选。</p>
 <p>这篇文章不是使用说明，而是一次开发复盘：我为什么做这个工具，过程中哪些问题最难，以及 Codex 如何改变了我的工作方式。</p>
