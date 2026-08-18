@@ -117,6 +117,7 @@
     "coverage.source.jsme2023.aria": ["Official source: JSME 2023 oral presentation program (opens in a new tab)", "官方来源：JSME 2023 口头报告议程（在新标签页打开）"],
     "coverage.source.virusEvolution.aria": ["Official source: Virus Evolution announcement (opens in a new tab)", "官方来源：《Virus Evolution》论文公告（在新标签页打开）"],
     "coverage.djrMcpFinder": ["Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.", "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。"],
+    "coverage.djrMcpFinder.href": ["/posts/djr-mcp-finder-evidence-first-ai4s-en/", "/posts/djr-mcp-finder-evidence-first-ai4s/"],
     "coverage.2026": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
     "coverage.award": ["Received the ICR Award for Graduate Students.", "荣获京大化研学生研究賞。"],
@@ -215,7 +216,20 @@
     "award.venue": ["124th ICR Research Presentation Meeting", "京都大学化学研究所第124回研究发表会"]
   };
 
-  const initialLanguage = (() => {
+  const normalizePagePath = (path) => path.replace(/\/index\.html$/, "/") || "/";
+  const normalizedPagePath = normalizePagePath(location.pathname);
+  const localizedPages = [
+    {
+      en: "/posts/djr-mcp-finder-evidence-first-ai4s-en/",
+      zh: "/posts/djr-mcp-finder-evidence-first-ai4s/"
+    }
+  ];
+  const localizedPage = localizedPages.find((routes) => Object.values(routes).includes(normalizedPagePath));
+  const authoredLanguage = localizedPage
+    ? (normalizedPagePath === localizedPage.zh ? "zh" : "en")
+    : null;
+
+  const initialLanguage = authoredLanguage || (() => {
     try { return localStorage.getItem(storageKey) === "zh" ? "zh" : "en"; }
     catch (_error) { return "en"; }
   })();
@@ -283,7 +297,7 @@
   const setLanguage = (language, persist = true) => {
     const index = language === "zh" ? 1 : 0;
     document.documentElement.dataset.uiLang = language;
-    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.documentElement.lang = (authoredLanguage || language) === "zh" ? "zh-CN" : "en";
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const translation = strings[element.dataset.i18n];
@@ -300,6 +314,11 @@
       if (translation) element.setAttribute("alt", translation[index]);
     });
 
+    document.querySelectorAll("[data-i18n-href]").forEach((element) => {
+      const translation = strings[element.dataset.i18nHref];
+      if (translation) element.setAttribute("href", translation[index]);
+    });
+
     document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
       const address = `${link.dataset.emailUser}${String.fromCharCode(64)}${link.dataset.emailDomain}`;
       link.setAttribute("href", `mailto:${address}`);
@@ -309,7 +328,10 @@
     const footer = document.querySelector(".nav-footer-right");
     if (footer) footer.textContent = strings["footer.tagline"][index];
 
-    const page = location.pathname.split("/").pop() || "index.html";
+    const isHomePage = normalizedPagePath === "/";
+    const page = isHomePage
+      ? "index.html"
+      : normalizedPagePath.split("/").filter(Boolean).pop() || "";
     let secondaryTitle = document.querySelector(".quarto-secondary-nav-title");
     const translatedPageTitle = document.querySelector("[data-document-title]");
     const isGalleryPage = Boolean(document.querySelector(".gallery-page"));
@@ -324,7 +346,7 @@
       secondaryTitle.textContent = "";
     } else if (secondaryTitle && translatedPageTitle) {
       secondaryTitle.textContent = translatedPageTitle.textContent.trim();
-    } else if (secondaryTitle && page === "index.html") {
+    } else if (secondaryTitle && isHomePage) {
       secondaryTitle.textContent = strings["coverage.title"][index];
     }
 
@@ -372,7 +394,19 @@
 
     document.querySelectorAll(".language-toggle").forEach((button) => {
       button.addEventListener("click", () => {
-        setLanguage(document.documentElement.dataset.uiLang === "zh" ? "en" : "zh");
+        const targetLanguage = document.documentElement.dataset.uiLang === "zh" ? "en" : "zh";
+        if (localizedPage && localizedPage[targetLanguage] !== normalizedPagePath) {
+          try { localStorage.setItem(storageKey, targetLanguage); } catch (_error) {}
+          location.assign(localizedPage[targetLanguage]);
+          return;
+        }
+        setLanguage(targetLanguage);
+      });
+    });
+
+    document.querySelectorAll("[data-language-target]").forEach((link) => {
+      link.addEventListener("click", () => {
+        try { localStorage.setItem(storageKey, link.dataset.languageTarget); } catch (_error) {}
       });
     });
     setLanguage(initialLanguage, false);
