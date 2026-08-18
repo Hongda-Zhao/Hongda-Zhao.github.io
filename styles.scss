@@ -1654,6 +1654,11 @@ main.content:has(> .gallery-page) > #title-block-header {
   margin: 0;
 }
 
+.highlight-media-item--poster .highlight-image {
+  width: min(100%, 36rem);
+  margin-inline: auto;
+}
+
 .highlight-image {
   display: block;
   width: 100%;
