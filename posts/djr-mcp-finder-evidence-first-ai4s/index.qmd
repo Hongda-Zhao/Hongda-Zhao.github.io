@@ -1,5 +1,5 @@
 ---
-title: "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析"
+title: "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。"
 description-meta: "DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。"
 open-graph:
   description: "DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。"
