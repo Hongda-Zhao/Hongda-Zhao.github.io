@@ -134,7 +134,7 @@ title-block-style: none
 </div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./highlights/jsme-oral-presentation-2023/">
-<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.jsme2023">Gave an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology in Hamamatsu.</h2></div>
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.jsme2023">My first academic conference presentation: an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology.</h2></div>
 <b aria-hidden="true">→</b>
 </a>
 <div class="coverage-source-line">

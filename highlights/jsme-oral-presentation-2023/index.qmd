@@ -1,5 +1,5 @@
 ---
-pagetitle: "Oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology"
+pagetitle: "My first academic conference presentation: an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology"
 description: "Hongda Zhao presented research on an endogenous giant virus in arbuscular mycorrhizal fungi at JSME 2023 in Hamamatsu."
 page-layout: full
 toc: false
@@ -10,7 +10,7 @@ title-block-style: none
 <div class="page-shell highlight-page">
 <header class="page-header highlight-header">
 <p class="highlight-meta"><span data-i18n="jsme2023.eyebrow">Conference record</span><time datetime="2023-11-29">2023.11.29</time></p>
-<h1 class="page-title" data-i18n="jsme2023.title" data-document-title>Oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology</h1>
+<h1 class="page-title" data-i18n="jsme2023.title" data-document-title>My first academic conference presentation: an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology</h1>
 </header>
 
 <section class="highlight-docket" aria-labelledby="jsme-2023-docket-title">
@@ -27,14 +27,12 @@ title-block-style: none
 <section class="content-section">
 <h2 class="content-label" data-i18n="detail.record">Record</h2>
 <div class="prose-slot highlight-prose">
-<p data-i18n="jsme2023.record.copy">On 29 November 2023, I gave an oral presentation in the Virus session at the 36th Annual Meeting of the Japanese Society of Microbial Ecology in Hamamatsu. The official program lists the talk as 2_44_O-p04, scheduled from 16:15 to 16:30 in Room 44.</p>
+<p data-i18n="jsme2023.record.copy">On 29 November 2023, I gave an oral presentation in the Virus session at the 36th Annual Meeting of the Japanese Society of Microbial Ecology in Hamamatsu.</p>
 <p class="highlight-citation">Zhao H., Zhang R., Wu J., Meng L., Okazaki Y., Hikida H., Ogata H. “Discovery of Endogenous Giant Virus in Arbuscular Mycorrhizal Fungi: Implications of a dsDNA Virus Infection in Fungi.” Oral presentation 2_44_O-p04, The 36th JSME &amp; The 13th ASME, 29 November 2023.</p>
-<p data-i18n="jsme2023.context.copy">The presentation was co-authored with Ruixuan Zhang, Junyi Wu, Lingjie Meng, Yusuke Okazaki, Hiroyuki Hikida, and Hiroyuki Ogata.</p>
 <nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
 <a href="https://2023.jsme-conference.net/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> <span aria-hidden="true">↗</span></a>
 <a href="https://2023.jsme-conference.net/wp-content/uploads/2023/11/3959a3484f24ff7233d0c854f5a070e7.pdf" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.program">Official program</span> <span aria-hidden="true">↗</span></a>
 <a href="https://cls.kuicr.kyoto-u.ac.jp/oral_poster/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.presentationList">Ogata Lab presentation list</span> <span aria-hidden="true">↗</span></a>
-<a href="https://2023.jsme-conference.net/wp-content/uploads/2023/08/87087ea0ec3edadd7ff77e740e95ff42-scaled.jpg" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.conferenceVisual">Official conference visual</span> <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </section>
