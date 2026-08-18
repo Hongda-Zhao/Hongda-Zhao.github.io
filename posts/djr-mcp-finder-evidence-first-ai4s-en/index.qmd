@@ -39,18 +39,6 @@ format:
 body.fixed-language-content .quarto-secondary-nav-title {
   display: none;
 }
-#quarto-document-content .article-language-switch {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.55rem;
-  margin: 0 0 1.8rem;
-  color: #66706b;
-  font-size: 0.86rem;
-}
-#quarto-document-content .article-language-switch [aria-current="page"] {
-  color: #222725;
-  font-weight: 700;
-}
 #quarto-document-content .article-figure { margin: 1.6rem 0; }
 #quarto-document-content .figure-scroll {
   max-width: 100%;
@@ -88,8 +76,6 @@ body.fixed-language-content .quarto-secondary-nav-title {
   }
 }
 </style>
-
-<nav class="article-language-switch" aria-label="Article language"><span aria-current="page">English</span><span aria-hidden="true">·</span><a href="../djr-mcp-finder-evidence-first-ai4s/" hreflang="zh-CN" lang="zh-CN" data-language-target="zh">中文</a></nav>
 
 On 30 July 2026, I released [DJR-MCP Finder v0.1](https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1) on GitHub. This was the project's first formal release. Here, v0.1 is the software release number, while the released model is called Model V0. The mixed nominee discussed later remains an experimental candidate.
 

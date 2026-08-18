@@ -113,7 +113,7 @@ flowchart LR
 - 新增的页面级标题使用 `data-document-title`，让浏览器标题与移动端标题同步切换。
 - 翻译时以期刊、大学、奖项和会议的官方名称为准，不从日语标题机械直译。
 - 含大量 Markdown、链接、代码和图表的长文不放入全站 `data-i18n` 字典；中文与英文正文分别放在 `posts/<slug>/` 和 `posts/<slug>-en/`，两者都符合公开页面白名单。
-- 双语长文必须各自声明 `lang`、self canonical、语言专属社交元数据，并通过 `hreflang="en"`、`hreflang="zh-CN"` 和 `x-default` 互相指向；正文顶部保留可见的对向语言链接。
+- 双语长文必须各自声明 `lang`、self canonical、语言专属社交元数据，并通过 `hreflang="en"`、`hreflang="zh-CN"` 和 `x-default` 互相指向；页面内不重复放语言控件，统一使用左侧栏的全站语言按钮在两个版本之间切换。
 - 首页的长文主链接应以英文 URL 作为无 JavaScript fallback，并由 `data-i18n-href` 随界面语言切换到中文 URL。
 - 图内有文字时不能只翻译 alt 和图注；应分别提供经过核对的语言专属成品，并且只提交页面实际引用的文件格式。生成脚本、源数据和 QA 记录继续放在公开发布白名单之外。
 
