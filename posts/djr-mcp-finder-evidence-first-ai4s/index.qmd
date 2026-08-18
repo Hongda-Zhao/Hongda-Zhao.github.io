@@ -3,16 +3,25 @@ title: "做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加�
 description-meta: "DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。"
 open-graph:
   description: "DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。"
+  image: figures/cover-evidence-first.png
+  image-alt: "DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。"
 twitter-card:
   description: "DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。"
+  image: figures/cover-evidence-first.png
+  image-alt: "DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。"
 lang: zh-CN
 image: figures/cover-evidence-first.png
 image-alt: "DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。"
+canonical-url: true
+body-classes: fixed-language-content
 draft: false
 toc: true
 toc-location: right
 code-copy: true
 anchor-sections: true
+format:
+  html:
+    include-in-header: ../../includes/djr-mcp-finder-alternates.html
 ---
 
 <style>
@@ -26,6 +35,21 @@ anchor-sections: true
 }
 #quarto-document-content #title-block-header .quarto-title-meta {
   display: none;
+}
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin: 0 0 1.8rem;
+  color: #66706b;
+  font-size: 0.86rem;
+}
+#quarto-document-content .article-language-switch [aria-current="page"] {
+  color: #222725;
+  font-weight: 700;
 }
 #quarto-document-content .article-figure { margin: 1.6rem 0; }
 #quarto-document-content .figure-scroll {
@@ -64,6 +88,8 @@ anchor-sections: true
   }
 }
 </style>
+
+<nav class="article-language-switch" aria-label="文章语言"><a href="../djr-mcp-finder-evidence-first-ai4s-en/" hreflang="en" lang="en" data-language-target="en">Read in English</a><span aria-hidden="true">·</span><span aria-current="page">中文</span></nav>
 
 2026 年 7 月 30 日，我在 GitHub 发布了 [DJR-MCP Finder v0.1](https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1)。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。
 

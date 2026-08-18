@@ -31,6 +31,7 @@ flowchart LR
 | 中英文与全站交互 | `head.html` | 翻译表、语言切换、邮箱还原、标题和灯箱无障碍标签 |
 | 首页随笔 | `index.qmd` | 手工维护的时间线，不会自动收集其他页面 |
 | 独立记录 | `highlights/<slug>/index.qmd` | 可用自有/获授权图片；无合适图片时使用文字记录档案 |
+| 双语长文 | `posts/<slug>/index.qmd`、`posts/<slug>-en/index.qmd` | 中文与英文使用独立静态页面与语言专属成品图片 |
 | 相册卡片 | `gallery.qmd` | 日期、图片、地点 key、alt key 和 12 栏布局 |
 | 相册图片 | `assets/gallery/` | 去除元数据的 WebP |
 | 相册行政区映射 | `assets/map/gallery-places.js` | 照片 ID、地区与 ISO 3166-2 行政区 |
@@ -111,6 +112,10 @@ flowchart LR
 - 语言脚本通过 `textContent` 写入文字，因此含 `<em>`、链接或其他标记的句子必须拆成 before/after key。
 - 新增的页面级标题使用 `data-document-title`，让浏览器标题与移动端标题同步切换。
 - 翻译时以期刊、大学、奖项和会议的官方名称为准，不从日语标题机械直译。
+- 含大量 Markdown、链接、代码和图表的长文不放入全站 `data-i18n` 字典；中文与英文正文分别放在 `posts/<slug>/` 和 `posts/<slug>-en/`，两者都符合公开页面白名单。
+- 双语长文必须各自声明 `lang`、self canonical、语言专属社交元数据，并通过 `hreflang="en"`、`hreflang="zh-CN"` 和 `x-default` 互相指向；正文顶部保留可见的对向语言链接。
+- 首页的长文主链接应以英文 URL 作为无 JavaScript fallback，并由 `data-i18n-href` 随界面语言切换到中文 URL。
+- 图内有文字时不能只翻译 alt 和图注；应分别提供经过核对的语言专属成品，并且只提交页面实际引用的文件格式。生成脚本、源数据和 QA 记录继续放在公开发布白名单之外。
 
 ## 6. 图片、隐私与版权
 
