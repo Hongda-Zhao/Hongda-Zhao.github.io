@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="An oral presentation on the dsDNA viral landscape in eukaryotic genomes at the 6th Ringberg Symposium on Giant Virus Biology.">
+<meta name="description" content="A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1.">
 
-<title>Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology – Hongda Zhao</title>
+<title>Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution – Hongda Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-93a1e9d7fec8c8528f0f182bd36bad97.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1a6af8b2e1f8203b8300c7550de4b42f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -490,21 +490,29 @@ ul.task-list li input[type="checkbox"] {
   });
 })();
 </script>
+<link rel="alternate" hreflang="en" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/">
+<link rel="alternate" hreflang="zh-CN" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/">
+<link rel="alternate" hreflang="x-default" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/">
 
 
-<meta property="og:title" content="Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology">
-<meta property="og:description" content="An oral presentation on the dsDNA viral landscape in eukaryotic genomes at the 6th Ringberg Symposium on Giant Virus Biology.">
-<meta property="og:image" content="https://hongda-zhao.github.io/highlights/giant-virus-biology-symposium-2025/assets/og.png">
+<meta property="og:title" content="Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution – Hongda Zhao">
+<meta property="og:description" content="A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1.">
+<meta property="og:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/figures/cover-evidence-first-en.png">
 <meta property="og:site_name" content="Hongda Zhao">
-<meta property="og:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
-<meta name="twitter:title" content="Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology">
-<meta name="twitter:description" content="An oral presentation on the dsDNA viral landscape in eukaryotic genomes at the 6th Ringberg Symposium on Giant Virus Biology.">
-<meta name="twitter:image" content="https://hongda-zhao.github.io/highlights/giant-virus-biology-symposium-2025/assets/og.png">
-<meta name="twitter:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta property="og:image:alt" content="A development retrospective on DJR-MCP Finder, from data definitions and hard negatives to component-aware splitting, model selection, and agent-assisted development.">
+<meta property="og:image:height" content="2160">
+<meta property="og:image:width" content="3840">
+<meta name="twitter:title" content="Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution – Hongda Zhao">
+<meta name="twitter:description" content="A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1.">
+<meta name="twitter:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/figures/cover-evidence-first-en.png">
+<meta name="twitter:image:alt" content="A development retrospective on DJR-MCP Finder, from data definitions and hard negatives to component-aware splitting, model selection, and agent-assisted development.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="2160">
+<meta name="twitter:image-width" content="3840">
+<link rel="canonical" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fixed-language-content quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -514,13 +522,13 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"></h1>
+          <h1 class="quarto-secondary-nav-title">Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution</h1>
         </a>     
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
 <div class="site-sidebar-profile">
@@ -547,52 +555,265 @@ Research notes, technical work, and field observations.
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-look-for-djr-mcps" id="toc-why-look-for-djr-mcps" class="nav-link active" data-scroll-target="#why-look-for-djr-mcps">Why Look for DJR-MCPs?</a></li>
+  <li><a href="#the-hardest-part-was-defining-the-labels" id="toc-the-hardest-part-was-defining-the-labels" class="nav-link" data-scroll-target="#the-hardest-part-was-defining-the-labels">The Hardest Part Was Defining the Labels</a></li>
+  <li><a href="#hard-negatives-easy-negatives-are-not-enough" id="toc-hard-negatives-easy-negatives-are-not-enough" class="nav-link" data-scroll-target="#hard-negatives-easy-negatives-are-not-enough">Hard Negatives: Easy Negatives Are Not Enough</a></li>
+  <li><a href="#split-by-component-not-by-sequence" id="toc-split-by-component-not-by-sequence" class="nav-link" data-scroll-target="#split-by-component-not-by-sequence">Split by Component, Not by Sequence</a></li>
+  <li><a href="#model-selection-cannot-stop-at-the-top-score" id="toc-model-selection-cannot-stop-at-the-top-score" class="nav-link" data-scroll-target="#model-selection-cannot-stop-at-the-top-score">Model Selection Cannot Stop at the Top Score</a></li>
+  <li><a href="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" id="toc-a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" class="nav-link" data-scroll-target="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A Slightly Higher Score Is Not Enough to Replace a Frozen Model</a></li>
+  <li><a href="#not_evaluated-can-be-a-meaningful-result" id="toc-not_evaluated-can-be-a-meaningful-result" class="nav-link" data-scroll-target="#not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> Can Be a Meaningful Result</a></li>
+  <li><a href="#what-codex-helped-me-accelerate" id="toc-what-codex-helped-me-accelerate" class="nav-link" data-scroll-target="#what-codex-helped-me-accelerate">What Codex Helped Me Accelerate</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#an-ai4s-project-starts-with-the-right-problem-decomposition" id="toc-an-ai4s-project-starts-with-the-right-problem-decomposition" class="nav-link" data-scroll-target="#an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S Project Starts with the Right Problem Decomposition</a></li>
+  <li><a href="#data-and-labels-often-matter-more-than-the-model" id="toc-data-and-labels-often-matter-more-than-the-model" class="nav-link" data-scroll-target="#data-and-labels-often-matter-more-than-the-model">2. Data and Labels Often Matter More Than the Model</a></li>
+  <li><a href="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search" id="toc-in-this-project-protein-language-models-did-not-replace-traditional-homology-search" class="nav-link" data-scroll-target="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In This Project, Protein Language Models Did Not Replace Traditional Homology Search</a></li>
+  <li><a href="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" id="toc-preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" class="nav-link" data-scroll-target="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the Limits of the Evidence Matters More Than Filling Every Cell</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<div class="page-shell highlight-page">
-<header class="page-header highlight-header">
-<p class="highlight-meta"><span data-i18n="symposiumDetail.eyebrow">Conference record</span><time datetime="2025-12-15">2025.12.15–19</time></p>
-<h1 class="page-title" data-i18n="symposiumDetail.title" data-document-title="">Oral presentation at the 6th Ringberg Symposium on Giant Virus Biology</h1>
+    
+  
+    
+  </div>
+  
+
+
 </header>
 
-<figure class="highlight-media figure">
-<img class="highlight-image highlight-image--compact figure-img" src="oral-presentation.webp" width="670" height="503" alt="Hongda Zhao gives an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany." data-i18n-alt="symposiumDetail.image.alt" decoding="async">
+
+<style>
+#quarto-document-content #title-block-header {
+  padding-bottom: clamp(2.2rem, 5vw, 3.5rem);
+}
+#quarto-document-content #title-block-header .quarto-title .title {
+  display: block !important;
+  max-width: 52rem;
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+}
+#quarto-document-content #title-block-header .quarto-title-meta {
+  display: none;
+}
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin: 0 0 1.8rem;
+  color: #66706b;
+  font-size: 0.86rem;
+}
+#quarto-document-content .article-language-switch [aria-current="page"] {
+  color: #222725;
+  font-weight: 700;
+}
+#quarto-document-content .article-figure { margin: 1.6rem 0; }
+#quarto-document-content .figure-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+#quarto-document-content .figure-zoom { display: block; }
+#quarto-document-content .figure-zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#quarto-document-content .article-figure figcaption {
+  margin-top: 0.55rem;
+  color: #66706b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  #quarto-document-content .figure-scroll img {
+    width: 700px;
+    max-width: none;
+  }
+  #quarto-document-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #quarto-document-content mjx-container[display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+</style>
+<nav class="article-language-switch" aria-label="Article language">
+<span aria-current="page">English</span><span aria-hidden="true">·</span><a href="../djr-mcp-finder-evidence-first-ai4s/" hreflang="zh-CN" lang="zh-CN" data-language-target="zh">中文</a>
+</nav>
+<p>On 30 July 2026, I released <a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1">DJR-MCP Finder v0.1</a> on GitHub. This was the project’s first formal release. Here, v0.1 is the software release number, while the released model is called Model V0. The mixed nominee discussed later remains an experimental candidate.</p>
+<p><a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder">DJR-MCP Finder</a> is a protein classifier for viral evolution research. It accepts protein FASTA sequences and searches for candidate major capsid proteins that may adopt the double-jelly-roll (DJR) fold and be associated with viral morphogenesis. The project was developed in the context of DJR-MCP lineages within <em>Varidnaviria</em>; it does not claim that every member of the realm uses a DJR-MCP.</p>
+<p>This article is not a user guide. It is a development retrospective: why I built the tool, which decisions proved most difficult, and how working with Codex changed the way I developed it.</p>
+<section id="why-look-for-djr-mcps" class="level2">
+<h2 class="anchored" data-anchor-id="why-look-for-djr-mcps">Why Look for DJR-MCPs?</h2>
+<p>Major capsid proteins (MCPs) are central components of the capsids built by many viruses, predominantly double-stranded DNA viruses in this context. In viruses whose MCPs adopt the DJR fold, these proteins also provide important clues for studying viral morphogenesis, genome annotation, and deep evolutionary relationships.</p>
+<p>The difficulty is that <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8812541/">sequence similarity among distantly related DJR-MCPs can be very low</a>. A search based only on existing annotations or high sequence similarity can therefore miss distantly related candidates.</p>
+<p>The problem cannot simply be reframed as “find every DJR protein,” either. Cellular organisms also encode DJR proteins, so a DJR fold does not by itself establish that a protein is a viral MCP.</p>
+<p>DJR-MCP Finder is not intended to make a final identification on the user’s behalf. Its goal is to:</p>
+<blockquote class="blockquote">
+<p>Reduce a large protein collection to a manageable candidate list with explicit evidence limits, so that structure, genomic context, and virological evidence can be examined next.</p>
+</blockquote>
+<p>I therefore divided the problem into three tasks:</p>
+<ol type="1">
+<li><strong>H1:</strong> determine whether a protein has a DJR fold;</li>
+<li><strong>H2:</strong> among DJR proteins, determine whether it is associated with viral morphogenesis;</li>
+<li><strong>H3:</strong> attempt to assign it to one of two known viral phyla with enough labeled examples.</li>
+</ol>
+<p>When the evidence for H3 is insufficient, the tool returns <code>unknown/other</code>. This is an abstention from a forced assignment, not evidence for a newly discovered viral phylum.</p>
+</section>
+<section id="the-hardest-part-was-defining-the-labels" class="level2">
+<h2 class="anchored" data-anchor-id="the-hardest-part-was-defining-the-labels">The Hardest Part Was Defining the Labels</h2>
+<p>One of the first problems I encountered was that the same cellular DJR protein had to be a positive example in H1 and a negative example in H2.</p>
+<p>This is not a labeling conflict.</p>
+<p>H1 asks whether the protein has a DJR fold. H2 starts from that premise and asks whether it is associated with viral morphogenesis. If both questions are compressed into a flat multiclass table, the biological role of cellular DJRs is lost.</p>
+<p>The three tasks therefore use different label definitions:</p>
+<ul>
+<li>H1 uses 560 virus-morphogenesis-associated DJRs (VMA-DJRs) and 500 cellular DJRs as positive examples, and 5,000 HardNeg records plus 5,000 background proteins as negative examples;</li>
+<li>H2 considers only DJR proteins and distinguishes VMA-DJRs from cellular DJRs;</li>
+<li>the H3 classifier is fitted on <em>Nucleocytoviricota</em> and <em>Preplasmiviricota</em>, while the remaining records are used only to examine rejection behavior.</li>
+</ul>
+<p>The positive set was not copied directly from a single database table. After reviewing the literature and structural evidence and deduplicating the sequences, I retained 560 VMA-DJR representatives.</p>
+<p>Some were higher-confidence Gold examples. The rest were Silver_R3 examples selected using fixed structural references and consistent thresholds. Silver_R3 is the data rule used in this release, not an immutable ground truth.</p>
+</section>
+<section id="hard-negatives-easy-negatives-are-not-enough" class="level2">
+<h2 class="anchored" data-anchor-id="hard-negatives-easy-negatives-are-not-enough">Hard Negatives: Easy Negatives Are Not Enough</h2>
+<p>If every H1 negative were an ordinary protein with little resemblance to DJR proteins, the model could easily obtain an impressive score. But such a score might reflect protein length, composition, or database source rather than the structural boundary I actually cared about.</p>
+<p>I therefore built a separate set of structurally similar hard negatives.</p>
+<p>The process began with 172,346 Foldseek search records. After quality filtering, deduplication, and MMseqs2 clustering, I used sequence, HMM, and structure checks to exclude candidates that still matched the DJR positives. I then selected 5,000 HardNeg representatives.</p>
+<p>Two representatives were too close to the positive set. Rather than forcing them into the negative class, I placed them in quarantine and excluded them from training.</p>
+<p>This set has a specific purpose: to probe whether the model mistakes proteins that resemble DJRs for positive examples after sequence, HMM, and structure checks have supported their exclusion from the H1-positive set.</p>
+<p>I did not run a directly comparable before-and-after ablation, so I do not attribute a numerical performance gain to the hard-negative set. What I can verify is that rerunning the workflow from the frozen inputs reproduces the same representatives and final outputs, and that the exclusion rules and G0–G6 recovery gates are auditable. The project does not claim that every raw intermediate file was retained or reproduced byte for byte.</p>
+<figure class="article-figure figure">
+<div class="figure-scroll">
+<p><a class="figure-zoom" href="figures/figure-1-labels-hard-negatives-en.svg" target="_blank" rel="noopener" aria-label="Open the full Figure 1 SVG in a new tab"><img src="figures/figure-1-labels-hard-negatives-en.svg" width="1152" height="710" alt="The task-dependent labels used by the three classification heads and the process used to select 5,000 hard negatives from 172,346 structural-search records." loading="lazy" decoding="async" class="figure-img"></a></p>
+</div>
+<figcaption>
+Figure 1 | How labels change across the three tasks, and how the HardNeg set was constructed. On mobile, scroll horizontally or open the full SVG.
+</figcaption>
 </figure>
-
-<section class="highlight-docket" aria-labelledby="symposium-docket-title">
-<p class="highlight-docket-label" id="symposium-docket-title" data-i18n="detail.summary">Record sheet</p>
-<dl class="highlight-facts">
-<div><dt data-i18n="detail.meta.event">Event</dt><dd lang="en">6th Ringberg Symposium on Giant Virus Biology</dd></div>
-<div><dt data-i18n="detail.meta.dates">Dates</dt><dd>2025.12.15–19</dd></div>
-<div><dt data-i18n="detail.meta.location">Location</dt><dd data-i18n="symposiumDetail.location">Schloss Ringberg, near Tegernsee, Germany</dd></div>
-<div><dt data-i18n="detail.meta.format">Format</dt><dd data-i18n="symposiumDetail.format">Oral presentation · 15 December 2025</dd></div>
-<div><dt data-i18n="detail.meta.talk">Talk</dt><dd lang="en">A computational framework for detecting the dsDNA viral landscape in eukaryotic genomes</dd></div>
-<div><dt data-i18n="detail.meta.announcement">Lab announcement</dt><dd>2025.12.22</dd></div>
-</dl>
 </section>
-
-<section class="content-section">
-<h2 class="content-label anchored" data-i18n="detail.record">Record</h2>
-<div class="prose-slot highlight-prose">
-<p data-i18n="symposiumDetail.record.copy">From 15 to 19 December 2025, I attended the 6th Ringberg Symposium on Giant Virus Biology at Ringberg Castle near Tegernsee, Germany. On 15 December, I gave an oral presentation on a computational framework for detecting the dsDNA viral landscape in eukaryotic genomes.</p>
-<p data-i18n="symposiumDetail.context.copy">The presentation was co-authored with Lingjie Meng, Ruixuan Zhang, Morgan Gaïa, and Hiroyuki Ogata. Lingjie Meng and Ruixuan Zhang from the Ogata Lab also gave oral presentations at the meeting.</p>
-<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
-<a href="https://cls.kuicr.kyoto-u.ac.jp/giant-virus-biology-symposium%e3%81%ab%e3%81%a6%e3%80%81%e5%8f%a3%e9%a0%ad%e7%99%ba%e8%a1%a8%e3%81%8c%e8%a1%8c%e3%82%8f%e3%81%be%e3%81%97%e3%81%9f%e3%80%82/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.labAnnouncement">Ogata Lab announcement</span> <span aria-hidden="true">↗</span></a>
-</nav>
+<section id="split-by-component-not-by-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="split-by-component-not-by-sequence">Split by Component, Not by Sequence</h2>
+<p>Two protein records may be non-identical yet still belong to the same family or originate from the same upstream cluster.</p>
+<p>If each row is assigned independently to training, validation, and test partitions, the test set may contain close relatives of training examples. The resulting score can look excellent while overstating generalization.</p>
+<p>To reduce this form of leakage, I first built a relation graph that connected records sharing any of the following:</p>
+<ul>
+<li>an identical normalized sequence;</li>
+<li>the same source cluster;</li>
+<li>a known historical or global component relationship;</li>
+<li>an MMseqs2 relationship with at least 30% identity and at least 80% coverage in both directions.</li>
+</ul>
+<p>Each connected component in this graph became a relation component. I assigned entire components—not individual sequences—to a partition.</p>
+<p>The 11,060 modeling records formed 9,262 components containing at least one modeling record. Using the frozen component sizes, a row-wise random 60/20/20 split would be expected to split about 348 components across two or more partitions.</p>
+<p>After the component-aware split, an independent workflow searched all three pairs of partitions. It found no exact duplicate sequences, no overlapping components, and no residual relationships that met the prespecified identity and coverage thresholds.</p>
+<p>This does not prove that no pairs of remote homologs below 30% identity remain across partitions. It does, however, let me state precisely which relationships were isolated, which thresholds were used, and how the result can be checked.</p>
+<figure class="article-figure figure">
+<div class="figure-scroll">
+<p><a class="figure-zoom" href="figures/figure-2-cluster-aware-split-en.svg" target="_blank" rel="noopener" aria-label="Open the full Figure 2 SVG in a new tab"><img src="figures/figure-2-cluster-aware-split-en.svg" width="1152" height="691" alt="A row-wise random split places related sequences in different partitions, whereas assigning complete relation components produces no qualifying residual cross-partition edges in an independent audit." loading="lazy" decoding="async" class="figure-img"></a></p>
 </div>
+<figcaption>
+Figure 2 | Row-wise splitting compared with relation-component splitting. The value 348 is a theoretical expectation, not a measured decrease in model performance.
+</figcaption>
+</figure>
 </section>
-
-<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
-<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
-</nav>
+<section id="model-selection-cannot-stop-at-the-top-score" class="level2">
+<h2 class="anchored" data-anchor-id="model-selection-cannot-stop-at-the-top-score">Model Selection Cannot Stop at the Top Score</h2>
+<p>I compared 14 protein representation models using one fixed five-fold component assignment within the training partition.</p>
+<p>Each model first had to pass a prespecified validation criterion for every task. The remaining models were then compared with a paired one-standard-error comparison across the same folds. Eight models passed every validation gate, but only ESM-C 6B remained in the one-standard-error set. I therefore froze it as Model V0.</p>
+<p>These development scores come from Train-CV, not from the test set.</p>
+<p>This stage also exposed a particularly instructive error.</p>
+<p>For one ESM-2 650M run, sigmoid-transformed scores had saturated to exact zeros and ones, producing an average precision (AP) of about 0.857. Recomputing AP from the corresponding raw decision scores, which retained ranking information, gave about 0.998 for the same run.</p>
+<p>The model had not suddenly improved. The input to the metric had changed.</p>
+<p>That experience made it clear that a metric contract—the precise definition of a score and the input it consumes—is part of model selection, not an implementation detail to inspect only after the results are produced.</p>
+<figure class="article-figure figure">
+<div class="figure-scroll">
+<p><a class="figure-zoom" href="figures/figure-3-model-selection-en.svg" target="_blank" rel="noopener" aria-label="Open the full Figure 3 SVG in a new tab"><img src="figures/figure-3-model-selection-en.svg" width="1152" height="1056" alt="Results for 14 protein representation models under shared component-aware cross-validation, followed by a post-freeze comparison between Model V0 and a mixed-model candidate." loading="lazy" decoding="async" class="figure-img"></a></p>
 </div>
+<figcaption>
+Figure 3 | Development-stage comparison of 14 protein representations and the mixed nominee identified after the freeze. The x-axis in panel a begins at 0.980 and is intentionally magnified.
+</figcaption>
+</figure>
+</section>
+<section id="a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" class="level2">
+<h2 class="anchored" data-anchor-id="a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A Slightly Higher Score Is Not Enough to Replace a Frozen Model</h2>
+<p>After Model V0 had been frozen, I obtained a mixed-model candidate—the mixed nominee—with a slightly higher composite score.</p>
+<p>Its Train-CV score was about 0.0005 higher than that of V0, but it performed worse in the viral strict-cluster diagnostic—an internal post-freeze check—and had a slower worst-case inference path. I therefore recorded it as <code>recommended_for_external_confirmation</code> rather than overturning the frozen choice because of a very small score difference.</p>
+<p>The important question here is not which model ranks first. It is whether the release rules remain robust to repeated experimentation during development.</p>
+</section>
+<section id="not_evaluated-can-be-a-meaningful-result" class="level2">
+<h2 class="anchored" data-anchor-id="not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> Can Be a Meaningful Result</h2>
+<p>The project retains a protected test set containing 2,214 records.</p>
+<p>This test set had already been opened for an earlier ESM-2 650M model. The subsequently selected ESM-C 6B model and the mixed nominee were not evaluated on it, so their model-level evaluation status remains <code>not_evaluated</code>.</p>
+<p>I chose not to reopen the old test set. The next genuinely independent evaluation will require a new external lockbox separated from the existing source components.</p>
+<p>I once might have regarded a results table without a complete set of test metrics as unfinished. I now prefer to preserve <code>not_evaluated</code>, because it says clearly that the test set was not used to chase a more attractive result for these models.</p>
+</section>
+<section id="what-codex-helped-me-accelerate" class="level2">
+<h2 class="anchored" data-anchor-id="what-codex-helped-me-accelerate">What Codex Helped Me Accelerate</h2>
+<p>In the past, I usually used AI to solve isolated coding problems. In this project, I worked with Codex continuously in the same repository for the first time.</p>
+<p>I used Codex to:</p>
+<ul>
+<li>draft and revise scripts;</li>
+<li>run tests and organize logs;</li>
+<li>compare intermediate results;</li>
+<li>expand literature-search terms;</li>
+<li>inspect citations, data leakage, and metric implementations;</li>
+<li>turn complex steps into review checklists.</li>
+</ul>
+<p>Every iteration, however, still began with the scientific question and constraints that I defined.</p>
+<p>Literature suggestions, labeling proposals, and methodological options returned by the agent were inputs for review, not conclusions. I went back to the original papers, figures, and database records to judge whether each record met the Gold or Silver criteria and whether it should be included. After a rule was implemented, I continued to review diffs, logs, frozen files, and key artifacts, then revised and reran the analysis when I found a problem.</p>
+<p>The greatest benefit of Codex was not that it decided what the correct answer should be. It allowed me to advance literature search, implementation, testing, and review in parallel, and to find inconsistencies between those parts sooner.</p>
+<p>Based on my development records and recollection, the path from the initial design to the first completed benchmark took about two months. Without this form of collaboration, it would probably have taken longer. I remained responsible for defining the dataset boundaries, judging the biological evidence, and standing behind the final conclusions.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<section id="an-ai4s-project-starts-with-the-right-problem-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S Project Starts with the Right Problem Decomposition</h3>
+<p>A DJR fold is useful structural evidence, but it is not equivalent to viral identity. The existence of cellular DJRs forced me to separate H1 from H2. It also reinforced that model output must still be interpreted alongside structure, genomic context, and virological evidence.</p>
+</section>
+<section id="data-and-labels-often-matter-more-than-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-labels-often-matter-more-than-the-model">2. Data and Labels Often Matter More Than the Model</h3>
+<p>In retrospect, much of the work went into collecting examples, validating Silver positives, constructing negative sets, and selecting representative sequences.</p>
+<p>Protein language models can provide powerful representations. But if the positive and negative classes are poorly defined, or if close relatives of training records leak into the test set, even a high score is difficult to interpret.</p>
+</section>
+<section id="in-this-project-protein-language-models-did-not-replace-traditional-homology-search" class="level3">
+<h3 class="anchored" data-anchor-id="in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In This Project, Protein Language Models Did Not Replace Traditional Homology Search</h3>
+<p>This benchmark did not give me evidence that protein language models dramatically outperform conventional sequence alignment or profile-HMM methods for homolog detection. The 14-model benchmark compared different protein-language-model representations; it was not a strict head-to-head comparison with MMseqs2 or HMM-based search. This is therefore a methodological judgment from the development process, not a quantitative claim about relative performance.</p>
+<p>Traditional methods still provide interpretable alignments, explicit thresholds, and traceable hit relationships. I see protein language models as a complement: they can help rank candidates when sequence similarity is weak and the classification boundary is complex. In practice, I would rather use the two approaches to cross-check each other than ask one to replace the other.</p>
+</section>
+<section id="preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" class="level3">
+<h3 class="anchored" data-anchor-id="preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the Limits of the Evidence Matters More Than Filling Every Cell</h3>
+<p>Ambiguous examples can be held in quarantine. A classifier can return <code>unknown/other</code> when the evidence is insufficient. A model without an independent evaluation can remain <code>not_evaluated</code>.</p>
+<p>These states are less visually satisfying than a complete results table, but they describe more honestly how far the evidence currently reaches.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

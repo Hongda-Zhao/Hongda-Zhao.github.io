@@ -194,6 +194,7 @@ ul.task-list li input[type="checkbox"] {
     "coverage.source.jsme2023.aria": ["Official source: JSME 2023 oral presentation program (opens in a new tab)", "官方来源：JSME 2023 口头报告议程（在新标签页打开）"],
     "coverage.source.virusEvolution.aria": ["Official source: Virus Evolution announcement (opens in a new tab)", "官方来源：《Virus Evolution》论文公告（在新标签页打开）"],
     "coverage.djrMcpFinder": ["Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.", "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。"],
+    "coverage.djrMcpFinder.href": ["/posts/djr-mcp-finder-evidence-first-ai4s-en/", "/posts/djr-mcp-finder-evidence-first-ai4s/"],
     "coverage.2026": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
     "coverage.award": ["Received the ICR Award for Graduate Students.", "荣获京大化研学生研究賞。"],
@@ -292,7 +293,20 @@ ul.task-list li input[type="checkbox"] {
     "award.venue": ["124th ICR Research Presentation Meeting", "京都大学化学研究所第124回研究发表会"]
   };
 
-  const initialLanguage = (() => {
+  const normalizePagePath = (path) => path.replace(/\/index\.html$/, "/") || "/";
+  const normalizedPagePath = normalizePagePath(location.pathname);
+  const localizedPages = [
+    {
+      en: "/posts/djr-mcp-finder-evidence-first-ai4s-en/",
+      zh: "/posts/djr-mcp-finder-evidence-first-ai4s/"
+    }
+  ];
+  const localizedPage = localizedPages.find((routes) => Object.values(routes).includes(normalizedPagePath));
+  const authoredLanguage = localizedPage
+    ? (normalizedPagePath === localizedPage.zh ? "zh" : "en")
+    : null;
+
+  const initialLanguage = authoredLanguage || (() => {
     try { return localStorage.getItem(storageKey) === "zh" ? "zh" : "en"; }
     catch (_error) { return "en"; }
   })();
@@ -360,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
   const setLanguage = (language, persist = true) => {
     const index = language === "zh" ? 1 : 0;
     document.documentElement.dataset.uiLang = language;
-    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.documentElement.lang = (authoredLanguage || language) === "zh" ? "zh-CN" : "en";
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const translation = strings[element.dataset.i18n];
@@ -377,6 +391,11 @@ ul.task-list li input[type="checkbox"] {
       if (translation) element.setAttribute("alt", translation[index]);
     });
 
+    document.querySelectorAll("[data-i18n-href]").forEach((element) => {
+      const translation = strings[element.dataset.i18nHref];
+      if (translation) element.setAttribute("href", translation[index]);
+    });
+
     document.querySelectorAll("[data-email-user][data-email-domain]").forEach((link) => {
       const address = `${link.dataset.emailUser}${String.fromCharCode(64)}${link.dataset.emailDomain}`;
       link.setAttribute("href", `mailto:${address}`);
@@ -386,7 +405,10 @@ ul.task-list li input[type="checkbox"] {
     const footer = document.querySelector(".nav-footer-right");
     if (footer) footer.textContent = strings["footer.tagline"][index];
 
-    const page = location.pathname.split("/").pop() || "index.html";
+    const isHomePage = normalizedPagePath === "/";
+    const page = isHomePage
+      ? "index.html"
+      : normalizedPagePath.split("/").filter(Boolean).pop() || "";
     let secondaryTitle = document.querySelector(".quarto-secondary-nav-title");
     const translatedPageTitle = document.querySelector("[data-document-title]");
     const isGalleryPage = Boolean(document.querySelector(".gallery-page"));
@@ -401,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
       secondaryTitle.textContent = "";
     } else if (secondaryTitle && translatedPageTitle) {
       secondaryTitle.textContent = translatedPageTitle.textContent.trim();
-    } else if (secondaryTitle && page === "index.html") {
+    } else if (secondaryTitle && isHomePage) {
       secondaryTitle.textContent = strings["coverage.title"][index];
     }
 
@@ -449,32 +471,48 @@ ul.task-list li input[type="checkbox"] {
 
     document.querySelectorAll(".language-toggle").forEach((button) => {
       button.addEventListener("click", () => {
-        setLanguage(document.documentElement.dataset.uiLang === "zh" ? "en" : "zh");
+        const targetLanguage = document.documentElement.dataset.uiLang === "zh" ? "en" : "zh";
+        if (localizedPage && localizedPage[targetLanguage] !== normalizedPagePath) {
+          try { localStorage.setItem(storageKey, targetLanguage); } catch (_error) {}
+          location.assign(localizedPage[targetLanguage]);
+          return;
+        }
+        setLanguage(targetLanguage);
+      });
+    });
+
+    document.querySelectorAll("[data-language-target]").forEach((link) => {
+      link.addEventListener("click", () => {
+        try { localStorage.setItem(storageKey, link.dataset.languageTarget); } catch (_error) {}
       });
     });
     setLanguage(initialLanguage, false);
   });
 })();
 </script>
+<link rel="alternate" hreflang="en" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/">
+<link rel="alternate" hreflang="zh-CN" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/">
+<link rel="alternate" hreflang="x-default" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s-en/">
 
 
 <meta property="og:title" content="做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析 – Hongda Zhao">
 <meta property="og:description" content="DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。">
 <meta property="og:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/figures/cover-evidence-first.png">
 <meta property="og:site_name" content="Hongda Zhao">
-<meta property="og:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta property="og:image:alt" content="DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。">
 <meta property="og:image:height" content="2160">
 <meta property="og:image:width" content="3840">
 <meta name="twitter:title" content="做 DJR-MCP Finder 的两个月：AI-assisted 结构生物学工具加速病毒演化学分析 – Hongda Zhao">
 <meta name="twitter:description" content="DJR-MCP Finder v0.1 的设计、训练与可重复评估记录。">
 <meta name="twitter:image" content="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/figures/cover-evidence-first.png">
-<meta name="twitter:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta name="twitter:image:alt" content="DJR-MCP Finder 的开发复盘，从数据定义、HardNeg 和关系切分到模型选择与 Agent 协作。">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="2160">
 <meta name="twitter:image-width" content="3840">
+<link rel="canonical" href="https://hongda-zhao.github.io/posts/djr-mcp-finder-evidence-first-ai4s/">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fixed-language-content quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -574,6 +612,21 @@ Research notes, technical work, and field observations.
 #quarto-document-content #title-block-header .quarto-title-meta {
   display: none;
 }
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin: 0 0 1.8rem;
+  color: #66706b;
+  font-size: 0.86rem;
+}
+#quarto-document-content .article-language-switch [aria-current="page"] {
+  color: #222725;
+  font-weight: 700;
+}
 #quarto-document-content .article-figure { margin: 1.6rem 0; }
 #quarto-document-content .figure-scroll {
   max-width: 100%;
@@ -611,6 +664,9 @@ Research notes, technical work, and field observations.
   }
 }
 </style>
+<nav class="article-language-switch" aria-label="文章语言">
+<a href="../djr-mcp-finder-evidence-first-ai4s-en/" hreflang="en" lang="en" data-language-target="en">Read in English</a><span aria-hidden="true">·</span><span aria-current="page">中文</span>
+</nav>
 <p>2026 年 7 月 30 日，我在 GitHub 发布了 <a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1">DJR-MCP Finder v0.1</a>。这是这个项目的第一个正式版本。这里的 v0.1 是软件的 Release 版本号，正式发布的模型叫 Model V0；后文提到的 mixed nominee 仍是实验候选。</p>
 <p><a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder">DJR-MCP Finder</a> 是一个面向病毒演化研究的蛋白质分类工具。它接收蛋白质 FASTA 序列，寻找可能具有 double-jelly-roll（DJR）折叠、并参与 Varidnaviria 病毒形态发生的主要衣壳蛋白候选。</p>
 <p>这篇文章不是使用说明，而是一次开发复盘：我为什么做这个工具，过程中哪些问题最难，以及 Codex 如何改变了我的工作方式。</p>
