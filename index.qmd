@@ -129,6 +129,22 @@ title-block-style: none
 </article>
 <article class="coverage-item">
 <div class="coverage-meta">
+<time datetime="2023-11-29">2023.11.29</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/jsme-oral-presentation-2023/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.jsme2023">Gave an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology in Hamamatsu.</h2></div>
+<b aria-hidden="true">→</b>
+</a>
+<div class="coverage-source-line">
+<span data-i18n="coverage.source.jsme2023">JSME · 36th Annual Meeting</span>
+<a class="coverage-item-source" href="https://2023.jsme-conference.net/program/" target="_blank" rel="noopener noreferrer" aria-label="Official source: JSME 2023 oral presentation program (opens in a new tab)" data-i18n-aria-label="coverage.source.jsme2023.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2023-10-04">2023.10.04</time>
 <span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
 </div>
