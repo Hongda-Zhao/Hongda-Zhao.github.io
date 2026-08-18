@@ -367,7 +367,6 @@ dd {
 
 .home-links a,
 .simple-link,
-.text-link,
 .print-button {
   color: var(--accent);
   background: transparent;
@@ -380,7 +379,6 @@ dd {
 
 .home-links a:hover,
 .simple-link:hover,
-.text-link:hover,
 .print-button:hover {
   color: #204f40;
   text-decoration-color: currentColor;
@@ -389,12 +387,6 @@ dd {
 .print-button {
   padding: 0;
   cursor: pointer;
-}
-
-.placeholder-link {
-  color: var(--muted);
-  cursor: default;
-  text-decoration: none;
 }
 
 .home-portrait {
@@ -749,10 +741,6 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
   padding-bottom: clamp(2.8rem, 5vw, 4rem);
 }
 
-.page-code {
-  display: none;
-}
-
 .page-title {
   margin: 0;
   font-size: clamp(2.7rem, 6vw, 4.2rem);
@@ -760,7 +748,6 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
 }
 
 .content-section,
-.publication-group,
 .cv-section {
   display: grid;
   padding-block: clamp(2.2rem, 5vw, 3.5rem);
@@ -770,7 +757,6 @@ main:has(.quarto-listing-default .quarto-post) .blog-empty-guidance {
 }
 
 .content-label,
-.publication-label,
 .cv-section > h2 {
   margin: 0;
   color: var(--muted);
@@ -1254,11 +1240,6 @@ main.content:has(> .gallery-page) > #title-block-header {
   background-color: transparent;
 }
 
-.placeholder-copy,
-.pending-row {
-  color: var(--muted);
-}
-
 .profile-intro-grid {
   display: grid;
   grid-template-columns: 12rem minmax(0, 1fr);
@@ -1278,8 +1259,7 @@ main.content:has(> .gallery-page) > #title-block-header {
 }
 
 .facts-list,
-.strand-details,
-.project-details {
+.strand-details {
   margin: 0;
 }
 
@@ -1298,16 +1278,14 @@ main.content:has(> .gallery-page) > #title-block-header {
 }
 
 .facts-list dt,
-.strand-details dt,
-.project-details dt {
+.strand-details dt {
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 .facts-list dd,
-.strand-details dd,
-.project-details dd {
+.strand-details dd {
   margin: 0;
 }
 
@@ -1363,19 +1341,8 @@ main.content:has(> .gallery-page) > #title-block-header {
   font-size: 1.4rem;
 }
 
-.hero-actions,
-.project-links,
-.publication-links {
-  display: flex;
-  margin-top: 1rem;
-  gap: 0.7rem 1.2rem;
-  flex-wrap: wrap;
-}
-
 .section-code,
 .strand-label,
-.project-topline,
-.publication-year,
 .activity-meta {
   color: var(--muted);
   font-size: 0.78rem;
@@ -1425,134 +1392,7 @@ main.content:has(> .gallery-page) > #title-block-header {
   font-size: 0.75rem;
 }
 
-/* Projects */
-
-.project-entry {
-  padding-block: clamp(2.8rem, 6vw, 4.5rem);
-  border-top: 1px solid var(--rule);
-  scroll-margin-top: 5rem;
-}
-
-.project-topline {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.project-heading-grid {
-  display: grid;
-  margin-top: 1.5rem;
-  grid-template-columns: minmax(0, 1fr) 14rem;
-  gap: clamp(2rem, 6vw, 4rem);
-  align-items: start;
-}
-
-.project-entry h2 {
-  margin: 0 0 0.8rem;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-}
-
-.project-summary {
-  max-width: 40rem;
-  margin: 0;
-  font-size: 1.04rem;
-}
-
-.project-details {
-  display: grid;
-  margin-top: 2rem;
-  border-bottom: 1px solid var(--rule);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.project-details > div {
-  display: grid;
-  min-height: 5rem;
-  padding-block: 0.8rem;
-  border-top: 1px solid var(--rule);
-  grid-template-columns: 6rem minmax(0, 1fr);
-  gap: 1rem;
-}
-
-.project-details > div:nth-child(odd) {
-  padding-right: 1.5rem;
-}
-
-.project-details > div:nth-child(even) {
-  padding-left: 1.5rem;
-  border-left: 1px solid var(--rule);
-}
-
-.project-links a,
-.project-links span,
-.publication-links a,
-.publication-links span {
-  color: var(--accent);
-  font-size: 0.84rem;
-}
-
-.project-links span,
-.publication-links span {
-  color: var(--muted);
-}
-
-/* Empty image spaces */
-
-.media-placeholder {
-  display: flex;
-  min-height: 10rem;
-  padding: 0.8rem;
-  border: 1px solid var(--rule);
-  color: var(--muted);
-  background: var(--surface);
-  font-size: 0.74rem;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.media-placeholder::after {
-  display: none;
-}
-
-.media-placeholder small {
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.45;
-}
-
-.media-placeholder-project,
-.media-placeholder-activity {
-  aspect-ratio: 4 / 3;
-}
-
-.media-placeholder-square {
-  aspect-ratio: 1;
-}
-
-/* Publications and notes */
-
-.publication-list {
-  border-bottom: 1px solid var(--rule);
-}
-
-.publication-row {
-  display: grid;
-  padding-block: 1rem;
-  border-top: 1px solid var(--rule);
-  grid-template-columns: 4rem minmax(0, 1fr);
-  gap: 1.25rem;
-}
-
-.publication-row h3 {
-  margin: 0 0 0.4rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.publication-row p {
-  margin: 0;
-}
+/* Notes */
 
 .writing-shell {
   padding-bottom: 2.5rem;
@@ -2120,7 +1960,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 
   .home-columns,
   .content-section,
-  .publication-group,
   .cv-section,
   .activity-heading {
     grid-template-columns: 1fr;
@@ -2131,7 +1970,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
     grid-template-columns: 10rem minmax(0, 1fr);
   }
 
-  .project-heading-grid,
   .activity-grid,
   .cv-header {
     grid-template-columns: 1fr;
@@ -2139,10 +1977,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 
   .highlight-media-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .project-heading-grid .media-placeholder {
-    max-width: 18rem;
   }
 
   .activity-grid-reverse .activity-card,
@@ -2279,7 +2113,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   .home-columns,
   .profile-intro-grid,
   .two-column-copy,
-  .project-details,
   .writing-lenses,
   .photo-contact-sheet,
   .cv-projects,
@@ -2292,7 +2125,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
   .highlight-facts > div,
   .strand-details > div,
   .timeline-row,
-  .publication-row,
   .cv-role {
     grid-template-columns: 1fr;
     gap: 0.25rem;
@@ -2309,12 +2141,6 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 
   .strand-details {
     grid-column: auto;
-  }
-
-  .project-details > div:nth-child(odd),
-  .project-details > div:nth-child(even) {
-    padding-inline: 0;
-    border-left: 0;
   }
 
   .writing-lenses article,

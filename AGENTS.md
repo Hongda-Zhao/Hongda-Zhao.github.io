@@ -13,6 +13,7 @@
 - Keep external links, language controls, images, keyboard focus, ARIA labels, and mobile layouts accessible.
 - Do not place HTML inside translation values in `head.html`; its i18n code writes with `textContent`. Keep semantic markup in QMD/HTML and split translated sentences when needed.
 - Ordinary Gallery updates must synchronize the WebP asset, `gallery.qmd`, `assets/map/gallery-places.js`, and the place/alt translations in `head.html`. Do not edit `assets/js/gallery-map.js` for routine additions.
+- Treat `_quarto.yml` `project.render` as the public-site boundary. Do not broaden it to include drafts, source data, QA notes, build scripts, or other working files; published posts must use `posts/<slug>/index.qmd`.
 
 ## Automatic Draft PRs
 
@@ -28,6 +29,7 @@
 ## Site validation
 
 - Treat `_quarto.yml`, Quarto source pages, shared HTML, JavaScript, and SCSS as source of truth; do not hand-edit generated files under `_site/`.
+- Confirm that internal filenames and removed routes are absent from `_site/sitemap.xml`, `_site/search.json`, and the rendered file tree after changing the public render boundary.
 - For visual changes, verify the rendered site at desktop and mobile widths and check at least one nested page when shared navigation or layout changes.
 - Preserve the site's English-default bilingual behavior and ensure the language control remains keyboard accessible.
 - For Gallery changes, verify that cards, image files, map photo IDs, administrative codes, translation keys, counts, marker scrolling, and lightbox order remain synchronized.
