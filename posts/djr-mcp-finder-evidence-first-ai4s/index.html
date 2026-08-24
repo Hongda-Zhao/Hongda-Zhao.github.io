@@ -571,14 +571,13 @@ Research notes, technical work, and field observations.
    
   <ul>
   <li><a href="#为什么要寻找-djr-mcp" id="toc-为什么要寻找-djr-mcp" class="nav-link active" data-scroll-target="#为什么要寻找-djr-mcp">为什么要寻找 DJR-MCP</a></li>
-  <li><a href="#最难的部分是定义标签" id="toc-最难的部分是定义标签" class="nav-link" data-scroll-target="#最难的部分是定义标签">最难的部分，是定义标签</a></li>
   <li><a href="#hardneg不能只选择容易区分的负样本" id="toc-hardneg不能只选择容易区分的负样本" class="nav-link" data-scroll-target="#hardneg不能只选择容易区分的负样本">HardNeg：不能只选择容易区分的负样本</a></li>
   <li><a href="#数据切分的单位不应该是一条序列" id="toc-数据切分的单位不应该是一条序列" class="nav-link" data-scroll-target="#数据切分的单位不应该是一条序列">数据切分的单位不应该是一条序列</a></li>
   <li><a href="#模型选择不能只看排行榜第一名" id="toc-模型选择不能只看排行榜第一名" class="nav-link" data-scroll-target="#模型选择不能只看排行榜第一名">模型选择不能只看排行榜第一名</a></li>
   <li><a href="#分数稍高不代表应该替换冻结模型" id="toc-分数稍高不代表应该替换冻结模型" class="nav-link" data-scroll-target="#分数稍高不代表应该替换冻结模型">分数稍高，不代表应该替换冻结模型</a></li>
   <li><a href="#not_evaluated-也可以是一种有意义的结果" id="toc-not_evaluated-也可以是一种有意义的结果" class="nav-link" data-scroll-target="#not_evaluated-也可以是一种有意义的结果"><code>not_evaluated</code> 也可以是一种有意义的结果</a></li>
   <li><a href="#codex-帮我加快了什么" id="toc-codex-帮我加快了什么" class="nav-link" data-scroll-target="#codex-帮我加快了什么">Codex 帮我加快了什么</a></li>
-  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结">总结</a>
+  <li><a href="#一些思考" id="toc-一些思考" class="nav-link" data-scroll-target="#一些思考">一些思考</a>
   <ul class="collapse">
   <li><a href="#ai4s-项目首先需要把科学问题拆对" id="toc-ai4s-项目首先需要把科学问题拆对" class="nav-link" data-scroll-target="#ai4s-项目首先需要把科学问题拆对">1. AI4S 项目首先需要把科学问题拆对</a></li>
   <li><a href="#数据和标签通常比模型更重要" id="toc-数据和标签通常比模型更重要" class="nav-link" data-scroll-target="#数据和标签通常比模型更重要">2. 数据和标签通常比模型更重要</a></li>
@@ -682,20 +681,6 @@ body.fixed-language-content .quarto-secondary-nav-title {
 </ol>
 <p>H3 证据不足时，工具输出 <code>unknown/other</code>。这只表示模型拒绝强行分类，并不代表发现了新的病毒门。</p>
 </section>
-<section id="最难的部分是定义标签" class="level2">
-<h2 class="anchored" data-anchor-id="最难的部分是定义标签">最难的部分，是定义标签</h2>
-<p>我最早遇到的一个问题是：同一条 cellular DJR，在 H1 中必须是正例，在 H2 中却必须是负例。</p>
-<p>这并不是标注冲突。</p>
-<p>H1 问的是“它是不是 DJR”，而 H2 的前提已经是 DJR，问题变成“它是否与病毒形态发生相关”。如果把两个问题压成一张平坦的多分类表，cellular DJR 在生物学上的角色反而会被抹掉。</p>
-<p>最终，三个任务使用了不同的标签体系：</p>
-<ul>
-<li>H1 使用 560 条 VMA-DJR 和 500 条 cellular DJR 作为正例，使用 5,000 条 HardNeg 和 5,000 条普通背景蛋白作为负例；</li>
-<li>H2 只在 DJR 蛋白中区分 VMA-DJR 和 cellular DJR；</li>
-<li>H3 使用 Nucleocytoviricota 和 Preplasmiviricota 拟合分类器，其他样本只用于观察拒绝分类行为。</li>
-</ul>
-<p>这些正样本也不是从某一张数据库表中直接复制出来的。上游记录经过文献、结构证据和序列去重后，最终留下了 560 条 VMA-DJR。</p>
-<p>其中一部分是证据更充分的 Gold 样本，另一部分是按照固定结构参照和统一门槛筛选的 Silver_R3 样本。Silver_R3 是这个版本采用的数据规则，而不是一条永远不会变化的“真值线”。</p>
-</section>
 <section id="hardneg不能只选择容易区分的负样本" class="level2">
 <h2 class="anchored" data-anchor-id="hardneg不能只选择容易区分的负样本">HardNeg：不能只选择容易区分的负样本</h2>
 <p>如果 H1 的负样本全是与 DJR 差异很大的普通蛋白，模型很容易得到漂亮的分数。但这种结果可能只说明它学会了蛋白长度、组成或数据库来源，并不代表它理解了我们真正关心的结构边界。</p>
@@ -785,8 +770,8 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <p>Codex 最有帮助的地方，并不是替我决定“什么是正确答案”，而是让我能够同时推进检索、实现、测试和复查，更快发现不同环节之间的矛盾。</p>
 <p>按我自己的开发记录和回忆，从最初设计到完成第一版 benchmark，这个项目大约用了两个月。没有这种协作方式，开发周期可能会更长。但决定数据边界、判断生物学证据和承担最终结论的仍然是我。</p>
 </section>
-<section id="总结" class="level2">
-<h2 class="anchored" data-anchor-id="总结">总结</h2>
+<section id="一些思考" class="level2">
+<h2 class="anchored" data-anchor-id="一些思考">一些思考</h2>
 <section id="ai4s-项目首先需要把科学问题拆对" class="level3">
 <h3 class="anchored" data-anchor-id="ai4s-项目首先需要把科学问题拆对">1. AI4S 项目首先需要把科学问题拆对</h3>
 <p>DJR 是有用的结构证据，但它不等于病毒身份。cellular DJR 的存在迫使我把 H1 和 H2 分开，也提醒我，模型输出之后仍然需要结构、基因组邻域和病毒学证据继续判断。</p>
