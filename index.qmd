@@ -17,6 +17,22 @@ title-block-style: none
 <div class="coverage-list">
 <article class="coverage-item">
 <div class="coverage-meta">
+<time datetime="2026-08-19">2026.08.19</time>
+<span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
+</div>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/sesj-oral-presentation-2026/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.sesj2026">Gave an oral presentation at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, in Nagoya.</h2><small lang="ja">日本進化学会第28回大会（名古屋大会）S2-4「ウイルスから宿主への遺伝子水平伝播が駆動する真核生物ゲノムの進化」</small></div>
+<b aria-hidden="true">→</b>
+</a>
+<div class="coverage-source-line">
+<span data-i18n="coverage.source.sesj2026">SESJ · 28th Annual Meeting</span>
+<a class="coverage-item-source" href="https://sesj2026.agr.nagoya-u.ac.jp/program.html" target="_blank" rel="noopener noreferrer" aria-label="Official source: SESJ 2026 program (opens in a new tab)" data-i18n-aria-label="coverage.source.sesj2026.aria"><span data-i18n="coverage.officialSource">Official source</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2026-07-30">2026.07.30</time>
 <span class="coverage-type" data-i18n="coverage.techBlog">Tech Blog</span>
 </div>
