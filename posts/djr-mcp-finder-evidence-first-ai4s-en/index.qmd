@@ -1,5 +1,5 @@
 ---
-title: "Two Months Building DJR-MCP Finder: Agent-Assisted Development of a Protein Classifier for Viral Evolution"
+title: "Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution."
 description-meta: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
 open-graph:
   description: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
@@ -102,24 +102,6 @@ I therefore divided the problem into three tasks:
 3. **H3:** attempt to assign it to one of two known viral phyla with enough labeled examples.
 
 When the evidence for H3 is insufficient, the tool returns `unknown/other`. This is an abstention from a forced assignment, not evidence for a newly discovered viral phylum.
-
-## The Hardest Part Was Defining the Labels
-
-One of the first problems I encountered was that the same cellular DJR protein had to be a positive example in H1 and a negative example in H2.
-
-This is not a labeling conflict.
-
-H1 asks whether the protein has a DJR fold. H2 starts from that premise and asks whether it is associated with viral morphogenesis. If both questions are compressed into a flat multiclass table, the biological role of cellular DJRs is lost.
-
-The three tasks therefore use different label definitions:
-
-* H1 uses 560 virus-morphogenesis-associated DJRs (VMA-DJRs) and 500 cellular DJRs as positive examples, and 5,000 HardNeg records plus 5,000 background proteins as negative examples;
-* H2 considers only DJR proteins and distinguishes VMA-DJRs from cellular DJRs;
-* the H3 classifier is fitted on *Nucleocytoviricota* and *Preplasmiviricota*, while the remaining records are used only to examine rejection behavior.
-
-The positive set was not copied directly from a single database table. After reviewing the literature and structural evidence and deduplicating the sequences, I retained 560 VMA-DJR representatives.
-
-Some were higher-confidence Gold examples. The rest were Silver_R3 examples selected using fixed structural references and consistent thresholds. Silver_R3 is the data rule used in this release, not an immutable ground truth.
 
 ## Hard Negatives: Easy Negatives Are Not Enough
 
@@ -232,7 +214,7 @@ The greatest benefit of Codex was not that it decided what the correct answer sh
 
 Based on my development records and recollection, the path from the initial design to the first completed benchmark took about two months. Without this form of collaboration, it would probably have taken longer. I remained responsible for defining the dataset boundaries, judging the biological evidence, and standing behind the final conclusions.
 
-## Summary
+## Reflections
 
 ### 1. An AI4S Project Starts with the Right Problem Decomposition
 
