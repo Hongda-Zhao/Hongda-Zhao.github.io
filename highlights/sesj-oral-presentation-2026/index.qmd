@@ -18,6 +18,13 @@ title-block-style: none
 <img class="highlight-image" src="sesj-nagoya-reception.webp" width="1840" height="1380" alt="Six attendees pose together at an evening reception during the evolution meeting in Nagoya." data-i18n-alt="sesj2026.image.receptionAlt" loading="lazy" decoding="async">
 </figure>
 
+<section class="content-section">
+<h2 class="content-label" data-i18n="detail.reflection">Personal note</h2>
+<div class="prose-slot highlight-prose">
+<p data-i18n="sesj2026.reflection.copy">Because of an unexpected situation affecting my professor, I stepped in at short notice and travelled to Nagoya to give this presentation. It was my first time attending the annual meeting of the Society for Evolutionary Studies, Japan. At the meeting, I met many professors and researchers with whom I had previously exchanged ideas, and heard many interesting studies in evolutionary biology.</p>
+</div>
+</section>
+
 <section class="highlight-docket" aria-labelledby="sesj-2026-docket-title">
 <p class="highlight-docket-label" id="sesj-2026-docket-title" data-i18n="detail.summary">Record sheet</p>
 <dl class="highlight-facts">
@@ -33,19 +40,12 @@ title-block-style: none
 <section class="content-section">
 <h2 class="content-label" data-i18n="detail.record">Record</h2>
 <div class="prose-slot highlight-prose">
-<p data-i18n="sesj2026.record.copy">On 19 August 2026, I gave an oral presentation (S2-4) in a symposium at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, held at Nagoya University. The presentation was co-authored with Hiroyuki Ogata, Lingjie Meng, and Ruixuan Zhang.</p>
+<p data-i18n="sesj2026.record.copy">On 19 August 2026, I gave an oral presentation (S2-4) in a symposium at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, held at Nagoya University.</p>
 <p class="highlight-citation">Ogata H., Zhao H., Meng L., Zhang R. “Eukaryotic genome evolution driven by virus-to-host horizontal gene transfer.” Symposium oral presentation S2-4, The 28th Annual Meeting of the Society for Evolutionary Studies, Japan, 19 August 2026.</p>
 <nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
 <a href="https://sesj2026.agr.nagoya-u.ac.jp/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.event">Conference website</span> <span aria-hidden="true">↗</span></a>
 <a href="https://sesj2026.agr.nagoya-u.ac.jp/%E5%A4%A7%E4%BC%9A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%83%BB%E7%99%BA%E8%A1%A8%E6%BC%94%E9%A1%8C%E4%B8%80%E8%A6%A7_v2.pdf" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.program">Official program</span> <span aria-hidden="true">↗</span></a>
 </nav>
-</div>
-</section>
-
-<section class="content-section">
-<h2 class="content-label" data-i18n="detail.reflection">Personal note</h2>
-<div class="prose-slot highlight-prose">
-<p data-i18n="sesj2026.reflection.copy">Following an unexpected last-minute change of plans, I stepped in for my professor and travelled to Nagoya to give the talk on short notice. It was my first time attending the Society’s annual meeting. I was glad to meet professors and researchers with whom I had previously exchanged ideas, and to hear many interesting studies across evolutionary biology. The preparation was rushed, but the experience was both intense and rewarding.</p>
 </div>
 </section>
 
