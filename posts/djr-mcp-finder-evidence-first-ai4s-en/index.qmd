@@ -1,5 +1,5 @@
 ---
-title: "Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution."
+title: "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。"
 description-meta: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
 open-graph:
   description: "A development retrospective on the design, training, and reproducible evaluation of DJR-MCP Finder v0.1."
