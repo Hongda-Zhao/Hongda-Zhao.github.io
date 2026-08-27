@@ -503,7 +503,7 @@ dd {
 /* Blog home */
 
 main.content:has(> .coverage-listing) {
-  width: min(calc(100% - 3rem), 820px);
+  width: min(calc(100% - 3rem), 1040px);
   margin-inline: auto;
   padding-block: clamp(3.25rem, 7vw, 5.25rem) 0;
 }
@@ -1877,6 +1877,30 @@ main.content:has(> .coverage-listing) > .quarto-listing-container-default {
 }
 
 @media (min-width: 992px) {
+  main.content:has(> .coverage-listing) {
+    width: min(100%, 1040px);
+    margin-inline: 0 auto;
+    grid-column: body-content-start / screen-end-inset;
+  }
+
+  body:has(.coverage-listing) #quarto-content::before {
+    content: "";
+    grid-column: screen-start / page-start;
+    grid-row: content-top / page-bottom;
+    background-color: var(--sidebar-base);
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(45, 29, 20, 0.14),
+        rgba(45, 29, 20, 0.26)
+      ),
+      url("/assets/backgrounds/kraft-paper.png");
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, 250px 250px;
+    background-blend-mode: normal, multiply;
+    pointer-events: none;
+  }
+
   main.content:has(> .coverage-listing) > .latest-heading {
     position: sticky;
     top: 0;
