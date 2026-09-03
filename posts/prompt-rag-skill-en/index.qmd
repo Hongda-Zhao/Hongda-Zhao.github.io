@@ -141,34 +141,36 @@ RAG is not “fact insurance.” Retrieval can miss relevant material, rank the 
 
 Skill is not an academic method with one established definition in the way that RAG is. Different agent platforms place different things inside a Skill and execute them in different ways.
 
-In this article, I use Skill to mean a **reusable task package** in an AI-agent toolchain. It may contain:
+In this article, I use Skill to mean a **reusable task package** in an AI-agent toolchain. Depending on the task, a Skill may package:
 
-- task instructions and Prompts;
-- SQL, Python programs, or API calls;
-- retrieval steps used by RAG;
+- one or more Prompts;
+- database queries, API calls, SQL, Python programs, or other tools;
+- retrieval, context assembly, and generation steps used by RAG;
 - controlled vocabularies, reference material, and input/output schemas;
-- consistency checks, completeness checks, and failure rules.
+- validation rules, completeness checks, and failure handling.
 
-A Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.
+A Skill may include all of these elements, or only the ones a task needs. Its defining feature is not complexity, but repeatability: tools execute concrete actions such as querying a database, calling an API, or running code, while the Skill defines when to invoke them, how to pass results between steps, how to validate the output, and what to do when a step fails.
 
-For example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.
+For example, a research-data Skill might normalize domain terms, call database, API, or literature-retrieval tools, run code to deduplicate and summarize the results, validate identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.
 
-A Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill.
+A Skill does not have to use RAG or even a large language model. A simple task may need only a Prompt, while a data-processing task may use only code and validation rules. RAG becomes one part of the Skill only when the task requires external evidence.
 
 ## How the three can work together
 
-Prompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.
+Prompts, RAG, and Skills operate at different levels. It is more useful to think of them as capabilities that can be combined according to the task than as competing alternatives.
 
-The diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.
+A Prompt can guide one model call on its own or appear inside RAG or a Skill. RAG can operate as a retrieval-and-generation system or become one stage in a Skill. A Skill can organize Prompts, RAG, databases, APIs, executable tools, and validation rules into one process, but it does not have to include all of them.
+
+Rather than treating the three as a fixed containment tree, the Venn-style map below shows some of their possible combinations:
 
 <figure class="article-figure">
 <div class="figure-scroll">
-<a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-workflow-en.svg" width="1152" height="830" alt="One way Prompts, RAG, and Skills can work together. A Skill optionally orchestrates task interpretation, source selection, retrieval, generation, validation, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases and supplies it to the model, while a Prompt defines the task, evidence limits, and output format." loading="lazy" decoding="async"></a>
+<a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-relationship-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-relationship-en.svg" width="1152" height="830" alt="A Venn-style relationship map showing that Prompts, RAG, and Skills can be used independently or together. A Skill is a reusable task package that can organize Prompts, tools such as databases, APIs, and code, validation, and failure handling. RAG is a retrieval-augmented generation workflow that can call tools and use a Prompt for evidence-grounded generation. The overlaps do not represent a fixed containment hierarchy." loading="lazy" decoding="async"></a>
 </div>
-<figcaption>Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.</figcaption>
+<figcaption>Figure 2 | A relationship map for Prompts, RAG, and Skills. A Skill can package Prompts, tools, and validation into a reusable task; RAG can call tools for retrieval and use a Prompt to guide evidence-grounded generation. The overlaps show possible combinations, not fixed containment.</figcaption>
 </figure>
 
-The relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all.
+When all three are used together, a common division of responsibility is for the Skill to orchestrate the task, call tools, and handle failures; for RAG to retrieve and organize external evidence; and for the Prompt to tell the model how to use that evidence in the current response. Database queries, programmatic processing, and result validation remain the responsibility of the relevant tools.
 
 ## One question, three responsibilities
 
@@ -191,27 +193,20 @@ For this question, the **Prompt** would define the answer rules, for example:
 - retrieve supporting passages from the relevant documents;
 - assemble the records, sources, and their applicable scope into context for the model.
 
-A **Skill** could connect the full sequence:
+A **Skill** could package the Prompts, Retrieval / RAG steps, database or API calls, executable code, validation rules, and failure handling into one reusable sequence:
 
 ```text
 Interpret the question
 → Normalize domain terms
 → Choose a structured, literature, or hybrid retrieval route
-→ Run the query
-→ Deduplicate and summarize the records
-→ Verify numbers, identifiers, versions, and sources
+→ Call database, API, or retrieval tools
+→ Process, deduplicate, and summarize the records
+→ Validate numbers, identifiers, versions, and sources
 → Produce the table
 → Explain the result and its limitations
 ```
 
 The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.
-
-## Four boundaries that are easy to blur
-
-- **A very long Prompt is still a Prompt.** Including background information in it does not mean the system can retrieve external evidence at runtime.
-- **A database connection is not necessarily RAG.** A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.
-- **A saved collection of Prompts is not necessarily a Skill.** For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.
-- **Citations in a RAG answer do not make the answer automatically correct.** Traceability makes errors easier to find and correct; it does not eliminate them.
 
 ## How I distinguish them now
 
@@ -219,6 +214,6 @@ The point is the separation of responsibilities: retrieval supplies evidence, th
 |---|---|---|---|
 | Prompt | One model interaction | What should be done in this call, what may be used, and how should the answer be formatted? | Access to external facts, or enforcement of a written instruction as a hard constraint |
 | RAG | Knowledge-access and generation architecture | Where does the evidence come from, and how does it enter the model context? | Complete retrieval, reliable sources, or a factually correct answer |
-| Skill | Reusable task workflow | How can a class of tasks be carried out consistently? | Cross-platform portability, or a correct conclusion merely because the workflow ran |
+| Skill | Reusable task workflow | How can Prompts, RAG, tools, and validation rules be organized to carry out a class of tasks consistently? | A correct conclusion merely because the workflow ran, or the same definition across platforms |
 
-If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and depends on several tools, checks, and failure conditions, I package the larger process as a Skill.
+If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and requires several of these pieces—Prompts, databases or APIs, code, retrieval, validation, or defined failure handling—I package the larger process as a Skill.
