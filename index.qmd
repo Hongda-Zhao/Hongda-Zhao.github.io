@@ -27,7 +27,6 @@ title-block-style: none
 </a>
 <div class="coverage-source-line">
 <span data-i18n="coverage.source.promptRagSkill">AI systems · Concept note</span>
-<a class="coverage-item-source" href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer" aria-label="RAG paper (opens in a new tab)" data-i18n-aria-label="coverage.ragPaper.aria"><span data-i18n="coverage.ragPaper">RAG paper</span> <span aria-hidden="true">↗</span></a>
 </div>
 </div>
 </article>
