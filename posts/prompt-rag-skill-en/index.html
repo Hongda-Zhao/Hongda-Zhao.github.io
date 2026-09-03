@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Hongda Zhao received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research in 2025.">
+<meta name="description" content="A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows.">
 
-<title>Received the ICR Award for Graduate Students – Hongda Zhao</title>
+<title>Prompts, RAG, and Skills: What’s the Difference? – Hongda Zhao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d82d34b9405b93d871a11b45e46b22e9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -509,21 +509,29 @@ ul.task-list li input[type="checkbox"] {
   });
 })();
 </script>
+<link rel="alternate" hreflang="en" href="https://hongda-zhao.github.io/posts/prompt-rag-skill-en/">
+<link rel="alternate" hreflang="zh-CN" href="https://hongda-zhao.github.io/posts/prompt-rag-skill/">
+<link rel="alternate" hreflang="x-default" href="https://hongda-zhao.github.io/posts/prompt-rag-skill-en/">
 
 
-<meta property="og:title" content="Received the ICR Award for Graduate Students">
-<meta property="og:description" content="Hongda Zhao received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research in 2025.">
-<meta property="og:image" content="https://hongda-zhao.github.io/highlights/icr-student-research-award-2025/assets/og.png">
+<meta property="og:title" content="Prompts, RAG, and Skills: What’s the Difference? – Hongda Zhao">
+<meta property="og:description" content="A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows.">
+<meta property="og:image" content="https://hongda-zhao.github.io/posts/prompt-rag-skill-en/figures/cover-prompt-rag-skill-en.png">
 <meta property="og:site_name" content="Hongda Zhao">
-<meta property="og:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
-<meta name="twitter:title" content="Received the ICR Award for Graduate Students">
-<meta name="twitter:description" content="Hongda Zhao received the ICR Award for Graduate Students at Kyoto University’s Institute for Chemical Research in 2025.">
-<meta name="twitter:image" content="https://hongda-zhao.github.io/highlights/icr-student-research-award-2025/assets/og.png">
-<meta name="twitter:image:alt" content="Hongda Zhao — Bioinformatics and Computational Genomics">
+<meta property="og:image:alt" content="A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow.">
+<meta property="og:image:height" content="720">
+<meta property="og:image:width" content="1152">
+<meta name="twitter:title" content="Prompts, RAG, and Skills: What’s the Difference? – Hongda Zhao">
+<meta name="twitter:description" content="A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows.">
+<meta name="twitter:image" content="https://hongda-zhao.github.io/posts/prompt-rag-skill-en/figures/cover-prompt-rag-skill-en.png">
+<meta name="twitter:image:alt" content="A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="720">
+<meta name="twitter:image-width" content="1152">
+<link rel="canonical" href="https://hongda-zhao.github.io/posts/prompt-rag-skill-en/">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fixed-language-content quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -533,13 +541,13 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"></h1>
+          <h1 class="quarto-secondary-nav-title">Prompts, RAG, and Skills: What’s the Difference?</h1>
         </a>     
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="quarto-sidebar-header"><div class="sidebar-header-item">
 <div class="site-sidebar-profile">
@@ -566,52 +574,249 @@ Research notes, technical work, and field observations.
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prompt-instructions-for-this-model-call" id="toc-prompt-instructions-for-this-model-call" class="nav-link active" data-scroll-target="#prompt-instructions-for-this-model-call">Prompt: instructions for this model call</a></li>
+  <li><a href="#rag-retrieve-evidence-before-the-model-answers" id="toc-rag-retrieve-evidence-before-the-model-answers" class="nav-link" data-scroll-target="#rag-retrieve-evidence-before-the-model-answers">RAG: retrieve evidence before the model answers</a></li>
+  <li><a href="#skill-make-a-class-of-tasks-reusable" id="toc-skill-make-a-class-of-tasks-reusable" class="nav-link" data-scroll-target="#skill-make-a-class-of-tasks-reusable">Skill: make a class of tasks reusable</a></li>
+  <li><a href="#how-the-three-can-work-together" id="toc-how-the-three-can-work-together" class="nav-link" data-scroll-target="#how-the-three-can-work-together">How the three can work together</a></li>
+  <li><a href="#one-question-three-responsibilities" id="toc-one-question-three-responsibilities" class="nav-link" data-scroll-target="#one-question-three-responsibilities">One question, three responsibilities</a></li>
+  <li><a href="#four-boundaries-that-are-easy-to-blur" id="toc-four-boundaries-that-are-easy-to-blur" class="nav-link" data-scroll-target="#four-boundaries-that-are-easy-to-blur">Four boundaries that are easy to blur</a></li>
+  <li><a href="#how-i-distinguish-them-now" id="toc-how-i-distinguish-them-now" class="nav-link" data-scroll-target="#how-i-distinguish-them-now">How I distinguish them now</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Prompts, RAG, and Skills: What’s the Difference?</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<div class="page-shell highlight-page">
-<header class="page-header highlight-header">
-<p class="highlight-meta"><span data-i18n="award.eyebrow">Award record</span><time datetime="2025-02-14">2025.02.14</time></p>
-<h1 class="page-title" data-i18n="award.title" data-document-title="">Received the ICR Award for Graduate Students</h1>
+    
+  
+    
+  </div>
+  
+
+
 </header>
 
-<figure class="highlight-media highlight-media-grid figure">
-<img class="highlight-image figure-img" src="icr-award-certificate.jpg" width="1702" height="1276" alt="Hongda Zhao and an award presenter display the open ICR Award certificate during the ceremony." data-i18n-alt="award.image.certificateAlt" decoding="async">
-<img class="highlight-image figure-img" src="icr-award-group.jpg" width="1702" height="1276" alt="Hongda Zhao, at far right, joins other recipients and an award presenter for a group photograph at the ICR award ceremony." data-i18n-alt="award.image.groupAlt" decoding="async">
+
+<style>
+#quarto-document-content #title-block-header {
+  padding-bottom: clamp(2.2rem, 5vw, 3.5rem);
+}
+#quarto-document-content #title-block-header .quarto-title .title {
+  display: block !important;
+  max-width: 52rem;
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+}
+#quarto-document-content #title-block-header .quarto-title-meta {
+  display: none;
+}
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-figure { margin: 1.6rem 0; }
+#quarto-document-content .figure-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+#quarto-document-content .figure-zoom { display: block; }
+#quarto-document-content .figure-zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#quarto-document-content .article-figure figcaption {
+  margin-top: 0.6rem;
+  color: #66706c;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  #quarto-document-content .figure-scroll img {
+    width: 900px;
+    max-width: none;
+  }
+  #quarto-document-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+</style>
+<p>While working on EndoViHo-RAG, I kept encountering three terms: Prompt, RAG, and Skill. They are often discussed together, but once I began designing an actual AI system, I realized that they solve three different problems.</p>
+<p>All three can be described loosely as ways to help a large language model complete a task. The distinction that has been most useful to me is the question each one answers:</p>
+<ul>
+<li><strong>Prompt:</strong> What should the model do in this call, what may it rely on, and how should it express the answer?</li>
+<li><strong>RAG:</strong> Where should the system retrieve question-relevant external evidence before answering?</li>
+<li><strong>Skill:</strong> How should the instructions, tools, and checks for a class of tasks be organized into a reusable workflow?</li>
+</ul>
+<p>This is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But I have found this distinction practical when thinking about scientific AI systems.</p>
+<figure class="article-figure figure">
+<div class="figure-scroll">
+<p><a class="figure-zoom" href="figures/figure-1-prompt-rag-skill-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 1 in a new tab"><img src="figures/figure-1-prompt-rag-skill-en.svg" width="1152" height="720" alt="A three-row comparison of Prompts, RAG, and Skills. A Prompt operates at the level of one model call and specifies the task, context, and output. RAG operates at the level of knowledge access and generation, retrieving and organizing external evidence before generation. A Skill operates at the level of a reusable task workflow and coordinates instructions, tools, retrieval, validation, and failure handling. The three can work together but are not equivalent." loading="lazy" decoding="async" class="figure-img"></a></p>
+</div>
+<figcaption>
+Figure 1 | The working distinction I use in this article. A Prompt guides one call, RAG determines how external evidence enters the generation context, and a Skill makes a class of tasks reusable. This is not a universal industry standard.
+</figcaption>
 </figure>
-
-<section class="content-section">
-<h2 class="content-label anchored" data-i18n="detail.record">Record</h2>
-<div class="prose-slot highlight-prose">
-<p data-i18n="award.record.copy">The award was presented at the 124th ICR Research Presentation Meeting, where I also gave an award lecture about the research.</p>
-<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
-<a href="https://www.kuicr.kyoto-u.ac.jp/sites/news/news_250214/" target="_blank" rel="noopener noreferrer"><span data-i18n="detail.link.source">Official announcement</span> <span aria-hidden="true">↗</span></a>
-</nav>
-</div>
+<section id="prompt-instructions-for-this-model-call" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-instructions-for-this-model-call">Prompt: instructions for this model call</h2>
+<p>A Prompt is the task description and context supplied to a model for a particular call. When people say that they are “writing a Prompt,” they usually mean writing this set of instructions.</p>
+<p>For example, a Prompt for a research-data question might say:</p>
+<pre class="text"><code>Use only the records supplied by the system.
+For each result, list its name, identifier, and supporting source.
+If retrieval returns no records, write “No records were found in the current dataset.”
+Do not rewrite that result as “The item does not exist.”</code></pre>
+<p>This Prompt defines the task, the evidence boundary, the output fields, and even the wording for an empty result. A Prompt can do more than control tone: it can constrain scope, request a format, and tell the model how to handle uncertainty.</p>
+<p>Its boundary is equally important. A Prompt can carry data that has already been supplied to the model, but adding the words “query accurately” does not give the model access to a database.</p>
+<p>Likewise, “do not guess” is an important instruction, but it is not a technical guarantee. Permissions, schema constraints, numerical checks, and fail-closed behavior still have to be enforced by software.</p>
+<p>I therefore think of a Prompt as the <strong>working instructions for one model call</strong>, not as a source of knowledge.</p>
 </section>
-
-<section class="content-section">
-<h2 class="content-label anchored" data-i18n="detail.details">Details</h2>
-<div class="prose-slot">
-<dl class="highlight-facts">
-<div><dt data-i18n="detail.meta.award">Award</dt><dd data-i18n="award.name">ICR Award for Graduate Students</dd></div>
-<div><dt data-i18n="detail.meta.date">Date</dt><dd>2025.02.14</dd></div>
-<div><dt data-i18n="detail.meta.venue">Venue</dt><dd data-i18n="award.venue">124th ICR Research Presentation Meeting</dd></div>
-<div><dt data-i18n="detail.meta.work">Work</dt><dd>Eukaryotic Genomic Data Uncover an Extensive Host Range of Mirusviruses</dd></div>
-</dl>
-</div>
+<section id="rag-retrieve-evidence-before-the-model-answers" class="level2">
+<h2 class="anchored" data-anchor-id="rag-retrieve-evidence-before-the-model-answers">RAG: retrieve evidence before the model answers</h2>
+<p>RAG stands for <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation</a>. Its defining idea is not a particular kind of database. It is a system pattern: retrieve external material relevant to the question, put that material into the model’s context, and then generate an answer grounded in what was retrieved.</p>
+<p>At its simplest, the flow looks like this:</p>
+<pre class="text"><code>User question
+   ↓
+Retrieve records, literature, or other sources
+   ↓
+Select and organize relevant evidence
+   ↓
+Place that evidence in the model context
+   ↓
+Generate an answer with explicit evidence boundaries</code></pre>
+<p>Retrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, a curated document collection, web pages, APIs, laboratory data, or a combination of these.</p>
+<p>Connecting a database is not automatically the same thing as building RAG. If a system runs SQL and returns a table directly, it is performing a database query. It becomes retrieval-augmented generation when the retrieved records are assembled into context and used to ground a subsequent natural-language response.</p>
+<p>A well-designed RAG system also separates retrieval from generation. Stable identifiers, numerical values, and source metadata should remain under programmatic control. The model should organize and explain retrieved evidence rather than invent missing facts.</p>
+<p>RAG is not “fact insurance.” Retrieval can miss relevant material, rank the wrong material, or surface a flawed source. Its value is that a reader can trace an answer back to particular records and passages and inspect them again.</p>
 </section>
-
-<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
-<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
-</nav>
+<section id="skill-make-a-class-of-tasks-reusable" class="level2">
+<h2 class="anchored" data-anchor-id="skill-make-a-class-of-tasks-reusable">Skill: make a class of tasks reusable</h2>
+<p>Skill is not an academic method with one established definition in the way that RAG is. Different agent platforms place different things inside a Skill and execute them in different ways.</p>
+<p>In this article, I use Skill to mean a <strong>reusable task package</strong> in an AI-agent toolchain. It may contain:</p>
+<ul>
+<li>task instructions and Prompts;</li>
+<li>SQL, Python programs, or API calls;</li>
+<li>retrieval steps used by RAG;</li>
+<li>controlled vocabularies, reference material, and input/output schemas;</li>
+<li>consistency checks, completeness checks, and failure rules.</li>
+</ul>
+<p>A Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.</p>
+<p>For example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.</p>
+<p>A Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill.</p>
+</section>
+<section id="how-the-three-can-work-together" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-three-can-work-together">How the three can work together</h2>
+<p>Prompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.</p>
+<p>The diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.</p>
+<figure class="article-figure figure">
+<div class="figure-scroll">
+<p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-workflow-en.svg" width="1152" height="830" alt="One way Prompts, RAG, and Skills can work together. A Skill optionally orchestrates task interpretation, source selection, retrieval, generation, validation, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases and supplies it to the model, while a Prompt defines the task, evidence limits, and output format." loading="lazy" decoding="async" class="figure-img"></a></p>
 </div>
+<figcaption>
+Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.
+</figcaption>
+</figure>
+<p>The relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all.</p>
+</section>
+<section id="one-question-three-responsibilities" class="level2">
+<h2 class="anchored" data-anchor-id="one-question-three-responsibilities">One question, three responsibilities</h2>
+<p>Suppose a system has access to versioned data and a document collection, and a user asks:</p>
+<blockquote class="blockquote">
+<p>Which records in the current dataset match condition X, and what evidence supports each result?</p>
+</blockquote>
+<p>The question sounds like a request for a table, but the system still has to define the retrieval scope, field meanings, and evidence limits.</p>
+<p>For this question, the <strong>Prompt</strong> would define the answer rules, for example:</p>
+<ul>
+<li>answer only from records returned by the system;</li>
+<li>report the record name, identifier, relevant value, and supporting source;</li>
+<li>preserve the dataset and literature versions;</li>
+<li>never interpret “no record” as “biologically absent.”</li>
+</ul>
+<p><strong>Retrieval / RAG</strong> would provide the evidence needed for the answer. It could:</p>
+<ul>
+<li>retrieve structured records from a versioned database;</li>
+<li>retrieve supporting passages from the relevant documents;</li>
+<li>assemble the records, sources, and their applicable scope into context for the model.</li>
+</ul>
+<p>A <strong>Skill</strong> could connect the full sequence:</p>
+<pre class="text"><code>Interpret the question
+→ Normalize domain terms
+→ Choose a structured, literature, or hybrid retrieval route
+→ Run the query
+→ Deduplicate and summarize the records
+→ Verify numbers, identifiers, versions, and sources
+→ Produce the table
+→ Explain the result and its limitations</code></pre>
+<p>The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.</p>
+</section>
+<section id="four-boundaries-that-are-easy-to-blur" class="level2">
+<h2 class="anchored" data-anchor-id="four-boundaries-that-are-easy-to-blur">Four boundaries that are easy to blur</h2>
+<ul>
+<li><strong>A very long Prompt is still a Prompt.</strong> Including background information in it does not mean the system can retrieve external evidence at runtime.</li>
+<li><strong>A database connection is not necessarily RAG.</strong> A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.</li>
+<li><strong>A saved collection of Prompts is not necessarily a Skill.</strong> For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.</li>
+<li><strong>Citations in a RAG answer do not make the answer automatically correct.</strong> Traceability makes errors easier to find and correct; it does not eliminate them.</li>
+</ul>
+</section>
+<section id="how-i-distinguish-them-now" class="level2">
+<h2 class="anchored" data-anchor-id="how-i-distinguish-them-now">How I distinguish them now</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>System layer</th>
+<th>Main question it answers</th>
+<th>What it cannot guarantee on its own</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prompt</td>
+<td>One model interaction</td>
+<td>What should be done in this call, what may be used, and how should the answer be formatted?</td>
+<td>Access to external facts, or enforcement of a written instruction as a hard constraint</td>
+</tr>
+<tr class="even">
+<td>RAG</td>
+<td>Knowledge-access and generation architecture</td>
+<td>Where does the evidence come from, and how does it enter the model context?</td>
+<td>Complete retrieval, reliable sources, or a factually correct answer</td>
+</tr>
+<tr class="odd">
+<td>Skill</td>
+<td>Reusable task workflow</td>
+<td>How can a class of tasks be carried out consistently?</td>
+<td>Cross-platform portability, or a correct conclusion merely because the workflow ran</td>
+</tr>
+</tbody>
+</table>
+<p>If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and depends on several tools, checks, and failure conditions, I package the larger process as a Skill.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

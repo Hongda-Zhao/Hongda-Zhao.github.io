@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -184,6 +184,11 @@ ul.task-list li input[type="checkbox"] {
     "coverage.researchAnnouncement": ["Research Announcement", "研究动态"],
     "coverage.githubRepository": ["GitHub repository", "GitHub 仓库"],
     "coverage.techBlog": ["Tech Blog", "技术博客"],
+    "coverage.promptRagSkill": ["Prompts, RAG, and skills: what’s the difference?", "Prompt、RAG 和 Skill 有什么区别？"],
+    "coverage.promptRagSkill.href": ["/posts/prompt-rag-skill-en/", "/posts/prompt-rag-skill/"],
+    "coverage.source.promptRagSkill": ["AI systems · Concept note", "AI 系统 · 概念笔记"],
+    "coverage.ragPaper": ["RAG paper", "RAG 论文"],
+    "coverage.ragPaper.aria": ["RAG paper (opens in a new tab)", "RAG 论文（在新标签页打开）"],
     "coverage.githubRepository.aria": ["GitHub repository (opens in a new tab)", "GitHub 仓库（在新标签页打开）"],
     "coverage.source.bioJapan.aria": ["Official source: Bioinformatics Japan award (opens in a new tab)", "官方来源：Bioinformatics Japan 奖项（在新标签页打开）"],
     "coverage.source.symposium.aria": ["Official source: Giant Virus Biology Symposium (opens in a new tab)", "官方来源：巨型病毒生物学研讨会（在新标签页打开）"],
@@ -311,6 +316,10 @@ ul.task-list li input[type="checkbox"] {
   const normalizePagePath = (path) => path.replace(/\/index\.html$/, "/") || "/";
   const normalizedPagePath = normalizePagePath(location.pathname);
   const localizedPages = [
+    {
+      en: "/posts/prompt-rag-skill-en/",
+      zh: "/posts/prompt-rag-skill/"
+    },
     {
       en: "/posts/djr-mcp-finder-evidence-first-ai4s-en/",
       zh: "/posts/djr-mcp-finder-evidence-first-ai4s/"

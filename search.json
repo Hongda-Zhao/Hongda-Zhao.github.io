@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "posts/prompt-rag-skill/index.html",
+    "href": "posts/prompt-rag-skill/index.html",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "",
+    "text": "最近在搭建 EndoViHo-RAG、学习设计 AI 工具时，我反复遇到三个词：Prompt、RAG 和 Skill。它们经常被放在一起讨论，但真正开始搭系统后，我才发现，这三者解决的其实不是同一个问题。\n这三个词听起来都像是在描述“怎样让大语言模型完成任务”，也很容易被混在一起。对我来说，最有用的区分是看它们分别回答什么问题：\n这不是一套严格的行业分类。尤其是 Skill，不同平台对它的定义并不完全相同。不过，对我正在做的科研工具来说，这个区分很实用。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#prompt规定这一次模型要怎样工作",
+    "href": "posts/prompt-rag-skill/index.html#prompt规定这一次模型要怎样工作",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "Prompt：规定这一次模型要怎样工作",
+    "text": "Prompt：规定这一次模型要怎样工作\nPrompt 是模型在一次调用中收到的任务说明和上下文。平时我们说“写 Prompt”，通常是指写给模型的那部分指令。\n例如，在一个需要查询研究数据的任务中，可以这样写：\n只根据系统提供的记录回答问题。\n列出对象名称、记录编号和支持证据。\n如果没有检索到记录，请写“当前数据集中没有记录”，不要写成“生物学上不存在”。\n这段 Prompt 同时规定了任务、证据边界、输出字段和措辞。它不只是控制语气，也可以限制回答范围、指定格式，并告诉模型遇到不确定情况时应怎样处理。\n但 Prompt 有一个很清楚的边界：它可以携带已经提供给模型的数据，却不会因为写了“请准确查询”就自动获得数据库访问能力。\n同样，“不要猜测”是一条重要指令，但不是可靠的技术保证。数据权限、字段校验、数字核对和出错时停止，仍然需要程序来完成。\n所以，我现在更愿意把 Prompt 理解为本次模型调用的工作说明，而不是知识来源。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#rag先取得证据再让模型回答",
+    "href": "posts/prompt-rag-skill/index.html#rag先取得证据再让模型回答",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "RAG：先取得证据，再让模型回答",
+    "text": "RAG：先取得证据，再让模型回答\nRAG 是 Retrieval-Augmented Generation，通常译作“检索增强生成”。它的核心不是某一种数据库，而是一种系统工作方式：在模型生成答案之前，先取回与问题有关的外部资料，再把这些资料放进生成上下文。\n最基本的流程是：\n用户问题\n   ↓\n检索数据库、文献或其他资料\n   ↓\n选择并组织相关证据\n   ↓\n把证据交给大语言模型\n   ↓\n生成带有证据边界的回答\n这里的检索不一定依赖向量数据库。它可以来自 SQL、全文检索、知识图谱、网页、API、实验室内部数据，也可以把几种方式组合起来。具体系统只需要选择与任务相符、能够被验证的资料来源。\n需要注意的是，“接入数据库”并不自动等于 RAG。如果系统执行 SQL 后直接返回一张表，那是数据库查询；当取回的记录被组织成上下文，并用于增强后续的自然语言生成时，才符合 RAG 的核心含义。\n在科研场景中，可以把版本化的结构化记录作为事实层，把文献作为解释和证据来源。记录编号、计数和数据版本不应该由模型补写；模型的工作是根据取回的内容整理和解释结果，并清楚标出证据边界。\nRAG 也不是“事实保险”。检索可能漏掉资料、选错资料，来源本身也可能有问题。它真正带来的价值，是让回答可以回到具体记录和文献重新检查。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#skill把一类任务变成可重复调用的流程",
+    "href": "posts/prompt-rag-skill/index.html#skill把一类任务变成可重复调用的流程",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "Skill：把一类任务变成可重复调用的流程",
+    "text": "Skill：把一类任务变成可重复调用的流程\nSkill 不是像 RAG 那样有相对明确来源的学术方法，各个平台对它能包含什么、怎样执行，都可能有不同约定。\n本文所说的 Skill，是 AI Agent 工具链中的一个可复用任务包。它可以包含：\n\n任务说明和 Prompt；\nSQL、Python 程序或 API 调用；\nRAG 所需的检索步骤；\n受控词表、参考资料和输入输出格式；\n去重、完整性检查和失败规则。\n\n因此，Skill 更像一套供 Agent 调用或遵循的任务流程及配套资源，而不是一句更长的 Prompt。\n例如，可以设计一个“查询某类生物学记录及其证据”的 Skill。它可以先把用户输入映射到受控名称，再选择结构化查询、文献检索或混合路线，随后运行相应工具、去重、校验结果并输出表格。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。\n一个 Skill 不一定要使用 RAG，也不一定需要复杂程序。翻译固定格式的文字可能只需要 Prompt；而一项需要反复执行、调用多个工具并检查结果的任务，才更适合封装成 Skill。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#三者怎样配合",
+    "href": "posts/prompt-rag-skill/index.html#三者怎样配合",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "三者怎样配合",
+    "text": "三者怎样配合\nPrompt、RAG 和 Skill 不是三个互相替代的选项。它们可以单独出现，也可以在同一套系统中分工合作。\n下面是一种常见的组合方式。它不对应某个特定项目，也不是唯一有效的架构：\n\n\n\n\n\n图 2｜Prompt、RAG 与 Skill 的一种协作方式。Skill 可以负责流程编排与失败处理，RAG 把外部证据带入生成上下文，Prompt 约束当前模型调用；三者可以组合，但并不存在固定的包含关系。\n\n\n这个关系不能简单画成一棵永远成立的包含树。Prompt 可以独立使用，RAG 可以不被封装成 Skill，Skill 也可以完全不做检索。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#用一个科研查询任务来拆解",
+    "href": "posts/prompt-rag-skill/index.html#用一个科研查询任务来拆解",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "用一个科研查询任务来拆解",
+    "text": "用一个科研查询任务来拆解\n假设一个系统已经接入版本化数据和文献资料，用户提出：\n\n当前版本的数据集中，哪些样本包含符合条件的记录？请列出样本名称、记录编号、数量和支持证据。\n\n这个问题看起来只是让模型整理一张表，但真正执行时，需要先确定检索范围、字段含义和证据边界。\n在这个问题中，Prompt 负责规定回答规则，例如：\n\n只根据系统返回的记录作答；\n输出样本名称、记录编号、数量和证据来源；\n保留数据集与文献版本；\n不把“没有记录”解释为“生物学上不存在”。\n\nRetrieval / RAG 负责取得回答所需的依据，例如：\n\n从版本化数据库中检索结构化记录；\n从文献资料中取回相关证据；\n把记录、来源和适用范围组织成模型可以使用的上下文。\n\nSkill 则可以把完整流程串起来：\n理解问题\n→ 标准化查询条件\n→ 选择结构化、文献或混合检索路线\n→ 执行查询\n→ 去重并汇总记录\n→ 核对数字、ID 与来源\n→ 生成表格\n→ 输出解释和限制\n这个例子说明，科研 RAG 的关键不只是“能够回答”。更重要的是：答案中的数字和判断能否回到具体的数据版本、记录和文献，以及检索失败能否与真正的空结果区分开来。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#四个容易混淆的边界",
+    "href": "posts/prompt-rag-skill/index.html#四个容易混淆的边界",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "四个容易混淆的边界",
+    "text": "四个容易混淆的边界\n\n很长的 Prompt 仍然只是 Prompt。 写入背景知识，不等于系统会在运行时检索外部证据。\n连上数据库也不一定是 RAG。 查询结果只有参与后续生成，才构成完整的检索增强生成过程。\n保存一组 Prompt 也不一定形成了 Skill。 对需要复查的科研任务来说，Skill 还应明确输入、工具、输出、校验方式和失败行为。\nRAG 给出了引用，也不代表答案一定正确。 可追溯让错误更容易被发现和修正，但不会自动消除错误。"
+  },
+  {
+    "objectID": "posts/prompt-rag-skill/index.html#我现在怎样区分它们",
+    "href": "posts/prompt-rag-skill/index.html#我现在怎样区分它们",
+    "title": "Prompt、RAG 和 Skill 有什么区别？",
+    "section": "我现在怎样区分它们",
+    "text": "我现在怎样区分它们\n\n\n\n\n\n\n\n\n\n概念\n所在层面\n主要解决的问题\n它不能单独保证什么\n\n\n\n\nPrompt\n一次模型交互\n这一次做什么、依据什么、怎样输出\n主动获得外部事实，或把文字约束变成硬性保证\n\n\nRAG\n知识访问与生成架构\n回答所需的证据从哪里来、怎样进入上下文\n检索一定完整、来源一定正确、答案一定真实\n\n\nSkill\n可复用任务流程\n怎样稳定地重复完成一整类任务\n跨平台通用，或流程运行后自然得到正确结论\n\n\n\n如果只是希望模型按固定方式回答，我会先写 Prompt；如果答案必须依赖外部、更新频繁或需要追溯的资料，我会设计 Retrieval 或 RAG；如果同一任务会反复出现，而且包含多个工具、检查步骤和失败条件，我会进一步把它封装成 Skill。"
+  },
+  {
     "objectID": "posts/djr-mcp-finder-evidence-first-ai4s/index.html",
     "href": "posts/djr-mcp-finder-evidence-first-ai4s/index.html",
     "title": "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。",
@@ -102,7 +158,7 @@
     "href": "index.html",
     "title": "Notes on life, technology & research.",
     "section": "",
-    "text": "2026.08.19\nResearch Announcement\n\n\n\nGave an oral presentation at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, in Nagoya.日本進化学会第28回大会（名古屋大会）S2-4「ウイルスから宿主への遺伝子水平伝播が駆動する真核生物ゲノムの進化」\n→\n\n\nSESJ · 28th Annual Meeting\nOfficial source ↗\n\n\n\n\n\n2026.07.30\nTech Blog\n\n\n\nBlog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.\n→\n\n\nDJR-MCP Finder v0.1\nGitHub repository ↗\n\n\n\n\n\n2026.03.05\nResearch Announcement\n\n\n\nReceived the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました\n→\n\n\nNPO Bioinformatics Japan\nOfficial source ↗\n\n\n\n\n\n2025.12.22\nResearch Announcement\n\n\n\nGave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗\n\n\n\n\n\n2025.02.14\nResearch Announcement\n\n\n\nReceived the ICR Award for Graduate Students.\n→\n\n\nKyoto University · Institute for Chemical Research\nOfficial source ↗\n\n\n\n\n\n2025.01.28\nResearch Announcement\n\n\n\nCompleted my master’s thesis presentation and Q&A.菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗\n\n\n\n\n\n2024.07.18\nResearch Announcement\n\n\n\nPresented a poster at Viruses of Microbes 2024 in Cairns, Australia.\n→\n\n\nViruses of Microbes 2024\nOfficial source ↗\n\n\n\n\n\n2024.04.30\nResearch Announcement\n\n\n\nMy first-author paper on mirusviruses was accepted for publication in Current Biology!\n→\n\n\nCurrent Biology\nOfficial source ↗\n\n\n\n\n\n2023.11.29\nResearch Announcement\n\n\n\nMy first academic conference presentation: an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology.\n→\n\n\nJSME · 36th Annual Meeting\nOfficial source ↗\n\n\n\n\n\n2023.10.04\nResearch Announcement\n\n\n\nMy first paper was accepted for publication in Virus Evolution!修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗"
+    "text": "2026.09.03\nTech Blog\n\n\n\nPrompts, RAG, and skills: what’s the difference?\n→\n\n\nAI systems · Concept note\nRAG paper ↗\n\n\n\n\n\n2026.08.19\nResearch Announcement\n\n\n\nGave an oral presentation at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, in Nagoya.日本進化学会第28回大会（名古屋大会）S2-4「ウイルスから宿主への遺伝子水平伝播が駆動する真核生物ゲノムの進化」\n→\n\n\nSESJ · 28th Annual Meeting\nOfficial source ↗\n\n\n\n\n\n2026.07.30\nTech Blog\n\n\n\nBlog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.\n→\n\n\nDJR-MCP Finder v0.1\nGitHub repository ↗\n\n\n\n\n\n2026.03.05\nResearch Announcement\n\n\n\nReceived the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.特定非営利活動法人バイオインフォマティクス・ジャパン令和7年度学生奨励賞をZhao Hongdaさんが受賞しました\n→\n\n\nNPO Bioinformatics Japan\nOfficial source ↗\n\n\n\n\n\n2025.12.22\nResearch Announcement\n\n\n\nGave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.ドイツのTegernseeで開催されたGiant Virus Biology Symposiumにて、孟 令杰先生、張 瑞軒さん、趙 宏達さんが口頭発表を行いました。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗\n\n\n\n\n\n2025.02.14\nResearch Announcement\n\n\n\nReceived the ICR Award for Graduate Students.\n→\n\n\nKyoto University · Institute for Chemical Research\nOfficial source ↗\n\n\n\n\n\n2025.01.28\nResearch Announcement\n\n\n\nCompleted my master’s thesis presentation and Q&A.菊矢 咲季さん、長坂 孔明さん、趙 宏達（ジャオ ホンダ）さんが修士論文の発表を行いました。素晴らしいプレゼンテーションと質疑応答でした。２年間お疲れ様でした。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗\n\n\n\n\n\n2024.07.18\nResearch Announcement\n\n\n\nPresented a poster at Viruses of Microbes 2024 in Cairns, Australia.\n→\n\n\nViruses of Microbes 2024\nOfficial source ↗\n\n\n\n\n\n2024.04.30\nResearch Announcement\n\n\n\nMy first-author paper on mirusviruses was accepted for publication in Current Biology!\n→\n\n\nCurrent Biology\nOfficial source ↗\n\n\n\n\n\n2023.11.29\nResearch Announcement\n\n\n\nMy first academic conference presentation: an oral presentation at the 36th Annual Meeting of the Japanese Society of Microbial Ecology.\n→\n\n\nJSME · 36th Annual Meeting\nOfficial source ↗\n\n\n\n\n\n2023.10.04\nResearch Announcement\n\n\n\nMy first paper was accepted for publication in Virus Evolution!修士1年のZhao Hongda君の論文が Virus Evolution に受理されました。おめでとうございます。\n→\n\n\nKyoto University · Ogata Lab\nOfficial source ↗"
   },
   {
     "objectID": "gallery.html",
@@ -201,5 +257,61 @@
     "title": "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。",
     "section": "Reflections",
     "text": "Reflections\n\n1. An AI4S Project Starts with the Right Problem Decomposition\nA DJR fold is useful structural evidence, but it is not equivalent to viral identity. The existence of cellular DJRs forced me to separate H1 from H2. It also reinforced that model output must still be interpreted alongside structure, genomic context, and virological evidence.\n\n\n2. Data and Labels Often Matter More Than the Model\nIn retrospect, much of the work went into collecting examples, validating Silver positives, constructing negative sets, and selecting representative sequences.\nProtein language models can provide powerful representations. But if the positive and negative classes are poorly defined, or if close relatives of training records leak into the test set, even a high score is difficult to interpret.\n\n\n3. In This Project, Protein Language Models Did Not Replace Traditional Homology Search\nThis benchmark did not give me evidence that protein language models dramatically outperform conventional sequence alignment or profile-HMM methods for homolog detection. The 14-model benchmark compared different protein-language-model representations; it was not a strict head-to-head comparison with MMseqs2 or HMM-based search. This is therefore a methodological judgment from the development process, not a quantitative claim about relative performance.\nTraditional methods still provide interpretable alignments, explicit thresholds, and traceable hit relationships. I see protein language models as a complement: they can help rank candidates when sequence similarity is weak and the classification boundary is complex. In practice, I would rather use the two approaches to cross-check each other than ask one to replace the other.\n\n\n4. Preserving the Limits of the Evidence Matters More Than Filling Every Cell\nAmbiguous examples can be held in quarantine. A classifier can return unknown/other when the evidence is insufficient. A model without an independent evaluation can remain not_evaluated.\nThese states are less visually satisfying than a complete results table, but they describe more honestly how far the evidence currently reaches."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html",
+    "href": "posts/prompt-rag-skill-en/index.html",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "",
+    "text": "While working on EndoViHo-RAG, I kept encountering three terms: Prompt, RAG, and Skill. They are often discussed together, but once I began designing an actual AI system, I realized that they solve three different problems.\nAll three can be described loosely as ways to help a large language model complete a task. The distinction that has been most useful to me is the question each one answers:\nThis is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But I have found this distinction practical when thinking about scientific AI systems."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#prompt-instructions-for-this-model-call",
+    "href": "posts/prompt-rag-skill-en/index.html#prompt-instructions-for-this-model-call",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "Prompt: instructions for this model call",
+    "text": "Prompt: instructions for this model call\nA Prompt is the task description and context supplied to a model for a particular call. When people say that they are “writing a Prompt,” they usually mean writing this set of instructions.\nFor example, a Prompt for a research-data question might say:\nUse only the records supplied by the system.\nFor each result, list its name, identifier, and supporting source.\nIf retrieval returns no records, write “No records were found in the current dataset.”\nDo not rewrite that result as “The item does not exist.”\nThis Prompt defines the task, the evidence boundary, the output fields, and even the wording for an empty result. A Prompt can do more than control tone: it can constrain scope, request a format, and tell the model how to handle uncertainty.\nIts boundary is equally important. A Prompt can carry data that has already been supplied to the model, but adding the words “query accurately” does not give the model access to a database.\nLikewise, “do not guess” is an important instruction, but it is not a technical guarantee. Permissions, schema constraints, numerical checks, and fail-closed behavior still have to be enforced by software.\nI therefore think of a Prompt as the working instructions for one model call, not as a source of knowledge."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#rag-retrieve-evidence-before-the-model-answers",
+    "href": "posts/prompt-rag-skill-en/index.html#rag-retrieve-evidence-before-the-model-answers",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "RAG: retrieve evidence before the model answers",
+    "text": "RAG: retrieve evidence before the model answers\nRAG stands for Retrieval-Augmented Generation. Its defining idea is not a particular kind of database. It is a system pattern: retrieve external material relevant to the question, put that material into the model’s context, and then generate an answer grounded in what was retrieved.\nAt its simplest, the flow looks like this:\nUser question\n   ↓\nRetrieve records, literature, or other sources\n   ↓\nSelect and organize relevant evidence\n   ↓\nPlace that evidence in the model context\n   ↓\nGenerate an answer with explicit evidence boundaries\nRetrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, a curated document collection, web pages, APIs, laboratory data, or a combination of these.\nConnecting a database is not automatically the same thing as building RAG. If a system runs SQL and returns a table directly, it is performing a database query. It becomes retrieval-augmented generation when the retrieved records are assembled into context and used to ground a subsequent natural-language response.\nA well-designed RAG system also separates retrieval from generation. Stable identifiers, numerical values, and source metadata should remain under programmatic control. The model should organize and explain retrieved evidence rather than invent missing facts.\nRAG is not “fact insurance.” Retrieval can miss relevant material, rank the wrong material, or surface a flawed source. Its value is that a reader can trace an answer back to particular records and passages and inspect them again."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#skill-make-a-class-of-tasks-reusable",
+    "href": "posts/prompt-rag-skill-en/index.html#skill-make-a-class-of-tasks-reusable",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "Skill: make a class of tasks reusable",
+    "text": "Skill: make a class of tasks reusable\nSkill is not an academic method with one established definition in the way that RAG is. Different agent platforms place different things inside a Skill and execute them in different ways.\nIn this article, I use Skill to mean a reusable task package in an AI-agent toolchain. It may contain:\n\ntask instructions and Prompts;\nSQL, Python programs, or API calls;\nretrieval steps used by RAG;\ncontrolled vocabularies, reference material, and input/output schemas;\nconsistency checks, completeness checks, and failure rules.\n\nA Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.\nFor example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.\nA Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#how-the-three-can-work-together",
+    "href": "posts/prompt-rag-skill-en/index.html#how-the-three-can-work-together",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "How the three can work together",
+    "text": "How the three can work together\nPrompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.\nThe diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.\n\n\n\n\n\nFigure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.\n\n\nThe relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#one-question-three-responsibilities",
+    "href": "posts/prompt-rag-skill-en/index.html#one-question-three-responsibilities",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "One question, three responsibilities",
+    "text": "One question, three responsibilities\nSuppose a system has access to versioned data and a document collection, and a user asks:\n\nWhich records in the current dataset match condition X, and what evidence supports each result?\n\nThe question sounds like a request for a table, but the system still has to define the retrieval scope, field meanings, and evidence limits.\nFor this question, the Prompt would define the answer rules, for example:\n\nanswer only from records returned by the system;\nreport the record name, identifier, relevant value, and supporting source;\npreserve the dataset and literature versions;\nnever interpret “no record” as “biologically absent.”\n\nRetrieval / RAG would provide the evidence needed for the answer. It could:\n\nretrieve structured records from a versioned database;\nretrieve supporting passages from the relevant documents;\nassemble the records, sources, and their applicable scope into context for the model.\n\nA Skill could connect the full sequence:\nInterpret the question\n→ Normalize domain terms\n→ Choose a structured, literature, or hybrid retrieval route\n→ Run the query\n→ Deduplicate and summarize the records\n→ Verify numbers, identifiers, versions, and sources\n→ Produce the table\n→ Explain the result and its limitations\nThe point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#four-boundaries-that-are-easy-to-blur",
+    "href": "posts/prompt-rag-skill-en/index.html#four-boundaries-that-are-easy-to-blur",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "Four boundaries that are easy to blur",
+    "text": "Four boundaries that are easy to blur\n\nA very long Prompt is still a Prompt. Including background information in it does not mean the system can retrieve external evidence at runtime.\nA database connection is not necessarily RAG. A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.\nA saved collection of Prompts is not necessarily a Skill. For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.\nCitations in a RAG answer do not make the answer automatically correct. Traceability makes errors easier to find and correct; it does not eliminate them."
+  },
+  {
+    "objectID": "posts/prompt-rag-skill-en/index.html#how-i-distinguish-them-now",
+    "href": "posts/prompt-rag-skill-en/index.html#how-i-distinguish-them-now",
+    "title": "Prompts, RAG, and Skills: What’s the Difference?",
+    "section": "How I distinguish them now",
+    "text": "How I distinguish them now\n\n\n\n\n\n\n\n\n\nConcept\nSystem layer\nMain question it answers\nWhat it cannot guarantee on its own\n\n\n\n\nPrompt\nOne model interaction\nWhat should be done in this call, what may be used, and how should the answer be formatted?\nAccess to external facts, or enforcement of a written instruction as a hard constraint\n\n\nRAG\nKnowledge-access and generation architecture\nWhere does the evidence come from, and how does it enter the model context?\nComplete retrieval, reliable sources, or a factually correct answer\n\n\nSkill\nReusable task workflow\nHow can a class of tasks be carried out consistently?\nCross-platform portability, or a correct conclusion merely because the workflow ran\n\n\n\nIf I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and depends on several tools, checks, and failure conditions, I package the larger process as a Skill."
   }
 ]
