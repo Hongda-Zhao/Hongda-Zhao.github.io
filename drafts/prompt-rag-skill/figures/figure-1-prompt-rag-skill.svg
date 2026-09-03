@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="720" viewBox="0 0 1152 720" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt、RAG 和 Skill 分别解决的问题</title>
+  <desc id="desc">三条泳道分别说明 Prompt 约束一次模型调用，RAG 取回并组织外部证据以增强模型生成，Skill 组织可重复任务流程。三者可以组合，但不互相等同。</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #222826; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #66706c; }
+      .lane-label { font-size: 26px; font-weight: 700; }
+      .scope { font-size: 16px; font-weight: 700; letter-spacing: 0.04em; }
+      .question { font-size: 23px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .boundary { font-size: 17px; font-weight: 700; }
+      .footer { font-size: 20px; font-weight: 700; }
+      .on-dark { fill: #ffffff; }
+      .arrow { fill: none; stroke: #8b918e; stroke-width: 2.4; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b918e"/>
+    </marker>
+  </defs>
+
+  <rect width="1152" height="720" fill="#faf9f6"/>
+  <text class="title" x="64" y="58">Prompt、RAG 和 Skill：三个问题，三个层面</text>
+  <text class="subtitle" x="64" y="91">它们都与大语言模型有关，但负责的范围不同。</text>
+
+  <g aria-label="Prompt 泳道">
+    <rect x="64" y="126" width="1024" height="142" rx="12" fill="#dce9f0" stroke="#356a8a" stroke-width="2"/>
+    <rect x="64" y="126" width="245" height="142" rx="12" fill="#356a8a"/>
+    <text class="scope on-dark" x="92" y="164">一次模型调用</text>
+    <text class="lane-label on-dark" x="92" y="205">Prompt</text>
+    <text class="body on-dark" x="92" y="237">工作说明</text>
+
+    <text class="question" x="345" y="172">这一次，模型怎样工作？</text>
+    <text class="body" x="345" y="208">任务说明 · 已提供的上下文 · 证据边界 · 输出格式</text>
+    <rect x="827" y="166" width="225" height="62" rx="8" fill="#faf9f6" stroke="#356a8a" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="191" text-anchor="middle" fill="#356a8a">边界</text>
+    <text class="body" x="940" y="216" text-anchor="middle">不会自动取得外部事实</text>
+  </g>
+
+  <g aria-label="RAG 泳道">
+    <rect x="64" y="292" width="1024" height="142" rx="12" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
+    <rect x="64" y="292" width="245" height="142" rx="12" fill="#2f6f5b"/>
+    <text class="scope on-dark" x="92" y="330">知识访问与生成</text>
+    <text class="lane-label on-dark" x="92" y="371">RAG</text>
+    <text class="body on-dark" x="92" y="403">外部证据</text>
+
+    <text class="question" x="345" y="338">回答依据从哪里来？</text>
+    <text class="body" x="345" y="374">检索外部资料</text>
+    <path class="arrow" d="M 467 368 H 514" marker-end="url(#arrow)"/>
+    <text class="body" x="531" y="374">组织证据</text>
+    <path class="arrow" d="M 612 368 H 642" marker-end="url(#arrow)"/>
+    <text class="body" x="659" y="374">增强模型生成</text>
+    <rect x="827" y="332" width="225" height="62" rx="8" fill="#faf9f6" stroke="#2f6f5b" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="357" text-anchor="middle" fill="#2f6f5b">边界</text>
+    <text class="body" x="940" y="382" text-anchor="middle">不保证检索完整或答案正确</text>
+  </g>
+
+  <g aria-label="Skill 泳道">
+    <rect x="64" y="458" width="1024" height="142" rx="12" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
+    <rect x="64" y="458" width="245" height="142" rx="12" fill="#654a38"/>
+    <text class="scope on-dark" x="92" y="496">可复用任务流程</text>
+    <text class="lane-label on-dark" x="92" y="537">Skill</text>
+    <text class="body on-dark" x="92" y="569">流程与资源</text>
+
+    <text class="question" x="345" y="504">怎样稳定完成一类任务？</text>
+    <text class="body" x="345" y="540">说明 · 工具 · 检索 · 校验 · 失败处理</text>
+    <rect x="827" y="498" width="225" height="62" rx="8" fill="#faf9f6" stroke="#7d4b00" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="523" text-anchor="middle" fill="#7d4b00">边界</text>
+    <text class="body" x="940" y="548" text-anchor="middle">定义和执行因平台而异</text>
+  </g>
+
+  <path d="M 64 654 H 1088" stroke="#c8ccc8" stroke-width="1.5"/>
+  <text class="footer" x="576" y="687" text-anchor="middle">可以组合使用，但彼此不等同，也不存在永远成立的包含关系。</text>
+</svg>
