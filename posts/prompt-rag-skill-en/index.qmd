@@ -1,12 +1,12 @@
 ---
-title: "Prompts, RAG, and Skills: What’s the Difference? An EndoViHo-RAG Design Example"
-description-meta: "An EndoViHo-RAG design example for separating three layers of an AI system: instructions for one model call, access to external evidence, and a reusable task workflow."
+title: "Prompts, RAG, and Skills: What’s the Difference?"
+description-meta: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
 open-graph:
-  description: "An EndoViHo-RAG design example for separating three layers of an AI system: instructions for one model call, access to external evidence, and a reusable task workflow."
+  description: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
   image: figures/cover-prompt-rag-skill-en.png
   image-alt: "A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow."
 twitter-card:
-  description: "An EndoViHo-RAG design example for separating three layers of an AI system: instructions for one model call, access to external evidence, and a reusable task workflow."
+  description: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
   image: figures/cover-prompt-rag-skill-en.png
   image-alt: "A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow."
 lang: en
@@ -73,9 +73,7 @@ body.fixed-language-content .quarto-secondary-nav-title {
 }
 </style>
 
-EndoViHo-RAG is an auditable Hybrid RAG system I am building for endogenous viral elements (EVEs). The idea is to bring three kinds of evidence into one query workflow: EVE records that are defined only within an individual genome assembly, the source-taxonomy assignments attached to those assemblies, and evidence from the scientific literature.
-
-While learning how to design AI tools, I kept running into three terms: Prompt, RAG, and Skill. They are often discussed together, but once I started designing an actual system, I found that I needed to separate them much more carefully.
+While working on EndoViHo-RAG, I kept encountering three terms: Prompt, RAG, and Skill. They are often discussed together, but once I began designing an actual AI system, I realized that they solve three different problems.
 
 All three can be described loosely as ways to help a large language model complete a task. The distinction that has been most useful to me is the question each one answers:
 
@@ -83,7 +81,7 @@ All three can be described loosely as ways to help a large language model comple
 - **RAG:** Where should the system retrieve question-relevant external evidence before answering?
 - **Skill:** How should the instructions, tools, and checks for a class of tasks be organized into a reusable workflow?
 
-This is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But this distinction has been practical for the scientific tool I am designing.
+This is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But I have found this distinction practical when thinking about scientific AI systems.
 
 <figure class="article-figure">
 <div class="figure-scroll">
@@ -96,14 +94,13 @@ This is not a rigid industry taxonomy. Skill, in particular, means somewhat diff
 
 A Prompt is the task description and context supplied to a model for a particular call. When people say that they are “writing a Prompt,” they usually mean writing this set of instructions.
 
-For example, the following is an illustration for a future system, not a function that EndoViHo-RAG can run today:
+For example, a Prompt for a research-data question might say:
 
 ```text
-Answer only from the records returned by the system.
-List the assembly source taxon, Assembly accession, the number of assembly-local
-EVE loci explicitly included in the current DatasetRelease, and the supporting evidence.
-If retrieval returns no record, write “No record in the current dataset.”
-Do not rewrite that result as “Biologically absent.”
+Use only the records supplied by the system.
+For each result, list its name, identifier, and supporting source.
+If retrieval returns no records, write “No records were found in the current dataset.”
+Do not rewrite that result as “The item does not exist.”
 ```
 
 This Prompt defines the task, the evidence boundary, the output fields, and even the wording for an empty result. A Prompt can do more than control tone: it can constrain scope, request a format, and tell the model how to handle uncertainty.
@@ -132,11 +129,11 @@ Place that evidence in the model context
 Generate an answer with explicit evidence boundaries
 ```
 
-Retrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, web pages, APIs, laboratory data, or a combination of these. Those are general possibilities, not a list of features already present in EndoViHo-RAG. The EndoViHo-RAG design uses a fixed, versioned literature corpus and does **not** perform live web search.
+Retrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, a curated document collection, web pages, APIs, laboratory data, or a combination of these.
 
 Connecting a database is not automatically the same thing as building RAG. If a system runs SQL and returns a table directly, it is performing a database query. It becomes retrieval-augmented generation when the retrieved records are assembled into context and used to ground a subsequent natural-language response.
 
-That distinction matters for EndoViHo-RAG. My proposed design would treat versioned structured records as the factual layer and literature passages as sources of evidence and interpretation. Assembly accessions, record counts, and release identifiers should not be filled in by the model. The model’s job would be to organize what was retrieved, explain the result, and make the limits of the evidence visible.
+A well-designed RAG system also separates retrieval from generation. Stable identifiers, numerical values, and source metadata should remain under programmatic control. The model should organize and explain retrieved evidence rather than invent missing facts.
 
 RAG is not “fact insurance.” Retrieval can miss relevant material, rank the wrong material, or surface a flawed source. Its value is that a reader can trace an answer back to particular records and passages and inspect them again.
 
@@ -154,9 +151,7 @@ In this article, I use Skill to mean a **reusable task package** in an AI-agent 
 
 A Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.
 
-For example, a future EndoViHo-RAG Skill could answer questions about EVE loci in a DatasetRelease and the source-taxonomy assignments of their assemblies. It could map user input to controlled taxonomic names, choose a structured, literature, or hybrid retrieval route, and then validate and format the results. If a critical step failed, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.
-
-At Milestone 0, however, EndoViHo-RAG does not yet have its domain tables, ingestion pipeline, retrieval routes, or callable Skills. The rules for locus identity, deduplication, and inclusion in a release are also not yet frozen. A future workflow therefore should not claim a count of “unique viruses.” It would report **assembly-local EVE loci explicitly included in the current DatasetRelease**, once those rules and records exist.
+For example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.
 
 A Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill.
 
@@ -164,62 +159,58 @@ A Skill does not have to use RAG, and it does not have to contain complex code. 
 
 Prompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.
 
-The following diagram shows one workflow that EndoViHo-RAG **could** adopt in the future. The Skill would orchestrate the task; prompting and retrieval would be stages invoked when needed. None of the workflow shown here is implemented functionality at Milestone 0.
+The diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.
 
 <figure class="article-figure">
 <div class="figure-scroll">
-<a class="figure-zoom" href="figures/figure-2-endoviho-future-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-endoviho-future-workflow-en.svg" width="1152" height="830" alt="A proposed future workflow for EndoViHo-RAG, explicitly marked as not yet implemented. A Skill orchestrates question interpretation, name normalization, route selection, retrieval, model generation, and programmatic validation. Retrieval is the retrieval stage of RAG and would obtain evidence from versioned structured records and a fixed literature corpus. A Prompt would constrain one model call. Software would validate numbers, Assembly accessions, release versions, citations, and empty results, and would stop on failure." loading="lazy" decoding="async"></a>
+<a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-workflow-en.svg" width="1152" height="830" alt="One way Prompts, RAG, and Skills can work together. A Skill optionally orchestrates task interpretation, source selection, retrieval, generation, validation, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases and supplies it to the model, while a Prompt defines the task, evidence limits, and output format." loading="lazy" decoding="async"></a>
 </div>
-<figcaption>Figure 2 | A proposed future design for EndoViHo-RAG, not current functionality. The Skill would orchestrate the workflow; retrieval would supply evidence to the generation stage of RAG; the Prompt would constrain one model call; and software would still validate numbers and identifiers.</figcaption>
+<figcaption>Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.</figcaption>
 </figure>
 
 The relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all.
 
-## Breaking down one EndoViHo-RAG question
+## One question, three responsibilities
 
-EndoViHo-RAG is still at **Milestone 0**. Domain data, retrieval routes, and callable Skills have not yet been implemented. The example below is a design exercise for separating responsibilities, not a demonstration of an existing feature.
+Suppose a system has access to versioned data and a document collection, and a user asks:
 
-Suppose those data and release rules had been implemented and published, and a user asked:
+> Which records in the current dataset match condition X, and what evidence supports each result?
 
-> In the current DatasetRelease, which genome assemblies sourced from Bivalvia include EVE loci related to Orthopolintovirales, and how many assembly-local EVE loci are explicitly included for each Assembly?
-
-The wording says that the dataset includes EVE loci; it does not say that an active virus infection was observed. An assembly’s source taxon is also not automatically a proven infection host. These distinctions are part of the evidence boundary, not stylistic caution.
+The question sounds like a request for a table, but the system still has to define the retrieval scope, field meanings, and evidence limits.
 
 For this question, the **Prompt** would define the answer rules, for example:
 
 - answer only from records returned by the system;
-- report the assembly source taxon, Assembly accession, the assembly-local EVE loci explicitly included in the current DatasetRelease, and the supporting source;
+- report the record name, identifier, relevant value, and supporting source;
 - preserve the dataset and literature versions;
 - never interpret “no record” as “biologically absent.”
 
 **Retrieval / RAG** would provide the evidence needed for the answer. It could:
 
 - retrieve structured records from a versioned database;
-- retrieve supporting passages from the fixed literature corpus, without live web search;
+- retrieve supporting passages from the relevant documents;
 - assemble the records, sources, and their applicable scope into context for the model.
 
 A **Skill** could connect the full sequence:
 
 ```text
 Interpret the question
-→ Normalize taxonomic names
+→ Normalize domain terms
 → Choose a structured, literature, or hybrid retrieval route
 → Run the query
-→ Apply the frozen locus-identity and release-inclusion rules
+→ Deduplicate and summarize the records
 → Verify numbers, identifiers, versions, and sources
 → Produce the table
 → Explain the result and its limitations
 ```
 
-Those locus-identity and release-inclusion rules do not yet exist in frozen form; the sequence describes a future contract the system would need, not a current capability.
-
-This example also shows why scientific RAG is not merely about producing an answer. Every number and interpretation should be traceable to a release, a record, and a source. The system should also distinguish a genuine empty result from a failed retrieval.
+The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.
 
 ## Four boundaries that are easy to blur
 
 - **A very long Prompt is still a Prompt.** Including background information in it does not mean the system can retrieve external evidence at runtime.
 - **A database connection is not necessarily RAG.** A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.
-- **A saved collection of Prompts is not necessarily a Skill.** For an auditable scientific task such as EndoViHo-RAG, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.
+- **A saved collection of Prompts is not necessarily a Skill.** For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.
 - **Citations in a RAG answer do not make the answer automatically correct.** Traceability makes errors easier to find and correct; it does not eliminate them.
 
 ## How I distinguish them now

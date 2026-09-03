@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1152" height="830" viewBox="0 0 1152 830" lang="zh-CN" role="img" aria-labelledby="title desc">
-  <title id="title">EndoViHo-RAG 的未来设计流程</title>
-  <desc id="desc">这是一张非现有功能的未来设计图。Skill 编排用户问题、名称标准化、路线选择、检索、生成和程序校验；Retrieval 是 RAG 的检索阶段，从版本化结构化记录与固定文献语料取回证据，模型随后使用证据生成回答；Prompt 约束模型调用；程序校验数字、标识符、版本和引用。</desc>
+  <title id="title">Prompt、RAG 与 Skill 如何协作</title>
+  <desc id="desc">这张图展示 Prompt、RAG 与 Skill 的一种协作方式。Skill 可以编排任务解析、知识来源选择、检索、生成、结果检查和失败处理；RAG 从结构化数据、API、文档或知识库中取回证据；Prompt 约束一次模型调用。</desc>
   <defs>
     <style>
       text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; fill: #222826; }
@@ -23,32 +23,32 @@
   </defs>
 
   <rect width="1152" height="830" fill="#faf9f6"/>
-  <text class="title" x="64" y="56">EndoViHo-RAG：未来 Hybrid RAG 的职责分工</text>
-  <text class="subtitle" x="64" y="89">结构化事实、文献证据、模型生成和程序校验各自保留清楚边界。</text>
+  <text class="title" x="64" y="56">Prompt、RAG 与 Skill 如何协作？</text>
+  <text class="subtitle" x="64" y="89">Skill 组织可复用流程，RAG 引入外部证据，Prompt 约束一次模型调用。</text>
   <rect x="839" y="27" width="249" height="42" rx="7" fill="#f2dfdc" stroke="#a8443f" stroke-width="1.6"/>
-  <text class="label" x="963.5" y="54" text-anchor="middle" fill="#a8443f">未来设计示例｜非现有功能</text>
+  <text class="label" x="963.5" y="54" text-anchor="middle" fill="#a8443f">组合示例｜并非固定模式</text>
 
   <path d="M 64 132 V 119 H 1088 V 132" fill="none" stroke="#654a38" stroke-width="2"/>
-  <text class="range" x="576" y="113" text-anchor="middle">Skill｜编排任务、调用工具并规定失败行为</text>
+  <text class="range" x="576" y="113" text-anchor="middle">Skill（可选工作流层）｜编排任务、调用工具并处理失败</text>
 
-  <g aria-label="用户问题">
+  <g aria-label="用户任务">
     <rect x="64" y="151" width="226" height="94" rx="10" fill="#ffffff" stroke="#654a38" stroke-width="2"/>
-    <text class="node-title" x="177" y="187" text-anchor="middle">用户问题</text>
-    <text class="small" x="177" y="217" text-anchor="middle">自然语言研究问题</text>
+    <text class="node-title" x="177" y="187" text-anchor="middle">用户任务</text>
+    <text class="small" x="177" y="217" text-anchor="middle">自然语言请求或结构化输入</text>
   </g>
   <path class="arrow" d="M 290 198 H 341"/>
 
-  <g aria-label="名称标准化">
+  <g aria-label="任务解析">
     <rect x="342" y="151" width="226" height="94" rx="10" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
-    <text class="node-title" x="455" y="187" text-anchor="middle">名称标准化</text>
-    <text class="small" x="455" y="217" text-anchor="middle">映射到受控分类名称</text>
+    <text class="node-title" x="455" y="187" text-anchor="middle">任务解析</text>
+    <text class="small" x="455" y="217" text-anchor="middle">明确目标与必要输入</text>
   </g>
   <path class="arrow" d="M 568 198 H 619"/>
 
-  <g aria-label="选择检索路线">
+  <g aria-label="选择知识来源">
     <rect x="620" y="151" width="292" height="94" rx="10" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
-    <text class="node-title" x="766" y="184" text-anchor="middle">选择检索路线</text>
-    <text class="node-body" x="766" y="214" text-anchor="middle">structured · literature · hybrid</text>
+    <text class="node-title" x="766" y="184" text-anchor="middle">选择知识来源</text>
+    <text class="node-body" x="766" y="214" text-anchor="middle">结构化数据 · 文档 · 混合</text>
     <text class="small" x="766" y="236" text-anchor="middle">不支持的问题明确停止</text>
   </g>
 
@@ -64,18 +64,18 @@
     <text class="small" x="135" y="427" text-anchor="middle">外部证据</text>
   </g>
 
-  <g aria-label="版本化结构化记录">
+  <g aria-label="结构化数据与 API">
     <rect x="248" y="305" width="356" height="138" rx="10" fill="#e8f1eb" stroke="#2f6f5b" stroke-width="2"/>
-    <text class="node-title" x="426" y="344" text-anchor="middle">版本化结构化记录</text>
-    <text class="node-body" x="426" y="380" text-anchor="middle">Assembly 来源分类群 · EVE 位点</text>
-    <text class="small" x="426" y="411" text-anchor="middle">提供 ID、计数和数据版本</text>
+    <text class="node-title" x="426" y="344" text-anchor="middle">结构化数据与 API</text>
+    <text class="node-body" x="426" y="380" text-anchor="middle">数据库 · 知识图谱 · 外部服务</text>
+    <text class="small" x="426" y="411" text-anchor="middle">返回记录、字段和版本</text>
   </g>
 
-  <g aria-label="固定文献语料">
+  <g aria-label="文档与知识库">
     <rect x="646" y="305" width="442" height="138" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
-    <text class="node-title" x="867" y="344" text-anchor="middle">固定文献语料</text>
-    <text class="node-body" x="867" y="380" text-anchor="middle">全文检索 · 语义检索</text>
-    <text class="small" x="867" y="411" text-anchor="middle">提供证据片段、出处和适用范围</text>
+    <text class="node-title" x="867" y="344" text-anchor="middle">文档与知识库</text>
+    <text class="node-body" x="867" y="380" text-anchor="middle">论文 · PDF · 网页 · 内部资料</text>
+    <text class="small" x="867" y="411" text-anchor="middle">返回证据片段、出处和适用范围</text>
   </g>
 
   <path class="arrow" d="M 426 443 V 476 H 485 V 500"/>
@@ -88,11 +88,11 @@
     <text class="small" x="169" y="598" text-anchor="middle">输出字段与措辞</text>
   </g>
 
-  <g aria-label="证据包">
+  <g aria-label="检索上下文">
     <rect x="310" y="500" width="350" height="126" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
-    <text class="node-title" x="485" y="538" text-anchor="middle">证据包（ContextPack）</text>
-    <text class="node-body" x="485" y="570" text-anchor="middle">StructuredResult · RetrievedChunks</text>
-    <text class="small" x="485" y="598" text-anchor="middle">来源 · 限制 · 数据与语料版本</text>
+    <text class="node-title" x="485" y="538" text-anchor="middle">检索上下文</text>
+    <text class="node-body" x="485" y="570" text-anchor="middle">相关记录 · 证据片段</text>
+    <text class="small" x="485" y="598" text-anchor="middle">来源 · 适用范围 · 版本</text>
   </g>
 
   <path class="arrow" d="M 169 626 V 642 H 776 V 634"/>
@@ -102,16 +102,16 @@
     <rect x="693" y="500" width="166" height="126" rx="10" fill="#ffffff" stroke="#654a38" stroke-width="2"/>
     <text class="small" x="776" y="523" text-anchor="middle">RAG 的生成阶段</text>
     <text class="node-title" x="776" y="551" text-anchor="middle">LLM</text>
-    <text class="node-body" x="776" y="578" text-anchor="middle">整理与解释</text>
-    <text class="small" x="776" y="604" text-anchor="middle">不补写数字和 ID</text>
+    <text class="node-body" x="776" y="578" text-anchor="middle">整理与生成</text>
+    <text class="small" x="776" y="604" text-anchor="middle">不补写缺失事实</text>
   </g>
   <path class="arrow" d="M 859 563 H 899"/>
 
-  <g aria-label="程序校验">
+  <g aria-label="结果检查">
     <rect x="900" y="500" width="188" height="126" rx="10" fill="#f0efeb" stroke="#66706c" stroke-width="2"/>
-    <text class="node-title" x="994" y="538" text-anchor="middle">程序校验</text>
-    <text class="node-body" x="994" y="570" text-anchor="middle">数字 · ID · 版本</text>
-    <text class="small" x="994" y="598" text-anchor="middle">引用 · 空结果</text>
+    <text class="node-title" x="994" y="538" text-anchor="middle">结果检查</text>
+    <text class="node-body" x="994" y="570" text-anchor="middle">格式 · 引用 · 一致性</text>
+    <text class="small" x="994" y="598" text-anchor="middle">失败状态</text>
   </g>
 
   <path class="branch" d="M 994 626 V 668"/>
@@ -124,14 +124,14 @@
   <g aria-label="失败处理">
     <rect x="64" y="705" width="210" height="94" rx="10" fill="#f2dfdc" stroke="#a8443f" stroke-width="2"/>
     <text class="node-title failure-text" x="169" y="742" text-anchor="middle">明确停止</text>
-    <text class="small" x="169" y="772" text-anchor="middle">并报告失败原因</text>
+    <text class="small" x="169" y="772" text-anchor="middle">报告原因与缺失信息</text>
   </g>
 
   <g aria-label="结构化回答">
     <rect x="310" y="705" width="778" height="94" rx="10" fill="#ffffff" stroke="#2f6f5b" stroke-width="2"/>
-    <text class="output-title" x="344" y="743" fill="#2f6f5b">结构化回答与证据边界</text>
-    <text class="node-body" x="344" y="773">表格 · 记录来源 · 数据版本 · 限制说明</text>
-    <text class="node-body" x="1050" y="743" text-anchor="end">“当前数据集中没有记录”</text>
-    <text class="small" x="1050" y="773" text-anchor="end">≠ “生物学上不存在”</text>
+    <text class="output-title" x="344" y="743" fill="#2f6f5b">有依据的回答</text>
+    <text class="node-body" x="344" y="773">答案 · 来源 · 限制说明</text>
+    <text class="node-body" x="1050" y="743" text-anchor="end">“没有检索到匹配证据”</text>
+    <text class="small" x="1050" y="773" text-anchor="end">≠ “该事实不存在”</text>
   </g>
 </svg>

@@ -22,11 +22,11 @@ title-block-style: none
 </div>
 <div class="coverage-entry">
 <a class="coverage-record-link" href="./posts/prompt-rag-skill-en/" data-i18n-href="coverage.promptRagSkill.href">
-<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.promptRagSkill">Prompts, RAG, and skills: what’s the difference? An EndoViHo-RAG design example.</h2></div>
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.promptRagSkill">Prompts, RAG, and skills: what’s the difference?</h2></div>
 <b aria-hidden="true">→</b>
 </a>
 <div class="coverage-source-line">
-<span data-i18n="coverage.source.promptRagSkill">EndoViHo-RAG · Design note</span>
+<span data-i18n="coverage.source.promptRagSkill">AI systems · Concept note</span>
 <a class="coverage-item-source" href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer" aria-label="RAG paper (opens in a new tab)" data-i18n-aria-label="coverage.ragPaper.aria"><span data-i18n="coverage.ragPaper">RAG paper</span> <span aria-hidden="true">↗</span></a>
 </div>
 </div>
