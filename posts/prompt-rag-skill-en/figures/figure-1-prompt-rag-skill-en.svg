@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="720" viewBox="0 0 1152 720" lang="en" role="img" aria-labelledby="title desc">
+  <title id="title">What Prompt, RAG, and Skill each solve</title>
+  <desc id="desc">Three lanes show that a Prompt constrains one model call, RAG retrieves and organizes external evidence to support generation, and a Skill organizes a reusable task workflow. They can work together, but they are not equivalent.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif; fill: #222826; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #66706c; }
+      .lane-label { font-size: 26px; font-weight: 700; }
+      .scope { font-size: 16px; font-weight: 700; letter-spacing: 0.04em; }
+      .question { font-size: 22px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .boundary { font-size: 16px; font-weight: 700; }
+      .boundary-body { font-size: 15px; }
+      .footer { font-size: 18px; font-weight: 700; }
+      .on-dark { fill: #ffffff; }
+      .arrow { fill: none; stroke: #8b918e; stroke-width: 2.4; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b918e"/>
+    </marker>
+  </defs>
+
+  <rect width="1152" height="720" fill="#faf9f6"/>
+  <text class="title" x="64" y="58">Prompt, RAG, and Skill: three questions, three layers</text>
+  <text class="subtitle" x="64" y="91">All three involve large language models, but they operate at different scopes.</text>
+
+  <g aria-label="Prompt lane">
+    <rect x="64" y="126" width="1024" height="142" rx="12" fill="#dce9f0" stroke="#356a8a" stroke-width="2"/>
+    <rect x="64" y="126" width="245" height="142" rx="12" fill="#356a8a"/>
+    <text class="scope on-dark" x="92" y="164">ONE MODEL CALL</text>
+    <text class="lane-label on-dark" x="92" y="205">Prompt</text>
+    <text class="body on-dark" x="92" y="237">Working instructions</text>
+
+    <text class="question" x="345" y="172">How should the model work this time?</text>
+    <text class="body" x="345" y="208">Task · supplied context · evidence limits · output format</text>
+    <rect x="827" y="157" width="225" height="82" rx="8" fill="#faf9f6" stroke="#356a8a" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="181" text-anchor="middle" fill="#356a8a">LIMIT</text>
+    <text class="boundary-body" x="940" y="207" text-anchor="middle">
+      <tspan x="940" dy="0">Does not retrieve external</tspan>
+      <tspan x="940" dy="20">facts by itself</tspan>
+    </text>
+  </g>
+
+  <g aria-label="RAG lane">
+    <rect x="64" y="292" width="1024" height="142" rx="12" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
+    <rect x="64" y="292" width="245" height="142" rx="12" fill="#2f6f5b"/>
+    <text class="scope on-dark" x="92" y="330">KNOWLEDGE ACCESS</text>
+    <text class="lane-label on-dark" x="92" y="371">RAG</text>
+    <text class="body on-dark" x="92" y="403">External evidence</text>
+
+    <text class="question" x="345" y="338">Where does the evidence come from?</text>
+    <text class="body" x="345" y="378">Retrieve sources → organize evidence → ground generation</text>
+    <rect x="827" y="323" width="225" height="82" rx="8" fill="#faf9f6" stroke="#2f6f5b" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="347" text-anchor="middle" fill="#2f6f5b">LIMIT</text>
+    <text class="boundary-body" x="940" y="373" text-anchor="middle">
+      <tspan x="940" dy="0">Does not guarantee complete</tspan>
+      <tspan x="940" dy="20">retrieval or a correct answer</tspan>
+    </text>
+  </g>
+
+  <g aria-label="Skill lane">
+    <rect x="64" y="458" width="1024" height="142" rx="12" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
+    <rect x="64" y="458" width="245" height="142" rx="12" fill="#654a38"/>
+    <text class="scope on-dark" x="92" y="496">REUSABLE WORKFLOW</text>
+    <text class="lane-label on-dark" x="92" y="537">Skill</text>
+    <text class="body on-dark" x="92" y="569">Workflow + resources</text>
+
+    <text class="question" x="345" y="504">How can a class of tasks be done reliably?</text>
+    <text class="body" x="345" y="540">Instructions · tools · retrieval · checks · failure handling</text>
+    <rect x="827" y="489" width="225" height="82" rx="8" fill="#faf9f6" stroke="#7d4b00" stroke-width="1.6"/>
+    <text class="boundary" x="940" y="513" text-anchor="middle" fill="#7d4b00">LIMIT</text>
+    <text class="boundary-body" x="940" y="539" text-anchor="middle">
+      <tspan x="940" dy="0">Definitions and execution</tspan>
+      <tspan x="940" dy="20">vary across platforms</tspan>
+    </text>
+  </g>
+
+  <path d="M 64 654 H 1088" stroke="#c8ccc8" stroke-width="1.5"/>
+  <text class="footer" x="576" y="687" text-anchor="middle">They can work together, but they are not equivalent—and no fixed containment hierarchy always applies.</text>
+</svg>

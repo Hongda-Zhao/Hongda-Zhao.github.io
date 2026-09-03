@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="720" viewBox="0 0 1152 720" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="720" viewBox="0 0 1152 720" lang="zh-CN" role="img" aria-labelledby="title desc">
   <title id="title">Prompt、RAG 和 Skill 分别解决的问题</title>
   <desc id="desc">三条泳道分别说明 Prompt 约束一次模型调用，RAG 取回并组织外部证据以增强模型生成，Skill 组织可重复任务流程。三者可以组合，但不互相等同。</desc>
   <defs>

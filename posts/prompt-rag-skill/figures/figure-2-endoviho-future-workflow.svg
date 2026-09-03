@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="830" viewBox="0 0 1152 830" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="830" viewBox="0 0 1152 830" lang="zh-CN" role="img" aria-labelledby="title desc">
   <title id="title">EndoViHo-RAG 的未来设计流程</title>
   <desc id="desc">这是一张非现有功能的未来设计图。Skill 编排用户问题、名称标准化、路线选择、检索、生成和程序校验；Retrieval 是 RAG 的检索阶段，从版本化结构化记录与固定文献语料取回证据，模型随后使用证据生成回答；Prompt 约束模型调用；程序校验数字、标识符、版本和引用。</desc>
   <defs>
@@ -91,8 +91,8 @@
   <g aria-label="证据包">
     <rect x="310" y="500" width="350" height="126" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
     <text class="node-title" x="485" y="538" text-anchor="middle">证据包（ContextPack）</text>
-    <text class="node-body" x="485" y="570" text-anchor="middle">去重后的记录 · 来源 · 适用范围</text>
-    <text class="small" x="485" y="598" text-anchor="middle">保留数据与文献版本</text>
+    <text class="node-body" x="485" y="570" text-anchor="middle">StructuredResult · RetrievedChunks</text>
+    <text class="small" x="485" y="598" text-anchor="middle">来源 · 限制 · 数据与语料版本</text>
   </g>
 
   <path class="arrow" d="M 169 626 V 642 H 776 V 634"/>

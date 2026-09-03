@@ -1,16 +1,45 @@
 ---
 title: "Prompt、RAG 和 Skill 有什么区别？——以 EndoViHo-RAG 为例"
-description-meta: "从一次模型调用、外部证据检索和可复用工作流三个层面，理解 Prompt、RAG 与 Skill 的区别。"
+description-meta: "以 EndoViHo-RAG 为例，从模型调用、外部证据与可复用工作流三个层面，区分 Prompt、RAG 和 Skill。"
+open-graph:
+  description: "以 EndoViHo-RAG 为例，从模型调用、外部证据与可复用工作流三个层面，区分 Prompt、RAG 和 Skill。"
+  image: figures/cover-prompt-rag-skill.png
+  image-alt: "Prompt、RAG 和 Skill 的职责对照图：Prompt 规定一次调用，RAG 引入外部证据，Skill 组织可复用工作流。"
+twitter-card:
+  description: "以 EndoViHo-RAG 为例，从模型调用、外部证据与可复用工作流三个层面，区分 Prompt、RAG 和 Skill。"
+  image: figures/cover-prompt-rag-skill.png
+  image-alt: "Prompt、RAG 和 Skill 的职责对照图：Prompt 规定一次调用，RAG 引入外部证据，Skill 组织可复用工作流。"
 lang: zh-CN
-draft: true
+image: figures/cover-prompt-rag-skill.png
+image-alt: "Prompt、RAG 和 Skill 的职责对照图：Prompt 规定一次调用，RAG 引入外部证据，Skill 组织可复用工作流。"
+canonical-url: true
+body-classes: fixed-language-content
+draft: false
 toc: true
 toc-location: right
 anchor-sections: true
 code-copy: true
+format:
+  html:
+    include-in-header: ../../includes/prompt-rag-skill-alternates.html
 ---
 
 <style>
-#quarto-document-content .article-figure { margin: 1.8rem 0; }
+#quarto-document-content #title-block-header {
+  padding-bottom: clamp(2.2rem, 5vw, 3.5rem);
+}
+#quarto-document-content #title-block-header .quarto-title .title {
+  display: block !important;
+  max-width: 52rem;
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+}
+#quarto-document-content #title-block-header .quarto-title-meta {
+  display: none;
+}
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-figure { margin: 1.6rem 0; }
 #quarto-document-content .figure-scroll {
   max-width: 100%;
   overflow-x: auto;
@@ -34,12 +63,19 @@ code-copy: true
     width: 900px;
     max-width: none;
   }
+  #quarto-document-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 </style>
 
-EndoViHo-RAG 是我正在搭建的一个面向内源性病毒元件（endogenous viral element，EVE）的可审计 Hybrid RAG。它希望把基因组组装（Assembly）层面或者是物种层面的内源化病毒的结构化记录与文献证据放进同一套查询流程中。
+EndoViHo-RAG 是我正在搭建的一个面向内源性病毒元件（endogenous viral element，EVE）的可审计 Hybrid RAG。它希望把仅在单个基因组组装（Assembly）范围内定义的 EVE 记录、Assembly 来源分类指派与文献证据放进同一套查询流程中。
 
-最近学习设计AI工具时反复遇到Prompt、RAG 和 Skill 这三个词。它们经常被放在一起讨论，但真正开始搭系统后，在这里我打算进行一下讨论。
+最近学习设计 AI 工具时，我反复遇到 Prompt、RAG 和 Skill 这三个词。它们经常被放在一起讨论，但真正开始搭系统后，我发现有必要把它们分开想清楚。
 
 这三个词听起来都像是在描述“怎样让大语言模型完成任务”，也很容易被混在一起。对我来说，最有用的区分是看它们分别回答什么问题：
 
@@ -62,9 +98,11 @@ Prompt 是模型在一次调用中收到的任务说明和上下文。平时我�
 
 例如：
 
+以下仍是面向未来系统的示意 Prompt，并非当前可运行的功能。
+
 ```text
 只根据系统返回的记录回答问题。
-列出 Assembly 来源分类群、Assembly 编号、当前数据版本纳入的去重后 EVE 位点（loci）数量和支持证据。
+列出 Assembly 来源分类群、Assembly 编号、当前 DatasetRelease 明确纳入的 assembly-local EVE 位点（loci）数量和支持证据。
 如果没有检索到记录，请写“当前数据集中没有记录”，不要写成“生物学上不存在”。
 ```
 
@@ -94,7 +132,7 @@ RAG 是 [Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401)，通
 生成带有证据边界的回答
 ```
 
-这里的检索不一定依赖向量数据库。它可以来自 SQL、全文检索、知识图谱、网页、API、实验室内部数据，也可以把几种方式组合起来。
+这里的检索不一定依赖向量数据库。它可以来自 SQL、全文检索、知识图谱、网页、API、实验室内部数据，也可以把几种方式组合起来。这里列举的是 RAG 的一般可能性；EndoViHo-RAG 当前规划使用固定文献语料，不进行实时网页搜索。
 
 需要注意的是，“接入数据库”并不自动等于 RAG。如果系统执行 SQL 后直接返回一张表，那是数据库查询；当取回的记录被组织成上下文，并用于增强后续的自然语言生成时，才符合 RAG 的核心含义。
 
@@ -116,7 +154,9 @@ Skill 不是像 RAG 那样有相对明确来源的学术方法，各个平台对
 
 因此，Skill 更像一套供 Agent 调用或遵循的任务流程及配套资源，而不是一句更长的 Prompt。
 
-例如，将来可以为 EndoViHo-RAG 设计一个“查询 EVE 记录与 Assembly 来源分类群之间关系”的 Skill。它可以先把用户输入映射到受控的分类名称，再选择结构化查询、文献检索或混合路线，随后完成去重、统计、结果校验和表格输出。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。
+例如，将来可以为 EndoViHo-RAG 设计一个“查询 DatasetRelease 中 EVE loci 及其 Assembly 来源分类指派”的 Skill。它可以先把用户输入映射到受控的分类名称，再选择结构化查询、文献检索或混合路线，随后按照已确认的位点身份规则汇总、校验结果并输出表格。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。
+
+截至 Milestone 0，EndoViHo-RAG 还没有完成领域数据表、数据导入流程、检索路线或可调用的 Skill。位点身份、去重和 DatasetRelease 纳入规则也尚未冻结。因此，未来流程不能把结果写成“唯一病毒数量”；只有等这些规则和记录具备后，才能报告当前 DatasetRelease 明确纳入的 assembly-local EVE loci。
 
 一个 Skill 不一定要使用 RAG，也不一定需要复杂程序。翻译固定格式的文字可能只需要 Prompt；而一项需要反复执行、调用多个工具并检查结果的任务，才更适合封装成 Skill。
 
@@ -137,18 +177,18 @@ Prompt、RAG 和 Skill 不是三个互相替代的选项。它们可以单独出
 
 ## 用 EndoViHo-RAG 的一个问题来拆解
 
-EndoViHo-RAG 目前仍处于早期开发阶段，领域数据、检索路线和可调用的 Skill 尚未完成。下面不是现有功能演示，而是一个用于说明职责分工的设计例子。
+EndoViHo-RAG 目前仍处于 Milestone 0，领域数据、检索路线和可调用的 Skill 尚未完成。下面不是现有功能演示，而是一个用于说明职责分工的设计例子。
 
 假设未来已经导入并发布了相应数据，用户提出：
 
-> 在当前发布的数据中，哪些来源于双壳类（Bivalvia）的基因组 Assembly 收录了与 Orthopolintovirales 相关的 EVE 位点？每个 Assembly 有多少个去重后的位点？
+> 在当前发布的数据中，哪些来源于双壳类（Bivalvia）的基因组 Assembly 收录了与 Orthopolintovirales 相关的 EVE 位点？当前 DatasetRelease 为每个 Assembly 明确纳入了多少个 assembly-local 位点？
 
 这里使用“数据中收录了 EVE 位点”，而不是直接说“发现了病毒”。Assembly 的来源分类群也不自动等于已经证明的感染宿主。这些措辞本身就是证据边界的一部分。
 
 在这个问题中，**Prompt** 负责规定回答规则，例如：
 
 - 只根据系统返回的记录作答；
-- 输出 Assembly 来源分类群、Assembly 编号、去重后的 EVE 位点数量和证据来源；
+- 输出 Assembly 来源分类群、Assembly 编号、当前 DatasetRelease 明确纳入的 assembly-local EVE 位点数量和证据来源；
 - 保留数据集与文献版本；
 - 不把“没有记录”解释为“生物学上不存在”。
 
@@ -165,7 +205,7 @@ EndoViHo-RAG 目前仍处于早期开发阶段，领域数据、检索路线和�
 → 标准化分类名称
 → 选择结构化、文献或混合检索路线
 → 执行查询
-→ 去重和汇总
+→ 按已确认的位点身份规则汇总
 → 核对数字、ID 与来源
 → 生成表格
 → 输出解释和限制
@@ -173,7 +213,7 @@ EndoViHo-RAG 目前仍处于早期开发阶段，领域数据、检索路线和�
 
 这个例子也说明，科研 RAG 的关键不只是“能回答”。更重要的是：答案中的每个数字和判断能不能回到数据版本、记录和文献，检索失败与真正的空结果能不能被区分。
 
-## 三个容易混淆的边界
+## 四个容易混淆的边界
 
 - **很长的 Prompt 仍然只是 Prompt。** 写入背景知识，不等于系统会在运行时检索外部证据。
 - **连上数据库也不一定是 RAG。** 查询结果只有参与后续生成，才构成完整的检索增强生成过程。
