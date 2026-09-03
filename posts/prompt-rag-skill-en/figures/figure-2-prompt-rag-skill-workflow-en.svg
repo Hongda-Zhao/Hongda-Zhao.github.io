@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="830" viewBox="0 0 1152 830" lang="en" role="img" aria-labelledby="title desc">
+  <title id="title">How Prompts, RAG, and Skills work together</title>
+  <desc id="desc">This diagram shows one way Prompts, RAG, and Skills can work together. A Skill can orchestrate task interpretation, source selection, retrieval, generation, result checks, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases, while a Prompt guides one model call.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif; fill: #222826; }
+      .title { font-size: 31px; font-weight: 700; }
+      .subtitle { font-size: 17px; fill: #66706c; }
+      .range { font-size: 17px; font-weight: 700; fill: #654a38; }
+      .node-title { font-size: 20px; font-weight: 700; }
+      .node-body { font-size: 16px; }
+      .small { font-size: 15px; fill: #4f5a55; }
+      .tiny { font-size: 14px; fill: #4f5a55; }
+      .failure-text { fill: #a8443f; }
+      .label { font-size: 16px; font-weight: 700; }
+      .badge { font-size: 13px; font-weight: 700; letter-spacing: 0.01em; }
+      .output-title { font-size: 20px; font-weight: 700; }
+      .arrow { fill: none; stroke: #8b918e; stroke-width: 2.4; marker-end: url(#arrow); }
+      .branch { fill: none; stroke: #8b918e; stroke-width: 2.2; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b918e"/>
+    </marker>
+  </defs>
+
+  <rect width="1152" height="830" fill="#faf9f6"/>
+  <text class="title" x="64" y="54">How Prompts, RAG, and Skills Work Together</text>
+  <text class="subtitle" x="64" y="88">A Skill organizes a reusable workflow, RAG brings in evidence, and a Prompt guides one model call.</text>
+  <rect x="765" y="25" width="323" height="42" rx="7" fill="#f2dfdc" stroke="#a8443f" stroke-width="1.6"/>
+  <text class="badge" x="926.5" y="52" text-anchor="middle" fill="#a8443f">ONE COMBINATION · NOT A FIXED PATTERN</text>
+
+  <path d="M 64 132 V 119 H 1088 V 132" fill="none" stroke="#654a38" stroke-width="2"/>
+  <text class="range" x="576" y="113" text-anchor="middle">Skill (optional workflow layer) | orchestrates tasks, tools, and failure handling</text>
+
+  <g aria-label="User task">
+    <rect x="64" y="151" width="226" height="94" rx="10" fill="#ffffff" stroke="#654a38" stroke-width="2"/>
+    <text class="node-title" x="177" y="184" text-anchor="middle">User task</text>
+    <text class="small" x="177" y="211" text-anchor="middle">
+      <tspan x="177" dy="0">Natural-language request</tspan>
+      <tspan x="177" dy="20">or structured input</tspan>
+    </text>
+  </g>
+  <path class="arrow" d="M 290 198 H 341"/>
+
+  <g aria-label="Task interpretation">
+    <rect x="342" y="151" width="226" height="94" rx="10" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
+    <text class="node-title" x="455" y="184" text-anchor="middle">Task interpretation</text>
+    <text class="small" x="455" y="211" text-anchor="middle">
+      <tspan x="455" dy="0">Identify the goal</tspan>
+      <tspan x="455" dy="20">and required inputs</tspan>
+    </text>
+  </g>
+  <path class="arrow" d="M 568 198 H 619"/>
+
+  <g aria-label="Select knowledge sources">
+    <rect x="620" y="151" width="292" height="94" rx="10" fill="#f4e7cd" stroke="#7d4b00" stroke-width="2"/>
+    <text class="node-title" x="766" y="181" text-anchor="middle">Select knowledge sources</text>
+    <text class="node-body" x="766" y="211" text-anchor="middle">structured · documents · hybrid</text>
+    <text class="small" x="766" y="235" text-anchor="middle">Stop clearly when unsupported</text>
+  </g>
+
+  <path class="arrow" d="M 766 245 V 278 H 426 V 305"/>
+  <path class="arrow" d="M 766 278 H 867 V 305"/>
+  <circle cx="766" cy="278" r="4" fill="#8b918e"/>
+
+  <g aria-label="RAG retrieval stage">
+    <rect x="64" y="305" width="142" height="138" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
+    <text class="label" x="135" y="341" text-anchor="middle" fill="#2f6f5b">Retrieval</text>
+    <text class="tiny" x="135" y="371" text-anchor="middle">RAG retrieval stage</text>
+    <text class="tiny" x="135" y="391" text-anchor="middle">Retrieve</text>
+    <text class="tiny" x="135" y="410" text-anchor="middle">and organize</text>
+    <text class="tiny" x="135" y="429" text-anchor="middle">external evidence</text>
+  </g>
+
+  <g aria-label="Structured data and APIs">
+    <rect x="248" y="305" width="356" height="138" rx="10" fill="#e8f1eb" stroke="#2f6f5b" stroke-width="2"/>
+    <text class="node-title" x="426" y="344" text-anchor="middle">Structured data and APIs</text>
+    <text class="node-body" x="426" y="380" text-anchor="middle">Databases · knowledge graphs · services</text>
+    <text class="small" x="426" y="411" text-anchor="middle">Return records, fields, and versions</text>
+  </g>
+
+  <g aria-label="Documents and knowledge bases">
+    <rect x="646" y="305" width="442" height="138" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
+    <text class="node-title" x="867" y="344" text-anchor="middle">Documents and knowledge bases</text>
+    <text class="node-body" x="867" y="380" text-anchor="middle">Papers · PDFs · web pages · internal sources</text>
+    <text class="small" x="867" y="411" text-anchor="middle">Return passages, provenance, and scope</text>
+  </g>
+
+  <path class="arrow" d="M 426 443 V 476 H 485 V 500"/>
+  <path class="arrow" d="M 867 443 V 476 H 485 V 500"/>
+
+  <g aria-label="Prompt">
+    <rect x="64" y="500" width="210" height="126" rx="10" fill="#dce9f0" stroke="#356a8a" stroke-width="2"/>
+    <text class="node-title" x="169" y="538" text-anchor="middle">Prompt</text>
+    <text class="node-body" x="169" y="570" text-anchor="middle">Task · evidence limits</text>
+    <text class="small" x="169" y="598" text-anchor="middle">Output fields and wording</text>
+  </g>
+
+  <g aria-label="Retrieved context">
+    <rect x="310" y="500" width="350" height="126" rx="10" fill="#dfece5" stroke="#2f6f5b" stroke-width="2"/>
+    <text class="node-title" x="485" y="538" text-anchor="middle">Retrieved context</text>
+    <text class="node-body" x="485" y="570" text-anchor="middle">Records · evidence passages</text>
+    <text class="tiny" x="485" y="598" text-anchor="middle">Sources · scope · versions</text>
+  </g>
+
+  <path class="arrow" d="M 169 626 V 642 H 776 V 634"/>
+  <path class="arrow" d="M 660 563 H 692"/>
+
+  <g aria-label="RAG generation stage">
+    <rect x="693" y="500" width="166" height="126" rx="10" fill="#ffffff" stroke="#654a38" stroke-width="2"/>
+    <text class="tiny" x="776" y="522" text-anchor="middle">RAG generation stage</text>
+    <text class="node-title" x="776" y="549" text-anchor="middle">LLM</text>
+    <text class="small" x="776" y="575" text-anchor="middle">Organize and generate</text>
+    <text class="tiny" x="776" y="597" text-anchor="middle">
+      <tspan x="776" dy="0">Do not fill in</tspan>
+      <tspan x="776" dy="18">missing facts</tspan>
+    </text>
+  </g>
+  <path class="arrow" d="M 859 563 H 899"/>
+
+  <g aria-label="Result checks">
+    <rect x="900" y="500" width="188" height="126" rx="10" fill="#f0efeb" stroke="#66706c" stroke-width="2"/>
+    <text class="node-title" x="994" y="531" text-anchor="middle">
+      <tspan x="994" dy="0">Result</tspan>
+      <tspan x="994" dy="23">checks</tspan>
+    </text>
+    <text class="small" x="994" y="580" text-anchor="middle">Format · citations</text>
+    <text class="tiny" x="994" y="605" text-anchor="middle">Consistency · failure states</text>
+  </g>
+
+  <path class="branch" d="M 994 626 V 668"/>
+  <circle cx="994" cy="668" r="4" fill="#8b918e"/>
+  <path class="arrow" d="M 994 668 H 699 V 704"/>
+  <path class="arrow" d="M 994 668 H 169 V 704"/>
+  <text class="small" x="720" y="695">Passed</text>
+  <text class="tiny failure-text" x="169" y="695" text-anchor="middle">Retrieval or validation failed</text>
+
+  <g aria-label="Failure handling">
+    <rect x="64" y="705" width="210" height="94" rx="10" fill="#f2dfdc" stroke="#a8443f" stroke-width="2"/>
+    <text class="node-title failure-text" x="169" y="742" text-anchor="middle">Stop clearly</text>
+    <text class="tiny" x="169" y="772" text-anchor="middle">Report the cause and missing inputs</text>
+  </g>
+
+  <g aria-label="Structured answer">
+    <rect x="310" y="705" width="778" height="94" rx="10" fill="#ffffff" stroke="#2f6f5b" stroke-width="2"/>
+    <text class="output-title" x="344" y="743" fill="#2f6f5b">Grounded response</text>
+    <text class="node-body" x="344" y="773">Answer · sources · limitations</text>
+    <text class="node-body" x="1050" y="743" text-anchor="end">“No matching evidence was retrieved”</text>
+    <text class="small" x="1050" y="773" text-anchor="end">≠ “The fact does not exist”</text>
+  </g>
+</svg>

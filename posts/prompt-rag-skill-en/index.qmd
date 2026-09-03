@@ -1,0 +1,224 @@
+---
+title: "Prompts, RAG, and Skills: What’s the Difference?"
+description-meta: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
+open-graph:
+  description: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
+  image: figures/cover-prompt-rag-skill-en.png
+  image-alt: "A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow."
+twitter-card:
+  description: "A practical comparison of three layers in an AI system: Prompts guide individual model calls, RAG supplies external evidence, and Skills package reusable workflows."
+  image: figures/cover-prompt-rag-skill-en.png
+  image-alt: "A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow."
+lang: en
+image: figures/cover-prompt-rag-skill-en.png
+image-alt: "A comparison of Prompts, RAG, and Skills: a Prompt guides one model call, RAG brings in external evidence, and a Skill organizes a reusable workflow."
+canonical-url: true
+body-classes: fixed-language-content
+draft: false
+toc: true
+toc-location: right
+anchor-sections: true
+code-copy: true
+format:
+  html:
+    include-in-header: ../../includes/prompt-rag-skill-alternates.html
+---
+
+<style>
+#quarto-document-content #title-block-header {
+  padding-bottom: clamp(2.2rem, 5vw, 3.5rem);
+}
+#quarto-document-content #title-block-header .quarto-title .title {
+  display: block !important;
+  max-width: 52rem;
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+}
+#quarto-document-content #title-block-header .quarto-title-meta {
+  display: none;
+}
+body.fixed-language-content .quarto-secondary-nav-title {
+  display: none;
+}
+#quarto-document-content .article-figure { margin: 1.6rem 0; }
+#quarto-document-content .figure-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+#quarto-document-content .figure-zoom { display: block; }
+#quarto-document-content .figure-zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#quarto-document-content .article-figure figcaption {
+  margin-top: 0.6rem;
+  color: #66706c;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  #quarto-document-content .figure-scroll img {
+    width: 900px;
+    max-width: none;
+  }
+  #quarto-document-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+</style>
+
+While working on EndoViHo-RAG, I kept encountering three terms: Prompt, RAG, and Skill. They are often discussed together, but once I began designing an actual AI system, I realized that they solve three different problems.
+
+All three can be described loosely as ways to help a large language model complete a task. The distinction that has been most useful to me is the question each one answers:
+
+- **Prompt:** What should the model do in this call, what may it rely on, and how should it express the answer?
+- **RAG:** Where should the system retrieve question-relevant external evidence before answering?
+- **Skill:** How should the instructions, tools, and checks for a class of tasks be organized into a reusable workflow?
+
+This is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But I have found this distinction practical when thinking about scientific AI systems.
+
+<figure class="article-figure">
+<div class="figure-scroll">
+<a class="figure-zoom" href="figures/figure-1-prompt-rag-skill-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 1 in a new tab"><img src="figures/figure-1-prompt-rag-skill-en.svg" width="1152" height="720" alt="A three-row comparison of Prompts, RAG, and Skills. A Prompt operates at the level of one model call and specifies the task, context, and output. RAG operates at the level of knowledge access and generation, retrieving and organizing external evidence before generation. A Skill operates at the level of a reusable task workflow and coordinates instructions, tools, retrieval, validation, and failure handling. The three can work together but are not equivalent." loading="lazy" decoding="async"></a>
+</div>
+<figcaption>Figure 1 | The working distinction I use in this article. A Prompt guides one call, RAG determines how external evidence enters the generation context, and a Skill makes a class of tasks reusable. This is not a universal industry standard.</figcaption>
+</figure>
+
+## Prompt: instructions for this model call
+
+A Prompt is the task description and context supplied to a model for a particular call. When people say that they are “writing a Prompt,” they usually mean writing this set of instructions.
+
+For example, a Prompt for a research-data question might say:
+
+```text
+Use only the records supplied by the system.
+For each result, list its name, identifier, and supporting source.
+If retrieval returns no records, write “No records were found in the current dataset.”
+Do not rewrite that result as “The item does not exist.”
+```
+
+This Prompt defines the task, the evidence boundary, the output fields, and even the wording for an empty result. A Prompt can do more than control tone: it can constrain scope, request a format, and tell the model how to handle uncertainty.
+
+Its boundary is equally important. A Prompt can carry data that has already been supplied to the model, but adding the words “query accurately” does not give the model access to a database.
+
+Likewise, “do not guess” is an important instruction, but it is not a technical guarantee. Permissions, schema constraints, numerical checks, and fail-closed behavior still have to be enforced by software.
+
+I therefore think of a Prompt as the **working instructions for one model call**, not as a source of knowledge.
+
+## RAG: retrieve evidence before the model answers
+
+RAG stands for [Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401). Its defining idea is not a particular kind of database. It is a system pattern: retrieve external material relevant to the question, put that material into the model’s context, and then generate an answer grounded in what was retrieved.
+
+At its simplest, the flow looks like this:
+
+```text
+User question
+   ↓
+Retrieve records, literature, or other sources
+   ↓
+Select and organize relevant evidence
+   ↓
+Place that evidence in the model context
+   ↓
+Generate an answer with explicit evidence boundaries
+```
+
+Retrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, a curated document collection, web pages, APIs, laboratory data, or a combination of these.
+
+Connecting a database is not automatically the same thing as building RAG. If a system runs SQL and returns a table directly, it is performing a database query. It becomes retrieval-augmented generation when the retrieved records are assembled into context and used to ground a subsequent natural-language response.
+
+A well-designed RAG system also separates retrieval from generation. Stable identifiers, numerical values, and source metadata should remain under programmatic control. The model should organize and explain retrieved evidence rather than invent missing facts.
+
+RAG is not “fact insurance.” Retrieval can miss relevant material, rank the wrong material, or surface a flawed source. Its value is that a reader can trace an answer back to particular records and passages and inspect them again.
+
+## Skill: make a class of tasks reusable
+
+Skill is not an academic method with one established definition in the way that RAG is. Different agent platforms place different things inside a Skill and execute them in different ways.
+
+In this article, I use Skill to mean a **reusable task package** in an AI-agent toolchain. It may contain:
+
+- task instructions and Prompts;
+- SQL, Python programs, or API calls;
+- retrieval steps used by RAG;
+- controlled vocabularies, reference material, and input/output schemas;
+- consistency checks, completeness checks, and failure rules.
+
+A Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.
+
+For example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.
+
+A Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill.
+
+## How the three can work together
+
+Prompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.
+
+The diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.
+
+<figure class="article-figure">
+<div class="figure-scroll">
+<a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-workflow-en.svg" width="1152" height="830" alt="One way Prompts, RAG, and Skills can work together. A Skill optionally orchestrates task interpretation, source selection, retrieval, generation, validation, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases and supplies it to the model, while a Prompt defines the task, evidence limits, and output format." loading="lazy" decoding="async"></a>
+</div>
+<figcaption>Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.</figcaption>
+</figure>
+
+The relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all.
+
+## One question, three responsibilities
+
+Suppose a system has access to versioned data and a document collection, and a user asks:
+
+> Which records in the current dataset match condition X, and what evidence supports each result?
+
+The question sounds like a request for a table, but the system still has to define the retrieval scope, field meanings, and evidence limits.
+
+For this question, the **Prompt** would define the answer rules, for example:
+
+- answer only from records returned by the system;
+- report the record name, identifier, relevant value, and supporting source;
+- preserve the dataset and literature versions;
+- never interpret “no record” as “biologically absent.”
+
+**Retrieval / RAG** would provide the evidence needed for the answer. It could:
+
+- retrieve structured records from a versioned database;
+- retrieve supporting passages from the relevant documents;
+- assemble the records, sources, and their applicable scope into context for the model.
+
+A **Skill** could connect the full sequence:
+
+```text
+Interpret the question
+→ Normalize domain terms
+→ Choose a structured, literature, or hybrid retrieval route
+→ Run the query
+→ Deduplicate and summarize the records
+→ Verify numbers, identifiers, versions, and sources
+→ Produce the table
+→ Explain the result and its limitations
+```
+
+The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.
+
+## Four boundaries that are easy to blur
+
+- **A very long Prompt is still a Prompt.** Including background information in it does not mean the system can retrieve external evidence at runtime.
+- **A database connection is not necessarily RAG.** A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.
+- **A saved collection of Prompts is not necessarily a Skill.** For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.
+- **Citations in a RAG answer do not make the answer automatically correct.** Traceability makes errors easier to find and correct; it does not eliminate them.
+
+## How I distinguish them now
+
+| Concept | System layer | Main question it answers | What it cannot guarantee on its own |
+|---|---|---|---|
+| Prompt | One model interaction | What should be done in this call, what may be used, and how should the answer be formatted? | Access to external facts, or enforcement of a written instruction as a hard constraint |
+| RAG | Knowledge-access and generation architecture | Where does the evidence come from, and how does it enter the model context? | Complete retrieval, reliable sources, or a factually correct answer |
+| Skill | Reusable task workflow | How can a class of tasks be carried out consistently? | Cross-platform portability, or a correct conclusion merely because the workflow ran |
+
+If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and depends on several tools, checks, and failure conditions, I package the larger process as a Skill.
