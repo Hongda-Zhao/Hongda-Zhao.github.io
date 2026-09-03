@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -584,7 +584,6 @@ Research notes, technical work, and field observations.
   <li><a href="#skill把一类任务变成可重复调用的流程" id="toc-skill把一类任务变成可重复调用的流程" class="nav-link" data-scroll-target="#skill把一类任务变成可重复调用的流程">Skill：把一类任务变成可重复调用的流程</a></li>
   <li><a href="#三者怎样配合" id="toc-三者怎样配合" class="nav-link" data-scroll-target="#三者怎样配合">三者怎样配合</a></li>
   <li><a href="#用一个科研查询任务来拆解" id="toc-用一个科研查询任务来拆解" class="nav-link" data-scroll-target="#用一个科研查询任务来拆解">用一个科研查询任务来拆解</a></li>
-  <li><a href="#四个容易混淆的边界" id="toc-四个容易混淆的边界" class="nav-link" data-scroll-target="#四个容易混淆的边界">四个容易混淆的边界</a></li>
   <li><a href="#我现在怎样区分它们" id="toc-我现在怎样区分它们" class="nav-link" data-scroll-target="#我现在怎样区分它们">我现在怎样区分它们</a></li>
   </ul>
 </nav>
@@ -708,31 +707,32 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <section id="skill把一类任务变成可重复调用的流程" class="level2">
 <h2 class="anchored" data-anchor-id="skill把一类任务变成可重复调用的流程">Skill：把一类任务变成可重复调用的流程</h2>
 <p>Skill 不是像 RAG 那样有相对明确来源的学术方法，各个平台对它能包含什么、怎样执行，都可能有不同约定。</p>
-<p>本文所说的 Skill，是 AI Agent 工具链中的一个<strong>可复用任务包</strong>。它可以包含：</p>
+<p>本文所说的 Skill，是 AI Agent 工具链中的一个<strong>可复用任务包</strong>。根据任务需要，它可以组合：</p>
 <ul>
-<li>任务说明和 Prompt；</li>
-<li>SQL、Python 程序或 API 调用；</li>
-<li>RAG 所需的检索步骤；</li>
+<li>一个或多个 Prompt；</li>
+<li>数据库查询、API 调用、SQL、Python 程序或其他工具；</li>
+<li>Retrieval / RAG；</li>
 <li>受控词表、参考资料和输入输出格式；</li>
-<li>去重、完整性检查和失败规则。</li>
+<li>去重、完整性检查、结果校验和失败规则。</li>
 </ul>
-<p>因此，Skill 更像一套供 Agent 调用或遵循的任务流程及配套资源，而不是一句更长的 Prompt。</p>
-<p>例如，可以设计一个“查询某类生物学记录及其证据”的 Skill。它可以先把用户输入映射到受控名称，再选择结构化查询、文献检索或混合路线，随后运行相应工具、去重、校验结果并输出表格。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。</p>
-<p>一个 Skill 不一定要使用 RAG，也不一定需要复杂程序。翻译固定格式的文字可能只需要 Prompt；而一项需要反复执行、调用多个工具并检查结果的任务，才更适合封装成 Skill。</p>
+<p>因此，Skill 不只是在告诉模型“怎样回答”，而是在组织完成任务所需的说明、资源、工具和执行规则。工具负责执行具体动作，例如查询数据库、调用 API 或运行程序；Skill 则规定何时调用这些工具、怎样传递结果、如何检查输出，以及失败时怎样停止。</p>
+<p>例如，可以设计一个“查询某类生物学记录及其证据”的 Skill：先标准化用户输入，再调用数据库、API 或文献检索工具，随后运行程序完成去重和汇总，最后校验结果并按照固定格式输出。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。</p>
+<p>一个 Skill 不一定使用 RAG，也不一定需要大语言模型。简单任务可能只有 Prompt；数据整理任务也可能只有程序和校验规则。只有任务需要外部证据时，RAG 才成为其中的一部分。</p>
 </section>
 <section id="三者怎样配合" class="level2">
 <h2 class="anchored" data-anchor-id="三者怎样配合">三者怎样配合</h2>
-<p>Prompt、RAG 和 Skill 不是三个互相替代的选项。它们可以单独出现，也可以在同一套系统中分工合作。</p>
-<p>下面是一种常见的组合方式。它不对应某个特定项目，也不是唯一有效的架构：</p>
+<p>Prompt、RAG 和 Skill 位于不同层面，更像三组可以按任务需要进行组合的能力。</p>
+<p>Prompt 可以单独用于一次模型调用，也可以出现在 RAG 或 Skill 中；RAG 可以作为独立的检索生成系统运行，也可以成为 Skill 的一个环节；Skill 则可以把 Prompt、RAG、数据库、API、程序工具和校验规则组织成完整流程，但并不要求同时包含所有这些组件。</p>
+<p>与其把三者画成一棵固定的包含树，我更倾向于用维恩式关系图表示它们可能出现的组合：</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
-<p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow.svg" target="_blank" rel="noopener" aria-label="在新标签页打开图 2 的完整 SVG"><img src="figures/figure-2-prompt-rag-skill-workflow.svg" width="1152" height="830" alt="Prompt、RAG 与 Skill 的一种协作流程。Skill 作为可选工作流层，组织任务解析、知识来源选择、检索、生成、校验和失败处理；RAG 从结构化数据、API、文档或知识库中检索证据并交给模型；Prompt 规定任务、证据边界和输出格式。" loading="lazy" decoding="async" class="figure-img"></a></p>
+<p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-relationship.svg" target="_blank" rel="noopener" aria-label="在新标签页打开图 2 的完整 SVG"><img src="figures/figure-2-prompt-rag-skill-relationship.svg" width="1152" height="830" alt="维恩式关系图，展示 Prompt、RAG 和 Skill 可以独立或组合。Skill 是可复用任务包，可组织 Prompt、数据库、API、代码等工具、校验和失败处理；RAG 是检索增强生成流程，可调用工具并使用 Prompt 指导基于证据的生成；Prompt 也可独立用于一次模型调用。重叠不表示固定的严格包含关系。" loading="lazy" decoding="async" class="figure-img"></a></p>
 </div>
 <figcaption>
-图 2｜Prompt、RAG 与 Skill 的一种协作方式。Skill 可以负责流程编排与失败处理，RAG 把外部证据带入生成上下文，Prompt 约束当前模型调用；三者可以组合，但并不存在固定的包含关系。
+图 2｜Prompt、RAG 和 Skill 的关系示意。Skill 可以把 Prompt、工具与校验组织成可复用任务包；RAG 可以调用工具完成检索，并用 Prompt 约束基于证据的生成。重叠只表示可能的组合关系，不代表固定包含。
 </figcaption>
 </figure>
-<p>这个关系不能简单画成一棵永远成立的包含树。Prompt 可以独立使用，RAG 可以不被封装成 Skill，Skill 也可以完全不做检索。</p>
+<p>当三者一起使用时，一种常见分工是：Skill 负责编排任务、调用工具并处理失败；RAG 负责取得并组织外部证据；Prompt 负责告诉模型怎样使用这些证据完成当前回答。数据库查询、程序处理和结果校验仍由相应工具承担。</p>
 </section>
 <section id="用一个科研查询任务来拆解" class="level2">
 <h2 class="anchored" data-anchor-id="用一个科研查询任务来拆解">用一个科研查询任务来拆解</h2>
@@ -754,25 +754,16 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <li>从文献资料中取回相关证据；</li>
 <li>把记录、来源和适用范围组织成模型可以使用的上下文。</li>
 </ul>
-<p><strong>Skill</strong> 则可以把完整流程串起来：</p>
+<p><strong>Skill</strong> 则负责把 Prompt、Retrieval / RAG、数据库或 API 调用、程序处理和校验规则串成完整流程：</p>
 <pre class="text"><code>理解问题
 → 标准化查询条件
 → 选择结构化、文献或混合检索路线
-→ 执行查询
-→ 去重并汇总记录
-→ 核对数字、ID 与来源
+→ 调用数据库、API 或检索工具
+→ 汇总、去重并处理记录
+→ 按规则核对数字、ID 与来源
 → 生成表格
 → 输出解释和限制</code></pre>
 <p>这个例子说明，科研 RAG 的关键不只是“能够回答”。更重要的是：答案中的数字和判断能否回到具体的数据版本、记录和文献，以及检索失败能否与真正的空结果区分开来。</p>
-</section>
-<section id="四个容易混淆的边界" class="level2">
-<h2 class="anchored" data-anchor-id="四个容易混淆的边界">四个容易混淆的边界</h2>
-<ul>
-<li><strong>很长的 Prompt 仍然只是 Prompt。</strong> 写入背景知识，不等于系统会在运行时检索外部证据。</li>
-<li><strong>连上数据库也不一定是 RAG。</strong> 查询结果只有参与后续生成，才构成完整的检索增强生成过程。</li>
-<li><strong>保存一组 Prompt 也不一定形成了 Skill。</strong> 对需要复查的科研任务来说，Skill 还应明确输入、工具、输出、校验方式和失败行为。</li>
-<li><strong>RAG 给出了引用，也不代表答案一定正确。</strong> 可追溯让错误更容易被发现和修正，但不会自动消除错误。</li>
-</ul>
 </section>
 <section id="我现在怎样区分它们" class="level2">
 <h2 class="anchored" data-anchor-id="我现在怎样区分它们">我现在怎样区分它们</h2>
@@ -807,12 +798,12 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <tr class="odd">
 <td>Skill</td>
 <td>可复用任务流程</td>
-<td>怎样稳定地重复完成一整类任务</td>
-<td>跨平台通用，或流程运行后自然得到正确结论</td>
+<td>怎样组织 Prompt、RAG、工具和校验规则，稳定完成一类任务</td>
+<td>流程运行后自然得到正确结论，或跨平台保持相同定义</td>
 </tr>
 </tbody>
 </table>
-<p>如果只是希望模型按固定方式回答，我会先写 Prompt；如果答案必须依赖外部、更新频繁或需要追溯的资料，我会设计 Retrieval 或 RAG；如果同一任务会反复出现，而且包含多个工具、检查步骤和失败条件，我会进一步把它封装成 Skill。</p>
+<p>如果只是希望模型按固定方式回答，我会先写 Prompt；如果答案依赖外部、持续更新或需要追溯的资料，我会设计 Retrieval 或 RAG；如果同一任务会反复出现，而且需要组合 Prompt、数据库、API、程序、检索与校验规则，我会进一步把它封装成 Skill。</p>
 
 
 </section>

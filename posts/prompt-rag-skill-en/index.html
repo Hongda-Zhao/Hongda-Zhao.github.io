@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -584,7 +584,6 @@ Research notes, technical work, and field observations.
   <li><a href="#skill-make-a-class-of-tasks-reusable" id="toc-skill-make-a-class-of-tasks-reusable" class="nav-link" data-scroll-target="#skill-make-a-class-of-tasks-reusable">Skill: make a class of tasks reusable</a></li>
   <li><a href="#how-the-three-can-work-together" id="toc-how-the-three-can-work-together" class="nav-link" data-scroll-target="#how-the-three-can-work-together">How the three can work together</a></li>
   <li><a href="#one-question-three-responsibilities" id="toc-one-question-three-responsibilities" class="nav-link" data-scroll-target="#one-question-three-responsibilities">One question, three responsibilities</a></li>
-  <li><a href="#four-boundaries-that-are-easy-to-blur" id="toc-four-boundaries-that-are-easy-to-blur" class="nav-link" data-scroll-target="#four-boundaries-that-are-easy-to-blur">Four boundaries that are easy to blur</a></li>
   <li><a href="#how-i-distinguish-them-now" id="toc-how-i-distinguish-them-now" class="nav-link" data-scroll-target="#how-i-distinguish-them-now">How I distinguish them now</a></li>
   </ul>
 </nav>
@@ -709,31 +708,32 @@ Generate an answer with explicit evidence boundaries</code></pre>
 <section id="skill-make-a-class-of-tasks-reusable" class="level2">
 <h2 class="anchored" data-anchor-id="skill-make-a-class-of-tasks-reusable">Skill: make a class of tasks reusable</h2>
 <p>Skill is not an academic method with one established definition in the way that RAG is. Different agent platforms place different things inside a Skill and execute them in different ways.</p>
-<p>In this article, I use Skill to mean a <strong>reusable task package</strong> in an AI-agent toolchain. It may contain:</p>
+<p>In this article, I use Skill to mean a <strong>reusable task package</strong> in an AI-agent toolchain. Depending on the task, a Skill may package:</p>
 <ul>
-<li>task instructions and Prompts;</li>
-<li>SQL, Python programs, or API calls;</li>
-<li>retrieval steps used by RAG;</li>
+<li>one or more Prompts;</li>
+<li>database queries, API calls, SQL, Python programs, or other tools;</li>
+<li>retrieval, context assembly, and generation steps used by RAG;</li>
 <li>controlled vocabularies, reference material, and input/output schemas;</li>
-<li>consistency checks, completeness checks, and failure rules.</li>
+<li>validation rules, completeness checks, and failure handling.</li>
 </ul>
-<p>A Skill is therefore closer to a workflow and its supporting resources than to a longer Prompt.</p>
-<p>For example, a research-data Skill might normalize domain terms, choose a structured, document, or hybrid retrieval route, run the relevant tools, deduplicate the results, verify identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.</p>
-<p>A Skill does not have to use RAG, and it does not have to contain complex code. Translating text into a fixed format may need only a Prompt. A task that is repeated, calls several tools, validates its output, and has defined failure conditions is a much better candidate for a Skill.</p>
+<p>A Skill may include all of these elements, or only the ones a task needs. Its defining feature is not complexity, but repeatability: tools execute concrete actions such as querying a database, calling an API, or running code, while the Skill defines when to invoke them, how to pass results between steps, how to validate the output, and what to do when a step fails.</p>
+<p>For example, a research-data Skill might normalize domain terms, call database, API, or literature-retrieval tools, run code to deduplicate and summarize the results, validate identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.</p>
+<p>A Skill does not have to use RAG or even a large language model. A simple task may need only a Prompt, while a data-processing task may use only code and validation rules. RAG becomes one part of the Skill only when the task requires external evidence.</p>
 </section>
 <section id="how-the-three-can-work-together" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-three-can-work-together">How the three can work together</h2>
-<p>Prompts, RAG, and Skills are not competing options. They can appear separately or divide responsibilities inside one system.</p>
-<p>The diagram below shows one common way to combine the three. It is not tied to a specific project, nor is it the only valid architecture.</p>
+<p>Prompts, RAG, and Skills operate at different levels. It is more useful to think of them as capabilities that can be combined according to the task than as competing alternatives.</p>
+<p>A Prompt can guide one model call on its own or appear inside RAG or a Skill. RAG can operate as a retrieval-and-generation system or become one stage in a Skill. A Skill can organize Prompts, RAG, databases, APIs, executable tools, and validation rules into one process, but it does not have to include all of them.</p>
+<p>Rather than treating the three as a fixed containment tree, the Venn-style map below shows some of their possible combinations:</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
-<p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-workflow-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-workflow-en.svg" width="1152" height="830" alt="One way Prompts, RAG, and Skills can work together. A Skill optionally orchestrates task interpretation, source selection, retrieval, generation, validation, and failure handling. RAG retrieves evidence from structured data, APIs, documents, or knowledge bases and supplies it to the model, while a Prompt defines the task, evidence limits, and output format." loading="lazy" decoding="async" class="figure-img"></a></p>
+<p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-relationship-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-relationship-en.svg" width="1152" height="830" alt="A Venn-style relationship map showing that Prompts, RAG, and Skills can be used independently or together. A Skill is a reusable task package that can organize Prompts, tools such as databases, APIs, and code, validation, and failure handling. RAG is a retrieval-augmented generation workflow that can call tools and use a Prompt for evidence-grounded generation. The overlaps do not represent a fixed containment hierarchy." loading="lazy" decoding="async" class="figure-img"></a></p>
 </div>
 <figcaption>
-Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orchestrate the workflow and handle failures, RAG brings external evidence into the generation context, and a Prompt guides the current model call. The three can be combined, but they do not form a fixed containment hierarchy.
+Figure 2 | A relationship map for Prompts, RAG, and Skills. A Skill can package Prompts, tools, and validation into a reusable task; RAG can call tools for retrieval and use a Prompt to guide evidence-grounded generation. The overlaps show possible combinations, not fixed containment.
 </figcaption>
 </figure>
-<p>The relationship cannot be reduced to one containment tree that is always true. A Prompt can be used by itself, a RAG system does not have to be packaged as a Skill, and a Skill may do no retrieval at all.</p>
+<p>When all three are used together, a common division of responsibility is for the Skill to orchestrate the task, call tools, and handle failures; for RAG to retrieve and organize external evidence; and for the Prompt to tell the model how to use that evidence in the current response. Database queries, programmatic processing, and result validation remain the responsibility of the relevant tools.</p>
 </section>
 <section id="one-question-three-responsibilities" class="level2">
 <h2 class="anchored" data-anchor-id="one-question-three-responsibilities">One question, three responsibilities</h2>
@@ -755,25 +755,16 @@ Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orche
 <li>retrieve supporting passages from the relevant documents;</li>
 <li>assemble the records, sources, and their applicable scope into context for the model.</li>
 </ul>
-<p>A <strong>Skill</strong> could connect the full sequence:</p>
+<p>A <strong>Skill</strong> could package the Prompts, Retrieval / RAG steps, database or API calls, executable code, validation rules, and failure handling into one reusable sequence:</p>
 <pre class="text"><code>Interpret the question
 → Normalize domain terms
 → Choose a structured, literature, or hybrid retrieval route
-→ Run the query
-→ Deduplicate and summarize the records
-→ Verify numbers, identifiers, versions, and sources
+→ Call database, API, or retrieval tools
+→ Process, deduplicate, and summarize the records
+→ Validate numbers, identifiers, versions, and sources
 → Produce the table
 → Explain the result and its limitations</code></pre>
 <p>The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.</p>
-</section>
-<section id="four-boundaries-that-are-easy-to-blur" class="level2">
-<h2 class="anchored" data-anchor-id="four-boundaries-that-are-easy-to-blur">Four boundaries that are easy to blur</h2>
-<ul>
-<li><strong>A very long Prompt is still a Prompt.</strong> Including background information in it does not mean the system can retrieve external evidence at runtime.</li>
-<li><strong>A database connection is not necessarily RAG.</strong> A query becomes part of retrieval-augmented generation only when its result grounds a later generation step.</li>
-<li><strong>A saved collection of Prompts is not necessarily a Skill.</strong> For an auditable task, I would also want the Skill to define inputs, tools, outputs, validation, and failure behavior.</li>
-<li><strong>Citations in a RAG answer do not make the answer automatically correct.</strong> Traceability makes errors easier to find and correct; it does not eliminate them.</li>
-</ul>
 </section>
 <section id="how-i-distinguish-them-now" class="level2">
 <h2 class="anchored" data-anchor-id="how-i-distinguish-them-now">How I distinguish them now</h2>
@@ -808,12 +799,12 @@ Figure 2 | One way Prompts, RAG, and Skills can work together. A Skill can orche
 <tr class="odd">
 <td>Skill</td>
 <td>Reusable task workflow</td>
-<td>How can a class of tasks be carried out consistently?</td>
-<td>Cross-platform portability, or a correct conclusion merely because the workflow ran</td>
+<td>How can Prompts, RAG, tools, and validation rules be organized to carry out a class of tasks consistently?</td>
+<td>A correct conclusion merely because the workflow ran, or the same definition across platforms</td>
 </tr>
 </tbody>
 </table>
-<p>If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and depends on several tools, checks, and failure conditions, I package the larger process as a Skill.</p>
+<p>If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and requires several of these pieces—Prompts, databases or APIs, code, retrieval, validation, or defined failure handling—I package the larger process as a Skill.</p>
 
 
 </section>
