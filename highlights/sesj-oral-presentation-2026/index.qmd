@@ -21,7 +21,7 @@ title-block-style: none
 <section class="content-section">
 <h2 class="content-label" data-i18n="detail.reflection">Personal note</h2>
 <div class="prose-slot highlight-prose">
-<p data-i18n="sesj2026.reflection.copy">Because of an unexpected situation affecting my professor, I stepped in at short notice and travelled to Nagoya to give this presentation. It was my first time attending the annual meeting of the Society for Evolutionary Studies, Japan. At the meeting, I met many professors and researchers with whom I had previously exchanged ideas, and heard many interesting studies in evolutionary biology.</p>
+<p data-i18n="sesj2026.reflection.copy">Something unexpected came up for my professor, so I travelled to Nagoya at short notice to give the presentation in their place. It was my first annual meeting of the Society for Evolutionary Studies, Japan. I met many professors and researchers I had previously exchanged ideas with and heard talks on interesting work in evolutionary biology.</p>
 </div>
 </section>
 
