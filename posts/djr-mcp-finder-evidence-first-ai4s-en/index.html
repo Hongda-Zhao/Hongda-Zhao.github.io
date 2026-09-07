@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -275,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     "sesj2026.format": ["Symposium oral presentation · 19 August 2026 · 13:54–14:16 · Room B · S2-4", "专题口头报告 · 2026年8月19日 · 13:54–14:16 · B会场 · S2-4"],
     "sesj2026.session": ["S2 · Dissemination of genetic information by transposons and pangenome evolution", "S2 · 转座子介导的遗传信息扩散与泛基因组进化"],
     "sesj2026.record.copy": ["On 19 August 2026, I gave an oral presentation (S2-4) in a symposium at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, held at Nagoya University.", "2026年8月19日，我在名古屋大学举行的日本进化学会第28回大会上作了 S2-4 专题口头报告。"],
-    "sesj2026.reflection.copy": ["Because of an unexpected situation affecting my professor, I stepped in at short notice and travelled to Nagoya to give this presentation. It was my first time attending the annual meeting of the Society for Evolutionary Studies, Japan. At the meeting, I met many professors and researchers with whom I had previously exchanged ideas, and heard many interesting studies in evolutionary biology.", "由于教授的突发情况，我在临时接替教授赴名古屋完成了这场报告。这是我第一次参加日本进化学会年会。会上见到了许多此前有过交流的教授和研究者，也听到了不少很有意思的进化生物学研究。"],
+    "sesj2026.reflection.copy": ["Something unexpected came up for my professor, so I travelled to Nagoya at short notice to give the presentation in their place. It was my first annual meeting of the Society for Evolutionary Studies, Japan. I met many professors and researchers I had previously exchanged ideas with and heard talks on interesting work in evolutionary biology.", "教授遇到突发情况，我临时代替教授赴名古屋作了这场报告。这是我第一次参加日本进化学会年会，见到了许多此前交流过的教授和研究者，也听到了不少很有意思的进化生物学研究报告。"],
     "thesisDetail.eyebrow": ["Academic milestone", "学业记录"],
     "thesisDetail.title": ["Master’s thesis presentation and Q&A", "硕士论文汇报与问答"],
     "thesisDetail.image.alt": ["A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&A.", "硕士论文发表与问答结束后，一行人在京都大学理学研究科2号馆外合影。"],
@@ -577,19 +577,19 @@ Research notes, technical work, and field observations.
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-look-for-djr-mcps" id="toc-why-look-for-djr-mcps" class="nav-link active" data-scroll-target="#why-look-for-djr-mcps">Why Look for DJR-MCPs?</a></li>
-  <li><a href="#hard-negatives-easy-negatives-are-not-enough" id="toc-hard-negatives-easy-negatives-are-not-enough" class="nav-link" data-scroll-target="#hard-negatives-easy-negatives-are-not-enough">Hard Negatives: Easy Negatives Are Not Enough</a></li>
-  <li><a href="#split-by-component-not-by-sequence" id="toc-split-by-component-not-by-sequence" class="nav-link" data-scroll-target="#split-by-component-not-by-sequence">Split by Component, Not by Sequence</a></li>
-  <li><a href="#model-selection-cannot-stop-at-the-top-score" id="toc-model-selection-cannot-stop-at-the-top-score" class="nav-link" data-scroll-target="#model-selection-cannot-stop-at-the-top-score">Model Selection Cannot Stop at the Top Score</a></li>
-  <li><a href="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" id="toc-a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" class="nav-link" data-scroll-target="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A Slightly Higher Score Is Not Enough to Replace a Frozen Model</a></li>
-  <li><a href="#not_evaluated-can-be-a-meaningful-result" id="toc-not_evaluated-can-be-a-meaningful-result" class="nav-link" data-scroll-target="#not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> Can Be a Meaningful Result</a></li>
-  <li><a href="#what-codex-helped-me-accelerate" id="toc-what-codex-helped-me-accelerate" class="nav-link" data-scroll-target="#what-codex-helped-me-accelerate">What Codex Helped Me Accelerate</a></li>
+  <li><a href="#why-look-for-djr-mcps" id="toc-why-look-for-djr-mcps" class="nav-link active" data-scroll-target="#why-look-for-djr-mcps">Why look for DJR-MCPs?</a></li>
+  <li><a href="#hard-negatives-easy-negatives-are-not-enough" id="toc-hard-negatives-easy-negatives-are-not-enough" class="nav-link" data-scroll-target="#hard-negatives-easy-negatives-are-not-enough">Hard negatives: easy negatives are not enough</a></li>
+  <li><a href="#split-by-component-not-by-sequence" id="toc-split-by-component-not-by-sequence" class="nav-link" data-scroll-target="#split-by-component-not-by-sequence">Split by component, not by sequence</a></li>
+  <li><a href="#model-selection-cannot-stop-at-the-top-score" id="toc-model-selection-cannot-stop-at-the-top-score" class="nav-link" data-scroll-target="#model-selection-cannot-stop-at-the-top-score">Model selection cannot stop at the top score</a></li>
+  <li><a href="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" id="toc-a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" class="nav-link" data-scroll-target="#a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A slightly higher score is not enough to replace a frozen model</a></li>
+  <li><a href="#not_evaluated-can-be-a-meaningful-result" id="toc-not_evaluated-can-be-a-meaningful-result" class="nav-link" data-scroll-target="#not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> can be a meaningful result</a></li>
+  <li><a href="#what-codex-helped-me-accelerate" id="toc-what-codex-helped-me-accelerate" class="nav-link" data-scroll-target="#what-codex-helped-me-accelerate">What Codex helped me accelerate</a></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections">Reflections</a>
   <ul class="collapse">
-  <li><a href="#an-ai4s-project-starts-with-the-right-problem-decomposition" id="toc-an-ai4s-project-starts-with-the-right-problem-decomposition" class="nav-link" data-scroll-target="#an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S Project Starts with the Right Problem Decomposition</a></li>
-  <li><a href="#data-and-labels-often-matter-more-than-the-model" id="toc-data-and-labels-often-matter-more-than-the-model" class="nav-link" data-scroll-target="#data-and-labels-often-matter-more-than-the-model">2. Data and Labels Often Matter More Than the Model</a></li>
-  <li><a href="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search" id="toc-in-this-project-protein-language-models-did-not-replace-traditional-homology-search" class="nav-link" data-scroll-target="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In This Project, Protein Language Models Did Not Replace Traditional Homology Search</a></li>
-  <li><a href="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" id="toc-preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" class="nav-link" data-scroll-target="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the Limits of the Evidence Matters More Than Filling Every Cell</a></li>
+  <li><a href="#an-ai4s-project-starts-with-the-right-problem-decomposition" id="toc-an-ai4s-project-starts-with-the-right-problem-decomposition" class="nav-link" data-scroll-target="#an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S project starts with the right problem decomposition</a></li>
+  <li><a href="#data-and-labels-often-matter-more-than-the-model" id="toc-data-and-labels-often-matter-more-than-the-model" class="nav-link" data-scroll-target="#data-and-labels-often-matter-more-than-the-model">2. Data and labels often matter more than the model</a></li>
+  <li><a href="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search" id="toc-in-this-project-protein-language-models-did-not-replace-traditional-homology-search" class="nav-link" data-scroll-target="#in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In this project, protein language models did not replace traditional homology search</a></li>
+  <li><a href="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" id="toc-preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" class="nav-link" data-scroll-target="#preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the limits of the evidence matters more than filling every cell</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -668,15 +668,15 @@ body.fixed-language-content .quarto-secondary-nav-title {
   }
 }
 </style>
-<p>On 30 July 2026, I released <a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1">DJR-MCP Finder v0.1</a> on GitHub. This was the project’s first formal release. Here, v0.1 is the software release number, while the released model is called Model V0. The mixed nominee discussed later remains an experimental candidate.</p>
+<p>On 30 July 2026, I published the first formal release of <a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder/releases/tag/v0.1">DJR-MCP Finder v0.1</a> on GitHub. The software release is v0.1; the model shipped with it is Model V0. The mixed nominee discussed later remains an experimental candidate.</p>
 <p><a href="https://github.com/Hongda-Zhao/DJR-MCP-Finder">DJR-MCP Finder</a> is a protein classifier for viral evolution research. It accepts protein FASTA sequences and searches for candidate major capsid proteins that may adopt the double-jelly-roll (DJR) fold and be associated with viral morphogenesis. The project was developed in the context of DJR-MCP lineages within <em>Varidnaviria</em>; it does not claim that every member of the realm uses a DJR-MCP.</p>
-<p>This article is not a user guide. It is a development retrospective: why I built the tool, which decisions proved most difficult, and how working with Codex changed the way I developed it.</p>
+<p>Here I describe why I built the tool, the decisions I struggled with, and my experience working with Codex.</p>
 <section id="why-look-for-djr-mcps" class="level2">
-<h2 class="anchored" data-anchor-id="why-look-for-djr-mcps">Why Look for DJR-MCPs?</h2>
+<h2 class="anchored" data-anchor-id="why-look-for-djr-mcps">Why look for DJR-MCPs?</h2>
 <p>Major capsid proteins (MCPs) are central components of the capsids built by many viruses, predominantly double-stranded DNA viruses in this context. In viruses whose MCPs adopt the DJR fold, these proteins also provide important clues for studying viral morphogenesis, genome annotation, and deep evolutionary relationships.</p>
 <p>The difficulty is that <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8812541/">sequence similarity among distantly related DJR-MCPs can be very low</a>. A search based only on existing annotations or high sequence similarity can therefore miss distantly related candidates.</p>
-<p>The problem cannot simply be reframed as “find every DJR protein,” either. Cellular organisms also encode DJR proteins, so a DJR fold does not by itself establish that a protein is a viral MCP.</p>
-<p>DJR-MCP Finder is not intended to make a final identification on the user’s behalf. Its goal is to:</p>
+<p>Cellular organisms also encode DJR proteins. Finding that fold alone is therefore insufficient to identify a protein as a viral MCP.</p>
+<p>DJR-MCP Finder screens candidates, leaving the final identification to the user:</p>
 <blockquote class="blockquote">
 <p>Reduce a large protein collection to a manageable candidate list with explicit evidence limits, so that structure, genomic context, and virological evidence can be examined next.</p>
 </blockquote>
@@ -689,12 +689,11 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <p>When the evidence for H3 is insufficient, the tool returns <code>unknown/other</code>. This is an abstention from a forced assignment, not evidence for a newly discovered viral phylum.</p>
 </section>
 <section id="hard-negatives-easy-negatives-are-not-enough" class="level2">
-<h2 class="anchored" data-anchor-id="hard-negatives-easy-negatives-are-not-enough">Hard Negatives: Easy Negatives Are Not Enough</h2>
-<p>If every H1 negative were an ordinary protein with little resemblance to DJR proteins, the model could easily obtain an impressive score. But such a score might reflect protein length, composition, or database source rather than the structural boundary I actually cared about.</p>
-<p>I therefore built a separate set of structurally similar hard negatives.</p>
+<h2 class="anchored" data-anchor-id="hard-negatives-easy-negatives-are-not-enough">Hard negatives: easy negatives are not enough</h2>
+<p>If every H1 negative were an ordinary protein with little resemblance to DJR proteins, the model might score well using protein length, composition, or database source alone. That would tell me little about its ability to distinguish similar structures, so I built a separate set of structurally similar hard negatives.</p>
 <p>The process began with 172,346 Foldseek search records. After quality filtering, deduplication, and MMseqs2 clustering, I used sequence, HMM, and structure checks to exclude candidates that still matched the DJR positives. I then selected 5,000 HardNeg representatives.</p>
-<p>Two representatives were too close to the positive set. Rather than forcing them into the negative class, I placed them in quarantine and excluded them from training.</p>
-<p>This set has a specific purpose: to probe whether the model mistakes proteins that resemble DJRs for positive examples after sequence, HMM, and structure checks have supported their exclusion from the H1-positive set.</p>
+<p>Two representatives were too close to the positive set. I placed them in quarantine and excluded them from training.</p>
+<p>I use this set to check whether proteins supported as H1 negatives by sequence, HMM, and structure checks are still misclassified because they resemble DJRs.</p>
 <p>I did not run a directly comparable before-and-after ablation, so I do not attribute a numerical performance gain to the hard-negative set. What I can verify is that rerunning the workflow from the frozen inputs reproduces the same representatives and final outputs, and that the exclusion rules and G0–G6 recovery gates are auditable. The project does not claim that every raw intermediate file was retained or reproduced byte for byte.</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
@@ -706,7 +705,7 @@ Figure 1 | How labels change across the three tasks, and how the HardNeg set was
 </figure>
 </section>
 <section id="split-by-component-not-by-sequence" class="level2">
-<h2 class="anchored" data-anchor-id="split-by-component-not-by-sequence">Split by Component, Not by Sequence</h2>
+<h2 class="anchored" data-anchor-id="split-by-component-not-by-sequence">Split by component, not by sequence</h2>
 <p>Two protein records may be non-identical yet still belong to the same family or originate from the same upstream cluster.</p>
 <p>If each row is assigned independently to training, validation, and test partitions, the test set may contain close relatives of training examples. The resulting score can look excellent while overstating generalization.</p>
 <p>To reduce this form of leakage, I first built a relation graph that connected records sharing any of the following:</p>
@@ -716,10 +715,10 @@ Figure 1 | How labels change across the three tasks, and how the HardNeg set was
 <li>a known historical or global component relationship;</li>
 <li>an MMseqs2 relationship with at least 30% identity and at least 80% coverage in both directions.</li>
 </ul>
-<p>Each connected component in this graph became a relation component. I assigned entire components—not individual sequences—to a partition.</p>
+<p>Each connected component in this graph became a relation component. All sequences in a component were assigned to the same partition.</p>
 <p>The 11,060 modeling records formed 9,262 components containing at least one modeling record. Using the frozen component sizes, a row-wise random 60/20/20 split would be expected to split about 348 components across two or more partitions.</p>
 <p>After the component-aware split, an independent workflow searched all three pairs of partitions. It found no exact duplicate sequences, no overlapping components, and no residual relationships that met the prespecified identity and coverage thresholds.</p>
-<p>This does not prove that no pairs of remote homologs below 30% identity remain across partitions. It does, however, let me state precisely which relationships were isolated, which thresholds were used, and how the result can be checked.</p>
+<p>These checks document which relationships were isolated and the thresholds and procedures used to check them. Remote homologs below 30% identity may still remain across partitions.</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-2-cluster-aware-split-en.svg" target="_blank" rel="noopener" aria-label="Open the full Figure 2 SVG in a new tab"><img src="figures/figure-2-cluster-aware-split-en.svg" width="1152" height="691" alt="A row-wise random split places related sequences in different partitions, whereas assigning complete relation components produces no qualifying residual cross-partition edges in an independent audit." loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -730,14 +729,12 @@ Figure 2 | Row-wise splitting compared with relation-component splitting. The va
 </figure>
 </section>
 <section id="model-selection-cannot-stop-at-the-top-score" class="level2">
-<h2 class="anchored" data-anchor-id="model-selection-cannot-stop-at-the-top-score">Model Selection Cannot Stop at the Top Score</h2>
+<h2 class="anchored" data-anchor-id="model-selection-cannot-stop-at-the-top-score">Model selection cannot stop at the top score</h2>
 <p>I compared 14 protein representation models using one fixed five-fold component assignment within the training partition.</p>
 <p>Each model first had to pass a prespecified validation criterion for every task. The remaining models were then compared with a paired one-standard-error comparison across the same folds. Eight models passed every validation gate, but only ESM-C 6B remained in the one-standard-error set. I therefore froze it as Model V0.</p>
 <p>These development scores come from Train-CV, not from the test set.</p>
-<p>This stage also exposed a particularly instructive error.</p>
-<p>For one ESM-2 650M run, sigmoid-transformed scores had saturated to exact zeros and ones, producing an average precision (AP) of about 0.857. Recomputing AP from the corresponding raw decision scores, which retained ranking information, gave about 0.998 for the same run.</p>
-<p>The model had not suddenly improved. The input to the metric had changed.</p>
-<p>That experience made it clear that a metric contract—the precise definition of a score and the input it consumes—is part of model selection, not an implementation detail to inspect only after the results are produced.</p>
+<p>During this comparison, I found that sigmoid-transformed scores for one ESM-2 650M run had saturated to exact zeros and ones, producing an average precision (AP) of about 0.857. Recomputing AP from the corresponding raw decision scores, which retained ranking information, gave about 0.998 for the same run. The difference came from the metric input; the model had not changed.</p>
+<p>That mistake showed me why I need to check the metric contract during model selection: what input each score takes and how it is calculated.</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-3-model-selection-en.svg" target="_blank" rel="noopener" aria-label="Open the full Figure 3 SVG in a new tab"><img src="figures/figure-3-model-selection-en.svg" width="1152" height="1056" alt="Results for 14 protein representation models under shared component-aware cross-validation, followed by a post-freeze comparison between Model V0 and a mixed-model candidate." loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -748,20 +745,20 @@ Figure 3 | Development-stage comparison of 14 protein representations and the mi
 </figure>
 </section>
 <section id="a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model" class="level2">
-<h2 class="anchored" data-anchor-id="a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A Slightly Higher Score Is Not Enough to Replace a Frozen Model</h2>
-<p>After Model V0 had been frozen, I obtained a mixed-model candidate—the mixed nominee—with a slightly higher composite score.</p>
-<p>Its Train-CV score was about 0.0005 higher than that of V0, but it performed worse in the viral strict-cluster diagnostic—an internal post-freeze check—and had a slower worst-case inference path. I therefore recorded it as <code>recommended_for_external_confirmation</code> rather than overturning the frozen choice because of a very small score difference.</p>
-<p>The important question here is not which model ranks first. It is whether the release rules remain robust to repeated experimentation during development.</p>
+<h2 class="anchored" data-anchor-id="a-slightly-higher-score-is-not-enough-to-replace-a-frozen-model">A slightly higher score is not enough to replace a frozen model</h2>
+<p>After freezing Model V0, I obtained a mixed-model candidate, referred to here as the mixed nominee, with a slightly higher composite score.</p>
+<p>Its Train-CV score was about 0.0005 higher than V0’s, but it performed worse in the viral strict-cluster diagnostic, an internal post-freeze check, and had a slower worst-case inference path. I recorded it as <code>recommended_for_external_confirmation</code> and kept the frozen choice.</p>
+<p>As I continued experimenting, I applied the existing release rules to new candidates instead of revising the selection with each change in rank.</p>
 </section>
 <section id="not_evaluated-can-be-a-meaningful-result" class="level2">
-<h2 class="anchored" data-anchor-id="not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> Can Be a Meaningful Result</h2>
+<h2 class="anchored" data-anchor-id="not_evaluated-can-be-a-meaningful-result"><code>not_evaluated</code> can be a meaningful result</h2>
 <p>The project retains a protected test set containing 2,214 records.</p>
 <p>This test set had already been opened for an earlier ESM-2 650M model. The subsequently selected ESM-C 6B model and the mixed nominee were not evaluated on it, so their model-level evaluation status remains <code>not_evaluated</code>.</p>
-<p>I chose not to reopen the old test set. The next genuinely independent evaluation will require a new external lockbox separated from the existing source components.</p>
-<p>I once might have regarded a results table without a complete set of test metrics as unfinished. I now prefer to preserve <code>not_evaluated</code>, because it says clearly that the test set was not used to chase a more attractive result for these models.</p>
+<p>I chose not to reopen the old test set. The next independent evaluation will require a new external lockbox separated from the existing source components.</p>
+<p>Previously, I might have wanted to fill in the missing test metrics. This time I kept <code>not_evaluated</code> to record that these models had not undergone that evaluation and that I had not reused the old test set to obtain more attractive scores.</p>
 </section>
 <section id="what-codex-helped-me-accelerate" class="level2">
-<h2 class="anchored" data-anchor-id="what-codex-helped-me-accelerate">What Codex Helped Me Accelerate</h2>
+<h2 class="anchored" data-anchor-id="what-codex-helped-me-accelerate">What Codex helped me accelerate</h2>
 <p>In the past, I usually used AI to solve isolated coding problems. In this project, I worked with Codex continuously in the same repository for the first time.</p>
 <p>I used Codex to:</p>
 <ul>
@@ -772,31 +769,30 @@ Figure 3 | Development-stage comparison of 14 protein representations and the mi
 <li>inspect citations, data leakage, and metric implementations;</li>
 <li>turn complex steps into review checklists.</li>
 </ul>
-<p>Every iteration, however, still began with the scientific question and constraints that I defined.</p>
-<p>Literature suggestions, labeling proposals, and methodological options returned by the agent were inputs for review, not conclusions. I went back to the original papers, figures, and database records to judge whether each record met the Gold or Silver criteria and whether it should be included. After a rule was implemented, I continued to review diffs, logs, frozen files, and key artifacts, then revised and reran the analysis when I found a problem.</p>
-<p>The greatest benefit of Codex was not that it decided what the correct answer should be. It allowed me to advance literature search, implementation, testing, and review in parallel, and to find inconsistencies between those parts sooner.</p>
-<p>Based on my development records and recollection, the path from the initial design to the first completed benchmark took about two months. Without this form of collaboration, it would probably have taken longer. I remained responsible for defining the dataset boundaries, judging the biological evidence, and standing behind the final conclusions.</p>
+<p>At the start of each iteration, I defined the scientific question and constraints.</p>
+<p>I checked the agent’s literature suggestions, labeling proposals, and methodological options myself. To decide whether a record met the Gold or Silver criteria and should be included, I went back to the original papers, figures, and database records. Once a rule was implemented, I reviewed diffs, logs, frozen files, and key artifacts, then revised and reran the analysis when I found a problem.</p>
+<p>Codex let me work on literature search, implementation, testing, and review in parallel and find inconsistencies between them sooner. I still had to judge which results I could trust.</p>
+<p>Based on my development records and recollection, the initial design through to the first completed benchmark took about two months. It would probably have taken longer without this collaboration. I remained responsible for the dataset boundaries, the biological evidence, and the final conclusions.</p>
 </section>
 <section id="reflections" class="level2">
 <h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
 <section id="an-ai4s-project-starts-with-the-right-problem-decomposition" class="level3">
-<h3 class="anchored" data-anchor-id="an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S Project Starts with the Right Problem Decomposition</h3>
+<h3 class="anchored" data-anchor-id="an-ai4s-project-starts-with-the-right-problem-decomposition">1. An AI4S project starts with the right problem decomposition</h3>
 <p>A DJR fold is useful structural evidence, but it is not equivalent to viral identity. The existence of cellular DJRs forced me to separate H1 from H2. It also reinforced that model output must still be interpreted alongside structure, genomic context, and virological evidence.</p>
 </section>
 <section id="data-and-labels-often-matter-more-than-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="data-and-labels-often-matter-more-than-the-model">2. Data and Labels Often Matter More Than the Model</h3>
-<p>In retrospect, much of the work went into collecting examples, validating Silver positives, constructing negative sets, and selecting representative sequences.</p>
-<p>Protein language models can provide powerful representations. But if the positive and negative classes are poorly defined, or if close relatives of training records leak into the test set, even a high score is difficult to interpret.</p>
+<h3 class="anchored" data-anchor-id="data-and-labels-often-matter-more-than-the-model">2. Data and labels often matter more than the model</h3>
+<p>Much of the work went into collecting examples, validating Silver positives, constructing negative sets, and selecting representative sequences.</p>
+<p>Protein language models provide useful representations, but interpreting their scores still depends on how the positive and negative classes were defined and whether close relatives of training records leaked into the test set.</p>
 </section>
 <section id="in-this-project-protein-language-models-did-not-replace-traditional-homology-search" class="level3">
-<h3 class="anchored" data-anchor-id="in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In This Project, Protein Language Models Did Not Replace Traditional Homology Search</h3>
+<h3 class="anchored" data-anchor-id="in-this-project-protein-language-models-did-not-replace-traditional-homology-search">3. In this project, protein language models did not replace traditional homology search</h3>
 <p>This benchmark did not give me evidence that protein language models dramatically outperform conventional sequence alignment or profile-HMM methods for homolog detection. The 14-model benchmark compared different protein-language-model representations; it was not a strict head-to-head comparison with MMseqs2 or HMM-based search. This is therefore a methodological judgment from the development process, not a quantitative claim about relative performance.</p>
-<p>Traditional methods still provide interpretable alignments, explicit thresholds, and traceable hit relationships. I see protein language models as a complement: they can help rank candidates when sequence similarity is weak and the classification boundary is complex. In practice, I would rather use the two approaches to cross-check each other than ask one to replace the other.</p>
+<p>Traditional methods still provide interpretable alignments, explicit thresholds, and traceable hit relationships. Protein language models can help rank candidates when sequence similarity is weak and the classification boundary is complex. In practice, I use the two approaches to cross-check each other.</p>
 </section>
 <section id="preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell" class="level3">
-<h3 class="anchored" data-anchor-id="preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the Limits of the Evidence Matters More Than Filling Every Cell</h3>
-<p>Ambiguous examples can be held in quarantine. A classifier can return <code>unknown/other</code> when the evidence is insufficient. A model without an independent evaluation can remain <code>not_evaluated</code>.</p>
-<p>These states are less visually satisfying than a complete results table, but they describe more honestly how far the evidence currently reaches.</p>
+<h3 class="anchored" data-anchor-id="preserving-the-limits-of-the-evidence-matters-more-than-filling-every-cell">4. Preserving the limits of the evidence matters more than filling every cell</h3>
+<p>I kept several unresolved states in the results: quarantine for ambiguous examples, <code>unknown/other</code> for classifications with insufficient evidence, and <code>not_evaluated</code> for models without an independent evaluation. The table has gaps, but readers can see which judgments still need evidence.</p>
 
 
 </section>

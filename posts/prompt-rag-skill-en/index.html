@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -275,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     "sesj2026.format": ["Symposium oral presentation · 19 August 2026 · 13:54–14:16 · Room B · S2-4", "专题口头报告 · 2026年8月19日 · 13:54–14:16 · B会场 · S2-4"],
     "sesj2026.session": ["S2 · Dissemination of genetic information by transposons and pangenome evolution", "S2 · 转座子介导的遗传信息扩散与泛基因组进化"],
     "sesj2026.record.copy": ["On 19 August 2026, I gave an oral presentation (S2-4) in a symposium at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, held at Nagoya University.", "2026年8月19日，我在名古屋大学举行的日本进化学会第28回大会上作了 S2-4 专题口头报告。"],
-    "sesj2026.reflection.copy": ["Because of an unexpected situation affecting my professor, I stepped in at short notice and travelled to Nagoya to give this presentation. It was my first time attending the annual meeting of the Society for Evolutionary Studies, Japan. At the meeting, I met many professors and researchers with whom I had previously exchanged ideas, and heard many interesting studies in evolutionary biology.", "由于教授的突发情况，我在临时接替教授赴名古屋完成了这场报告。这是我第一次参加日本进化学会年会。会上见到了许多此前有过交流的教授和研究者，也听到了不少很有意思的进化生物学研究。"],
+    "sesj2026.reflection.copy": ["Something unexpected came up for my professor, so I travelled to Nagoya at short notice to give the presentation in their place. It was my first annual meeting of the Society for Evolutionary Studies, Japan. I met many professors and researchers I had previously exchanged ideas with and heard talks on interesting work in evolutionary biology.", "教授遇到突发情况，我临时代替教授赴名古屋作了这场报告。这是我第一次参加日本进化学会年会，见到了许多此前交流过的教授和研究者，也听到了不少很有意思的进化生物学研究报告。"],
     "thesisDetail.eyebrow": ["Academic milestone", "学业记录"],
     "thesisDetail.title": ["Master’s thesis presentation and Q&A", "硕士论文汇报与问答"],
     "thesisDetail.image.alt": ["A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&A.", "硕士论文发表与问答结束后，一行人在京都大学理学研究科2号馆外合影。"],
@@ -656,14 +656,13 @@ body.fixed-language-content .quarto-secondary-nav-title {
   }
 }
 </style>
-<p>While working on EndoViHo-RAG, I kept encountering three terms: Prompt, RAG, and Skill. They are often discussed together, but once I began designing an actual AI system, I realized that they solve three different problems.</p>
-<p>All three can be described loosely as ways to help a large language model complete a task. The distinction that has been most useful to me is the question each one answers:</p>
+<p>While building EndoViHo-RAG, I kept running into the terms Prompt, RAG, and Skill. All three concern how a model completes a task, and discussions often blur them together. In practice, I find it useful to ask what each one is responsible for:</p>
 <ul>
 <li><strong>Prompt:</strong> What should the model do in this call, what may it rely on, and how should it express the answer?</li>
-<li><strong>RAG:</strong> Where should the system retrieve question-relevant external evidence before answering?</li>
+<li><strong>RAG:</strong> Where should the system find external evidence relevant to the question before answering?</li>
 <li><strong>Skill:</strong> How should the instructions, tools, and checks for a class of tasks be organized into a reusable workflow?</li>
 </ul>
-<p>This is not a rigid industry taxonomy. Skill, in particular, means somewhat different things on different platforms. But I have found this distinction practical when thinking about scientific AI systems.</p>
+<p>I use this distinction when designing scientific tools. It is a working convention rather than an industry standard, especially for Skills, whose definitions vary across platforms.</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-1-prompt-rag-skill-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 1 in a new tab"><img src="figures/figure-1-prompt-rag-skill-en.svg" width="1152" height="720" alt="A three-row comparison of Prompts, RAG, and Skills. A Prompt operates at the level of one model call and specifies the task, context, and output. RAG operates at the level of knowledge access and generation, retrieving and organizing external evidence before generation. A Skill operates at the level of a reusable task workflow and coordinates instructions, tools, retrieval, validation, and failure handling. The three can work together but are not equivalent." loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -680,14 +679,13 @@ Figure 1 | The working distinction I use in this article. A Prompt guides one ca
 For each result, list its name, identifier, and supporting source.
 If retrieval returns no records, write “No records were found in the current dataset.”
 Do not rewrite that result as “The item does not exist.”</code></pre>
-<p>This Prompt defines the task, the evidence boundary, the output fields, and even the wording for an empty result. A Prompt can do more than control tone: it can constrain scope, request a format, and tell the model how to handle uncertainty.</p>
-<p>Its boundary is equally important. A Prompt can carry data that has already been supplied to the model, but adding the words “query accurately” does not give the model access to a database.</p>
-<p>Likewise, “do not guess” is an important instruction, but it is not a technical guarantee. Permissions, schema constraints, numerical checks, and fail-closed behavior still have to be enforced by software.</p>
-<p>I therefore think of a Prompt as the <strong>working instructions for one model call</strong>, not as a source of knowledge.</p>
+<p>This Prompt specifies the task, the evidence the model may use, the output fields, and the wording for an empty result. When writing a Prompt, I need to cover scope, format, and uncertainty as well as tone.</p>
+<p>A Prompt can carry data supplied to the model. Database access has to be set up separately; writing “query accurately” does not grant that access.</p>
+<p>“Do not guess” is also only an instruction. Software still has to enforce permissions, schema constraints, numerical checks, and a stop when a critical step fails. I treat a Prompt as the working instructions for one model call and arrange access to external knowledge separately.</p>
 </section>
 <section id="rag-retrieve-evidence-before-the-model-answers" class="level2">
 <h2 class="anchored" data-anchor-id="rag-retrieve-evidence-before-the-model-answers">RAG: retrieve evidence before the model answers</h2>
-<p>RAG stands for <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation</a>. Its defining idea is not a particular kind of database. It is a system pattern: retrieve external material relevant to the question, put that material into the model’s context, and then generate an answer grounded in what was retrieved.</p>
+<p>RAG stands for <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation</a>. It describes a process: retrieve external material relevant to the question, put it into the model’s context, and use it to generate an answer.</p>
 <p>At its simplest, the flow looks like this:</p>
 <pre class="text"><code>User question
    ↓
@@ -699,9 +697,9 @@ Place that evidence in the model context
    ↓
 Generate an answer with explicit evidence boundaries</code></pre>
 <p>Retrieval does not have to mean a vector database. Depending on the task, a RAG system might use SQL, full-text search, a knowledge graph, a curated document collection, web pages, APIs, laboratory data, or a combination of these.</p>
-<p>Connecting a database is not automatically the same thing as building RAG. If a system runs SQL and returns a table directly, it is performing a database query. It becomes retrieval-augmented generation when the retrieved records are assembled into context and used to ground a subsequent natural-language response.</p>
+<p>If a system runs SQL and returns a table directly, it has performed a database query. For RAG, the retrieved records also need to enter the model’s context and inform a subsequent natural-language response.</p>
 <p>A well-designed RAG system also separates retrieval from generation. Stable identifiers, numerical values, and source metadata should remain under programmatic control. The model should organize and explain retrieved evidence rather than invent missing facts.</p>
-<p>RAG is not “fact insurance.” Retrieval can miss relevant material, rank the wrong material, or surface a flawed source. Its value is that a reader can trace an answer back to particular records and passages and inspect them again.</p>
+<p>Retrieval can still miss relevant material, rank the wrong material, or return a flawed source. What I value in RAG is the ability to trace an answer back to particular records and passages and check its basis.</p>
 </section>
 <section id="skill-make-a-class-of-tasks-reusable" class="level2">
 <h2 class="anchored" data-anchor-id="skill-make-a-class-of-tasks-reusable">Skill: make a class of tasks reusable</h2>
@@ -714,15 +712,14 @@ Generate an answer with explicit evidence boundaries</code></pre>
 <li>controlled vocabularies, reference material, and input/output schemas;</li>
 <li>validation rules, completeness checks, and failure handling.</li>
 </ul>
-<p>A Skill may include all of these elements, or only the ones a task needs. Its defining feature is not complexity, but repeatability: tools execute concrete actions such as querying a database, calling an API, or running code, while the Skill defines when to invoke them, how to pass results between steps, how to validate the output, and what to do when a step fails.</p>
+<p>A Skill includes the elements needed to repeat a task. Tools query databases, call APIs, or run code. The Skill defines when to invoke those tools, how to pass results between steps, how to validate the output, and what to do when a step fails.</p>
 <p>For example, a research-data Skill might normalize domain terms, call database, API, or literature-retrieval tools, run code to deduplicate and summarize the results, validate identifiers and numerical values, and format the final response. If a critical step fails, the workflow should stop explicitly instead of asking the model to fill the gap from general knowledge.</p>
 <p>A Skill does not have to use RAG or even a large language model. A simple task may need only a Prompt, while a data-processing task may use only code and validation rules. RAG becomes one part of the Skill only when the task requires external evidence.</p>
 </section>
 <section id="how-the-three-can-work-together" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-three-can-work-together">How the three can work together</h2>
-<p>Prompts, RAG, and Skills operate at different levels. It is more useful to think of them as capabilities that can be combined according to the task than as competing alternatives.</p>
-<p>A Prompt can guide one model call on its own or appear inside RAG or a Skill. RAG can operate as a retrieval-and-generation system or become one stage in a Skill. A Skill can organize Prompts, RAG, databases, APIs, executable tools, and validation rules into one process, but it does not have to include all of them.</p>
-<p>Rather than treating the three as a fixed containment tree, the Venn-style map below shows some of their possible combinations:</p>
+<p>The three can be combined as needed. A Prompt can guide a model call on its own or be used within RAG or a Skill. RAG can run independently or as one stage in a Skill. A Skill can bring together Prompts, RAG, databases, APIs, code, and validation rules without needing all of them.</p>
+<p>The Venn-style map below shows possible combinations, with no fixed containment hierarchy:</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-relationship-en.svg" target="_blank" rel="noopener" aria-label="Open the full SVG for Figure 2 in a new tab"><img src="figures/figure-2-prompt-rag-skill-relationship-en.svg" width="1152" height="830" alt="A Venn-style relationship map showing that Prompts, RAG, and Skills can be used independently or together. A Skill is a reusable task package that can organize Prompts, tools such as databases, APIs, and code, validation, and failure handling. RAG is a retrieval-augmented generation workflow that can call tools and use a Prompt for evidence-grounded generation. The overlaps do not represent a fixed containment hierarchy." loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -739,7 +736,7 @@ Figure 2 | A relationship map for Prompts, RAG, and Skills. A Skill can package 
 <blockquote class="blockquote">
 <p>Which records in the current dataset match condition X, and what evidence supports each result?</p>
 </blockquote>
-<p>The question sounds like a request for a table, but the system still has to define the retrieval scope, field meanings, and evidence limits.</p>
+<p>To produce that table, the system first has to define the retrieval scope, the meaning of each field, and which evidence can support the answer.</p>
 <p>For this question, the <strong>Prompt</strong> would define the answer rules, for example:</p>
 <ul>
 <li>answer only from records returned by the system;</li>
@@ -762,7 +759,7 @@ Figure 2 | A relationship map for Prompts, RAG, and Skills. A Skill can package 
 → Validate numbers, identifiers, versions, and sources
 → Produce the table
 → Explain the result and its limitations</code></pre>
-<p>The point is the separation of responsibilities: retrieval supplies evidence, the Prompt constrains one model call, and the Skill governs the repeatable workflow and its failure behavior. Every value and interpretation should remain traceable to a release, a record, and a source; the system should also distinguish a genuine empty result from a failed retrieval.</p>
+<p>When checking a research query like this, I trace each value and interpretation back to a release, a record, and a source. I also check that the system distinguishes an empty result from a failed retrieval.</p>
 </section>
 <section id="how-i-distinguish-them-now" class="level2">
 <h2 class="anchored" data-anchor-id="how-i-distinguish-them-now">How I distinguish them now</h2>
@@ -802,7 +799,7 @@ Figure 2 | A relationship map for Prompts, RAG, and Skills. A Skill can package 
 </tr>
 </tbody>
 </table>
-<p>If I only need the model to answer in a consistent way, I start with a Prompt. If the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. If the task recurs and requires several of these pieces—Prompts, databases or APIs, code, retrieval, validation, or defined failure handling—I package the larger process as a Skill.</p>
+<p>I usually start with a Prompt to specify how the model should answer. When the answer depends on external, frequently updated, or auditable evidence, I design retrieval or RAG. Once a task recurs and requires me to maintain Prompts, database or API calls, code, retrieval, validation, or failure handling together, I package that process as a Skill.</p>
 
 
 </section>

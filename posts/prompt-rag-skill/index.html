@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9f43a20c679eb76b4703ca291990b4b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-de579d65d12cbc6c4f17f060ab4853a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-455caa55b9735e542b5fc4253da46944.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -275,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     "sesj2026.format": ["Symposium oral presentation · 19 August 2026 · 13:54–14:16 · Room B · S2-4", "专题口头报告 · 2026年8月19日 · 13:54–14:16 · B会场 · S2-4"],
     "sesj2026.session": ["S2 · Dissemination of genetic information by transposons and pangenome evolution", "S2 · 转座子介导的遗传信息扩散与泛基因组进化"],
     "sesj2026.record.copy": ["On 19 August 2026, I gave an oral presentation (S2-4) in a symposium at the 28th Annual Meeting of the Society for Evolutionary Studies, Japan, held at Nagoya University.", "2026年8月19日，我在名古屋大学举行的日本进化学会第28回大会上作了 S2-4 专题口头报告。"],
-    "sesj2026.reflection.copy": ["Because of an unexpected situation affecting my professor, I stepped in at short notice and travelled to Nagoya to give this presentation. It was my first time attending the annual meeting of the Society for Evolutionary Studies, Japan. At the meeting, I met many professors and researchers with whom I had previously exchanged ideas, and heard many interesting studies in evolutionary biology.", "由于教授的突发情况，我在临时接替教授赴名古屋完成了这场报告。这是我第一次参加日本进化学会年会。会上见到了许多此前有过交流的教授和研究者，也听到了不少很有意思的进化生物学研究。"],
+    "sesj2026.reflection.copy": ["Something unexpected came up for my professor, so I travelled to Nagoya at short notice to give the presentation in their place. It was my first annual meeting of the Society for Evolutionary Studies, Japan. I met many professors and researchers I had previously exchanged ideas with and heard talks on interesting work in evolutionary biology.", "教授遇到突发情况，我临时代替教授赴名古屋作了这场报告。这是我第一次参加日本进化学会年会，见到了许多此前交流过的教授和研究者，也听到了不少很有意思的进化生物学研究报告。"],
     "thesisDetail.eyebrow": ["Academic milestone", "学业记录"],
     "thesisDetail.title": ["Master’s thesis presentation and Q&A", "硕士论文汇报与问答"],
     "thesisDetail.image.alt": ["A group poses outside Kyoto University’s Graduate School of Science Building No. 2 after the master’s thesis presentations and Q&A.", "硕士论文发表与问答结束后，一行人在京都大学理学研究科2号馆外合影。"],
@@ -656,14 +656,13 @@ body.fixed-language-content .quarto-secondary-nav-title {
   }
 }
 </style>
-<p>最近在搭建 EndoViHo-RAG、学习设计 AI 工具时，我反复遇到三个词：Prompt、RAG 和 Skill。它们经常被放在一起讨论，但真正开始搭系统后，我才发现，这三者解决的其实不是同一个问题。</p>
-<p>这三个词听起来都像是在描述“怎样让大语言模型完成任务”，也很容易被混在一起。对我来说，最有用的区分是看它们分别回答什么问题：</p>
+<p>最近搭建 EndoViHo-RAG、学习设计 AI 工具时，我经常遇到 Prompt、RAG 和 Skill 这三个词。它们都和模型如何完成任务有关，讨论时也容易混用。实际做下来，我习惯按各自要解决的问题区分：</p>
 <ul>
 <li><strong>Prompt：</strong>这一次，要模型做什么、依据什么、怎样表达；</li>
 <li><strong>RAG：</strong>回答之前，到哪里取得与问题相关的外部证据；</li>
 <li><strong>Skill：</strong>怎样把一类任务所需的说明、工具和检查步骤组织成可重复使用的流程。</li>
 </ul>
-<p>这不是一套严格的行业分类。尤其是 Skill，不同平台对它的定义并不完全相同。不过，对我正在做的科研工具来说，这个区分很实用。</p>
+<p>这个分法便于我设计科研工具，但不算统一的行业标准，尤其是 Skill，各个平台的定义还有差别。</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-1-prompt-rag-skill.svg" target="_blank" rel="noopener" aria-label="在新标签页打开图 1 的完整 SVG"><img src="figures/figure-1-prompt-rag-skill.svg" width="1152" height="720" alt="Prompt、RAG 与 Skill 的三行对照图。Prompt 位于一次模型调用层，规定任务、上下文和输出；RAG 位于知识访问与生成架构层，在生成前取回并组织外部证据，用来增强模型生成；Skill 位于可复用任务流程层，组织说明、工具、检索、校验和失败处理。三者可以组合，但不互相等同。" loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -679,14 +678,13 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <pre class="text"><code>只根据系统提供的记录回答问题。
 列出对象名称、记录编号和支持证据。
 如果没有检索到记录，请写“当前数据集中没有记录”，不要写成“生物学上不存在”。</code></pre>
-<p>这段 Prompt 同时规定了任务、证据边界、输出字段和措辞。它不只是控制语气，也可以限制回答范围、指定格式，并告诉模型遇到不确定情况时应怎样处理。</p>
-<p>但 Prompt 有一个很清楚的边界：它可以携带已经提供给模型的数据，却不会因为写了“请准确查询”就自动获得数据库访问能力。</p>
-<p>同样，“不要猜测”是一条重要指令，但不是可靠的技术保证。数据权限、字段校验、数字核对和出错时停止，仍然需要程序来完成。</p>
-<p>所以，我现在更愿意把 Prompt 理解为本次模型调用的<strong>工作说明</strong>，而不是知识来源。</p>
+<p>这段 Prompt 规定了任务、可用的证据、输出字段，以及没有记录时的措辞。写 Prompt 时，除了语气，也要交代回答范围、格式和不确定情况的处理方式。</p>
+<p>Prompt 可以携带数据，数据库访问能力却需要另外接入。写上“请准确查询”，模型并不会因此获得访问权限。</p>
+<p>“不要猜测”也只能作为指令。数据权限、字段校验、数字核对和出错时停止，仍然要靠程序保证。因此，我把 Prompt 当作本次模型调用的工作说明；外部知识从哪里来，还需要单独安排。</p>
 </section>
 <section id="rag先取得证据再让模型回答" class="level2">
 <h2 class="anchored" data-anchor-id="rag先取得证据再让模型回答">RAG：先取得证据，再让模型回答</h2>
-<p>RAG 是 <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation</a>，通常译作“检索增强生成”。它的核心不是某一种数据库，而是一种系统工作方式：在模型生成答案之前，先取回与问题有关的外部资料，再把这些资料放进生成上下文。</p>
+<p>RAG 是 <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation</a>，通常译作“检索增强生成”。它描述的是这样一种流程：先取回与问题有关的外部资料，放进模型的上下文，再让模型据此生成答案。</p>
 <p>最基本的流程是：</p>
 <pre class="text"><code>用户问题
    ↓
@@ -698,9 +696,9 @@ body.fixed-language-content .quarto-secondary-nav-title {
    ↓
 生成带有证据边界的回答</code></pre>
 <p>这里的检索不一定依赖向量数据库。它可以来自 SQL、全文检索、知识图谱、网页、API、实验室内部数据，也可以把几种方式组合起来。具体系统只需要选择与任务相符、能够被验证的资料来源。</p>
-<p>需要注意的是，“接入数据库”并不自动等于 RAG。如果系统执行 SQL 后直接返回一张表，那是数据库查询；当取回的记录被组织成上下文，并用于增强后续的自然语言生成时，才符合 RAG 的核心含义。</p>
+<p>这里要区分数据库查询和 RAG。如果系统执行 SQL 后直接返回一张表，到这一步只是查询。取回的记录还要进入模型上下文，供后续自然语言生成使用，才构成 RAG。</p>
 <p>在科研场景中，可以把版本化的结构化记录作为事实层，把文献作为解释和证据来源。记录编号、计数和数据版本不应该由模型补写；模型的工作是根据取回的内容整理和解释结果，并清楚标出证据边界。</p>
-<p>RAG 也不是“事实保险”。检索可能漏掉资料、选错资料，来源本身也可能有问题。它真正带来的价值，是让回答可以回到具体记录和文献重新检查。</p>
+<p>检索仍然可能遗漏资料或选错资料，来源本身也可能有问题。使用 RAG 后，我看重的是能沿着答案回到具体记录和文献，重新检查它的依据。</p>
 </section>
 <section id="skill把一类任务变成可重复调用的流程" class="level2">
 <h2 class="anchored" data-anchor-id="skill把一类任务变成可重复调用的流程">Skill：把一类任务变成可重复调用的流程</h2>
@@ -713,15 +711,14 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <li>受控词表、参考资料和输入输出格式；</li>
 <li>去重、完整性检查、结果校验和失败规则。</li>
 </ul>
-<p>因此，Skill 不只是在告诉模型“怎样回答”，而是在组织完成任务所需的说明、资源、工具和执行规则。工具负责执行具体动作，例如查询数据库、调用 API 或运行程序；Skill 则规定何时调用这些工具、怎样传递结果、如何检查输出，以及失败时怎样停止。</p>
+<p>Skill 把这些说明、资源和执行规则放在一起。工具负责查询数据库、调用 API 或运行程序；Skill 规定何时调用、怎样传递结果、如何检查输出，以及失败时怎样停止。</p>
 <p>例如，可以设计一个“查询某类生物学记录及其证据”的 Skill：先标准化用户输入，再调用数据库、API 或文献检索工具，随后运行程序完成去重和汇总，最后校验结果并按照固定格式输出。任何关键步骤失败时，流程都应明确停止，而不是让模型凭常识补齐缺失结果。</p>
 <p>一个 Skill 不一定使用 RAG，也不一定需要大语言模型。简单任务可能只有 Prompt；数据整理任务也可能只有程序和校验规则。只有任务需要外部证据时，RAG 才成为其中的一部分。</p>
 </section>
 <section id="三者怎样配合" class="level2">
 <h2 class="anchored" data-anchor-id="三者怎样配合">三者怎样配合</h2>
-<p>Prompt、RAG 和 Skill 位于不同层面，更像三组可以按任务需要进行组合的能力。</p>
-<p>Prompt 可以单独用于一次模型调用，也可以出现在 RAG 或 Skill 中；RAG 可以作为独立的检索生成系统运行，也可以成为 Skill 的一个环节；Skill 则可以把 Prompt、RAG、数据库、API、程序工具和校验规则组织成完整流程，但并不要求同时包含所有这些组件。</p>
-<p>与其把三者画成一棵固定的包含树，我更倾向于用维恩式关系图表示它们可能出现的组合：</p>
+<p>三者可以按任务需要组合。Prompt 可以单独指导一次模型调用，也可以用于 RAG 或 Skill。RAG 既能独立运行，也能成为 Skill 的一个环节。Skill 则按需组织 Prompt、RAG、数据库、API、程序工具和校验规则，不必把所有组件都用上。</p>
+<p>下面这张维恩式关系图表示几种可能的组合，没有固定的包含层级：</p>
 <figure class="article-figure figure">
 <div class="figure-scroll">
 <p><a class="figure-zoom" href="figures/figure-2-prompt-rag-skill-relationship.svg" target="_blank" rel="noopener" aria-label="在新标签页打开图 2 的完整 SVG"><img src="figures/figure-2-prompt-rag-skill-relationship.svg" width="1152" height="830" alt="维恩式关系图，展示 Prompt、RAG 和 Skill 可以独立或组合。Skill 是可复用任务包，可组织 Prompt、数据库、API、代码等工具、校验和失败处理；RAG 是检索增强生成流程，可调用工具并使用 Prompt 指导基于证据的生成；Prompt 也可独立用于一次模型调用。重叠不表示固定的严格包含关系。" loading="lazy" decoding="async" class="figure-img"></a></p>
@@ -738,7 +735,7 @@ body.fixed-language-content .quarto-secondary-nav-title {
 <blockquote class="blockquote">
 <p>当前版本的数据集中，哪些样本包含符合条件的记录？请列出样本名称、记录编号、数量和支持证据。</p>
 </blockquote>
-<p>这个问题看起来只是让模型整理一张表，但真正执行时，需要先确定检索范围、字段含义和证据边界。</p>
+<p>要生成这张表，系统得先确定检索范围、字段含义，以及哪些证据可以支持回答。</p>
 <p>在这个问题中，<strong>Prompt</strong> 负责规定回答规则，例如：</p>
 <ul>
 <li>只根据系统返回的记录作答；</li>
@@ -761,7 +758,7 @@ body.fixed-language-content .quarto-secondary-nav-title {
 → 按规则核对数字、ID 与来源
 → 生成表格
 → 输出解释和限制</code></pre>
-<p>这个例子说明，科研 RAG 的关键不只是“能够回答”。更重要的是：答案中的数字和判断能否回到具体的数据版本、记录和文献，以及检索失败能否与真正的空结果区分开来。</p>
+<p>检查这类科研查询时，我会逐项追溯答案中的数字和判断，看它们能否对应到具体的数据版本、记录和文献；还要确认系统能区分检索失败和真正的空结果。</p>
 </section>
 <section id="我现在怎样区分它们" class="level2">
 <h2 class="anchored" data-anchor-id="我现在怎样区分它们">我现在怎样区分它们</h2>
@@ -801,7 +798,7 @@ body.fixed-language-content .quarto-secondary-nav-title {
 </tr>
 </tbody>
 </table>
-<p>如果只是希望模型按固定方式回答，我会先写 Prompt；如果答案依赖外部、持续更新或需要追溯的资料，我会设计 Retrieval 或 RAG；如果同一任务会反复出现，而且需要组合 Prompt、数据库、API、程序、检索与校验规则，我会进一步把它封装成 Skill。</p>
+<p>实际做工具时，我通常从 Prompt 开始，把回答要求写清楚。答案依赖外部、持续更新或需要追溯的资料时，再设计 Retrieval 或 RAG。等到同一任务反复出现，需要一起维护 Prompt、数据库或 API 调用、程序、检索和校验规则时，我再把这套流程整理成 Skill。</p>
 
 
 </section>
