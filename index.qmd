@@ -17,21 +17,6 @@ title-block-style: none
 <div class="coverage-list">
 <article class="coverage-item">
 <div class="coverage-meta">
-<time datetime="2026-09-03">2026.09.03</time>
-<span class="coverage-type" data-i18n="coverage.techBlog">Tech Blog</span>
-</div>
-<div class="coverage-entry">
-<a class="coverage-record-link" href="./posts/prompt-rag-skill-en/" data-i18n-href="coverage.promptRagSkill.href">
-<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.promptRagSkill">Prompts, RAG, and skills: what’s the difference?</h2></div>
-<b aria-hidden="true">→</b>
-</a>
-<div class="coverage-source-line">
-<span data-i18n="coverage.source.promptRagSkill">AI systems · Concept note</span>
-</div>
-</div>
-</article>
-<article class="coverage-item">
-<div class="coverage-meta">
 <time datetime="2026-08-19">2026.08.19</time>
 <span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
 </div>
