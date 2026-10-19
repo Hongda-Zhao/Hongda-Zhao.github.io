@@ -33,22 +33,6 @@ title-block-style: none
 </article>
 <article class="coverage-item">
 <div class="coverage-meta">
-<time datetime="2026-07-30">2026.07.30</time>
-<span class="coverage-type" data-i18n="coverage.techBlog">Tech Blog</span>
-</div>
-<div class="coverage-entry">
-<a class="coverage-record-link" href="./posts/djr-mcp-finder-evidence-first-ai4s-en/" data-i18n-href="coverage.djrMcpFinder.href">
-<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.djrMcpFinder">Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.</h2></div>
-<b aria-hidden="true">→</b>
-</a>
-<div class="coverage-source-line">
-<span>DJR-MCP Finder v0.1</span>
-<a class="coverage-item-source" href="https://github.com/Hongda-Zhao/DJR-MCP-Finder" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository (opens in a new tab)" data-i18n-aria-label="coverage.githubRepository.aria"><span data-i18n="coverage.githubRepository">GitHub repository</span> <span aria-hidden="true">↗</span></a>
-</div>
-</div>
-</article>
-<article class="coverage-item">
-<div class="coverage-meta">
 <time datetime="2026-03-05">2026.03.05</time>
 <span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
 </div>

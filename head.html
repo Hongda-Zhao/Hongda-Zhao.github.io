@@ -105,9 +105,6 @@
     "coverage.source.icr": ["Kyoto University · Institute for Chemical Research", "京都大学 · 化学研究所"],
     "coverage.officialSource": ["Official source", "官方来源"],
     "coverage.researchAnnouncement": ["Research Announcement", "研究动态"],
-    "coverage.githubRepository": ["GitHub repository", "GitHub 仓库"],
-    "coverage.techBlog": ["Tech Blog", "技术博客"],
-    "coverage.githubRepository.aria": ["GitHub repository (opens in a new tab)", "GitHub 仓库（在新标签页打开）"],
     "coverage.source.bioJapan.aria": ["Official source: Bioinformatics Japan award (opens in a new tab)", "官方来源：Bioinformatics Japan 奖项（在新标签页打开）"],
     "coverage.source.symposium.aria": ["Official source: Giant Virus Biology Symposium (opens in a new tab)", "官方来源：巨型病毒生物学研讨会（在新标签页打开）"],
     "coverage.source.icrAward.aria": ["Official source: ICR award (opens in a new tab)", "官方来源：京大化研学生研究奖（在新标签页打开）"],
@@ -117,8 +114,6 @@
     "coverage.source.jsme2023.aria": ["Official source: JSME 2023 oral presentation program (opens in a new tab)", "官方来源：JSME 2023 口头报告议程（在新标签页打开）"],
     "coverage.source.sesj2026.aria": ["Official source: SESJ 2026 program (opens in a new tab)", "官方来源：日本进化学会2026年大会议程（在新标签页打开）"],
     "coverage.source.virusEvolution.aria": ["Official source: Virus Evolution announcement (opens in a new tab)", "官方来源：《Virus Evolution》论文公告（在新标签页打开）"],
-    "coverage.djrMcpFinder": ["Blog about DJR-MCP Finder: AI-assisted structural biology for virus evolution.", "DJR-MCP Finder 技术博客：AI 辅助结构生物学助力病毒演化研究。"],
-    "coverage.djrMcpFinder.href": ["/posts/djr-mcp-finder-evidence-first-ai4s-en/", "/posts/djr-mcp-finder-evidence-first-ai4s/"],
     "coverage.2026": ["Received the FY2025 Student Encouragement Award from NPO Bioinformatics Japan.", "荣获非营利组织 Bioinformatics Japan 2025年度学生鼓励奖。"],
     "coverage.symposium": ["Gave an oral presentation at the Giant Virus Biology Symposium in Tegernsee, Germany.", "在德国 Tegernsee 举行的 Giant Virus Biology Symposium（巨型病毒生物学研讨会）上作了口头报告。"],
     "coverage.award": ["Received the ICR Award for Graduate Students.", "荣获京大化研学生研究賞。"],
@@ -233,12 +228,7 @@
 
   const normalizePagePath = (path) => path.replace(/\/index\.html$/, "/") || "/";
   const normalizedPagePath = normalizePagePath(location.pathname);
-  const localizedPages = [
-    {
-      en: "/posts/djr-mcp-finder-evidence-first-ai4s-en/",
-      zh: "/posts/djr-mcp-finder-evidence-first-ai4s/"
-    }
-  ];
+  const localizedPages = [];
   const localizedPage = localizedPages.find((routes) => Object.values(routes).includes(normalizedPagePath));
   const authoredLanguage = localizedPage
     ? (normalizedPagePath === localizedPage.zh ? "zh" : "en")
