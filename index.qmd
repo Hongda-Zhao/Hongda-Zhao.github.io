@@ -17,6 +17,22 @@ title-block-style: none
 <div class="coverage-list">
 <article class="coverage-item">
 <div class="coverage-meta">
+<time datetime="2026-11-04">2026.11.04</time>
+<span class="coverage-type" data-i18n="oist2026.visit">Research visit</span>
+</div>
+<div class="coverage-entry">
+<a class="coverage-record-link" href="./highlights/oist-seminar-2026/">
+<div class="coverage-copy"><h2 class="no-anchor" data-i18n="coverage.oist2026">Visited the Okinawa Institute of Science and Technology (OIST) and gave a seminar on double-stranded DNA viruses in eukaryotes.</h2></div>
+<b aria-hidden="true">→</b>
+</a>
+<div class="coverage-source-line">
+<span>OIST</span>
+<a class="coverage-item-source" href="https://groups.oist.jp/ecbsu/event/seminar-hidden-world-dsdna-viruses-eukaryotes-diversity-host-associations-and-cryptic" target="_blank" rel="noopener noreferrer" aria-label="OIST seminar announcement (opens in a new tab)" data-i18n-aria-label="oist2026.source.aria"><span data-i18n="oist2026.source">Seminar announcement</span> <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</article>
+<article class="coverage-item">
+<div class="coverage-meta">
 <time datetime="2026-08-19">2026.08.19</time>
 <span class="coverage-type" data-i18n="coverage.researchAnnouncement">Research Announcement</span>
 </div>
