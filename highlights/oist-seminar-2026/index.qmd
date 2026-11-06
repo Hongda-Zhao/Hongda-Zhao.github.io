@@ -14,7 +14,7 @@ title-block-style: none
 </header>
 
 <figure class="highlight-media">
-<img class="highlight-image" src="oist-campus.webp" width="1702" height="1276" alt="OIST campus buildings rise above the trees, with the sea on the horizon under a partly cloudy sky." data-i18n-alt="oist2026.image.alt" decoding="async">
+<img class="highlight-image highlight-image--inset" src="oist-campus.webp" width="1702" height="1276" alt="OIST campus buildings rise above the trees, with the sea on the horizon under a partly cloudy sky." data-i18n-alt="oist2026.image.alt" decoding="async">
 </figure>
 
 <section class="content-section">
