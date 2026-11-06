@@ -1516,6 +1516,11 @@ main.content:has(> .gallery-page) > #title-block-header {
   margin-inline: auto;
 }
 
+.highlight-image--inset {
+  width: 84%;
+  margin-inline: auto;
+}
+
 .highlight-docket {
   display: grid;
   margin: 0 0 clamp(3rem, 7vw, 5rem);
