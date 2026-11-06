@@ -1,0 +1,38 @@
+---
+pagetitle: "A seminar on double-stranded DNA viruses at OIST"
+description: "Hongda Zhao visited OIST on 4 November 2026 to give a seminar on double-stranded DNA viruses in eukaryotes."
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+```{=html}
+<div class="page-shell highlight-page">
+<header class="page-header highlight-header">
+<p class="highlight-meta"><span data-i18n="oist2026.visit">Research visit</span><time datetime="2026-11-04">2026.11.04</time></p>
+<h1 class="page-title" data-i18n="oist2026.title" data-document-title>A seminar on double-stranded DNA viruses at OIST</h1>
+</header>
+
+<section class="highlight-docket" aria-labelledby="oist-docket-title">
+<p class="highlight-docket-label" id="oist-docket-title" data-i18n="detail.summary">Record sheet</p>
+<dl class="highlight-facts">
+<div><dt data-i18n="detail.meta.talk">Talk</dt><dd lang="en">The hidden world of dsDNA viruses in eukaryotes: diversity, host associations, and cryptic lifestyles</dd></div>
+<div><dt data-i18n="detail.meta.organization">Organization</dt><dd data-i18n="oist2026.host">Evolution, Cell Biology, and Symbiosis Unit, OIST</dd></div>
+</dl>
+</section>
+
+<section class="content-section">
+<h2 class="content-label" data-i18n="detail.record">Record</h2>
+<div class="prose-slot highlight-prose">
+<p data-i18n="oist2026.record">I discussed how viral DNA preserved in host genomes can tell us which viruses infected their ancestors. Across more than 37,000 eukaryotic genome assemblies, we found that the proportion of viral DNA varied widely among host lineages.</p>
+<nav class="highlight-links" aria-label="Record sources" data-i18n-aria-label="detail.links.aria">
+<a href="https://groups.oist.jp/ecbsu/event/seminar-hidden-world-dsdna-viruses-eukaryotes-diversity-host-associations-and-cryptic" target="_blank" rel="noopener noreferrer" aria-label="OIST seminar announcement (opens in a new tab)" data-i18n-aria-label="oist2026.source.aria"><span data-i18n="oist2026.source">Seminar announcement</span> <span aria-hidden="true">↗</span></a>
+</nav>
+</div>
+</section>
+
+<nav class="highlight-back" aria-label="Back to notes" data-i18n-aria-label="detail.back.aria">
+<a href="../../index.html#coverage"><span aria-hidden="true">←</span> <span data-i18n="detail.back">Back to notes</span></a>
+</nav>
+</div>
+```
